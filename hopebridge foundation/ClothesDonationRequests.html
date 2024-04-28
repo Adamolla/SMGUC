@@ -332,44 +332,43 @@
   </script>
 
 <script>
-   document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("filterButton").addEventListener("click", filterDonationRequests);
-});
+  });
 
-function filterDonationRequests() {
+  function filterDonationRequests() {
     var genderFilter = document.getElementById("gender").value;
     var ageFilter = document.getElementById("age").value;
     var seasonFilter = document.getElementById("season").value;
     var tableRows = document.querySelectorAll("#clothesDonationRequests tbody tr");
 
-    tableRows.forEach(function(row) {
-        var genderCell = row.querySelector("td:nth-child(1)").textContent.trim();
-        var ageCell = row.querySelector("td:nth-child(2)").textContent.trim();
-        var sizeCell = row.querySelector("td:nth-child(3)").textContent.trim();
-        var typeCell = row.querySelector("td:nth-child(4)").textContent.trim();
-        var seasonCell = row.querySelector("td:nth-child(5)").textContent.trim();
+    tableRows.forEach(function (row) {
+      var genderCell = row.querySelector("td:nth-child(1)").textContent.trim();
+      var ageCell = row.querySelector("td:nth-child(2)").textContent.trim();
+      var sizeCell = row.querySelector("td:nth-child(3)").textContent.trim();
+      var typeCell = row.querySelector("td:nth-child(4)").textContent.trim();
+      var seasonCell = row.querySelector("td:nth-child(5)").textContent.trim();
 
-        var showRow = true;
-        if (genderFilter && genderFilter !== "All" && genderCell !== genderFilter) {
-            showRow = false;
-        }
-        if (ageFilter) {
-            var ageRange = ageFilter.split("-").map(Number);
-            var ageValues = ageCell.split("-").map(Number); // Extracting both age limits
-            var minAge = ageValues[0];
-            var maxAge = ageValues[1];
-            if (isNaN(minAge) || isNaN(maxAge) || ageRange[0] < minAge || ageRange[1] > maxAge) {
-                showRow = false;
-            }
-        }
-        if (seasonFilter && seasonFilter !== "All" && seasonCell !== seasonFilter) {
-            showRow = false;
-        }
+      var showRow = true;
+      if (genderFilter && genderFilter !== "All" && genderCell !== genderFilter) {
+        showRow = false;
+      }
+      if (ageFilter) {
+    var ageValue = parseInt(ageCell); // Parse age as an integer
+    var ageRange = ageFilter.split("-").map(Number); // Extract age range
+    var minAge = ageRange[0];
+    var maxAge = ageRange[1];
+    if (isNaN(ageValue) || ageValue < minAge || ageValue > maxAge) {
+        showRow = false;
+    }
+      }
+      if (seasonFilter && seasonFilter !== "All" && seasonCell !== seasonFilter) {
+        showRow = false;
+      }
 
-        row.style.display = showRow ? "" : "none";
+      row.style.display = showRow ? "" : "none";
     });
-}
-
+  }
 </script>
 </body>
 </html>
