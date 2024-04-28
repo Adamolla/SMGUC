@@ -44,8 +44,8 @@
           display: block; 
     } 
     #map {
-        width: 450px;
-        height: 500px;
+            height: 400px;
+            width: 450px;
     }
   </style>
   </head>
@@ -143,69 +143,6 @@
 </div>
 <p></p>
 <div id="map"></div>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Google Maps Integration</title>
-    <style>
-        /* Style your map container */
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <!-- Add a container for the map -->
-    <div id="map"></div>
-
-    <!-- Include the Google Maps JavaScript API with async attribute -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
-
-    <script>
-        // Initialize the map
-        function initMap() {
-            // Create a map object and specify the DOM element for display
-            const map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 40.7128, lng: -74.0060 }, // New York City coordinates
-                zoom: 10 // Set initial zoom level
-            });
-
-            // Create a marker and place it on the map
-            const marker = new google.maps.Marker({
-                position: { lat: 40.7128, lng: -74.0060 }, // Marker position for New York City
-                map: map,
-                title: 'Lala land ' // Marker title
-            });
-        }
-    </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <footer class="footer">
     <div class="container">
@@ -350,5 +287,32 @@
     });
   });
 </script>
+
+
+    <!-- Add a container for the map -->
+    <div id="map"></div>
+
+    <!-- Include the Google Maps JavaScript API with async attribute -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+     <script>
+      // Initialize the map
+      function initMap() {
+          // Create a map object and specify the DOM element for display
+          const map = new google.maps.Map(document.getElementById('map'), {
+              center: { lat: 40.7128, lng: -74.0060 }, // New York City coordinates
+              zoom: 10 // Set initial zoom level
+          });
+
+          // Create a marker and place it on the map
+          const marker = new google.maps.Marker({
+              position: { lat: 40.7128, lng: -74.0060 }, // Marker position for New York City
+              map: map,
+              title: 'Lala land ' // Marker title
+          });
+      }
+  </script>
+
  </body>
 </html>
