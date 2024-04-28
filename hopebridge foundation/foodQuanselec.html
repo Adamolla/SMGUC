@@ -80,15 +80,15 @@
       </div>
   </div>
 
-  <h1>Quantity Selection for Clothing Donations</h1>
+  <h1>Quantity Selection for Food Donations</h1>
   <form id="donationForm">
-    <label for="item">Select Clothing Item:</label>
+    <label for="item">Select School Stationary Supplies Item:</label>
     <select id="item" name="item">
-      <option value="All"> All</option>
-      <option value="shirt">Shirt</option>
-      <option value="pants">Pants</option>
-      <option value="dress">Dress</option>
-      <option value="jacket">Jacket</option>
+        <option value="">All</option>
+        <option value="Fruits and Vegetables">Fruits and Vegetable</option>
+        <option value="Canned Foods"> Canned Foods</option>
+        <option value=" Baked Goods"> Baked Goods</option>
+        <option value="Fresh Meals">Fresh Meals</option>
     </select><br><br>
     <label for="quantity">Quantity:</label>
     <input type="number" id="quantity" name="quantity" min="1" required><br><br>
@@ -214,32 +214,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
-
-  <script>
-    // Function to initialize the map
-    function initMap() {
-        // Define the coordinates for your organization's location
-        var organizationLocation = { lat: 30.033333, lng: 31.233334 };
-
-        // Create a new map centered at the organization's location
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15, // Adjust zoom level as needed
-            center: organizationLocation
-        });
-
-        // Add a marker at the organization's location
-        var marker = new google.maps.Marker({
-            position: organizationLocation,
-            map: map,
-            title: 'HopeBridge Foundation' // Title for the marker
-        });
-    }
-</script>
-
-
-<!-- Call the initMap function after the API is loaded -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
   <script>
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -255,32 +229,5 @@
     });
   });
 </script>
-
-
-    <!-- Add a container for the map -->
-    <div id="map"></div>
-
-    <!-- Include the Google Maps JavaScript API with async attribute -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
-     <script>
-      // Initialize the map
-      function initMap() {
-          // Create a map object and specify the DOM element for display
-          const map = new google.maps.Map(document.getElementById('map'), {
-              center: { lat: 40.7128, lng: -74.0060 }, // New York City coordinates
-              zoom: 10 // Set initial zoom level
-          });
-
-          // Create a marker and place it on the map
-          const marker = new google.maps.Marker({
-              position: { lat: 40.7128, lng: -74.0060 }, // Marker position for New York City
-              map: map,
-              title: 'Lala land ' // Marker title
-          });
-      }
-  </script>
-
  </body>
 </html>
