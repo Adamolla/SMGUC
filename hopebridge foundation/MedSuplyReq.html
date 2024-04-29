@@ -313,44 +313,30 @@
       });
     });
   </script>
-    <script>
-        // Filter form
-        const filterForm = document.getElementById("filterForm");
-        const category = document.getElementById("category");
-    
-        filterForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            const categoryValue = category.value;
-            const rows = document.querySelectorAll("#medDonationRequests tbody tr");
-    
-            rows.forEach(row => {
-                const categoryRow = row.children[2].textContent;
-                if (categoryValue === "all" || categoryValue === categoryRow) {
-                    row.style.display = "table-row";
-                } else {
-                    row.style.display = "none";
-                }
-            });
+   <script>
+    $(document).ready(function () {
+        $("#hospitalFilter").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#bloodDonationTable tbody tr").filter(function () {
+                return $(this).text().toLowerCase().indexOf(value) > -1;
+            }).toggle();
         });
-    
-        // Medication filter form
-        const medicationFilterForm = document.getElementById("medicationFilterForm");
-        const medicationUse = document.getElementById("medicationUse");
-    
-        medicationFilterForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            const medicationUseValue = medicationUse.value;
-            const rows = document.querySelectorAll("#medDonationRequests tbody tr");
-    
-            rows.forEach(row => {
-                const medicationUseRow = row.children[3].textContent;
-                if (medicationUseValue === "all" || medicationUseValue === medicationUseRow) {
-                    row.style.display = "table-row";
-                } else {
-                    row.style.display = "none";
-                }
-            });
+
+        $("#governorateFilter").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#bloodDonationTable tbody tr").filter(function () {
+                return $(this).text().toLowerCase().indexOf(value) > -1;
+            }).toggle();
         });
-    </script>
+
+        $("#areaFilter").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#bloodDonationTable tbody tr").filter(function () {
+                return $(this).text().toLowerCase().indexOf(value) > -1;
+            }).toggle();
+        });
+    });
+</script>
+
 </body> 
 </html>
