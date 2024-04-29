@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HopeBridge Foundation</title>
+    <link rel="icon" type="image/png" href="fond_logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      .navbar-brand {
+          font-size: 22.5px;
+          margin-left: -10px;
+      }
+      
+      .block-48{
+        background-color:#4297A0;
+      }
+      .logo{
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-left: -500px;
+            width: 140px;
+            vertical-align:bottom;
+            margin-right: 21px;
+            height: 140px;
+            border-radius: 900%;
+            display: none;
+            
+      }
+      .show-logo .logo {
+          display: block; 
+    } 
+   
+    .btn-primary {
+      background-color:#4297A0;
+        color: white;
+        width: auto;
+        height: auto;
+    }
+    .btn-primary:hover {
+        background-color: black;
+        color: white;
+    }
+    .block-6 .icon {
+    margin-right: 30px;
+    color: #4297A0;
+}
+   .block-6 .link-underline{
+    color: #4297A0;
+   }
+   .block-6 .link-underline:hover {
+    color: black;
+    text-decoration-line: underline;
+   }
+   .btn-white{
+    background-color: white;
+    color: #4297A0;
+    font-size: 20px;
+   }
+   .btn-white:hover{
+    background-color: black;
+    color:white
+   }
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    /* Style table header */
+    th {
+      background-color: #f2f2f2;
+      padding: 8px;
+      text-align: left;
+    }
+
+    /* Style table rows */
+    td {
+      border-bottom: 1px solid #ddd;
+      padding: 8px;
+    }
+    .btn{
+            background-color: #4297A0;
+            color: white;
+        }
+        .btn:active{
+            color: white;
+        }
+        #searchInput{
+            width:17% ;
+            margin-left: 20px;
+        }
+   
+  </style>
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+      <img class="logo" src="fond_logo.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+  
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');" data-stellar-background-ratio="0.5">
+        </div>
+      </div>
+      </div>
+  </div>
+  
+  <h1>Registered Organizations</h1>
+
+  <!-- Search bar -->
+  <input type="text" id="searchInput" placeholder="Search by organization name">
+  
+    <!-- Organization list -->
+    <p></p>
+
+    <div class="table-container">
+        <table id="organizationList" aria-label="Registered Organizations" role="presentation">
+     
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>Area</th>
+              <th>Contact</th>
+              <th>Website</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Healthcare Foundation</td>
+              <td>123 Main Street</td>
+              <td>City Central</td>
+              <td>Stateville</td>
+              <td>1234567890</td>
+              <td><a href="https://example.com/healthcare">Healthcare Foundation.com</a></td>
+              <td>johndoe@example.com</td>
+            </tr>
+            <tr>
+              <td>Education Empowerment</td>
+              <td>456 Oak Avenue</td>
+              <td>Suburbia</td>
+              <td>Townsville</td>
+              <td>9876543210</td>
+              <td><a href="https://example.com/education">Education Empowerment.com</a></td>
+              <td>janesmith@example.com</td>
+            </tr>
+            <tr>
+              <td>Hope for All</td>
+              <td>789 Elm Street</td>
+              <td>Outskirts</td>
+              <td>Ruraltown</td>
+              <td>4561237890</td>
+              <td><a href="https://example.com/hope">Hope for All.com</a></td>
+              <td>michaeljohnson@example.com</td>
+            </tr>
+            <tr>
+              <td>Childrens Haven</td>
+              <td>789 Maple Avenue</td>
+              <td>City Center</td>
+              <td>Metropolis</td>
+              <td>9876541230</td>
+              <td><a href="https://example.com/childrens">Childrens Haven Website..com</a></td>
+              <td>emilyanderson@example.com</td>
+            </tr>
+            <tr>
+              <td>EmpowerHope Foundation</td>
+              <td>963 Pine Street</td>
+              <td>Outskirts</td>
+              <td>Ruraltown</td>
+              <td>3698521470</td>
+              <td><a href="https://example.com/empower">EmpowerHope Foundation Website.com</a></td>
+              <td>davidwilliams@example.com</td>
+            </tr>
+            <tr>
+              <td>Education for All</td>
+              <td>147 Walnut Street</td>
+              <td>City Center</td>
+              <td>Townsville</td>
+              <td>7418529630</td>
+              <td><a href="https://example.com/educationforall">Education for All.com</a></td>
+              <td>sarahwilson@example.com</td>
+            </tr>
+            <tr>
+              <td>Grace Haven Community</td>
+              <td>123 Main Street</td>
+              <td>City Center</td>
+              <td>State</td>
+              <td>+1234567890</td>
+              <td><a href="https://example.com/gracehaven">Grace Haven Community.com</a></td>
+              <td>johndoe@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+          <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <p><a href="#" class="link-underline">Read  More</a></p>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">Recent Blog</h3>
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_1.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Water Is Life. Clean Water In Urban Area</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_2.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Life Is Short So Be Kind</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_4.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Unfortunate Children Need Your Love</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="block-23">
+            <h3 class="heading-section">Get Connected</h3>
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+              </ul>
+            </div>
+        </div>
+        
+        
+      </div>
+      <div class="row pt-5">
+        <div class="col-md-12 text-center">
+          
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+
+  <script src="js/jquery.fancybox.min.js"></script>
+  
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 50) {
+          document.getElementById("ftco-navbar").classList.add("show-logo");
+          document.querySelector(".navbar-brand").style.marginLeft = "100px";
+        } else {
+          document.getElementById("ftco-navbar").classList.remove("show-logo");
+          document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+        }
+      });
+    });
+  
+  </script>
+ 
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the input element and table
+      var searchInput = document.getElementById("searchInput");
+      var table = document.getElementById("organizationList");
+  
+      // Add event listener for input changes
+      searchInput.addEventListener("input", function() {
+        var searchText = this.value.toLowerCase();
+  
+        // Loop through each row and hide/show based on search text
+        for (var i = 1; i < table.rows.length; i++) {
+          var row = table.rows[i];
+          var name = row.cells[0].innerText.toLowerCase();
+          
+          if (name.includes(searchText)) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        }
+      });
+    });
+  </script>
+  
+ </body>
+</html>
