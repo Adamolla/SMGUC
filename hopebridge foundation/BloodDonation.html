@@ -112,32 +112,49 @@
                             <th>Blood Type</th>
                             <th>Hospital Name</th>
                             <th>Hospital Address</th>
+                            <th>Government</th>
+                            <th>Area</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>John Doe</td>
-                            <td>A+</td>
-                            <td>HopeBridge Hospital</td>
-                            <td>123 Main St, City, State</td>
+                          <td>John Doe</td>
+                          <td>A+</td>
+                          <td>HopeBridge Hospital</td>
+                          <td>123 Main St</td>
+                          <td>Cairo</td>
+                          <td>Maadi</td>
+                          <td>123 Main St, City, State</td>
                         </tr>
                         <tr>
-                            <td>Jane Smith</td>
-                            <td>B-</td>
-                            <td>HopeBridge Hospital</td>
-                            <td>456 Elm St, City, State</td>
+                          <td>Jane Smith</td>
+                          <td>B-</td>
+                          <td>El Salam Hopital</td>
+                          <td>456 Elm St </td>
+                          <td>Cairo</td>
+                          <td>Nasr City</td>
+                          <td>HopeBridge Hospital</td>
+                          <td>456 Elm St, City, State</td>
                         </tr>
                         <tr>
-                            <td>Michael Johnson</td>
-                            <td>O+</td>
-                            <td>HopeBridge Hospital</td>
-                            <td>789 Oak St, City, State</td>
+                          <td>Michael Johnson</td>
+                          <td>O+</td>
+                          <td>Dar el Fouad</td>
+                          <td>789 Oak St</td>
+                          <td>Giza</td>
+                          <td>6 of October</td>
+                          <td>HopeBridge Hospital</td>
+                          <td>789 Oak St, City, State</td>
                         </tr>
                         <tr>
-                            <td>Sarah Williams</td>
-                            <td>AB+</td>
-                            <td>HopeBridge Hospital</td>
-                            <td>321 Pine St, City, State</td>
+                          <td>Sarah Williams</td>
+                          <td>AB+</td>
+                          <td>57357</td>
+                          <td>321 Pine St</td>
+                          <td>Giza</td>
+                          <td>Dokki</td>
+                          <td>HopeBridge Hospital</td>
+                          <td>321 Pine St, City, State</td>
                         </tr>
                     </tbody>
                 </table>
@@ -145,6 +162,31 @@
         </div>
     </div>
 
+    <label for="hospitalFilter">Hospital:</label>
+    <select id="hospitalFilter">
+        <option value="">All</option>
+        <option value="Hospital A">HopeBridge Hospital</option>
+        <option value="Hospital B">El Salam Hopital</option>
+        <option value="Hospital c">Dar el Fouad</option>
+        <option value="Hospital d">57357</option>
+    </select>
+    
+    <label for="governorateFilter">Governorate:</label>
+    <select id="governorateFilter">
+        <option value="">All</option>
+        <option value="Governorate 1">Cairo</option>
+        <option value="Governorate 2">Giza</option>
+    </select>
+    
+    <label for="areaFilter">Area:</label>
+    <select id="areaFilter">
+        <option value="">All</option>
+        <option value="Area X">Maadi</option>
+        <option value="Area Y">Nasr City</option>
+        <option value="Area X">6  of October</option>
+        <option value="Area X">Dokki</option>
+    </select>
+    <button type="submit">Filter</button>
 
 
 
@@ -259,6 +301,31 @@
         }
       });
     });
+
+    
+    $(document).ready(function () {
+        $("#hospitalFilter").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#bloodDonationTable tbody tr").filter(function () {
+                return $(this).text().toLowerCase().indexOf(value) > -1;
+            }).toggle();
+        });
+
+        $("#governorateFilter").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#bloodDonationTable tbody tr").filter(function () {
+                return $(this).text().toLowerCase().indexOf(value) > -1;
+            }).toggle();
+        });
+
+        $("#areaFilter").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#bloodDonationTable tbody tr").filter(function () {
+                return $(this).text().toLowerCase().indexOf(value) > -1;
+            }).toggle();
+        });
+    });
+</script>
     
   </script>
    </body>
