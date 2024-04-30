@@ -69,12 +69,12 @@
     color: black;
     text-decoration-line: underline;
    }
-   .btn-white{
-    background-color: white;
-    color: #4297A0;
-    font-size: 20px;
+   .btn{
+    background-color: #4297A0;
+    color: white;
+   
    }
-   .btn-white:hover{
+   .btn:hover{
     background-color: black;
     color:white
    }
@@ -96,13 +96,7 @@
       border-bottom: 1px solid #ddd;
       padding: 8px;
     }
-    .btn{
-            background-color: #4297A0;
-            color: white;
-        }
-        .btn:active{
-            color: white;
-        }
+   
         #searchInput{
             width:17% ;
             margin-left: 20px;
@@ -139,27 +133,55 @@
       </div>
       </div>
   </div>
-  
   <h1>Registered Organizations</h1>
-
+  <form> <!-- Corrected from <from> -->
+    <select id="filterArea">
+      <option value="">All Areas</option>
+      <option value="City Central">City Central</option>
+      <option value="Suburbia">Suburbia</option>
+      <option value="Outskirts">Outskirts</option>
+    </select>
+    
+    <select id="filterGovernorate">
+      <option value="">All Governorates</option>
+      <option value="Stateville">Stateville</option>
+      <option value="Metropolis">Metropolis</option>
+      <option value="Ruraltown">Ruraltown</option>
+      <option value="Townsville">Townsville</option>
+      <option value="State">State</option>
+    </select>
+    
+    <select id="filterType">
+      <option value="">All Types</option>
+      <option value="Hospital">Hospital</option>
+      <option value="Orphanage">Orphanage</option>
+      <option value="Church">Church</option>
+      <option value="Public School">Public School</option>
+      <option value="Non-Profit organization">Non-Profit organization</option>
+    </select>
+    
+    <div class="col-md-12 mt-3">
+      <button type="submit" class="btn">Apply Filter</button>
+    </div>
+  </form>
+<p></p>
   <!-- Search bar -->
   <input type="text" id="searchInput" placeholder="Search by organization name">
   
-    <!-- Organization list -->
-    <p></p>
-
-    <div class="table-container">
-        <table id="organizationList" aria-label="Registered Organizations" role="presentation">
+  <!-- Organization list -->
+  <div class="table-container">
+    <table id="organizationList" aria-label="Registered Organizations" role="presentation">
      
           <thead>
             <tr>
               <th>Name</th>
               <th>Address</th>
-              <th>City</th>
               <th>Area</th>
+              <th>Governorate</th>
               <th>Contact</th>
               <th>Website</th>
               <th>Email</th>
+              <th>Type</th>
             </tr>
           </thead>
           <tbody>
@@ -171,6 +193,7 @@
               <td>1234567890</td>
               <td><a href="https://example.com/healthcare">Healthcare Foundation.com</a></td>
               <td>johndoe@example.com</td>
+              <td>Hospital</td>
             </tr>
             <tr>
               <td>Education Empowerment</td>
@@ -180,6 +203,7 @@
               <td>9876543210</td>
               <td><a href="https://example.com/education">Education Empowerment.com</a></td>
               <td>janesmith@example.com</td>
+              <td>Public School</td>
             </tr>
             <tr>
               <td>Hope for All</td>
@@ -189,6 +213,7 @@
               <td>4561237890</td>
               <td><a href="https://example.com/hope">Hope for All.com</a></td>
               <td>michaeljohnson@example.com</td>
+              <td>Orphanage</td>
             </tr>
             <tr>
               <td>Childrens Haven</td>
@@ -198,6 +223,7 @@
               <td>9876541230</td>
               <td><a href="https://example.com/childrens">Childrens Haven Website..com</a></td>
               <td>emilyanderson@example.com</td>
+              <td>Orphanage</td>
             </tr>
             <tr>
               <td>EmpowerHope Foundation</td>
@@ -207,6 +233,7 @@
               <td>3698521470</td>
               <td><a href="https://example.com/empower">EmpowerHope Foundation Website.com</a></td>
               <td>davidwilliams@example.com</td>
+              <td>Non-Profit organization</td>
             </tr>
             <tr>
               <td>Education for All</td>
@@ -216,6 +243,7 @@
               <td>7418529630</td>
               <td><a href="https://example.com/educationforall">Education for All.com</a></td>
               <td>sarahwilson@example.com</td>
+              <td>Public School</td>
             </tr>
             <tr>
               <td>Grace Haven Community</td>
@@ -225,6 +253,7 @@
               <td>+1234567890</td>
               <td><a href="https://example.com/gracehaven">Grace Haven Community.com</a></td>
               <td>johndoe@example.com</td>
+              <td>Church</td>
             </tr>
           </tbody>
         </table>
@@ -371,6 +400,44 @@
       });
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the form and table
+      var form = document.querySelector("form");
+      var table = document.getElementById("organizationList");
+  
+      // Add event listener for form submission
+      form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+  
+        // Get selected filter criteria
+        var filterArea = document.getElementById("filterArea").value.toLowerCase();
+        var filterGovernorate = document.getElementById("filterGovernorate").value.toLowerCase();
+        var filterType = document.getElementById("filterType").value.toLowerCase();
+  
+        // Loop through each row and filter
+        for (var i = 1; i < table.rows.length; i++) {
+          var row = table.rows[i];
+          var area = row.cells[2].innerText.toLowerCase();
+          var governorate = row.cells[3].innerText.toLowerCase();
+          var type = row.cells[7].innerText.toLowerCase();
+  
+          // Check if the row matches the filter criteria
+          var matchesArea = filterArea === "" || area.includes(filterArea);
+          var matchesGovernorate = filterGovernorate === "" || governorate.includes(filterGovernorate);
+          var matchesType = filterType === "" || type.includes(filterType);
+  
+          // Show or hide the row based on filter criteria
+          if (matchesArea && matchesGovernorate && matchesType) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        }
+      });
+    });
+  </script>
+  
   
  </body>
 </html>
