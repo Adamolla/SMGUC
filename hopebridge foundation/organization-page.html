@@ -77,7 +77,7 @@
       </div>
     </div>
   </nav>
-  <!-- END nav -->
+ 
   
   <div class="block-31" style="position: relative;">
     <div class="owl-carousel loop-block-31 ">
@@ -88,7 +88,7 @@
   </div>
 
   <div class "wrapper">
-    <form action "">
+    <form action="organizationPost.html" method="GET">
         <div>
         <h1> Regestration Form: </h1>
         <p></p>
@@ -145,7 +145,7 @@
             <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
         </div>
         <p></p>
-        <button type="submit" class= "btn">Register</button>
+        <button type="submit" class="btn">Register</button>
     </form>
 </div>
 <p></p>
@@ -223,9 +223,9 @@
         <div class="col-md-12 text-center">
           
             <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            
             Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            
             </p>
           
         </div>
@@ -233,7 +233,7 @@
     </div>
   </footer>
 
-  <!-- loader -->
+ 
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
@@ -258,28 +258,28 @@
     
 
   <script>
-    // Function to initialize the map
+    
     function initMap() {
-        // Define the coordinates for your organization's location
+        
         var organizationLocation = { lat: 30.033333, lng: 31.233334 };
 
-        // Create a new map centered at the organization's location
+       
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15, // Adjust zoom level as needed
+            zoom: 15, 
             center: organizationLocation
         });
 
-        // Add a marker at the organization's location
+        
         var marker = new google.maps.Marker({
             position: organizationLocation,
             map: map,
-            title: 'HopeBridge Foundation' // Title for the marker
+            title: 'HopeBridge Foundation' 
         });
     }
 </script>
 
 
-<!-- Call the initMap function after the API is loaded -->
+
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
   <script>
 
@@ -298,27 +298,27 @@
 </script>
 
 
-    <!-- Add a container for the map -->
+    
     <div id="map"></div>
 
-    <!-- Include the Google Maps JavaScript API with async attribute -->
+    
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
     </script>
      <script>
-      // Initialize the map
+      
       function initMap() {
-          // Create a map object and specify the DOM element for display
+          
           const map = new google.maps.Map(document.getElementById('map'), {
-              center: { lat: 40.7128, lng: -74.0060 }, // New York City coordinates
-              zoom: 10 // Set initial zoom level
+              center: { lat: 40.7128, lng: -74.0060 }, 
+              zoom: 10 
           });
 
-          // Create a marker and place it on the map
+          
           const marker = new google.maps.Marker({
-              position: { lat: 40.7128, lng: -74.0060 }, // Marker position for New York City
+              position: { lat: 40.7128, lng: -74.0060 }, 
               map: map,
-              title: 'Lala land ' // Marker title
+              title: 'Lala land ' 
           });
       }
   </script>
