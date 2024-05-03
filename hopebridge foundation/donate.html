@@ -90,7 +90,6 @@
           <option value="school_supplies">School Supplies</option>
           <option value="blood_donations">Blood Donations</option>
       </select><br><br>
-
       <div id="clothesFields" class="hidden">
         <label for="clothesSize">Size:</label>
         <select id="clothesSize" name="clothesSize">
@@ -104,6 +103,7 @@
             <option value="One_Size">One Size</option>
             <option value="Custom_Size">Custom Size</option>
         </select><br><br>
+
         <div>
         <label for="customzise">Custom Size:</label>
         <input type="text" id="customzise" name="customzise"><br><br>
@@ -114,6 +114,9 @@
             <option value="female">Female</option>
             <option value="unisex">Unisex</option>
         </select><br><br>
+        <label for="clothQuantity">Quantity:</label>
+        <input type="text" id="clothQuantity" name="clothQuantity"><br><br>
+    </div>
        
     </div>
 
@@ -346,58 +349,65 @@
       }
   }
 
-  document.getElementById("donationForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent the form from submitting normally
+ document.getElementById("donationForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
 
-      // Get form values
-      var category = document.getElementById("category").value;
-      var description = document.getElementById("description").value;
-      var formData = {};
+    // Get form values
+    var category = document.getElementById("category").value;
+    var description = document.getElementById("description").value;
+    var formData = {};
 
-      // Get additional fields based on category
-      switch (category) {
-          case "clothes":
-              formData.clothesSize = document.getElementById("clothesSize").value;
-              formData.clothesGender = document.getElementById("clothesGender").value;
-              break;
-          case "toys":
-              formData.toyType = document.getElementById("toyType").value;
-              formData.toyAge = document.getElementById("toyAge").value;
-              break;
-          case "food":
-              formData.foodType = document.getElementById("foodType").value;
-              formData.foodQuantity = document.getElementById("foodQuantity").value;
-              break;
-          case "medical_supplies":
-              formData.medicalSupplyType = document.getElementById("medicalSupplyType").value;
-              formData.medicalSupplyCondition = document.getElementById("medicalSupplyCondition").value;
-              break;
-          case "school_supplies":
-              formData.schoolSupplyType = document.getElementById("schoolSupplyType").value;
-              formData.schoolSupplyQuantity = document.getElementById("schoolSupplyQuantity").value;
-              break;
-          case "blood_donations":
-              formData.bloodType = document.getElementById("bloodType").value;
-              formData.bloodQuantity = document.getElementById("bloodQuantity").value;
-              break;
-          default:
-              break;
-      }
+    // Get additional fields based on category
+    switch (category) {
+        case "clothes":
+            formData.clothesSize = document.getElementById("clothesSize").value;
+            formData.clothesGender = document.getElementById("clothesGender").value;
+            break;
+        case "toys":
+            formData.toyType = document.getElementById("toyType").value;
+            formData.toyAge = document.getElementById("toyAge").value;
+            break;
+        case "food":
+            formData.foodType = document.getElementById("foodType").value;
+            formData.foodQuantity = document.getElementById("foodQuantity").value;
+            break;
+        case "medical_supplies":
+            formData.medicalSupplyType = document.getElementById("medicalSupplyType").value;
+            formData.medicalSupplyCondition = document.getElementById("medicalSupplyCondition").value;
+            break;
+        case "school_supplies":
+            formData.schoolSupplyType = document.getElementById("schoolSupplyType").value;
+            formData.schoolSupplyQuantity = document.getElementById("schoolSupplyQuantity").value;
+            break;
+        case "blood_donations":
+            formData.bloodType = document.getElementById("bloodType").value;
+            formData.bloodQuantity = document.getElementById("bloodQuantity").value;
+            break;
+        default:
+            break;
+    }
 
-      // Create the donation post object
-      var donationPost = {
-          category: category,
-          description: description,
-          ...formData
-      };
+    // Create the donation post object
+    var donationPost = {
+        category: category,
+        description: description,
+        ...formData
+    };
 
-      // Simulate sending the donation post data to the server
-      console.log("Donation post created:", donationPost);
+    // Redirect to orgmainpage.html with form data as URL parameters
+    var queryString = Object.keys(donationPost).map(key => key + '=' + donationPost[key]).join('&');
+    setTimeout(function() {
+      window.location.href = 'orgmainpage.html?' + queryString;
+    }, 5000);
+
+    console.log("Donation post created:", donationPost);
       alert("Donation post created successfully!");
 
       // Optionally, you can reset the form after submission
       document.getElementById("donationForm").reset();
   });
+
 </script>
+
   </body>
 </html>

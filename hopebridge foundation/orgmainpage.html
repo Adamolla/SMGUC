@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HopeBridge Foundation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .btn {
+            background-color: #4297A0;
+            color: white;
+        }
+
+        .btn:active {
+            color: white;
+        }
+
+        .navbar-brand {
+            font-size: 22.5px;
+            margin-left: -10px;
+        }
+
+        .logo {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-left: -500px;
+            width: 140px;
+            vertical-align: bottom;
+            margin-right: 21px;
+            height: 140px;
+            border-radius: 900%;
+            display: none;
+
+        }
+
+        .show-logo .logo {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        /* Common table header style */
+        thead th {
+            background-color: #f2f2f2;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Common table row style */
+        tbody td {
+            border-bottom: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        /* Common table row hover effect */
+        tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+            <img class="logo" src="fond_logo.png">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="block-31" style="position: relative;">
+        <div class="owl-carousel loop-block-31 ">
+            <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+                data-stellar-background-ratio="0.5">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <h2>Newly fulfilled Donation Posts</h2>
+    <section id="newlyFulfilledPosts" class="mt-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table id="donationTable" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <h2>Delete Fulfilled Donation Posts</h2>
+    <section id="clothesDonationRequests" class="mt-5">
+        <div class="container">
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>Size</th>
+                            <th>Type of Clothes</th>
+                            <th>Season</th>
+                            <th>Quantity Needed</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-request-id="1">
+                            <td>Female</td>
+                            <td>20</td>
+                            <td>Small and Medium</td>
+                            <td>Dresses</td>
+                            <td>Spring</td>
+                            <td>50</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('clothes', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>Female</td>
+                            <td>25</td>
+                            <td>Small and Medium</td>
+                            <td>Blouses</td>
+                            <td>Spring</td>
+                            <td>Fulfilled</td>
+                            <td>40</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('clothes', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>Male</td>
+                            <td>25</td>
+                            <td>Medium and Large</td>
+                            <td>Shirts</td>
+                            <td>Summer</td>
+                            <td>40</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('clothes', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>Male</td>
+                            <td>20</td>
+                            <td>Medium and Large</td>
+                            <td>Pants</td>
+                            <td>Summer</td>
+                            <td>25</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('clothes', 4)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="foodDonationRequests" class="mt-5">
+        <div class="container">
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Food Item</th>
+                            <th>Quantity Needed</th>
+                            <th>Type of Food</th>
+                            <th>Dietary Restrictions</th>
+                            <th>Expiration Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Food donation request rows (dummy data) -->
+                        <tr data-request-id="1">
+                            <td>Apples</td>
+                            <td>50</td>
+                            <td>Fruits and Vegetables</td>
+                            <td>None</td>
+                            <td>2024-05-01</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('food', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>Canned Beans</td>
+                            <td>30 cans</td>
+                            <td>Canned Foods</td>
+                            <td>None</td>
+                            <td>2024-06-10</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('food', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>Gluten-Free Bread</td>
+                            <td>10 loaves</td>
+                            <td>Baked Goods</td>
+                            <td>Gluten-Free</td>
+                            <td>2024-05-06</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('food', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>Cupcakes</td>
+                            <td>30 pieces</td>
+                            <td>Baked Goods</td>
+                            <td>None</td>
+                            <td>2024-05-07</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('food', 4)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="medicationDonationRequests" class="mt-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Quantity Needed</th>
+                            <th>category</th>
+                            <th>Medical Use</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Food donation request rows (dummy data) -->
+                        <tr data-request-id="1">
+                            <td>Blood pressure Monitor</td>
+                            <td>50</td>
+                            <td>devices</td>
+                            <td>non</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('medication', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>Asprin</td>
+                            <td>30</td>
+                            <td>medication</td>
+                            <td>pain</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('medication', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>Hospital Beds</td>
+                            <td>10</td>
+                            <td>equipment</td>
+                            <td>non</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('medication', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>Insulin</td>
+                            <td>10</td>
+                            <td>medication</td>
+                            <td>chronic</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('medication', 4)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="5">
+                            <td>Wheel Chair</td>
+                            <td>25</td>
+                            <td>equipment</td>
+                            <td>None</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('medication', 5)">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="BloodDonationRequests" class="mt-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Blood Type</th>
+                            <th>Hospital Name</th>
+                            <th>Hospital Address</th>
+                            <th>Government</th>
+                            <th>Area</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-request-id="1">
+                            <td>John Doe</td>
+                            <td>A+</td>
+                            <td>HopeBridge Hospital</td>
+                            <td>123 Main St</td>
+                            <td>Cairo</td>
+                            <td>Maadi</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('Blood', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>Jane Smith</td>
+                            <td>B-</td>
+                            <td>El Salam Hopital</td>
+                            <td>456 Elm St </td>
+                            <td>Cairo</td>
+                            <td>Nasr City</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('Blood', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>Michael Johnson</td>
+                            <td>O+</td>
+                            <td>Dar el Fouad</td>
+                            <td>789 Oak St</td>
+                            <td>Giza</td>
+                            <td>6 of October</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('Blood', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>Sarah Williams</td>
+                            <td>AB+</td>
+                            <td>57357</td>
+                            <td>321 Pine St</td>
+                            <td>Giza</td>
+                            <td>Dokki</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('Blood', 4)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="schoolSuppliesDonationRequests" class="mt-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Item Type</th>
+                            <th>Quantity Needed</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-request-id="1">
+                            <td>Books</td>
+                            <td>30</td>
+                            <td>Books</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>computers</td>
+                            <td>20</td>
+                            <td>Stationary</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>Math textbooks</td>
+                            <td>10</td>
+                            <td>Books</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>unifroms</td>
+                            <td>50</td>
+                            <td>Stationary</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 4)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="toyDonationRequests" class="mt-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Recipient Age</th>
+                            <th>Gender</th>
+                            <th>Toy Name</th>
+                            <th>Type of Toy</th>
+                            <th>Quantity Needed</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Toy donation request rows -->
+                        <tr data-request-id="1">
+                            <td>5 years</td>
+                            <td>Male</td>
+                            <td>Action Figures</td>
+                            <td>Board Games</td>
+                            <td>5</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('toy', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>8 years</td>
+                            <td>Female</td>
+                            <td>Teddy Bear</td>
+                            <td>Stuffed Toys</td>
+                            <td>10</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('toy', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>3 years</td>
+                            <td>Male</td>
+                            <td>Barbie Doll</td>
+                            <td>Dolls</td>
+                            <td>15</td>
+                            <td>Fulfilled</td>
+                            <td>
+                                <button onclick="deleteDonationRequest('toy', 3)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="heading-section">About Us</h3>
+                    <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and
+                        Consonantia, there live the blind texts. </p>
+                    <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+                        language ocean.</p>
+                    <p><a href="#" class="link-underline">Read More</a></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="heading-section">Recent Blog</h3>
+                    <div class="block-21 d-flex mb-4">
+                        <figure class="mr-3">
+                            <img src="images/img_1.jpg" alt="" class="img-fluid">
+                        </figure>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Water Is Life. Clean Water In Urban Area</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-21 d-flex mb-4">
+                        <figure class="mr-3">
+                            <img src="images/img_2.jpg" alt="" class="img-fluid">
+                        </figure>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Life Is Short So Be Kind</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-21 d-flex mb-4">
+                        <figure class="mr-3">
+                            <img src="images/img_4.jpg" alt="" class="img-fluid">
+                        </figure>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Unfortunate Children Need Your Love</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="block-23">
+                        <h3 class="heading-section">Get Connected</h3>
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View,
+                                    San Francisco, California, USA</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
+                                        210</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span
+                                        class="text">info@yourdomain.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row pt-5">
+                <div class="col-md-12 text-center">
+
+                    <p>
+
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                        is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a
+                            href="https://colorlib.com" target="_blank">Colorlib</a>
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    document.getElementById("ftco-navbar").classList.add("show-logo");
+                    const logoWidth = document.querySelector(".logo").offsetWidth;
+                    document.querySelector(".navbar-brand").style.marginLeft = (100 + logoWidth) + "px";
+                } else {
+                    document.getElementById("ftco-navbar").classList.remove("show-logo");
+                    document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+                }
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Function to delete a donation request
+        function deleteDonation(category, button) {
+            // Find the parent row element
+            var parentRow = button.closest("tr");
+            
+            // Remove the parent row from the table
+            parentRow.remove();
+            console.log("Deleted donation request in category:", category);
+        }
+
+        // Retrieve data from URL parameters
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const category = urlParams.get('category');
+        const description = urlParams.get('description');
+
+        let additionalFields = '';
+
+        // Retrieve additional fields based on category
+        switch (category) {
+            case "clothes":
+                additionalFields = `Size: ${urlParams.get('clothesSize')}, Gender: ${urlParams.get('clothesGender')}`;
+                break;
+            case "toys":
+                additionalFields = `Type: ${urlParams.get('toyType')}, Age Range: ${urlParams.get('toyAge')}`;
+                break;
+            case "food":
+                additionalFields = `Type: ${urlParams.get('foodType')}, Quantity: ${urlParams.get('foodQuantity')}`;
+                break;
+            case "medical_supplies":
+                additionalFields = `Type: ${urlParams.get('medicalSupplyType')}, Condition: ${urlParams.get('medicalSupplyCondition')}`;
+                break;
+            case "school_supplies":
+                additionalFields = `Type: ${urlParams.get('schoolSupplyType')}, Quantity: ${urlParams.get('schoolSupplyQuantity')}`;
+                break;
+            case "blood_donations":
+                additionalFields = `Blood Type: ${urlParams.get('bloodType')}, Quantity: ${urlParams.get('bloodQuantity')} pints`;
+                break;
+            default:
+                break;
+        }
+
+        // Insert new row into donation table
+        const table = document.getElementById('donationTable');
+        const newRow = table.insertRow(-1);
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2); // Add this line to create the third cell
+        cell1.textContent = category;
+        cell2.textContent = description + ' ' + additionalFields;
+        cell3.innerHTML = `<button onclick="deleteDonation('${category}', this)">Delete</button>`; // Pass 'this' to refer to the button element
+    });
+</script>
+
+<script>
+    function deleteDonationRequest(category, requestId) {
+        // Find the row corresponding to the requestId
+        var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
+        if (row) {
+            // Remove the row from the table
+            row.remove();
+            console.log("Deleted donation request:", category, requestId);
+        }
+    }
+</script>
+    <script>
+            // Function to display the message
+            function displayMessage() {
+                // Create a new div element for the message
+                var messageDiv = document.createElement("div");
+                messageDiv.innerHTML = "A new post has been fulfilled!";
+                messageDiv.style.backgroundColor = "green";
+                messageDiv.style.color = "white";
+                messageDiv.style.padding = "10px";
+                messageDiv.style.textAlign = "center";
+                messageDiv.style.position = "fixed";
+                messageDiv.style.top = "0";
+                messageDiv.style.left = "0";
+                messageDiv.style.width = "100%";
+                messageDiv.style.zIndex = "9999";
+
+                // Append the message div to the body
+                document.body.appendChild(messageDiv);
+
+                // Automatically remove the message after 5 seconds
+                setTimeout(function () {
+                    messageDiv.remove();
+                }, 1000);
+            }
+
+            // Call the displayMessage function when the page loads
+            window.onload = function () {
+                displayMessage();
+            };
+    </script>
+
+
+</body>
+</html>
