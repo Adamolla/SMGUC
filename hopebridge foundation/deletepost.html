@@ -631,65 +631,69 @@
         </div>
     </section>
 
-   <script> 
-   function editDonationRequest(category, requestId) {
-    // Find the row corresponding to the requestId
-    var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
-    if (row) {
-        // Get the cells of the row
-        var cells = row.getElementsByTagName("td");
-        
-        // Iterate over the cells and replace the text content with input fields
-        for (var i = 0; i < cells.length - 1; i++) { // Exclude the last cell containing action buttons
-            var currentValue = cells[i].innerText;
-            var input = document.createElement("input");
-            input.type = "text";
-            input.value = currentValue;
-            cells[i].innerText = ''; // Clear existing text
-            cells[i].appendChild(input);
-        }
+   <script>
+    function editDonationRequest(category, requestId) {
+        // Find the row corresponding to the requestId
+        var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
+        if (row) {
+            // Get the cells of the row
+            var cells = row.getElementsByTagName("td");
 
-        // Change the "Edit" button to "Save"
-        var editButton = cells[cells.length - 1].querySelector("button:first-child");
-        editButton.innerText = "Save";
-        editButton.onclick = function() { // Change the function of the button to saveChanges
-            saveChanges(category, requestId);
-        };
-    }
-}
-
-function saveChanges(category, requestId) {
-    // Find the row corresponding to the requestId
-    var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
-    if (row) {
-        // Get the input fields from the row
-        var inputs = row.getElementsByTagName("input");
-        
-        // Iterate over the input fields and replace the text content of the cells with their new values
-        for (var i = 0; i < inputs.length; i++) {
-            var newValue = inputs[i].value;
-            row.cells[i].innerText = newValue;
-        }
-
-        // Change the "Save" button back to "Edit"
-        var editButton = row.cells[row.cells.length - 1].querySelector("button:first-child");
-        editButton.innerText = "Edit";
-        editButton.onclick = function() { // Change the function of the button back to editDonationRequest
-            editDonationRequest(category, requestId);
-        };
-    }
-}
-    
-
-        function deleteDonationRequest(category, requestId) {
-            // Find the row corresponding to the requestId
-            var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
-            if (row) {
-                // Remove the row from the table
-                row.remove();
-                console.log("Deleted donation request:", category, requestId);
+            // Iterate over the cells and replace the text content with input fields
+            for (var i = 0; i < cells.length - 1; i++) { // Exclude the last cell containing action buttons
+                var currentValue = cells[i].innerText;
+                var input = document.createElement("input");
+                input.type = "text";
+                input.value = currentValue;
+                // Create a wrapper div to contain the input
+                var inputWrapper = document.createElement("div");
+                inputWrapper.classList.add("input-wrapper");
+                inputWrapper.appendChild(input);
+                cells[i].innerText = ''; // Clear existing text
+                cells[i].appendChild(inputWrapper);
             }
+
+            // Change the "Edit" button to "Save"
+            var editButton = cells[cells.length - 1].querySelector("button:first-child");
+            editButton.innerText = "Save";
+            editButton.onclick = function () { // Change the function of the button to saveChanges
+                saveChanges(category, requestId);
+            };
         }
-    </script>   
+    }
+
+    function saveChanges(category, requestId) {
+        // Find the row corresponding to the requestId
+        var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
+        if (row) {
+            // Get the input fields from the row
+            var inputs = row.getElementsByTagName("input");
+
+            // Iterate over the input fields and replace the text content of the cells with their new values
+            for (var i = 0; i < inputs.length; i++) {
+                var newValue = inputs[i].value;
+                row.cells[i].innerText = newValue;
+            }
+
+            // Change the "Save" button back to "Edit"
+            var editButton = row.cells[row.cells.length - 1].querySelector("button:first-child");
+            editButton.innerText = "Edit";
+            editButton.onclick = function () { // Change the function of the button back to editDonationRequest
+                editDonationRequest(category, requestId);
+            };
+        }
+    }
+
+    function deleteDonationRequest(category, requestId) {
+        // Find the row corresponding to the requestId
+        var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
+        if (row) {
+            // Remove the row from the table
+            row.remove();
+            console.log("Deleted donation request:", category, requestId);
+        }
+    }
+</script>
+
 </body>
 </html>
