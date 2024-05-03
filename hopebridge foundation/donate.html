@@ -42,6 +42,9 @@
       .show-logo .logo {
           display: block; 
     } 
+    .hidden {
+            display: none;
+        }
   </style>
   </head>
   <body>
@@ -75,149 +78,123 @@
       </div>
   </div>
 
-  <div class="site-section fund-raisers">
-    <div class="container">
-      <div class="row mb-3 justify-content-center">
-        <div class="col-md-8 text-center">
-          <h2>Latest Donations</h2>
-          <p class="lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <p class="mb-5"><a href="#" class="link-underline">View All Donations</a></p>
+  <h2>Enter Donation Details</h2>
+  <form id="donationForm">
+      <label for="category">Category:</label>
+      <select id="category" name="category" onchange="showFields()">
+          <option value="All">All</option>  
+          <option value="clothes">Clothes</option>
+          <option value="toys">Toys</option>
+          <option value="food">Food</option>
+          <option value="medical_supplies">Medical Supplies</option>
+          <option value="school_supplies">School Supplies</option>
+          <option value="blood_donations">Blood Donations</option>
+      </select><br><br>
+
+      <div id="clothesFields" class="hidden">
+        <label for="clothesSize">Size:</label>
+        <select id="clothesSize" name="clothesSize">
+            <option value="XXS">XXS</option>  
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+            <option value="One_Size">One Size</option>
+            <option value="Custom_Size">Custom Size</option>
+        </select><br><br>
+        <div>
+        <label for="customzise">Custom Size:</label>
+        <input type="text" id="customzise" name="customzise"><br><br>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Jorge Smith</h2>
-              <span class="time d-block mb-3">Donated Just now</span>
-              <p>Donated <span class="text-success">$252</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Water Is Life. Clean Water In Urban Area</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="images/person_2.jpg" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Christine Charles</h2>
-              <span class="time d-block mb-3">Donated 1 hour ago</span>
-              <p>Donated <span class="text-success">$400</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Children Needs Education</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="images/person_3.jpg" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Albert Sluyter</h2>
-              <span class="time d-block mb-3">Donated 4 hours ago</span>
-              <p>Donated <span class="text-success">$1,200</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Need Shelter for Children in Africa</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="images/person_4.jpg" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Andrew Holloway</h2>
-              <span class="time d-block mb-3">Donated 9 hours ago</span>
-              <p>Donated <span class="text-success">$100</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Water Is Life. Clean Water In Urban Area</a></p>
-            </div>
-          </div>    
-        </div>
-
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Jorge Smith</h2>
-              <span class="time d-block mb-3">Donated Just now</span>
-              <p>Donated <span class="text-success">$252</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Water Is Life. Clean Water In Urban Area</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="images/person_2.jpg" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Christine Charles</h2>
-              <span class="time d-block mb-3">Donated 1 hour ago</span>
-              <p>Donated <span class="text-success">$400</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Children Needs Education</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="images/person_3.jpg" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Albert Sluyter</h2>
-              <span class="time d-block mb-3">Donated 4 hours ago</span>
-              <p>Donated <span class="text-success">$1,200</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Need Shelter for Children in Africa</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="images/person_4.jpg" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Andrew Holloway</h2>
-              <span class="time d-block mb-3">Donated 9 hours ago</span>
-              <p>Donated <span class="text-success">$100</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Water Is Life. Clean Water In Urban Area</a></p>
-            </div>
-          </div>    
-        </div>
-
-      </div>
-    </div>
-  </div> <!-- .section -->
-
-  <div class="featured-section overlay-color-2" style="background-image: url('images/bg_2.jpg');">
-    
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 mb-5 mb-md-0">
-          <img src="images/bg_2.jpg" alt="Image placeholder" class="img-fluid">
-        </div>
-
-        <div class="col-md-6 pl-md-5">
-
-          <div class="form-volunteer">
-            
-            <h2>Be A Volunteer Today</h2>
-            <form action="#" method="post">
-              <div class="form-group">
-                <!-- <label for="name">Name</label> -->
-                <input type="text" class="form-control py-2" id="name" placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <!-- <label for="email">Email</label> -->
-                <input type="text" class="form-control py-2" id="email" placeholder="Enter your email">
-              </div>
-              <div class="form-group">
-                <!-- <label for="v_message">Email</label> -->
-                <textarea name="v_message" id="" cols="30" rows="3" class="form-control py-2" placeholder="Write your message"></textarea>
-                <!-- <input type="text" class="form-control py-2" id="email"> -->
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-white px-5 py-2" value="Send">
-              </div>
-            </form>
-          </div>
-        </div>
-        
-      </div>
+        <label for="clothesGender">Gender:</label>
+        <select id="clothesGender" name="clothesGender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="unisex">Unisex</option>
+        </select><br><br>
+       
     </div>
 
-  </div> <!-- .featured-donate -->
+      <div id="toysFields" class="hidden">
+          <label for="toyType">Type:</label>
+          <select id="toyType" name="toyType">
+              <option value="All">All</option>
+              <option value="board_games">Board Games</option>
+              <option value="stuffed_toys">Stuffed Toys</option>
+              <option value="dolls">Dolls</option>
+              <option value="sports">Sports</option>
+              <option value="cars">Cars</option>
+              <option value="outdoor">Outdoor</option>
+          </select><br><br>
+
+          <label for="toyAge">Age Range:</label>
+          <input type="text" id="toyAge" name="toyAge"><br><br>
+      </div>
+
+      <div id="foodFields" class="hidden">
+          <label for="foodType">Type:</label>
+          <select id="foodType" name="foodType">
+            <option value="All">All</option>
+              <option value="fruits_and_vegetables">Fruits and Vegetables</option>
+              <option value="canned_foods">Canned Foods</option>
+              <option value="fresh_meals">Fresh Meals</option>
+              <option value="baked_goods">Baked Goods</option>
+          </select><br><br>
+
+          <label for="foodQuantity">Quantity:</label>
+          <input type="text" id="foodQuantity" name="foodQuantity"><br><br>
+      </div>
+
+      <div id="medicalSuppliesFields" class="hidden">
+          <label for="medicalSupplyType">Type:</label>
+          <select id="medicalSupplyType" name="medicalSupplyType">
+              <option value="medical_devices">Medical Devices</option>
+              <option value="medical_equipment_and_medication">Medical Equipment and Medication</option>
+              <option value="pain">Pain</option>
+              <option value="chronic">Chronic</option>
+              <option value="infection">Infection</option>
+          </select><br><br>
+
+          <label for="medicalSupplyCondition">Condition:</label>
+          <input type="text" id="medicalSupplyCondition" name="medicalSupplyCondition"><br><br>
+      </div>
+
+      <div id="schoolSuppliesFields" class="hidden">
+          <label for="schoolSupplyType">Type:</label>
+          <select id="schoolSupplyType" name="schoolSupplyType">
+              <option value="books">Books</option>
+              <option value="stationary">Stationary</option>
+          </select><br><br>
+
+          <label for="schoolSupplyQuantity">Quantity:</label>
+          <input type="text" id="schoolSupplyQuantity" name="schoolSupplyQuantity"><br><br>
+      </div>
+
+      <div id="bloodDonationsFields" class="hidden">
+          <label for="bloodType">Blood Type:</label>
+          <select id="bloodType" name="bloodType">
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+          </select><br><br>
+
+          <label for="bloodQuantity">Quantity (in pints):</label>
+          <input type="text" id="bloodQuantity" name="bloodQuantity"><br><br>
+      </div>
+
+      <label for="description">Description:</label><br>
+      <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+      <input type="submit" value="Submit">
+  </form>
+
 
   <footer class="footer">
     <div class="container">
@@ -334,5 +311,93 @@
       });
     });
   </script>
+  
+<script>
+  function showFields() {
+      var category = document.getElementById("category").value;
+      var clothesFields = document.getElementById("clothesFields");
+      var toysFields = document.getElementById("toysFields");
+      var foodFields = document.getElementById("foodFields");
+      var medicalSuppliesFields = document.getElementById("medicalSuppliesFields");
+      var schoolSuppliesFields = document.getElementById("schoolSuppliesFields");
+      var bloodDonationsFields = document.getElementById("bloodDonationsFields");
+
+      // Hide all fields by default
+      clothesFields.classList.add("hidden");
+      toysFields.classList.add("hidden");
+      foodFields.classList.add("hidden");
+      medicalSuppliesFields.classList.add("hidden");
+      schoolSuppliesFields.classList.add("hidden");
+      bloodDonationsFields.classList.add("hidden");
+
+      // Show fields based on selected category
+      if (category === "clothes") {
+          clothesFields.classList.remove("hidden");
+      } else if (category === "toys") {
+          toysFields.classList.remove("hidden");
+      } else if (category === "food") {
+          foodFields.classList.remove("hidden");
+      } else if (category === "medical_supplies") {
+          medicalSuppliesFields.classList.remove("hidden");
+      } else if (category === "school_supplies") {
+          schoolSuppliesFields.classList.remove("hidden");
+      } else if (category === "blood_donations") {
+          bloodDonationsFields.classList.remove("hidden");
+      }
+  }
+
+  document.getElementById("donationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+
+      // Get form values
+      var category = document.getElementById("category").value;
+      var description = document.getElementById("description").value;
+      var formData = {};
+
+      // Get additional fields based on category
+      switch (category) {
+          case "clothes":
+              formData.clothesSize = document.getElementById("clothesSize").value;
+              formData.clothesGender = document.getElementById("clothesGender").value;
+              break;
+          case "toys":
+              formData.toyType = document.getElementById("toyType").value;
+              formData.toyAge = document.getElementById("toyAge").value;
+              break;
+          case "food":
+              formData.foodType = document.getElementById("foodType").value;
+              formData.foodQuantity = document.getElementById("foodQuantity").value;
+              break;
+          case "medical_supplies":
+              formData.medicalSupplyType = document.getElementById("medicalSupplyType").value;
+              formData.medicalSupplyCondition = document.getElementById("medicalSupplyCondition").value;
+              break;
+          case "school_supplies":
+              formData.schoolSupplyType = document.getElementById("schoolSupplyType").value;
+              formData.schoolSupplyQuantity = document.getElementById("schoolSupplyQuantity").value;
+              break;
+          case "blood_donations":
+              formData.bloodType = document.getElementById("bloodType").value;
+              formData.bloodQuantity = document.getElementById("bloodQuantity").value;
+              break;
+          default:
+              break;
+      }
+
+      // Create the donation post object
+      var donationPost = {
+          category: category,
+          description: description,
+          ...formData
+      };
+
+      // Simulate sending the donation post data to the server
+      console.log("Donation post created:", donationPost);
+      alert("Donation post created successfully!");
+
+      // Optionally, you can reset the form after submission
+      document.getElementById("donationForm").reset();
+  });
+</script>
   </body>
 </html>

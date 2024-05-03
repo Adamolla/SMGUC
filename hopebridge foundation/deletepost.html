@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update/Delete Donation Posts</title>
+    <style>
+          table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    /* Style table header */
+    th {
+      background-color: #f2f2f2;
+      padding: 8px;
+      text-align: left;
+    }
+
+    /* Style table rows */
+    td {
+      border-bottom: 1px solid #ddd;
+      padding: 8px;
+    }
+    </style>
+</head>
+<body>
+    <h2>Update/Delete Donation Posts</h2>
+    <section id="clothesDonationRequests" class="mt-5">
+        <div class="container">
+            <h2>View List of Clothes Donation Requests</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>Size</th>
+                            <th>Type of Clothes</th>
+                            <th>Season</th>
+                            <th>Quantity Needed</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-request-id="1">
+                            <td>Female</td>
+                            <td>20</td>
+                            <td>Small and Medium</td>
+                            <td>Dresses</td>
+                            <td>Spring</td>
+                            <td>50</td>
+                            <td>
+                                <button onclick="editDonationRequest('clothes', 1)">Edit</button>
+                                <button onclick="deleteDonationRequest('clothes', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>Female</td>
+                            <td>25</td>
+                            <td>Small and Medium</td>
+                            <td>Blouses</td>
+                            <td>Spring</td>
+                            <td>40</td>
+                            <td>
+                                <button onclick="editDonationRequest('clothes', 2)">Edit</button>
+                                <button onclick="deleteDonationRequest('clothes', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>Male</td>
+                            <td>25</td>
+                            <td>Medium and Large</td>
+                            <td>Shirts</td>
+                            <td>Summer</td>
+                            <td>40</td>
+                            <td>
+                                <button onclick="editDonationRequest('clothes', 3)">Edit</button>
+                                <button onclick="deleteDonationRequest('clothes', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>Male</td>
+                            <td>20</td>
+                            <td>Medium and Large</td>
+                            <td>Pants</td>
+                            <td>Summer</td>
+                            <td>25</td>
+                            <td>
+                                <button onclick="editDonationRequest('clothes', 4)">Edit</button>
+                                <button onclick="deleteDonationRequest('clothes', 4)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="5">
+                            <td>Children</td>
+                            <td> 6 </td>
+                            <td>Small and Medium</td>
+                            <td>T-shirts</td>
+                            <td>Autumn</td>
+                            <td>30</td>
+                            <td>
+                                <button onclick="editDonationRequest('clothes', 5)">Edit</button>
+                                <button onclick="deleteDonationRequest('clothes', 5)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="6">
+                            <td>Children</td>
+                            <td> 8 </td>
+                            <td>Medium and Large</td>
+                            <td>Shorts</td>
+                            <td>Autumn</td>
+                            <td>20</td>
+                            <td>
+                                <button onclick="editDonationRequest('clothes', 6)">Edit</button>
+                                <button onclick="deleteDonationRequest('clothes', 6)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="7">
+                            <td>Unisex</td>
+                            <td>20</td>
+                            <td>Various Sizes</td>
+                            <td>Hoodies</td>
+                            <td>Winter</td>
+                            <td>35</td>
+                            <td>
+                                <button onclick="editDonationRequest('clothes', 7)">Edit</button>
+                                <button onclick="deleteDonationRequest('clothes', 7)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="8">
+                            <td>Unisex</td>
+                            <td>2</td>
+                            <td>Various Sizes</td>
+                            <td>Jackets</td>
+                            <td>Winter</td>
+                            <td>25</td>
+                            <td>
+                                <button onclick="editDonationRequest('clothes', 8)">Edit</button>
+                                <button onclick="deleteDonationRequest('clothes', 8)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <section id="foodDonationRequests" class="mt-5">
+        <div class="container">
+            <h2>View List of Food Donation Requests</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Food Item</th>
+                            <th>Quantity Needed</th>
+                            <th>Type of Food</th>
+                            <th>Dietary Restrictions</th>
+                            <th>Expiration Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Food donation request rows (dummy data) -->
+                        <tr data-request-id="1">
+                            <td>Apples</td>
+                            <td>50</td>
+                            <td>Fruits and Vegetables</td>
+                            <td>None</td>
+                            <td>2024-05-01</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 1)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>Canned Beans</td>
+                            <td>30 cans</td>
+                            <td>Canned Foods</td>
+                            <td>None</td>
+                            <td>2024-06-10</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 2)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>Gluten-Free Bread</td>
+                            <td>10 loaves</td>
+                            <td>Baked Goods</td>
+                            <td>Gluten-Free</td>
+                            <td>2024-05-06</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 3)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>Chicken Salad</td>
+                            <td>10 servings</td>
+                            <td>Fresh Meals</td>
+                            <td>None</td>
+                            <td>2024-05-10</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 4)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 4)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="5">
+                            <td>Bread</td>
+                            <td>20 loaves</td>
+                            <td>Baked Goods</td>
+                            <td>None</td>
+                            <td>2024-05-05</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 5)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 5)">Delete</button>
+                            </td>
+                        </tr>     
+                        <tr data-request-id="6">
+                            <td>Oranges</td>
+                            <td>40</td>
+                            <td>Fruits and Vegetables</td>
+                            <td>None</td>
+                            <td>2024-04-30</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 6)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 6)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="7">
+                            <td>Canned Soup</td>
+                            <td>25 cans</td>
+                            <td>Canned Foods</td>
+                            <td>None</td>
+                            <td>2024-06-15</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 7)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 7)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="8">
+                            <td>Pasta Salad</td>
+                            <td>15 servings</td>
+                            <td>Fresh Meals</td>
+                            <td>Vegetarian</td>
+                            <td>2024-05-08</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 8)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 8)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="9">
+                            <td>Cupcakes</td>
+                            <td>30 pieces</td>
+                            <td>Baked Goods</td>
+                            <td>None</td>
+                            <td>2024-05-07</td>
+                            <td>
+                                <button onclick="editDonationRequest('food', 9)">Edit</button>
+                                <button onclick="deleteDonationRequest('food', 9)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+        </div>
+    </section>
+
+    <section id="medicationDonationRequests" class="mt-5">
+    <div class="container">
+    <h2>View List of Medication Donation Requests</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity Needed</th>
+                    <th>category</th>
+                    <th>Medical Use</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Food donation request rows (dummy data) -->
+                <tr data-request-id="1">
+                    <td>Blood pressure Monitor</td>
+                    <td>50</td>
+                    <td>devices</td>
+                    <td>non</td>
+                    <td>
+                        <button onclick="editDonationRequest('medication', 1)">Edit</button>
+                        <button onclick="deleteDonationRequest('medication', 1)">Delete</button>
+                    </td>
+                </tr>
+                <tr data-request-id="2">
+                    <td>Asprin</td>
+                    <td>30</td>
+                    <td>medication</td>
+                    <td>pain</td>
+                    <td>
+                        <button onclick="editDonationRequest('medication', 2)">Edit</button>
+                        <button onclick="deleteDonationRequest('medication', 2)">Delete</button>
+                    </td>
+                </tr>
+                <tr data-request-id="3">
+                    <td>Hospital Beds</td>
+                    <td>10</td>
+                    <td>equipment</td>
+                    <td>non</td>
+                    <td>
+                        <button onclick="editDonationRequest('medication', 3)">Edit</button>
+                        <button onclick="deleteDonationRequest('medication', 3)">Delete</button>
+                    </td>
+                </tr>
+                <tr data-request-id="4">
+                    <td>Insulin</td>
+                    <td>10</td>
+                    <td>medication</td>
+                    <td>chronic</td>
+                    <td>
+                        <button onclick="editDonationRequest('medication', 4)">Edit</button>
+                        <button onclick="deleteDonationRequest('medication', 4)">Delete</button>
+                    </td>
+                </tr>
+                <tr data-request-id="5">
+                    <td>Penicillin</td>
+                    <td>20</td>
+                    <td>medication</td>
+                    <td>infection</td>
+                    <td>
+                        <button onclick="editDonationRequest('medication', 5)">Edit</button>
+                        <button onclick="deleteDonationRequest('medication', 5)">Delete</button>
+                    </td>
+                </tr>  
+                <tr data-request-id="6">
+                    <td>Electrocardiogram</td>
+                    <td>40</td>
+                    <td>devices</td>
+                    <td>None</td>
+                    <td>
+                        <button onclick="editDonationRequest('medication', 6)">Edit</button>
+                        <button onclick="deleteDonationRequest('medication', 6)">Delete</button>
+                    </td>
+                </tr>
+                <tr data-request-id="7">
+                    <td>Wheel Chair</td>
+                    <td>25</td>
+                    <td>equipment</td>
+                    <td>None</td>
+                    <td>
+                        <button onclick="editDonationRequest('medication', 7)">Edit</button>
+                        <button onclick="deleteDonationRequest('medication', 7)">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </section>
+    <section id="BloodDonationRequests" class="mt-5">
+        <div class="container">
+          <h2>View List of Blood Donation Requests</h2>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Blood Type</th>
+                  <th>Hospital Name</th>
+                  <th>Hospital Address</th>
+                  <th>Government</th>
+                  <th>Area</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-request-id="1">
+                  <td>John Doe</td>
+                  <td>A+</td>
+                  <td>HopeBridge Hospital</td>
+                  <td>123 Main St</td>
+                  <td>Cairo</td>
+                  <td>Maadi</td>
+                  <td> 
+                  <button onclick="editDonationRequest('Blood', 1)">Edit</button>
+                  <button onclick="deleteDonationRequest('Blood', 1)">Delete</button>
+                </td>
+                </tr>
+                <tr data-request-id="2">
+                  <td>Jane Smith</td>
+                  <td>B-</td>
+                  <td>El Salam Hopital</td>
+                  <td>456 Elm St </td>
+                  <td>Cairo</td>
+                  <td>Nasr City</td>
+                  <td>
+                    <button onclick="editDonationRequest('Blood', 2)">Edit</button>
+                    <button onclick="deleteDonationRequest('Blood', 2)">Delete</button>
+                </td>
+                </tr>
+                <tr data-request-id="3">
+                  <td>Michael Johnson</td>
+                  <td>O+</td>
+                  <td>Dar el Fouad</td>
+                  <td>789 Oak St</td>
+                  <td>Giza</td>
+                  <td>6 of October</td>
+                  <td>
+                    <button onclick="editDonationRequest('Blood', 3)">Edit</button>
+                    <button onclick="deleteDonationRequest('Blood', 3)">Delete</button>
+                </td>
+                </tr>
+                <tr data-request-id="4">
+                  <td>Sarah Williams</td>
+                  <td>AB+</td>
+                  <td>57357</td>
+                  <td>321 Pine St</td>
+                  <td>Giza</td>
+                  <td>Dokki</td>
+                  <td>
+                    <button onclick="editDonationRequest('Blood', 4)">Edit</button>
+                    <button onclick="deleteDonationRequest('Blood', 4)">Delete</button>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    <section id="schoolSuppliesDonationRequests" class="mt-5">
+        <div class="container">
+            <h2>View List of School Supplies Donation Requests</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Item Type</th>
+                            <th>Quantity Needed</th>
+                            <th>Category</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-request-id="1">
+                            <td>Books</td>
+                            <td>30</td>
+                            <td>Books</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 1)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>computers</td>
+                            <td>20</td>
+                            <td>Stationary</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 2)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>Math textbooks</td>
+                            <td>10</td>
+                            <td>Books</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 3)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>English literature novels</td>
+                            <td>20</td>
+                            <td>Books</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 4)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 4)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="5">
+                            <td>unifroms</td>
+                            <td>50</td>
+                            <td>Stationary</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 5)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 5)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="6">
+                            <td>notebooks</td>
+                            <td>40</td>
+                            <td>Books</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 6)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 6)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="7">
+                            <td>Pens</td>
+                            <td>60</td>
+                            <td>Stationary</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 7)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 7)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="8">
+                            <td>Pencils</td>
+                            <td>70</td>
+                            <td>Stationary</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 8)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 8)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="9">
+                            <td>backpack</td>
+                            <td>25</td>
+                            <td>Stationary</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 9)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 9)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="10">
+                            <td>Calculators</td>
+                            <td>15</td>
+                            <td>Stationary</td>
+                            <td>
+                                <button onclick="editDonationRequest('schoolSupplies', 10)">Edit</button>
+                                <button onclick="deleteDonationRequest('schoolSupplies', 10)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <section id="toyDonationRequests" class="mt-5">
+        <div class="container">
+            <h2>View List of Toy Donation Requests</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Recipient Age</th>
+                            <th>Gender</th>
+                            <th>Toy Name</th>
+                            <th>Type of Toy</th>
+                            <th>Quantity Needed</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Toy donation request rows -->
+                        <tr data-request-id="1">
+                            <td>5 years</td>
+                            <td>Male</td>
+                            <td>Action Figures</td>
+                            <td>Board Games</td>
+                            <td>5</td>
+                            <td>
+                                <button onclick="editDonationRequest('toy', 1)">Edit</button>
+                                <button onclick="deleteDonationRequest('toy', 1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="2">
+                            <td>8 years</td>
+                            <td>Female</td>
+                            <td>Teddy Bear</td>
+                            <td>Stuffed Toys</td>
+                            <td>10</td>
+                            <td>
+                                <button onclick="editDonationRequest('toy', 2)">Edit</button>
+                                <button onclick="deleteDonationRequest('toy', 2)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="3">
+                            <td>3 years</td>
+                            <td>Male</td>
+                            <td>Barbie Doll</td>
+                            <td>Dolls</td>
+                            <td>15</td>
+                            <td>
+                                <button onclick="editDonationRequest('toy', 3)">Edit</button>
+                                <button onclick="deleteDonationRequest('toy', 3)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="4">
+                            <td>6 years</td>
+                            <td>Female</td>
+                            <td>Basketball</td>
+                            <td>Sports</td>
+                            <td>12</td>
+                            <td>
+                                <button onclick="editDonationRequest('toy', 4)">Edit</button>
+                                <button onclick="deleteDonationRequest('toy', 4)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="5">
+                            <td>4 years</td>
+                            <td>Male</td>
+                            <td>Toy Car Model</td>
+                            <td>Cars</td>
+                            <td>18</td>
+                            <td>
+                                <button onclick="editDonationRequest('toy', 5)">Edit</button>
+                                <button onclick="deleteDonationRequest('toy', 5)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-request-id="6">
+                            <td>7 years</td>
+                            <td>Female</td>
+                            <td>Bicycle</td>
+                            <td>Outdoor</td>
+                            <td>8</td>
+                            <td>
+                                <button onclick="editDonationRequest('toy', 6)">Edit</button>
+                                <button onclick="deleteDonationRequest('toy', 6)">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+   <script> 
+   function editDonationRequest(category, requestId) {
+    // Find the row corresponding to the requestId
+    var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
+    if (row) {
+        // Get the cells of the row
+        var cells = row.getElementsByTagName("td");
+        
+        // Iterate over the cells and replace the text content with input fields
+        for (var i = 0; i < cells.length - 1; i++) { // Exclude the last cell containing action buttons
+            var currentValue = cells[i].innerText;
+            var input = document.createElement("input");
+            input.type = "text";
+            input.value = currentValue;
+            cells[i].innerText = ''; // Clear existing text
+            cells[i].appendChild(input);
+        }
+
+        // Change the "Edit" button to "Save"
+        var editButton = cells[cells.length - 1].querySelector("button:first-child");
+        editButton.innerText = "Save";
+        editButton.onclick = function() { // Change the function of the button to saveChanges
+            saveChanges(category, requestId);
+        };
+    }
+}
+
+function saveChanges(category, requestId) {
+    // Find the row corresponding to the requestId
+    var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
+    if (row) {
+        // Get the input fields from the row
+        var inputs = row.getElementsByTagName("input");
+        
+        // Iterate over the input fields and replace the text content of the cells with their new values
+        for (var i = 0; i < inputs.length; i++) {
+            var newValue = inputs[i].value;
+            row.cells[i].innerText = newValue;
+        }
+
+        // Change the "Save" button back to "Edit"
+        var editButton = row.cells[row.cells.length - 1].querySelector("button:first-child");
+        editButton.innerText = "Edit";
+        editButton.onclick = function() { // Change the function of the button back to editDonationRequest
+            editDonationRequest(category, requestId);
+        };
+    }
+}
+    
+
+        function deleteDonationRequest(category, requestId) {
+            // Find the row corresponding to the requestId
+            var row = document.querySelector(`#${category}DonationRequests tr[data-request-id="${requestId}"]`);
+            if (row) {
+                // Remove the row from the table
+                row.remove();
+                console.log("Deleted donation request:", category, requestId);
+            }
+        }
+    </script>   
+</body>
+</html>
