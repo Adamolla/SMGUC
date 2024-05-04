@@ -114,7 +114,7 @@
     </div>
     </div>
 
-    <h2>Newly fulfilled Donation Posts</h2>
+    <h2>Newly Fulfilled Donation Posts</h2>
     <section id="newlyFulfilledPosts" class="mt-5">
         <div class="container">
             <div class="table-responsive">
@@ -123,11 +123,12 @@
                         <tr>
                             <th>Category</th>
                             <th>Description</th>
-                            <th>Actions</th>
+                            <th>Actions</th> 
+                            
                         </tr>
                     </thead>
-                    <tbody>
-                    </tbody>
+                    
+                    
                 </table>
             </div>
         </div>
@@ -719,6 +720,7 @@
     });
 </script>
 
+
 <script>
     function deleteDonationRequest(category, requestId) {
         // Find the row corresponding to the requestId
@@ -760,7 +762,59 @@
                 displayMessage();
             };
     </script>
+<script>
+    document.getElementById("donationForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+  
+        // Get form values and create the donation post object
+        // (This part of the code remains the same as in your original HTML)
+        var category = document.getElementById("category").value;
+        var description = document.getElementById("description").value;
+        var formData = { /* ... */ };
+  
+        var donationPost = {
+            category: category,
+            description: description,
+            ...formData
+        };
+  
+        // Simulate sending the donation post data to the server
+        console.log("Donation post created:", donationPost);
+        alert("Donation post created successfully!");
+  
+        // Store the category in session storage
+        sessionStorage.setItem("donationCategory", category);
+  
+        
+        setTimeout(function() {
+            window.location.href = "orgmainpage.html";
+        }, 1000); 
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Retrieve description parameter from URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const description = urlParams.get('description');
 
+        // Check if description is null
+        if (description !== null) {
+            // Update the description section with the retrieved description
+            document.getElementById("description").textContent = description;
+        } else {
+            // Display a default message or handle the null description case as needed
+            document.getElementById("description").textContent = "No description available";
+        }
+    });
+
+    function deleteDonation(category) {
+        // Placeholder function for deleting a donation
+        console.log("Deleted donation in category:", category);
+    }
+    
+</script>
+  
 
 </body>
 </html>

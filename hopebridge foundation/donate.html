@@ -69,7 +69,8 @@
     </div>
   </nav>
   <!-- END nav -->
-  
+  sessionStorage.setItem("donationDescription", description);
+
   <div class="block-31" style="position: relative;">
     <div class="owl-carousel loop-block-31 ">
       <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');" data-stellar-background-ratio="0.5">
@@ -293,8 +294,6 @@
   
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
   <script>
@@ -345,6 +344,18 @@
           bloodDonationsFields.classList.remove("hidden");
       }
   }
+  // Simulate sending the donation post data to the server
+console.log("Donation post created:", donationPost);
+alert("Donation post created successfully!");
+
+// Store the category in session storage
+sessionStorage.setItem("donationCategory", category);
+
+// Redirect to the new page
+setTimeout(function() {
+  window.location.href = "orgmainpage.html";
+}, 1000); // 1000 milliseconds = 1 second
+
 
   document.getElementById("donationForm").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent the form from submitting normally
@@ -397,7 +408,42 @@
 
       // Optionally, you can reset the form after submission
       document.getElementById("donationForm").reset();
+      
+      setTimeout(function() {
+      window.location.href = "orgmainpage.html";
+    }, 1000); // 1000 milliseconds = 1 second
   });
+
 </script>
+<script>
+  document.getElementById("donationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+
+      // Get form values and create the donation post object
+      // (This part of the code remains the same as in your original HTML)
+      var category = document.getElementById("category").value;
+      var description = document.getElementById("description").value;
+      var formData = { /* ... */ };
+
+      var donationPost = {
+          category: category,
+          description: description,
+          ...formData
+      };
+
+      // Simulate sending the donation post data to the server
+      console.log("Donation post created:", donationPost);
+      alert("Donation post created successfully!");
+
+      // Redirect to the new page with the category as a URL parameter
+      var redirectUrl = "orgmainpage.html?category=" + category;
+      setTimeout(function() {
+          window.location.href = redirectUrl;
+      }, 1000); // 1000 milliseconds = 1 second
+  });
+
+
+</script>
+
   </body>
 </html>
