@@ -28,7 +28,9 @@
       font-size: 22.5px;
       margin-left: -10px;
     }
-
+    .body{
+      cursor: pointer;
+    }
     .logo {
       margin-bottom: 0px;
       margin-top: 0px;
@@ -63,6 +65,7 @@
     td {
       border-bottom: 1px solid #ddd;
       padding: 8px;
+      cursor: pointer;
     }
     .btn{
             background-color: #4297A0;
@@ -113,7 +116,7 @@
     <select id="itemCategory" class="form-control">
         <option value="">All</option>
         <option value="Books">Books</option>
-        <option value="Stationery">Stationary</option>
+        <option value="Stationary">Stationary</option>
         <!-- Add more options as needed -->
     </select>
 </div>
@@ -311,28 +314,28 @@
     });
   </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("filterButton").addEventListener("click", filterDonationRequests);
-    });
+   <script>
+        // Function to filter donation requests
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("filterButton").addEventListener("click", filterDonationRequests);
+        });
 
-    function filterDonationRequests() {
-    var itemCategoryFilter = document.getElementById("itemCategory").value.toLowerCase();
-    var tableRows = document.querySelectorAll("#schoolSuppliesDonationRequests tbody tr");
+        function filterDonationRequests() {
+            var itemCategoryFilter = document.getElementById("itemCategory").value.toLowerCase();
+            var tableRows = document.querySelectorAll("#schoolSuppliesDonationRequests tbody tr");
 
-    tableRows.forEach(function (row) {
-        var itemCategoryCell = row.querySelector("td:nth-child(3)").textContent.trim().toLowerCase();
+            tableRows.forEach(function (row) {
+                var itemCategoryCell = row.querySelector("td:nth-child(3)").textContent.trim().toLowerCase();
 
-        var showRow = true;
-        if (itemCategoryFilter && itemCategoryFilter !== "all" && itemCategoryCell !== itemCategoryFilter) {
-            showRow = false;
+                var showRow = true;
+                if (itemCategoryFilter && itemCategoryFilter !== "all" && itemCategoryCell !== itemCategoryFilter) {
+                    showRow = false;
+                }
+
+                row.style.display = showRow ? "" : "none";
+            });
         }
-
-        row.style.display = showRow ? "" : "none";
-    });
-}
-
-</script>
+    </script>
 
 <script>
   // Function to display item details popup
