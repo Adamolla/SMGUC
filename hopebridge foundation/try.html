@@ -155,120 +155,86 @@
 
 <!-- Table to display donation requests -->
 <section id="schoolSuppliesDonationRequests" class="mt-5">
-  <div class="container">
-    <h2 id="bookTableHeading">Book Donation Requests</h2>
-    <table id="bookDonationTable" class="table table-bordered">  
-      <thead>
-        <tr>
-          <th>Book Name</th>
-          <th>Book Type</th>
-          <th>Category</th>
-          <th>Author</th>
-          <th>Language</th>
-          <th>Edition</th>
-          <th>Summary</th>
-          <th>Quantity</th>
-          <th>Picture Reference</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Biology for AP ® Courses</td>
-          <td>Science Textbook</td>
-          <td>Books</td>
-          <td>John Eggebrecht and Julianne Zedalis</td>
-          <td>English</td>
-          <td>1st Edition</td>
-          <td>The AP Biology course is an introductory college-level biology course. Students cultivate their understanding of biology through inquiry-based investigations as they explore the following topics: evolution, cellular processes, energy and communication, genetics, information transfer, ecology, and interactions</td>
-          <td>20</td>
-          <td><button onclick="picview('sci11.jpg')">View Reference</button></td>
-        </tr>
-        <tr>
-          <td>Common Core Curriculum</td>
-          <td>Math Textbook</td>
-          <td>Books</td>
-          <td>Houghton Mifflin Harcourt</td>
-          <td>English</td>
-          <td>1st Edition</td>
-          <td>A textbook covering various mathematical topics for 6th grade.</td>
-          <td>10</td>
-          <td><button onclick="picview('math1.jpg')">View Reference</button></td>
-        </tr>
-        <tr>
-          <td>Macbeth</td>
-          <td>Literature Novel</td>
-          <td>Books</td>
-          <td>William Shakespeare</td>
-          <td>English</td>
-          <td>None</td>
-          <td>A brave Scottish general named Macbeth receives a prophecy from a trio of witches that one day he will become King of Scotland. Consumed by ambition and spurred to action by his wife, Macbeth murders King Duncan and takes the Scottish throne for himself. He is then wracked with guilt and paranoia.</td>
-          <td>15</td>
-          <td><button onclick="picview('mac1.jpg')">View Reference</button></td>
-        </tr>
-        <tr>
-          <td>A Patriot's History of the United States: From Columbus's Great Discovery to the War on Terror</td>
-          <td>History Textbook</td>
-          <td>Books</td>
-          <td>Larry Schweikart and Michael Allen.</td>
-          <td>English</td>
-          <td>None</td>
-          <td>A Patriot's History of the United States corrects those doctrinaire biases. In this groundbreaking book, America's discovery, founding, and development are reexamined with an appreciation for the elements of public virtue, personal liberty, and private property that make this nation uniquely successful.</td>
-          <td>20</td>
-          <td><button onclick="picview('his1.jpg')">View Reference</button></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2 id="stationaryTableHeading">Stationary Donation Requests</h2>
-    <table id="stationaryDonationTable" class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Item Type</th>
-          <th>Quantity</th>
-          <th>Category</th>
-          <th>Picture Reference</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Pens</td>
-          <td>15</td>
-          <td>Stationary</td>
-          <td><button onclick="picview('pen1.jpg')">View Reference</button></td>
-        </tr>
-        <tr>
-          <td>Pencils</td>
-          <td>20</td>
-          <td>Stationary</td>
-          <td><button onclick="picview('penc1.jpg')">View Reference</button></td>
-        </tr>
-        <tr>
-          <td>Backpack</td>
-          <td>10</td>
-          <td>Stationary</td>
-          <td><button onclick="picview('bag1.jpg')">View Reference</button></td>
-        </tr>
-        <tr>
-          <td>Calculators</td>
-          <td>5</td>
-          <td>Stationary</td>
-          <td><button onclick="picview('calc1.jpg')">View Reference</button></td>
-        </tr>
-        <tr>
-          <td>Computers</td>
-          <td>5</td>
-          <td>Stationary</td>
-          <td><button onclick="picview('comp1.jpg')">View Reference</button></td>
-        </tr>
-        <tr>
-          <td>Uniforms</td>
-          <td>10</td>
-          <td>Stationary</td>
-          <td><button onclick="picview('uni2.jpg')">View Reference</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="container">
+        <h2>View List of School Supplies Donation Requests</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item Type</th>
+                        <th style="display: none;">Item count</th>
+                        <th>Category</th>
+                        <th> Picture Reference</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;" onclick="bookdetaildisplay('Biology for AP ® Courses')">Biology for AP ® Courses</span></td>
+                    <td style="display: none;">20</td>
+                    <td>Books</td>
+                    <td><button onclick="picview('sci11.jpg')">View Reference</button></td>
+                  </tr>
+                  
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">computers</span></td>
+                    <td style="display: none;">5</td>
+                    <td>Stationary</td>
+                    <td><button onclick="picview('comp1.jpg')">View Reference</button></td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;" onclick="bookdetaildisplay('Common Core Curriculum')">Common Core Curriculum</span></td>
+                    <td style="display: none;">10</td>
+                    <td>Books</td>
+                    <td><button onclick="picview('math1.jpg')">View Reference</button></td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;" onclick="bookdetaildisplay('Macbeth')">Macbeth</span></td>
+                    <td style="display: none;">15</td>
+                    <td>Books</td>
+                    <td><button onclick="picview('mac1.jpg')">View Reference</button></td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">unifroms</span></td>
+                    <td style="display: none;">10</td>
+                    <td>Stationary</td>
+                    <td><button onclick="picview('uni2.jpg')">View Reference</button></td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">A Patriot's History of the United States: From Columbus's Great Discovery to the War on Terror</span></td>
+                    <td style="display: none;">20</td>
+                    <td>Books</td>
+                    <td><button onclick="picview('his1.jpg')">View Reference</button></td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">Pens</span></td>
+                    <td style="display: none;">15</td>
+                    <td>Stationary</td>
+                    <td><button onclick="picview('pen1.jpg')">View Reference</button></td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">Pencils</span></td>
+                    <td style="display: none;">20</td>
+                    <td>Stationary</td>
+                    <td><button onclick="picview('penc1.jpg')">View Reference</button></td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">backpack</span></td>
+                    <td style="display: none;">10</td>
+                    <td>Stationary</td>
+                    <td><button onclick="picview('bag1.jpg')">View Reference</button></td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">Calculators</span></td>
+                    <td style="display: none;">5</td>
+                    <td>Stationary</td>
+                    <td><button onclick="picview('calc1.jpg')">View Reference</button></td>
+                  </tr>
+                </tbody>
+                </tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </section>
 
 
@@ -382,69 +348,130 @@
       });
     });
   </script>
-
- 
-<script>
-  // Filter requests based on selected category
-  function filterRequests() {
-    var selectedCategory = document.getElementById("itemCategory").value.toLowerCase();
-    var bookTable = document.getElementById("bookDonationTable");
-    var stationaryTable = document.getElementById("stationaryDonationTable");
-    var bookTableHeading = document.getElementById("bookTableHeading");
-    var stationaryTableHeading = document.getElementById("stationaryTableHeading");
-
-    // Check if the selected category is "books" or "stationary" and show/hide the respective tables
-    if (selectedCategory === 'books') {
-      bookTable.style.display = "table";
-      stationaryTable.style.display = "none";
-      stationaryTableHeading.style.display = "none"; // Hide stationary table heading
-      bookTableHeading.style.display = "table-row"; // Show book table heading
-    } else if (selectedCategory === 'stationary') {
-      bookTable.style.display = "none";
-      stationaryTable.style.display = "table";
-      stationaryTableHeading.style.display = "table-row"; // Show stationary table heading
-      bookTableHeading.style.display = "none"; // Hide book table heading
-    } else {
-      bookTable.style.display = "none";
-      stationaryTable.style.display = "none";
-      stationaryTableHeading.style.display = "none"; // Hide stationary table heading
-      bookTableHeading.style.display = "none"; // Hide book table heading
-    }
-  }
-
-  // Add event listener to the filter button
-  document.getElementById("filterButton").addEventListener("click", filterRequests);
-</script>
-
+  
   <script>
-function picview(imageSrc) {
-  // Create a modal overlay container
-  var overlay = document.createElement('div');
-  overlay.classList.add('modal-overlay');
-  
-  // Create a modal container
-  var modalContainer = document.createElement('div');
-  modalContainer.classList.add('modal-container');
-  
-  // Create an image element
-  var imageElement = document.createElement('img');
-  imageElement.src = imageSrc;
-  
-  // Append the image element to the modal container
-  modalContainer.appendChild(imageElement);
-  
-  // Append the modal container to the overlay
-  overlay.appendChild(modalContainer);
-  
-  // Append the overlay to the body
-  document.body.appendChild(overlay);
-  
-  // Close the modal when clicking outside the image
-  overlay.onclick = function() {
-    overlay.remove();
-  };
-}
-</script>
+    // Define book details object with lowercase and simplified keys
+    var bookDetails = {
+      "biology for ap courses": {
+        "Book Type": "Science Textbook",
+        "Category": "Books",
+        "Author": "John Eggebrecht and Julianne Zedalis",
+        "Language": "English",
+        "Edition": "1st Edition",
+        "Summary": "The AP Biology course is an introductory college-level biology course. Students cultivate their understanding of biology through inquiry-based investigations as they explore the following topics: evolution, cellular processes, energy and communication, genetics, information transfer, ecology, and interactions",
+        "Quantity": 20
+      },
+      "common core curriculum": {
+        "Book Type": "Math Textbook",
+        "Category": "Books",
+        "Author": "Houghton Mifflin Harcourt",
+        "Language": "English",
+        "Edition": "1st Edition",
+        "Summary": "A textbook covering various mathematical topics for 6th grade.",
+        "Quantity": 10
+      },
+      // Add details for other books similarly
+    };
 
+    // Function to display book details
+    function displayBookDetails(bookName) {
+      // Convert bookName to lowercase for case-insensitive comparison
+      bookName = bookName.toLowerCase();
+      
+      // Get the book details from the bookDetails object
+      var book = bookDetails[bookName];
+      
+      // Check if the book details exist
+      if (book) {
+        // Create a string to hold the book details
+        var bookDetailsString = "Book Details:\n";
+        
+        // Loop through the book details and append them to the string
+        for (var key in book) {
+          bookDetailsString += key + ": " + book[key] + "\n";
+        }
+        
+        // Display the book details
+        alert(bookDetailsString);
+      } else {
+        // If the book details are not found, show an alert
+        alert("Book details not found.");
+      }
+    }
+
+    // Add click event listener to table rows
+    var tableRows = document.querySelectorAll("#schoolSuppliesDonationRequests tbody tr");
+    tableRows.forEach(function(row) {
+      // Add click event listener to the first cell of each row
+      var firstCell = row.querySelector("td:first-child");
+      firstCell.addEventListener("click", function() {
+        var itemName = firstCell.textContent.trim();
+        var itemCategory = row.querySelector("td:nth-child(3)").textContent.trim();
+        var itemQuantity = row.querySelector("td:nth-child(2)").textContent.trim();
+
+        if (itemCategory.toLowerCase() === 'books') {
+          displayBookDetails(itemName); // Call the function when a book row is clicked
+        } else {
+          // If it's not a book, display basic details only
+          var basicContent = "Item Details" + "\n" +
+            "Name: " + itemName + "\n" +
+            "Category: " + itemCategory + "\n" +
+            "Quantity: " + itemQuantity;
+
+          // Display the popup
+          alert(basicContent);
+        }
+      });
+    });
+
+    // Function to filter donation requests based on selected category
+    function filterRequests() {
+      var selectedCategory = document.getElementById("itemCategory").value.toLowerCase();
+      var tableRows = document.querySelectorAll("#schoolSuppliesDonationRequests tbody tr");
+
+      tableRows.forEach(function(row) {
+        var itemCategory = row.querySelector("td:nth-child(3)").textContent.trim().toLowerCase();
+
+        if (selectedCategory === '' || itemCategory === selectedCategory) {
+          row.style.display = "table-row"; // Show the row if it matches the selected category or if no category is selected
+        } else {
+          row.style.display = "none"; // Hide the row if it doesn't match the selected category
+        }
+      });
+    }
+
+    // Add click event listener to the filter button
+    var filterButton = document.getElementById("filterButton");
+    filterButton.addEventListener("click", filterRequests);
+
+    // Function to view image in a modal
+    function picview(imageSrc) {
+      // Create a modal overlay container
+      var overlay = document.createElement('div');
+      overlay.classList.add('modal-overlay');
+      
+      // Create a modal container
+      var modalContainer = document.createElement('div');
+      modalContainer.classList.add('modal-container');
+      
+      // Create an image element
+      var imageElement = document.createElement('img');
+      imageElement.src = imageSrc;
+      
+      // Append the image element to the modal container
+      modalContainer.appendChild(imageElement);
+      
+      // Append the modal container to the overlay
+      overlay.appendChild(modalContainer);
+      
+      // Append the overlay to the body
+      document.body.appendChild(overlay);
+      
+      // Close the modal when clicking outside the image
+      overlay.onclick = function() {
+        overlay.remove();
+      };
+    }
+  </script>
 </body>
 </html>
