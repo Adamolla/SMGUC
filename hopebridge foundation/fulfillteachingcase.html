@@ -403,7 +403,7 @@
             alert("You have chosen to fulfill the teaching case: " + teachingCase);
         }
     </script>
-<script>
+ <script>
     function applyFilters() {
         var subjectFilter = document.getElementById("subjectFilter").value.toUpperCase();
         var areaFilter = document.getElementById("areaFilter").value.toUpperCase();
@@ -416,8 +416,8 @@
             var tdArea = tr[i].getElementsByTagName("td")[2];
             var tdGovernorate = tr[i].getElementsByTagName("td")[3];
             if (tdSubject && tdArea && tdGovernorate) {
-                var subjectValue = tdSubject.textContent  tdSubject.innerText;
-                var areaValue = tdArea.textContent  tdArea.innerText;
+                var subjectValue = tdSubject.textContent || tdSubject.innerText;
+                var areaValue = tdArea.textContent || tdArea.innerText;
                 var governorateValue = tdGovernorate.textContent || tdGovernorate.innerText;
                 if (subjectValue.toUpperCase().indexOf(subjectFilter) > -1 &&
                     areaValue.toUpperCase().indexOf(areaFilter) > -1 &&
