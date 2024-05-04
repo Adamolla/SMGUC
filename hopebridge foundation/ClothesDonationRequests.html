@@ -138,6 +138,13 @@
         </div>
     </div>
 </div>
+<style>
+  .clickable-type {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+</style>
 
 <section id="clothesDonationRequests" class="mt-5">
     <div class="container">
@@ -148,82 +155,66 @@
                     <tr>
                         <th>Gender</th>
                         <th>Age</th>
-                        <th>Size</th>
-                        <th>Type of Clothes</th>
+                        <th>Type of Clothes (click to view needed details of a specific item)</th>
                         <th>Season</th>
-                        <th>Quantity Needed</th>
                     </tr>
+                  
                 </thead>
                 <tbody>
                     <tr>
                         <td>Female</td>
                         <td>20</td>
-                        <td>Small and Medium</td>
-                        <td>Dresses</td>
+                        <td><span class="clickable-type">Dresses</span></td>
                         <td>Spring</td>
-                        <td>50</td>
                     </tr>
                     <tr>
                         <td>Female</td>
                         <td>25</td>
-                        <td>Small and Medium</td>
-                        <td>Blouses</td>
+                        <td><span class="clickable-type">Blouses</span></td>
                         <td>Spring</td>
-                        <td>40</td>
                     </tr>
                     <tr>
                         <td>Male</td>
                         <td>25</td>
-                        <td>Medium and Large</td>
-                        <td>Shirts</td>
+                        <td><span class="clickable-type">Shirts</span></td>
                         <td>Summer</td>
-                        <td>40</td>
                     </tr>
                     <tr>
                         <td>Male</td>
                         <td>20</td>
-                        <td>Medium and Large</td>
-                        <td>Pants</td>
+                        <td><span class="clickable-type">Pants</span></td>
                         <td>Summer</td>
-                        <td>25</td>
                     </tr>
                     <tr>
                         <td>Children</td>
                         <td> 6 </td>
-                        <td>Small and Medium</td>
-                        <td>T-shirts</td>
+                        <td><span class="clickable-type">T-shirts</span></td>
                         <td>Autumn</td>
-                        <td>30</td>
                     </tr>
                     <tr>
                         <td>Children</td>
                         <td> 8 </td>
-                        <td>Medium and Large</td>
-                        <td>Shorts</td>
+                        <td><span class="clickable-type">Shorts</span></td>
                         <td>Autumn</td>
-                        <td>20</td>
                     </tr>
                     <tr>
                         <td>Unisex</td>
                         <td>20</td>
-                        <td>Various Sizes</td>
-                        <td>Hoodies</td>
+                        <td><span class="clickable-type">Hoodies</span></td>
                         <td>Winter</td>
-                        <td>35</td>
                     </tr>
                     <tr>
                         <td>Unisex</td>
                         <td>2</td>
-                        <td>Various Sizes</td>
-                        <td>Jackets</td>
+                        <td><span class="clickable-type">Jackets</span></td>
                         <td>Winter</td>
-                        <td>25</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </section>
+
 
 <footer class="footer">
     <div class="container">
@@ -377,5 +368,53 @@
     });
   }
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      // Get all the rows in the table
+      var tableRows = document.querySelectorAll("#clothesDonationRequests tbody tr");
+
+      // Attach click event listeners to each row
+      tableRows.forEach(function (row) {
+          row.addEventListener("click", function () {
+              // Get the type of clothes from the clicked row
+              var typeOfClothes = row.querySelector("td:nth-child(3)").textContent.trim();
+              
+              // Display a different message based on the type of clothes
+              switch (typeOfClothes) {
+                  case "Dresses":
+                      alert("Gender: Female\nType of clothing: Dresses\nAge: 20\nSeason: Spring\nMaterial:Cloth");
+                      break;
+                  case "Blouses":
+                      alert("Gender: Female\nType of clothing: Blouses\nAge: 25\nSeason: Spring\nMaterial:Cotton");
+                      break;
+                  case "Shirts":
+                      alert("Gender: Male\nType of clothing: Shirts\nAge: 25\nSeason: Summer\nMaterial:Cotton");
+                      break;
+                  case "Pants":
+                      alert("Gender: Male\nType of clothing: Pants\nAge: 20\nSeason: Summer\nMaterial:Jeans");
+                      break;
+                  case "T-shirts":
+                      alert("Gender: Unisex\nType of clothing: T-shirts\nAge: 6\nSeason: Autumn\nMaterial:Cotton");
+                      break;
+                  case "Shorts":
+                      alert("Gender: Unisex\nType of clothing: Shorts\nAge: 8\nSeason: Summer\nMaterial:Polestar");
+                      break;
+                  case "Hoodies":
+                      alert("Gender: Female\nType of clothing: Hoodie\nAge: 20\nSeason: Winter\nMaterial:Woll");
+                      break;
+                  case "Jackets":
+                      alert("Gender: Female\nType of clothing: Jackets\nAge: 2\nSeason: Winter\nMaterial:Woll");
+                      break;
+                  default:
+                      alert("Thank you for your donation!");
+              }
+          });
+      });
+  });
+</script>
+
+
 </body>
 </html>
+
+
