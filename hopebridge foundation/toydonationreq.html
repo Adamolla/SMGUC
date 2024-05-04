@@ -71,6 +71,35 @@
         .btn:active{
             color: white;
         }
+        .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+.modal-container {
+  background-color: #fff; /* White background for the container */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  width: 400px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+.modal-container img {
+  max-width: 100%; /* Set maximum width to container width */
+  max-height: 100%; /* Set maximum height to container height */
+}
+
   </style>
 </head>
 
@@ -108,91 +137,137 @@
   </div>
   
 <!-- Filter controls -->
-<div class="col-md-4">
+<div class="row">
+  <div class="col-md-4">
     <label for="itemCategory">Item Category:</label>
     <select id="itemCategory" class="form-control">
-        <option value="">All</option>
-        <option value="Outdoor">Outdoor</option>
-        <option value="Stuffed Toys"> Stuffed Toys</option>
-        <option value="Board Games">Board Games</option>
-        <option value="Sports">Sports</option>
-        <option value="Dolls">Dolls</option>
-        <option value="Cars">Cars</option>
-        <!-- Add more options as needed -->
+      <option value="">All</option>
+      <option value="Board Games">Board Games</option>
+      <option value="Stuffed Toys">Stuffed Toys</option>
+      <option value="Dolls">Dolls</option>
+      <option value="Sports">Sports</option>
+      <option value="Cars">Cars</option>
+      <option value="Outdoor">Outdoor</option>
     </select>
+  </div>
+
+  <div class="col-md-4">
+    <label for="itemAge">Recipient Age:</label>
+    <input type="text" id="itemAge" class="form-control" placeholder="Enter age">
+  </div>
+
+  <div class="col-md-4">
+    <label for="itemGender">Recipient Gender:</label>
+    <select id="itemGender" class="form-control">
+      <option value="">All</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
 </div>
 
-        </div>
-        <div class="col-md-12 mt-3">
-            <button id="filterButton" class="btn">Apply Filter</button>
-        </div>
-    </div>
+<div class="row mt-3">
+  <div class="col-md-12">
+    <button id="filterButton" class="btn">Apply Filter</button>
+  </div>
 </div>
+
+
 
 <section id="toyDonationRequests" class="mt-5">
-    <div class="container">
-        <h2>View List of Toy Donation Requests</h2>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Recipient Age</th>
-                        <th>Gender</th>
-                        <th>Toy Name</th>
-                        <th>Type of Toy</th>
-                        <th>Quantity Needed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Toy donation request rows -->
-                    <tr>
-                        <td>5 years</td>
-                        <td>Male</td>
-                        <td>Action Figures</td>
+  <div class="container">
+      <h2>View List of Toy Donation Requests</h2>
+      <div class="table-responsive">
+          <table class="table table-bordered">
+              <thead>
+                <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th>Toy Name</th>
+                          <th>Recipient Age</th>
+                          <th>Gender</th>
+                          <th>Type of Toy</th>
+                          <th>Category</th>
+                          <th>Quantity Needed</th>
+                          <th>Picture Reference</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tbody>
+                      <tr>
+                          <td>spiderman</td>
+                          <td>5 </td>
+                          <td>Male</td>
+                          <td>Collectible Toys</td>
+                          <td>Collectible</td>
+                          <td>5</td>
+                          <td><button onclick="picview('spooderman.jpg')">View photo</button></td>
+                      </tr>
+                      <tr>
+                          <td>Teddy Bear</td>
+                          <td>8 </td>
+                          <td>Female</td>
+                          <td>Stuffed Animals and Plush Toys</td>
+                          <td>Stuffed Toys</td>
+                          <td>10</td>
+                          <td><button onclick="picview('Teddy_bear.jpg')">View photo</button></td>
+                      </tr>
+                      <tr>
+                          <td>Barbie Doll</td>
+                          <td>3 </td>
+                          <td>Male</td>
+                          <td>Dolls and Accessories</td>
+                          <td>Dolls</td>
+                          <td>15</td>
+                          <td><button onclick="picview('barbie.jpg')">View photo</button></td>
+                      </tr>
+                      <tr>
+                          <td>Basketball</td>
+                          <td>6 </td>
+                          <td>Female</td>
+                          <td>Outdoor and Sports Toys</td>
+                          <td>Sports</td>
+                          <td>12</td>
+                          <td><button onclick="picview('Basketball.jpg')">View photo</button></td>
+                      </tr>
+                      <tr>
+                          <td> Ferrari toy </td>
+                          <td>4 </td>
+                          <td>Male</td>
+                          <td>Building and Construction Toys</td>
+                          <td>Cars</td>
+                          <td>18</td>
+                          <td><button onclick="picview('car.jpg')">View photo</button></td>
+                      </tr>
+                      <tr>
+                          <td>Bicycle</td>
+                          <td>7 </td>
+                          <td>Female</td>
+                          <td>Ride-on Toys</td>
+                          <td>Outdoor</td>
+                          <td>8</td>
+                          <td><button onclick="picview('Bicycle.jpg')">View photo</button></td>
+                      </tr>
+                      <tr>
+                        <td>chess</td>
+                        <td>10 </td>
+                        <td>All </td>
+                        <td> board game </td>
                         <td>Board Games</td>
-                        <td>5</td>
+                        <td>2</td>
+                        <td><button onclick="picview('chess.jpg')">View photo</button></td>
                     </tr>
-                    <tr>
-                        <td>8 years</td>
-                        <td>Female</td>
-                        <td>Teddy Bear</td>
-                        <td>Stuffed Toys</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>3 years</td>
-                        <td>Male</td>
-                        <td>Barbie Doll</td>
-                        <td>Dolls</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>6 years</td>
-                        <td>Female</td>
-                        <td>Basketball</td>
-                        <td>Sports</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>4 years</td>
-                        <td>Male</td>
-                        <td>Toy Car Model</td>
-                        <td>Cars</td>
-                        <td>18</td>
-                    </tr>
-                    <tr>
-                        <td>7 years</td>
-                        <td>Female</td>
-                        <td>Bicycle</td>
-                        <td>Outdoor</td>
-                        <td>8</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-        </div>
-    </div>
+                  </tbody>
+                  
+                  </tbody>
+              </table>
+              
+              </tbody>
+          </table>
+      </div>
+  </div>
 </section>
+
 
 <footer class="footer">
     <div class="container">
@@ -292,42 +367,68 @@
   <script src="js/main.js"></script>
     
   <script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-      window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
-          document.getElementById("ftco-navbar").classList.add("show-logo");
-          document.querySelector(".navbar-brand").style.marginLeft = "100px";
-
-        } else {
-          document.getElementById("ftco-navbar").classList.remove("show-logo");
-          document.querySelector(".navbar-brand").style.marginLeft = "-10px";
-        }
-      });
-    });
-  </script>
-
-<script>
     document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("filterButton").addEventListener("click", filterDonationRequests);
     });
-
+  
     function filterDonationRequests() {
         var itemCategoryFilter = document.getElementById("itemCategory").value.toLowerCase();
+        var itemAgeFilter = document.getElementById("itemAge").value.toLowerCase();
+        var itemGenderFilter = document.getElementById("itemGender").value.toLowerCase();
         var tableRows = document.querySelectorAll("#toyDonationRequests tbody tr");
-
+  
         tableRows.forEach(function (row) {
-            var itemCategoryCell = row.querySelector("td:nth-child(4)").textContent.trim().toLowerCase();
-
+            var categoryCell = row.querySelector("td:nth-child(5)").textContent.trim().toLowerCase();
+            var ageCell = row.querySelector("td:nth-child(2)").textContent.trim().toLowerCase();
+            var genderCell = row.querySelector("td:nth-child(3)").textContent.trim().toLowerCase();
+  
             var showRow = true;
-            if (itemCategoryFilter && itemCategoryFilter !== "all" && itemCategoryCell !== itemCategoryFilter) {
+            if (itemCategoryFilter && itemCategoryFilter !== "all" && categoryCell !== itemCategoryFilter) {
                 showRow = false;
             }
-
+            if (itemAgeFilter && itemAgeFilter !== "" && ageCell !== itemAgeFilter) {
+                showRow = false;
+            }
+            if (itemGenderFilter && itemGenderFilter !== "" && genderCell !== itemGenderFilter) {
+                showRow = false;
+            }
+  
             row.style.display = showRow ? "" : "none";
         });
     }
-</script>
-</script>
+  </script>
+  
+
+<script> 
+  function picview(imageSrc) {
+    // Create a modal overlay container
+    var overlay = document.createElement('div');
+    overlay.classList.add('modal-overlay');
+    
+    // Create a modal container
+    var modalContainer = document.createElement('div');
+    modalContainer.classList.add('modal-container');
+    
+    // Create an image element
+    var imageElement = document.createElement('img');
+    imageElement.src = imageSrc;
+    
+    // Append the image element to the modal container
+    modalContainer.appendChild(imageElement);
+    
+    // Append the modal container to the overlay
+    overlay.appendChild(modalContainer);
+    
+    // Append the overlay to the body
+    document.body.appendChild(overlay);
+    
+    // Close the modal when clicking outside the image
+    overlay.onclick = function() {
+      overlay.remove();
+    };
+  }
+  
+  
+  </script>
 </body>
 </html>
