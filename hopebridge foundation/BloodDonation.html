@@ -64,13 +64,15 @@
       border-bottom: 1px solid #ddd;
       padding: 8px;
     }
-    .btn{
-            background-color: #4297A0;
-            color: white;
-        }
-        .btn:active{
-            color: white;
-        }
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+    }
+
+    .btn:active {
+      color: white;
+    }
   </style>
 </head>
 <style>
@@ -78,7 +80,8 @@
   .clickable-type {
     color: blue;
     text-decoration: underline;
-    cursor: pointer; /* Add a pointer cursor to indicate clickable */
+    cursor: pointer;
+    /* Add a pointer cursor to indicate clickable */
   }
 </style>
 
@@ -141,58 +144,73 @@
       <option value="Dokki">Dokki</option>
     </select>
     <div class="col-md-12 mt-3">
-      <button type="submit"class="btn">Apply Filter</button>
-  </div>
+      <button type="submit" class="btn">Apply Filter</button>
+    </div>
   </form>
 
-  <section id="bloodDonationRequests" class="mt-5">
-    <div class="container">
-      <h2>View List of Blood Donation Requests</h2>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Request Number</th>
-              <th>Blood Type</th>
-              <th>Hospital Name</th>
-              <th>Government</th>
-              <th>Area</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span class="clickable-type">Request Number 1</span></td>
-              <td>A+</td>
-              <td>HopeBridge Hospital</td>
-              <td>Cairo</td>
-              <td>Maadi</td>
-            </tr>
-            <tr>
-              <td><span class="clickable-type">Request Number 2</span></td>
-              <td>B-</td>
-              <td>El Salam Hopital</td>
-              <td>Cairo</td>
-              <td>Nasr City</td>
-            </tr>
-            <tr>
-              <td><span class="clickable-type">Request Number 3</span></td>
-              <td>O+</td>
-              <td>Dar el Fouad</td>
-              <td>Giza</td>
-              <td>6 of October</td>
-            </tr>
-            <tr>
-              <td><span class="clickable-type">Request Number 4</span></td>
-              <td>AB+</td>
-              <td>57357</td>
-              <td>Giza</td>
-              <td>Dokki</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<section id="bloodDonationRequests" class="mt-5">
+  <div class="container">
+    <h2>View List of Blood Donation Requests</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Request Number</th>
+            <th>Blood Type</th>
+            <th>Hospital Name</th>
+            <th>Government</th>
+            <th>Area</th>
+            <th>Location</th> <!-- New column header for location -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="clickable-type">Request Number 1</span></td>
+            <td>A+</td>
+            <td>HopeBridge Hospital</td>
+            <td>Cairo</td>
+            <td>Maadi</td>
+            <td>
+              <button class="btn btn-info btn-sm" onclick="showHospitalLocation('HopeBridge Hospital')">View
+                Location</button>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="clickable-type">Request Number 2</span></td>
+            <td>B-</td>
+            <td>El Salam Hopital</td>
+            <td>Cairo</td>
+            <td>Nasr City</td>
+            <td>
+              <button class="btn btn-info btn-sm" onclick="showHospitalLocation('El Salam Hopital')">View
+                Location</button>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="clickable-type">Request Number 3</span></td>
+            <td>O+</td>
+            <td>Dar el Fouad</td>
+            <td>Giza</td>
+            <td>6 of October</td>
+            <td>
+              <button class="btn btn-info btn-sm" onclick="showHospitalLocation('Dar el Fouad')">View Location</button>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="clickable-type">Request Number 4</span></td>
+            <td>AB+</td>
+            <td>57357</td>
+            <td>Giza</td>
+            <td>Dokki</td>
+            <td>
+              <button class="btn btn-info btn-sm" onclick="showHospitalLocation('57357')">View Location</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer class="footer">
     <div class="container">
@@ -258,10 +276,10 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-
+  
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("scroll", function () {
@@ -275,8 +293,7 @@
         }
       });
     });
-  </script>
-  <script>
+
     $(document).ready(function () {
       $("#filterForm").on("submit", function (event) {
         event.preventDefault(); // Prevent form submission
@@ -311,42 +328,18 @@
         });
       }
     });
-  </script>
-  <script>
- document.addEventListener("DOMContentLoaded", function() {
-  // Get all the rows in the table body
-  var tableRows = document.querySelectorAll("#bloodDonationRequests tbody tr");
 
-  // Attach click event listeners to each row
-  tableRows.forEach(function(row) {
-    var requestsCell = row.querySelector("td:nth-child(1)"); // Assuming the "Request Number" column is the first column
-
-    requestsCell.addEventListener("click", function(event) {
-      // Get the text content of the clicked cell
-      var requestNumber = event.target.textContent.trim();
-
-      // Display specific messages based on the request number
-      switch (requestNumber) {
-        case "Request Number 1":
-          alert("Patient Name:Ahmed Mohamed\nBlood type: A+\nHospital Name:HopeBridge Hospital\nHospital Area: Maadi\nHospital Governorate: Cairo\nHospital address: 35 Street 9 ");
-          break;
-        case "Request Number 2":
-          alert("Patient Name:Mai Sayed\nBlood type: B-\nHospital Name: El Salam Hopital\nHospital Area: Nasr City\nHospital Governorate: Cairo\nHospital address: 73 Street Ramses ");
-          break;
-        case "Request Number 3":
-          alert("Patient Name:Omar Hany\nBlood type: O+\nHospital Name: Dar el Fouad Hopital\nHospital Area: 6th of October\nHospital Governorate: Giza\nHospital address: 56 Street Abou Galoon ");
-          break;
-        case "Request Number 4":
-          alert("Patient Name:Khaled Hussein\nBlood type: AB+\nHospital Name: 57357 Hopital\nHospital Area: Dokki\nHospital Governorate: Giza\nHospital address:  Street Wadi el Natroun");
-          break;
-        // Add more cases for other request numbers as needed
-        default:
-          alert("No specific message for this request number.");
+    function showHospitalLocation(hospitalName) {
+      if (hospitalName === 'HopeBridge Hospital') {
+        // Redirect or display the location of HopeBridge Hospital
+        window.location.href = 'https://www.google.com/maps/place/HopeBridge+Hospital';
+      } else {
+        // Handle other hospitals here
+        alert('Location not available for this hospital.');
       }
-    });
-  });
-});
-</script>
-</body>
+    }
+  </script>
+  </body>
+
+
 </html>
-  
