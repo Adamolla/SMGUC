@@ -134,61 +134,63 @@
                 <thead>
                     <tr>
                         <th>Item Type</th>
-                        <th>Quantity Needed</th>
+                        <th style="display: none;">Item count</th>
                         <th>Category</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Books</td>
-                        <td>30</td>
-                        <td>Books</td>
-                    </tr>
-                    <tr>
-                        <td>computers</td>
-                        <td>20</td>
-                        <td>Stationary</td>
-                    </tr>
-                    <tr>
-                        <td>Math textbooks</td>
-                        <td>10</td>
-                        <td>Books</td>
-                    </tr>
-                    <tr>
-                        <td>English literature novels</td>
-                        <td>20</td>
-                        <td>Books</td>
-                    </tr>
-                    <tr>
-                        <td>unifroms</td>
-                        <td>50</td>
-                        <td>Stationary</td>
-                    </tr>
-                    <tr>
-                        <td>notebooks</td>
-                        <td>40</td>
-                        <td>Books</td>
-                    </tr>
-                    <tr>
-                        <td>Pens</td>
-                        <td>60</td>
-                        <td>Stationary</td>
-                    </tr>
-                    <tr>
-                        <td>Pencils</td>
-                        <td>70</td>
-                        <td>Stationary</td>
-                    </tr>
-                    <tr>
-                        <td>backpack</td>
-                        <td>25</td>
-                        <td>Stationary</td>
-                    </tr>
-                    <tr>
-                        <td>Calculators</td>
-                        <td>15</td>
-                        <td>Stationary</td>
-                    </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">Books</span></td>
+                    <td style="display: none;">20</td>
+                    <td>Books</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">computers</span></td>
+                    <td style="display: none;">5</td>
+                    <td>Stationary</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">Math textbooks</span></td>
+                    <td style="display: none;">10</td>
+                    <td>Books</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">English literature novels</span></td>
+                    <td style="display: none;">15</td>
+                    <td>Books</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">unifroms</span></td>
+                    <td style="display: none;">10</td>
+                    <td>Stationary</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">notebooks</span></td>
+                    <td style="display: none;">20</td>
+                    <td>Books</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">Pens</span></td>
+                    <td style="display: none;">15</td>
+                    <td>Stationary</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">Pencils</span></td>
+                    <td style="display: none;">20</td>
+                    <td>Stationary</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">backpack</span></td>
+                    <td style="display: none;">10</td>
+                    <td>Stationary</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: blue; text-decoration: underline;">Calculators</span></td>
+                    <td style="display: none;">5</td>
+                    <td>Stationary</td>
+                  </tr>
+                </tbody>
+                </tbody>
                 </tbody>
             </table>
         </div>
@@ -330,6 +332,33 @@
     });
 }
 
+</script>
+
+<script>
+  // Function to display item details popup
+  function displayItemDetails(item) {
+    // Get the item details from the row
+    var itemName = item.querySelector("td:nth-child(1)").textContent.trim();
+    var itemCategory = item.querySelector("td:nth-child(3)").textContent.trim();
+    var itemQuantity = item.querySelector("td:nth-child(2)").textContent.trim();
+    
+    // Create the popup content
+    var popupContent = "Item Details" + "\n" + 
+                       "Name: " + itemName + "\n" +
+                        "Category: " + itemCategory + "\n" +
+                        "Quantity: " + itemQuantity;
+    
+    // Display the popup
+    alert(popupContent);
+  }
+  
+  // Add click event listener to table rows
+  var tableRows = document.querySelectorAll("#schoolSuppliesDonationRequests tbody tr");
+  tableRows.forEach(function(row) {
+    row.addEventListener("click", function() {
+      displayItemDetails(row);  // Call the function when a row is clicked
+    });
+  });
 </script>
 </body>
 </html>
