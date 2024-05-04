@@ -73,6 +73,16 @@
         }
   </style>
 </head>
+<style>
+  /* Add this style to make clickable items blue and underlined */
+  .clickable-type {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer; /* Add a pointer cursor to indicate clickable */
+  }
+</style>
+ 
+
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -133,7 +143,6 @@
                 <thead>
                     <tr>
                         <th>Food Item</th>
-                        <th>Quantity Needed</th>
                         <th>Type of Food</th>
                         <th>Dietary Restrictions</th>
                         <th>Expiration Date</th>
@@ -142,70 +151,61 @@
                 <tbody>
                     <!-- Food donation request rows (dummy data) -->
                     <tr>
-                        <td>Apples</td>
-                        <td>50</td>
+                      <td><span class="clickable-type">Apples</span></td>
                         <td>Fruits and Vegetables</td>
                         <td>None</td>
                         <td>2024-05-01</td>
                     </tr>
                     <tr>
-                        <td>Canned Beans</td>
-                        <td>30 cans</td>
+                      <td><span class="clickable-type">Beans</span></td>
                         <td>Canned Foods</td>
                         <td>None</td>
                         <td>2024-06-10</td>
                     </tr>
                     <tr>
-                        <td>Gluten-Free Bread</td>
-                        <td>10 loaves</td>
+                        <td><span class="clickable-type">Gluten-Free Bread</span></td>
                         <td>Baked Goods</td>
                         <td>Gluten-Free</td>
                         <td>2024-05-06</td>
                     </tr>
                     <tr>
-                        <td>Chicken Salad</td>
-                        <td>10 servings</td>
+                      <td><span class="clickable-type">Chicken Salad</span></td>
                         <td>Fresh Meals</td>
                         <td>None</td>
                         <td>2024-05-10</td>
                     </tr>
                     <tr>
-                        <td>Bread</td>
-                        <td>20 loaves</td>
+                      <td><span class="clickable-type">Bread</span></td>
                         <td>Baked Goods</td>
                         <td>None</td>
                         <td>2024-05-05</td>
                     </tr>
-                    <!-- Additional dummy data -->
+                    
                     <tr>
-                        <td>Oranges</td>
-                        <td>40</td>
+                      <td><span class="clickable-type">Oranges</span></td>
                         <td>Fruits and Vegetables</td>
                         <td>None</td>
                         <td>2024-04-30</td>
                     </tr>
                     <tr>
-                        <td>Canned Soup</td>
-                        <td>25 cans</td>
+                      <td><span class="clickable-type">Canned Soup</span></td>
                         <td>Canned Foods</td>
                         <td>None</td>
                         <td>2024-06-15</td>
                     </tr>
                     <tr>
-                        <td>Pasta Salad</td>
-                        <td>15 servings</td>
+                       <td><span class="clickable-type">Pasta Salad</span></td>
                         <td>Fresh Meals</td>
                         <td>Vegetarian</td>
                         <td>2024-05-08</td>
                     </tr>
                     <tr>
-                        <td>Cupcakes</td>
-                        <td>30 pieces</td>
+                      <td><span class="clickable-type">Cupcakes</span></td>
                         <td>Baked Goods</td>
                         <td>None</td>
                         <td>2024-05-07</td>
                     </tr>
-                    <!-- Add more rows as needed -->
+                    
                 </tbody>
             </table>
         </div>
@@ -346,5 +346,56 @@
         });
     }
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      // Get all the rows in the table
+      var tableRows = document.querySelectorAll("#foodDonationRequests tbody tr");
+
+      // Attach click event listeners to each row
+      tableRows.forEach(function (row) {
+          var foodItemCell = row.querySelector("td:nth-child(1) .clickable-type");
+
+          foodItemCell.addEventListener("click", function () {
+              // Get the food item from the clicked cell
+              var foodItem = foodItemCell.textContent.trim();
+              
+              // Display a different message based on the food item
+              switch (foodItem) {
+                  case "Apples":
+                      alert("Item name: Apple\nQuantity: 50");
+                      break;
+                  case "Beans":
+                      alert("Item name: Beans\nQuantity: 30");
+                      break;
+                  case "Gluten-Free Bread":
+                      alert("Item name: Gluten-Free Bread\nQuantity: 25");
+                      break;
+                  case "Chicken Salad":
+                      alert("Item name: Chicken Salad\nQuantity: 14");
+                      break;
+                  case "Bread":
+                      alert("Item name: Bread\nQuantity: 20");
+                      break;
+                  case "Canned Soup":
+                      alert("Item name: Canned Soup\nQuantity: 8");
+                      break;
+                  case "Pasta Salad":
+                      alert("Item name: Pasta Salad\nQuantity: 15");
+                      break;
+                  case "Cupcakes":
+                      alert("Item name: Cupcakes\nQuantity: 80");
+                      break;
+                  
+                  default:
+                      alert("No additional details available for this food item.");
+              }
+          });
+      });
+  });
+</script>
+
+
+
+
 </body>
 </html>
