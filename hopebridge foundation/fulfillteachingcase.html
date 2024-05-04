@@ -1,7 +1,7 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
+<head>
     <title>HopeBridge Foundation</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,100 +25,132 @@
 
     <style>
         .navbar-brand {
-        font-size: 22.5px;
-        margin-left: -10px;
+            font-size: 22.5px;
+            margin-left: -10px;
         }
 
         .logo {
-        margin-bottom: 0px;
-        margin-top: 0px;
-        margin-left: -500px;
-        width: 140px;
-        vertical-align: bottom;
-        margin-right: 21px;
-        height: 140px;
-        border-radius: 900%;
-        display: none;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-left: -500px;
+            width: 140px;
+            vertical-align: bottom;
+            margin-right: 21px;
+            height: 140px;
+            border-radius: 900%;
+            display: none;
 
         }
 
         .show-logo .logo {
-        display: block;
+            display: block;
         }
 
         table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
 
         /* Style table header */
         th {
-        background-color: #f2f2f2;
-        padding: 8px;
-        text-align: left;
+            background-color: #f2f2f2;
+            padding: 8px;
+            text-align: left;
         }
 
         /* Style table rows */
         td {
-        border-bottom: 1px solid #ddd;
-        padding: 8px;
+            border-bottom: 1px solid #ddd;
+            padding: 8px;
         }
-        .btn{
+
+        .btn {
             background-color: #4297A0;
             color: white;
         }
-        .btn:active{
+
+        .btn:active {
             color: white;
         }
     </style>
-    </head>
+</head>
 
-    <body>
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-        <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
-        <img class="logo" src="fond_logo.png">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
+            <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+            <img class="logo" src="fond_logo.png">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-            <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 
-            </ul>
-        </div>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- END nav -->
 
     <div class="block-31" style="position: relative;">
         <div class="owl-carousel loop-block-31 ">
-        <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
-            data-stellar-background-ratio="0.5">
-        </div>
+            <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+                data-stellar-background-ratio="0.5">
+            </div>
         </div>
     </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="subjectFilter">Filter by Subject:</label>
+                <select id="subjectFilter" class="form-control" onchange="filterTable()">
+                    <option value="">All Subjects</option>
+
+
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="areaFilter">Filter by Area:</label>
+                <select id="areaFilter" class="form-control" onchange="filterTable()">
+                    <option value="">All Areas</option>
+
+                    <!-- Populate options dynamically using JavaScript -->
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="governorateFilter">Filter by Governorate:</label>
+                <select id="governorateFilter" class="form-control" onchange="filterTable()">
+                    <option value="">All Governorate</option>
+
+                    <!-- Populate options dynamically using JavaScript -->
+                </select>
+            </div>
+        </div>
+    </div>
+
 
     <section id="TeachingpostRequests" class="mt-5">
         <div class="container">
             <h2>View List of Teaching Posts</h2>
             <div class="table-responsive">
-                <table class="table table-bordered">
+                <table id="teachingPostTable" class="table table-bordered">
                     <thead>
                         <tr>
                             <th>Subject Name</th>
                             <th>Grade Level</th>
                             <th>Area</th>
                             <th>Governorate</th>
-                            <th>Number of Students</th> 
-                            <th>Action</th> 
+                            <th>Number of Students</th>
+                            <th>Action</th>
+                            <th>Location</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -128,7 +160,13 @@
                             <td>Mandara</td>
                             <td>Alexandria</td>
                             <td>70</td>
-                            <td><button type="submit"class="btn " onclick="fulfillTeachingCase('Mathematics')">Fulfill</button></td>
+                            <td><button type="submit" class="btn "
+                                    onclick="fulfillTeachingCase('Mathematics')">Fulfill</button></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" onclick="showMap('map1', 30.0444, 31.2357, 10)">Show Map</button>
+
+                            </td>
+                            
                         </tr>
                         <tr>
                             <td>English</td>
@@ -136,7 +174,14 @@
                             <td>Nasr City</td>
                             <td>Cairo</td>
                             <td>100</td>
-                            <td><button type="submit"class="btn " onclick="fulfillTeachingCase('English')">Fulfill</button></td>
+                            <td><button type="submit" class="btn "
+                                    onclick="fulfillTeachingCase('English')">Fulfill</button></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" onclick="showMap('map2')">Show
+                                    Map</button>
+                            </td>
+                            
+                        </tr>
                         </tr>
                         <tr>
                             <td>Science</td>
@@ -144,7 +189,14 @@
                             <td>Shorouk</td>
                             <td>Cairo</td>
                             <td>30</td>
-                            <td><button type="submit"class="btn" onclick="fulfillTeachingCase('Science')">Fulfill</button></td>
+                            <td><button type="submit" class="btn"
+                                    onclick="fulfillTeachingCase('Science')">Fulfill</button></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" onclick="showMap('map3')">Show
+                                    Map</button>
+                            </td>
+                
+                        </tr>
                         </tr>
                         <tr>
                             <td>Mathematics</td>
@@ -152,7 +204,14 @@
                             <td>Maadi</td>
                             <td>Cairo</td>
                             <td>90</td>
-                            <td><button type="submit" class="btn" onclick="fulfillTeachingCase('Mathematics')">Fulfill</button></td>
+                            <td><button type="submit" class="btn"
+                                    onclick="fulfillTeachingCase('Mathematics')">Fulfill</button></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" onclick="showMap('map4')">Show
+                                    Map</button>
+                            </td>
+                            
+                        </tr>
                         </tr>
                         <tr>
                             <td>English</td>
@@ -160,151 +219,287 @@
                             <td>Sidi Gaber</td>
                             <td>Alexandria</td>
                             <td>20</td>
-                            <td><button type="submit" class="btn" onclick="fulfillTeachingCase('English')">Fulfill</button></td>
-                           
-                        </tr>                
+                            <td><button type="submit" class="btn"
+                                    onclick="fulfillTeachingCase('English')">Fulfill</button></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" onclick="showMap('map5')">Show
+                                    Map</button>
+                            </td>
+                          
+                        </tr>
+
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
+   
 
-        <footer class="footer">
-            <div class="container">
+    <div id="map1" style="display: none; height: 400px; width: 450px;"></div>
+    <div id="map2"  style="display: none; height: 400px; width: 450px;"></div>
+    <div id="map3"  style="display: none; height: 400px; width: 450px;"></div>
+    <div id="map4"  style="display: none; height: 400px; width: 450px;"></div>
+    <div id="map5"  style="display: none; height: 400px; width: 450px;"></div>
+
+
+    <footer class="footer">
+        <div class="container">
             <div class="row mb-5">
                 <div class="col-md-6 col-lg-4">
-                <h3 class="heading-section">About Us</h3>
-                <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                <p><a href="#" class="link-underline">Read  More</a></p>
+                    <h3 class="heading-section">About Us</h3>
+                    <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and
+                        Consonantia, there live the blind texts. </p>
+                    <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+                        language ocean.</p>
+                    <p><a href="#" class="link-underline">Read More</a></p>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                <h3 class="heading-section">Recent Blog</h3>
-                <div class="block-21 d-flex mb-4">
-                    <figure class="mr-3">
-                    <img src="images/img_1.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                    <h3 class="heading"><a href="#">Water Is Life. Clean Water In Urban Area</a></h3>
-                    <div class="meta">
-                        <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                        <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                        <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                    <h3 class="heading-section">Recent Blog</h3>
+                    <div class="block-21 d-flex mb-4">
+                        <figure class="mr-3">
+                            <img src="images/img_1.jpg" alt="" class="img-fluid">
+                        </figure>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Water Is Life. Clean Water In Urban Area</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="block-21 d-flex mb-4">
+                        <figure class="mr-3">
+                            <img src="images/img_2.jpg" alt="" class="img-fluid">
+                        </figure>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Life Is Short So Be Kind</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-        
-                <div class="block-21 d-flex mb-4">
-                    <figure class="mr-3">
-                    <img src="images/img_2.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                    <h3 class="heading"><a href="#">Life Is Short So Be Kind</a></h3>
-                    <div class="meta">
-                        <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                        <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                        <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+
+                    <div class="block-21 d-flex mb-4">
+                        <figure class="mr-3">
+                            <img src="images/img_4.jpg" alt="" class="img-fluid">
+                        </figure>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Unfortunate Children Need Your Love</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-        
-                <div class="block-21 d-flex mb-4">
-                    <figure class="mr-3">
-                    <img src="images/img_4.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                    <h3 class="heading"><a href="#">Unfortunate Children Need Your Love</a></h3>
-                    <div class="meta">
-                        <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                        <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                        <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                    </div>
-                    </div>
-                </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                <div class="block-23">
-                    <h3 class="heading-section">Get Connected</h3>
-                    <ul>
-                        <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                        <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                        <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-                    </ul>
+                    <div class="block-23">
+                        <h3 class="heading-section">Get Connected</h3>
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View,
+                                    San Francisco, California, USA</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
+                                        210</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span
+                                        class="text">info@yourdomain.com</span></a></li>
+                        </ul>
                     </div>
                 </div>
-                
-                
+
+
             </div>
             <div class="row pt-5">
                 <div class="col-md-12 text-center">
-                
+
                     <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                        is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a
+                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
-                
+
                 </div>
             </div>
-            </div>
-        </footer>
-        
-        <!-- loader -->
-        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-        
-        
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        
-        <script src="js/jquery.fancybox.min.js"></script>
-        
-        <script src="js/aos.js"></script>
-        <script src="js/jquery.animateNumber.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-        <script src="js/google-map.js"></script>
-        <script src="js/main.js"></script>
-            
-        <script>
-        
-        document.addEventListener("DOMContentLoaded", function() {
-            window.addEventListener("scroll", function() {
-            if (window.scrollY > 50) {
-                document.getElementById("ftco-navbar").classList.add("show-logo");
-                document.querySelector(".navbar-brand").style.marginLeft = "100px"; 
-                
-            } else {
-                document.getElementById("ftco-navbar").classList.remove("show-logo");
-                document.querySelector(".navbar-brand").style.marginLeft = "-10px"; 
-            }
+        </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+
+    <script src="js/jquery.fancybox.min.js"></script>
+
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    document.getElementById("ftco-navbar").classList.add("show-logo");
+                    document.querySelector(".navbar-brand").style.marginLeft = "100px";
+
+                } else {
+                    document.getElementById("ftco-navbar").classList.remove("show-logo");
+                    document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+                }
             });
         });
-        </script>
-        
-        <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-                event.preventDefault(); // Preventing default form submission behavior
-                
-                // Displaying the thank you message
-                document.getElementById('message').style.display = 'block';
-        
-                // Redirecting to the main page after a delay
-                setTimeout(function() {
-                    window.location.href = "donormainpage.html";
-                }, 3000); // 3000 milliseconds (3 seconds) delay
-            });
-            </script>
-        <script>
-            function fulfillTeachingCase(teachingCase) {
-                alert("You have chosen to fulfill the teaching case: " + teachingCase);
+    </script>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Preventing default form submission behavior
+
+            // Displaying the thank you message
+            document.getElementById('message').style.display = 'block';
+
+            // Redirecting to the main page after a delay
+            setTimeout(function () {
+                window.location.href = "donormainpage.html";
+            }, 3000); // 3000 milliseconds (3 seconds) delay
+        });
+    </script>
+    <script>
+        function fulfillTeachingCase(teachingCase) {
+            alert("You have chosen to fulfill the teaching case: " + teachingCase);
+        }
+    </script>
+    <script>
+        function populateDropdownOptions() {
+            var subjects = [], areas = [], governorates = [];
+            var table = document.getElementById("teachingPostTable");
+            var tr = table.getElementsByTagName("tr");
+
+            // Loop through table rows and extract unique values for each filter criterion
+            for (var i = 1; i < tr.length; i++) {
+                var tdSubject = tr[i].getElementsByTagName("td")[0];
+                var tdArea = tr[i].getElementsByTagName("td")[2];
+                var tdGovernorate = tr[i].getElementsByTagName("td")[3];
+                var subject = tdSubject.textContent || tdSubject.innerText;
+                var area = tdArea.textContent || tdArea.innerText;
+                var governorate = tdGovernorate.textContent || tdGovernorate.innerText;
+
+                if (!subjects.includes(subject)) {
+                    subjects.push(subject);
+                }
+                if (!areas.includes(area)) {
+                    areas.push(area);
+                }
+                if (!governorates.includes(governorate)) {
+                    governorates.push(governorate);
+                }
             }
-        </script>
+
+            // Sort options alphabetically
+            subjects.sort();
+            areas.sort();
+            governorates.sort();
+
+            // Populate dropdown options
+            var subjectDropdown = document.getElementById("subjectFilter");
+            var areaDropdown = document.getElementById("areaFilter");
+            var governorateDropdown = document.getElementById("governorateFilter");
+
+            subjects.forEach(function (subject) {
+                var option = document.createElement("option");
+                option.text = subject;
+                subjectDropdown.add(option);
+            });
+
+            areas.forEach(function (area) {
+                var option = document.createElement("option");
+                option.text = area;
+                areaDropdown.add(option);
+            });
+
+            governorates.forEach(function (governorate) {
+                var option = document.createElement("option");
+                option.text = governorate;
+                governorateDropdown.add(option);
+            });
+        }
+
+        // Function to filter the table based on dropdown selections
+        function filterTable() {
+            var subjectFilter = document.getElementById("subjectFilter").value.toUpperCase();
+            var areaFilter = document.getElementById("areaFilter").value.toUpperCase();
+            var governorateFilter = document.getElementById("governorateFilter").value.toUpperCase();
+            var table = document.getElementById("teachingPostTable");
+            var tr = table.getElementsByTagName("tr");
+
+            for (var i = 1; i < tr.length; i++) {
+                var tdSubject = tr[i].getElementsByTagName("td")[0];
+                var tdArea = tr[i].getElementsByTagName("td")[2];
+                var tdGovernorate = tr[i].getElementsByTagName("td")[3];
+                if (tdSubject && tdArea && tdGovernorate) {
+                    var subjectValue = tdSubject.textContent || tdSubject.innerText;
+                    var areaValue = tdArea.textContent || tdArea.innerText;
+                    var governorateValue = tdGovernorate.textContent || tdGovernorate.innerText;
+                    if (subjectValue.toUpperCase().indexOf(subjectFilter) > -1 &&
+                        areaValue.toUpperCase().indexOf(areaFilter) > -1 &&
+                        governorateValue.toUpperCase().indexOf(governorateFilter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        // Call the function to populate dropdown options
+        populateDropdownOptions();
+    </script>
+
+
+<script>
+    function initializeMap(mapId, lat, lng, zoom) {
+        var mapOptions = {
+            center: { lat: lat, lng: lng },
+            zoom: zoom
+        };
+        var map = new google.maps.Map(document.getElementById(mapId), mapOptions);
+    }
+
+    function showMap(mapId, lat, lng, zoom) {
+        var mapContainer = document.getElementById(mapId);
+        if (mapContainer.style.display === 'none' || mapContainer.style.display === '') {
+            mapContainer.style.display = 'block';
+            initializeMap(mapId, lat, lng, zoom);
+        } else {
+            mapContainer.style.display = 'none';
+        }
+    }
+</script>
+
     </body>
-    </html>
+
+</html>
