@@ -73,6 +73,14 @@
         }
   </style>
 </head>
+<style>
+  /* Add this style to make clickable items blue and underlined */
+  .clickable-type {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer; /* Add a pointer cursor to indicate clickable */
+  }
+</style>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -144,44 +152,39 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>Name</th>
+              <th>Request Number</th>
               <th>Blood Type</th>
               <th>Hospital Name</th>
-              <th>Hospital Address</th>
               <th>Government</th>
               <th>Area</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>John Doe</td>
+              <td><span class="clickable-type">Request Number 1</span></td>
               <td>A+</td>
               <td>HopeBridge Hospital</td>
-              <td>123 Main St</td>
               <td>Cairo</td>
               <td>Maadi</td>
             </tr>
             <tr>
-              <td>Jane Smith</td>
+              <td><span class="clickable-type">Request Number 2</span></td>
               <td>B-</td>
               <td>El Salam Hopital</td>
-              <td>456 Elm St </td>
               <td>Cairo</td>
               <td>Nasr City</td>
             </tr>
             <tr>
-              <td>Michael Johnson</td>
+              <td><span class="clickable-type">Request Number 3</span></td>
               <td>O+</td>
               <td>Dar el Fouad</td>
-              <td>789 Oak St</td>
               <td>Giza</td>
               <td>6 of October</td>
             </tr>
             <tr>
-              <td>Sarah Williams</td>
+              <td><span class="clickable-type">Request Number 4</span></td>
               <td>AB+</td>
               <td>57357</td>
-              <td>321 Pine St</td>
               <td>Giza</td>
               <td>Dokki</td>
             </tr>
@@ -309,5 +312,41 @@
       }
     });
   </script>
+  <script>
+ document.addEventListener("DOMContentLoaded", function() {
+  // Get all the rows in the table body
+  var tableRows = document.querySelectorAll("#bloodDonationRequests tbody tr");
+
+  // Attach click event listeners to each row
+  tableRows.forEach(function(row) {
+    var requestsCell = row.querySelector("td:nth-child(1)"); // Assuming the "Request Number" column is the first column
+
+    requestsCell.addEventListener("click", function(event) {
+      // Get the text content of the clicked cell
+      var requestNumber = event.target.textContent.trim();
+
+      // Display specific messages based on the request number
+      switch (requestNumber) {
+        case "Request Number 1":
+          alert("Patient Name:Ahmed Mohamed\nBlood type: A+\nHospital Name:HopeBridge Hospital\nHospital Area: Maadi\nHospital Governorate: Cairo\nHospital address: 35 Street 9 ");
+          break;
+        case "Request Number 2":
+          alert("Patient Name:Mai Sayed\nBlood type: B-\nHospital Name: El Salam Hopital\nHospital Area: Nasr City\nHospital Governorate: Cairo\nHospital address: 73 Street Ramses ");
+          break;
+        case "Request Number 3":
+          alert("Patient Name:Omar Hany\nBlood type: O+\nHospital Name: Dar el Fouad Hopital\nHospital Area: 6th of October\nHospital Governorate: Giza\nHospital address: 56 Street Abou Galoon ");
+          break;
+        case "Request Number 4":
+          alert("Patient Name:Khaled Hussein\nBlood type: AB+\nHospital Name: 57357 Hopital\nHospital Area: Dokki\nHospital Governorate: Giza\nHospital address:  Street Wadi el Natroun");
+          break;
+        // Add more cases for other request numbers as needed
+        default:
+          alert("No specific message for this request number.");
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
+  
