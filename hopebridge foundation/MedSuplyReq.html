@@ -28,7 +28,9 @@
       font-size: 22.5px;
       margin-left: -10px;
     }
-
+    .body{
+      cursor: pointer;
+    }
     .logo {
       margin-bottom: 0px;
       margin-top: 0px;
@@ -63,6 +65,7 @@
     td {
       border-bottom: 1px solid #ddd;
       padding: 8px;
+      cursor: pointer;
     }
     .btn{
             background-color: #4297A0;
@@ -71,6 +74,29 @@
         .btn:active{
             color: white;
         }
+        .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+.modal-container {
+  background-color: #fff; /* White background for the container */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.modal-container img {
+  max-width: 60; /* Adjust image width */
+  max-height: auto; /* Adjust image height */
+}
   </style>
 </head>
 
@@ -106,7 +132,6 @@
     </div>
   </div>
   </div>
-
   <!-- Combined Filter Form -->
   <form id="combinedFilterForm">
     <label for="category">Filter by category:</label>
@@ -142,56 +167,64 @@
             <tr>
               <th>Name</th>
               <th>Quantity Needed</th>
-              <th>category</th>
+              <th>Device Type</th>
               <th>Medical Use</th>
+              <th> Picture Reference</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Food donation request rows (dummy data) -->
+            
             <tr>
               <td>Blood pressure Monitor</td>
               <td>50</td>
               <td>devices</td>
-              <td>non</td>
+              <td>None</td>
+              <td><button onclick="picview('Bpm2.jpg')">View photo </button></td>
             </tr>
             <tr>
               <td>Asprin</td>
               <td>30</td>
               <td>medication</td>
               <td>pain</td>
+              <td><button onclick="picview('ASP.jpg')">View photo </button></td>
             </tr>
             <tr>
               <td>Hospital Beds</td>
               <td>10</td>
               <td>equipment</td>
-              <td>non</td>
+              <td>None</td>
+              <td><button onclick="picview('HB.jpg')">View photo </button></td>
             </tr>
             <tr>
               <td>Insulin</td>
               <td>10</td>
               <td>medication</td>
               <td>chronic</td>
+              <td><button onclick="picview('insulin.jpg')">View photo </button></td>
             </tr>
             <tr>
               <td>Penicillin</td>
               <td>20</td>
               <td>medication</td>
               <td>infection</td>
+              <td><button onclick="picview('pencilin.jpg')">View photo </button></td>
             </tr>
-            <!-- Additional dummy data -->
+          
             <tr>
               <td>Electrocardiogram</td>
               <td>40</td>
               <td>devices</td>
               <td>None</td>
+              <td><button onclick="picview('elecM.jpg')">View photo </button></td>
             </tr>
             <tr>
               <td>Wheel Chair</td>
               <td>25</td>
               <td>equipment</td>
               <td>None</td>
+              <td><button onclick="picview('wheelC.jpg')">View photo </button></td>
             </tr>
-            <!-- Add more rows as needed -->
+            
           </tbody>
         </table>
       </div>
@@ -353,7 +386,37 @@
     });
 
   </script>
-
+<script> 
+  function picview(imageSrc) {
+    // Create a modal overlay container
+    var overlay = document.createElement('div');
+    overlay.classList.add('modal-overlay');
+    
+    // Create a modal container
+    var modalContainer = document.createElement('div');
+    modalContainer.classList.add('modal-container');
+    
+    // Create an image element
+    var imageElement = document.createElement('img');
+    imageElement.src = imageSrc;
+    
+    // Append the image element to the modal container
+    modalContainer.appendChild(imageElement);
+    
+    // Append the modal container to the overlay
+    overlay.appendChild(modalContainer);
+    
+    // Append the overlay to the body
+    document.body.appendChild(overlay);
+    
+    // Close the modal when clicking outside the image
+    overlay.onclick = function() {
+      overlay.remove();
+    };
+  }
+  
+  
+  </script>
 </body>
 
 </html>
