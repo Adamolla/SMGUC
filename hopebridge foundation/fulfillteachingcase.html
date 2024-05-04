@@ -107,34 +107,50 @@
             </div>
         </div>
     </div>
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-4">
-                <label for="subjectFilter">Filter by Subject:</label>
-                <select id="subjectFilter" class="form-control" onchange="filterTable()">
-                    <option value="">All Subjects</option>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="subjectFilter">Filter by Subject:</label>
+            <select id="subjectFilter" class="form-control" onchange="filterTable()">
+                <option value="">All Subjects</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="English">English</option>
+                <option value="Science">Science</option>
 
 
-                </select>
-            </div>
-            <div class="col-md-4">
-                <label for="areaFilter">Filter by Area:</label>
-                <select id="areaFilter" class="form-control" onchange="filterTable()">
-                    <option value="">All Areas</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="areaFilter">Filter by Area:</label>
+            <select id="areaFilter" class="form-control" onchange="filterTable()">
+                <option value="">All Areas</option>
+                <option value="Mandara">Mandara</option>
+                <option value="Nasr City">Nasr City</option>
+                <option value="Maadi">Maadi</option>
+                <option value="Shorouk">Shorouk</option>
+                <option value="Sidi Gaber">Sidi Gaber</option>
 
-                    <!-- Populate options dynamically using JavaScript -->
-                </select>
-            </div>
-            <div class="col-md-4">
-                <label for="governorateFilter">Filter by Governorate:</label>
-                <select id="governorateFilter" class="form-control" onchange="filterTable()">
-                    <option value="">All Governorate</option>
 
-                    <!-- Populate options dynamically using JavaScript -->
-                </select>
-            </div>
+                <!-- Populate options dynamically using JavaScript -->
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="governorateFilter">Filter by Governorate:</label>
+            <select id="governorateFilter" class="form-control" onchange="filterTable()">
+                <option value="">All Governorate</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Alexandria">Alexandria</option>
+
+                <!-- Populate options dynamically using JavaScript -->
+            </select>
         </div>
     </div>
+    <div class="col-md-12 mt-2">
+        <button class="btn" onclick="applyFilters()">Apply Filters</button>
+
+    </div>
+</div>
+</div>
 
 
     <section id="TeachingpostRequests" class="mt-5">
@@ -162,11 +178,13 @@
                             <td>70</td>
                             <td><button type="submit" class="btn "
                                     onclick="fulfillTeachingCase('Mathematics')">Fulfill</button></td>
+
                             <td>
-                                <button type="button" class="btn btn-primary" onclick="showMap('map1', 30.0444, 31.2357, 10)">Show Map</button>
+                                <button type="button" class="btn btn-primary" onclick="showTeachingPostLocation(31.2241, 29.9658)">Show Map</button>
 
                             </td>
-                            
+
+
                         </tr>
                         <tr>
                             <td>English</td>
@@ -177,10 +195,10 @@
                             <td><button type="submit" class="btn "
                                     onclick="fulfillTeachingCase('English')">Fulfill</button></td>
                             <td>
-                                <button type="button" class="btn btn-primary" onclick="showMap('map2')">Show
-                                    Map</button>
+                                <button type="button" class="btn btn-primary"
+                                    onclick="showTeachingPostLocation('map1', 30.0444, 31.2357, 10)">Show Map</button>
                             </td>
-                            
+
                         </tr>
                         </tr>
                         <tr>
@@ -192,10 +210,10 @@
                             <td><button type="submit" class="btn"
                                     onclick="fulfillTeachingCase('Science')">Fulfill</button></td>
                             <td>
-                                <button type="button" class="btn btn-primary" onclick="showMap('map3')">Show
-                                    Map</button>
+                                <button type="button" class="btn btn-primary"
+                                    onclick="showTeachingPostLocation('map2', 30.0444, 31.2357, 10)">Show Map</button>
                             </td>
-                
+
                         </tr>
                         </tr>
                         <tr>
@@ -207,10 +225,9 @@
                             <td><button type="submit" class="btn"
                                     onclick="fulfillTeachingCase('Mathematics')">Fulfill</button></td>
                             <td>
-                                <button type="button" class="btn btn-primary" onclick="showMap('map4')">Show
-                                    Map</button>
+                                <button type="button" class="btn btn-primary"
+                                    onclick="showTeachingPostLocation('map3', 30.0444, 31.2357, 10)">Show Map</button>
                             </td>
-                            
                         </tr>
                         </tr>
                         <tr>
@@ -222,10 +239,10 @@
                             <td><button type="submit" class="btn"
                                     onclick="fulfillTeachingCase('English')">Fulfill</button></td>
                             <td>
-                                <button type="button" class="btn btn-primary" onclick="showMap('map5')">Show
-                                    Map</button>
+                                <button type="button" class="btn btn-primary"
+                                    onclick="showTeachingPostLocation('map4', 30.0444, 31.2357, 10)">Show Map</button>
                             </td>
-                          
+
                         </tr>
 
                         </tr>
@@ -234,13 +251,6 @@
             </div>
         </div>
     </section>
-   
-
-    <div id="map1" style="display: none; height: 400px; width: 450px;"></div>
-    <div id="map2"  style="display: none; height: 400px; width: 450px;"></div>
-    <div id="map3"  style="display: none; height: 400px; width: 450px;"></div>
-    <div id="map4"  style="display: none; height: 400px; width: 450px;"></div>
-    <div id="map5"  style="display: none; height: 400px; width: 450px;"></div>
 
 
     <footer class="footer">
@@ -355,7 +365,7 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
 
@@ -393,113 +403,51 @@
             alert("You have chosen to fulfill the teaching case: " + teachingCase);
         }
     </script>
-    <script>
-        function populateDropdownOptions() {
-            var subjects = [], areas = [], governorates = [];
-            var table = document.getElementById("teachingPostTable");
-            var tr = table.getElementsByTagName("tr");
-
-            // Loop through table rows and extract unique values for each filter criterion
-            for (var i = 1; i < tr.length; i++) {
-                var tdSubject = tr[i].getElementsByTagName("td")[0];
-                var tdArea = tr[i].getElementsByTagName("td")[2];
-                var tdGovernorate = tr[i].getElementsByTagName("td")[3];
-                var subject = tdSubject.textContent || tdSubject.innerText;
-                var area = tdArea.textContent || tdArea.innerText;
-                var governorate = tdGovernorate.textContent || tdGovernorate.innerText;
-
-                if (!subjects.includes(subject)) {
-                    subjects.push(subject);
-                }
-                if (!areas.includes(area)) {
-                    areas.push(area);
-                }
-                if (!governorates.includes(governorate)) {
-                    governorates.push(governorate);
-                }
-            }
-
-            // Sort options alphabetically
-            subjects.sort();
-            areas.sort();
-            governorates.sort();
-
-            // Populate dropdown options
-            var subjectDropdown = document.getElementById("subjectFilter");
-            var areaDropdown = document.getElementById("areaFilter");
-            var governorateDropdown = document.getElementById("governorateFilter");
-
-            subjects.forEach(function (subject) {
-                var option = document.createElement("option");
-                option.text = subject;
-                subjectDropdown.add(option);
-            });
-
-            areas.forEach(function (area) {
-                var option = document.createElement("option");
-                option.text = area;
-                areaDropdown.add(option);
-            });
-
-            governorates.forEach(function (governorate) {
-                var option = document.createElement("option");
-                option.text = governorate;
-                governorateDropdown.add(option);
-            });
-        }
-
-        // Function to filter the table based on dropdown selections
-        function filterTable() {
-            var subjectFilter = document.getElementById("subjectFilter").value.toUpperCase();
-            var areaFilter = document.getElementById("areaFilter").value.toUpperCase();
-            var governorateFilter = document.getElementById("governorateFilter").value.toUpperCase();
-            var table = document.getElementById("teachingPostTable");
-            var tr = table.getElementsByTagName("tr");
-
-            for (var i = 1; i < tr.length; i++) {
-                var tdSubject = tr[i].getElementsByTagName("td")[0];
-                var tdArea = tr[i].getElementsByTagName("td")[2];
-                var tdGovernorate = tr[i].getElementsByTagName("td")[3];
-                if (tdSubject && tdArea && tdGovernorate) {
-                    var subjectValue = tdSubject.textContent || tdSubject.innerText;
-                    var areaValue = tdArea.textContent || tdArea.innerText;
-                    var governorateValue = tdGovernorate.textContent || tdGovernorate.innerText;
-                    if (subjectValue.toUpperCase().indexOf(subjectFilter) > -1 &&
-                        areaValue.toUpperCase().indexOf(areaFilter) > -1 &&
-                        governorateValue.toUpperCase().indexOf(governorateFilter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-
-        // Call the function to populate dropdown options
-        populateDropdownOptions();
-    </script>
-
-
 <script>
-    function initializeMap(mapId, lat, lng, zoom) {
-        var mapOptions = {
-            center: { lat: lat, lng: lng },
-            zoom: zoom
-        };
-        var map = new google.maps.Map(document.getElementById(mapId), mapOptions);
-    }
+    function applyFilters() {
+        var subjectFilter = document.getElementById("subjectFilter").value.toUpperCase();
+        var areaFilter = document.getElementById("areaFilter").value.toUpperCase();
+        var governorateFilter = document.getElementById("governorateFilter").value.toUpperCase();
+        var table = document.getElementById("teachingPostTable");
+        var tr = table.getElementsByTagName("tr");
 
-    function showMap(mapId, lat, lng, zoom) {
-        var mapContainer = document.getElementById(mapId);
-        if (mapContainer.style.display === 'none' || mapContainer.style.display === '') {
-            mapContainer.style.display = 'block';
-            initializeMap(mapId, lat, lng, zoom);
-        } else {
-            mapContainer.style.display = 'none';
+        for (var i = 1; i < tr.length; i++) {
+            var tdSubject = tr[i].getElementsByTagName("td")[0];
+            var tdArea = tr[i].getElementsByTagName("td")[2];
+            var tdGovernorate = tr[i].getElementsByTagName("td")[3];
+            if (tdSubject && tdArea && tdGovernorate) {
+                var subjectValue = tdSubject.textContent  tdSubject.innerText;
+                var areaValue = tdArea.textContent  tdArea.innerText;
+                var governorateValue = tdGovernorate.textContent || tdGovernorate.innerText;
+                if (subjectValue.toUpperCase().indexOf(subjectFilter) > -1 &&
+                    areaValue.toUpperCase().indexOf(areaFilter) > -1 &&
+                    governorateValue.toUpperCase().indexOf(governorateFilter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
         }
     }
 </script>
+    <script>
+        function showTeachingPostLocation(lat, lng) {
+                // Construct the Google Maps URL with the specified coordinates
+                var mapsUrl = "https://www.google.com/maps?q=" + lat + "," + lng;
 
-    </body>
+                // Open the Google Maps URL in a new tab
+                window.open(mapsUrl, '_blank');
+            }
+
+        function initializeMap(mapId, lat, lng, zoom) {
+            var mapOptions = {
+                center: { lat: lat, lng: lng },
+                zoom: zoom
+            };
+            var map = new google.maps.Map(document.getElementById(mapId), mapOptions);
+        }
+    </script>
+
+</body>
 
 </html>
