@@ -23,28 +23,263 @@
 
     <style>
       .navbar-brand {
-          font-size: 22.5px;
-          margin-left: -10px;
-      }
-      
-      .logo{
-            margin-bottom: 0px;
-            margin-top: 0px;
-            margin-left: -500px;
-            width: 140px;
-            vertical-align:bottom;
-            margin-right: 21px;
-            height: 140px;
-            border-radius: 900%;
-            display: none;
-            
-      }
-      .show-logo .logo {
-          display: block; 
-    } 
+      font-size: 22.5px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
+    }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
+    .logo {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: -490px;
+      width: 130px;
+      vertical-align: bottom;
+      margin-right: 21px;
+      height: 130px;
+      border-radius: 900%;
+      display: none;
+
+    }
+
+    .show-logo .logo {
+      display: block;
+    }
+
+    a {
+      color: #4297A0;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      /* Adjust the margin as needed */
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+
+    .btn img {
+      width: 20px;
+      /* Adjust width as needed */
+      height: 20px;
+      /* Adjust height as needed */
+      vertical-align: middle;
+      /* Align image vertically */
+    }
+
+   
     .hidden {
-            display: none;
-        }
+  display: none;
+}
+
+/* Style for form label */
+label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4297A0;
+  margin-bottom: 10px;
+  text-decoration: underline rgb(38, 37, 37);
+}
+
+/* Style for form inputs */
+#item,
+#quantity {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  
+}
+#donationForm {
+  max-width: 600px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 430px;
+}
+
+/* Style for submit button */
+input[type="submit"] {
+  background-color: #4297A0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 127px;
+  margin-bottom: 20px;
+}
+  
   </style>
   </head>
   <body>
@@ -79,177 +314,173 @@
       </div>
   </div>
 
-  <h2>Enter Donation Details</h2>
-  <form id="donationForm">
-      <label for="category">Category:</label>
-      <select id="category" name="category" onchange="showFields()">
-          <option value="All">All</option>  
-          <option value="clothes">Clothes</option>
-          <option value="toys">Toys</option>
-          <option value="food">Food</option>
-          <option value="medical_supplies">Medical Supplies</option>
-          <option value="school_supplies">School Supplies</option>
-          <option value="blood_donations">Blood Donations</option>
-      </select><br><br>
+  <h1>Donation Details</h1>
 
-      <div id="clothesFields" class="hidden">
-        <label for="clothesSize">Size:</label>
-        <select id="clothesSize" name="clothesSize">
-            <option value="XXS">XXS</option>  
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
-            <option value="One_Size">One Size</option>
-            <option value="Custom_Size">Custom Size</option>
-        </select><br><br>
-        <div>
-        <label for="customzise">Custom Size:</label>
-        <input type="text" id="customzise" name="customzise"><br><br>
-        </div>
+  <form id="donationForm">
+    <label for="category">Category:</label>
+    <select id="category" name="category" onchange="showFields()">
+      <option value=""></option>  
+      <option value="clothes">Clothes</option>
+      <option value="toys">Toys</option>
+      <option value="food">Food</option>
+      <option value="medical_supplies">Medical Supplies</option>
+      <option value="school_supplies">School Supplies</option>
+      <option value="blood_donations">Blood Donations</option>
+    </select><br><br>
+  
+    <div id="clothesFields" class="hidden">
+      <label for="clothesSize">Size:</label>
+      <select id="clothesSize" name="clothesSize">
+        <option value=""></option>
+        <option value="XXS">XXS</option>  
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+        <option value="One_Size">One Size</option>
+        <option value="Custom_Size">Custom Size</option>
+      </select><br><br>
+      <div>
+        <label for="customSize">Custom Size:</label>
+        <input type="text" id="customSize" name="customSize"><br><br>
+      </div>
+      <div>
         <label for="clothesGender">Gender:</label>
         <select id="clothesGender" name="clothesGender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="unisex">Unisex</option>
+          <option value=""></option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="unisex">Unisex</option>
         </select><br><br>
-       
+      </div>
     </div>
-
-      <div id="toysFields" class="hidden">
-          <label for="toyType">Type:</label>
-          <select id="toyType" name="toyType">
-              <option value="All">All</option>
-              <option value="board_games">Board Games</option>
-              <option value="stuffed_toys">Stuffed Toys</option>
-              <option value="dolls">Dolls</option>
-              <option value="sports">Sports</option>
-              <option value="cars">Cars</option>
-              <option value="outdoor">Outdoor</option>
-          </select><br><br>
-
-          <label for="toyAge">Age Range:</label>
-          <input type="text" id="toyAge" name="toyAge"><br><br>
+  
+    <div id="toysFields" class="hidden">
+      <label for="toyType">Type:</label>
+      <select id="toyType" name="toyType">
+        <option value=""></option>
+        <option value="board_games">Board Games</option>
+        <option value="stuffed_toys">Stuffed Toys</option>
+        <option value="dolls">Dolls</option>
+        <option value="sports">Sports</option>
+        <option value="cars">Cars</option>
+        <option value="outdoor">Outdoor</option>
+      </select><br><br>
+      <div>
+        <label for="toyAge">Age:</label>
+        <input type="text" id="toyAge" name="toyAge"><br><br>
       </div>
-
-      <div id="foodFields" class="hidden">
-          <label for="foodType">Type:</label>
-          <select id="foodType" name="foodType">
-            <option value="All">All</option>
-              <option value="fruits_and_vegetables">Fruits and Vegetables</option>
-              <option value="canned_foods">Canned Foods</option>
-              <option value="fresh_meals">Fresh Meals</option>
-              <option value="baked_goods">Baked Goods</option>
-          </select><br><br>
-
-          <label for="foodQuantity">Quantity:</label>
-          <input type="text" id="foodQuantity" name="foodQuantity"><br><br>
+    </div>
+  
+    <div id="foodFields" class="hidden">
+      <label for="foodType">Type:</label>
+      <select id="foodType" name="foodType">
+        <option value=""></option>
+        <option value="fruits_and_vegetables">Fruits and Vegetables</option>
+        <option value="canned_foods">Canned Foods</option>
+        <option value="fresh_meals">Fresh Meals</option>
+        <option value="baked_goods">Baked Goods</option>
+      </select><br><br>
+      <div>
+        <label for="foodQuantity">Quantity:</label>
+        <input type="text" id="foodQuantity" name="foodQuantity"><br><br>
       </div>
-
-      <div id="medicalSuppliesFields" class="hidden">
-          <label for="medicalSupplyType">Type:</label>
-          <select id="medicalSupplyType" name="medicalSupplyType">
-              <option value="medical_devices">Medical Devices</option>
-              <option value="medical_equipment_and_medication">Medical Equipment and Medication</option>
-              <option value="pain">Pain</option>
-              <option value="chronic">Chronic</option>
-              <option value="infection">Infection</option>
-          </select><br><br>
-
-          <label for="medicalSupplyCondition">Condition:</label>
-          <input type="text" id="medicalSupplyCondition" name="medicalSupplyCondition"><br><br>
+    </div>
+  
+    <div id="medicalSuppliesFields" class="hidden">
+      <label for="medicalSupplyType">Type:</label>
+      <select id="medicalSupplyType" name="medicalSupplyType">
+        <option value=""></option>
+        <option value="medical_devices">Medical Devices</option>
+        <option value="medical_equipment_and_medication">Medical Equipment and Medication</option>
+        <option value="pain">Pain</option>
+        <option value="chronic">Chronic</option>
+        <option value="infection">Infection</option>
+      </select><br><br>
+      <div>
+        <label for="medicalSupplyCondition">Condition:</label>
+        <input type="text" id="medicalSupplyCondition" name="medicalSupplyCondition"><br><br>
       </div>
-
-      <div id="schoolSuppliesFields" class="hidden">
-          <label for="schoolSupplyType">Type:</label>
-          <select id="schoolSupplyType" name="schoolSupplyType">
-              <option value="books">Books</option>
-              <option value="stationary">Stationary</option>
-          </select><br><br>
-
-          <label for="schoolSupplyQuantity">Quantity:</label>
-          <input type="text" id="schoolSupplyQuantity" name="schoolSupplyQuantity"><br><br>
+    </div>
+  
+    <div id="schoolSuppliesFields" class="hidden">
+      <label for="schoolSupplyType">Type:</label>
+      <select id="schoolSupplyType" name="schoolSupplyType">
+        <option value=""></option>
+        <option value="books">Books</option>
+        <option value="stationary">Stationary</option>
+      </select><br><br>
+      <div>
+        <label for="schoolSupplyQuantity">Quantity:</label>
+        <input type="text" id="schoolSupplyQuantity" name="schoolSupplyQuantity"><br><br>
       </div>
-
-      <div id="bloodDonationsFields" class="hidden">
-          <label for="bloodType">Blood Type:</label>
-          <select id="bloodType" name="bloodType">
-              <option value="A+">A+</option>
-              <option value="A-">A-</option>
-              <option value="B+">B+</option>
-              <option value="B-">B-</option>
-              <option value="AB+">AB+</option>
-              <option value="AB-">AB-</option>
-              <option value="O+">O+</option>
-              <option value="O-">O-</option>
-          </select><br><br>
-
-          <label for="bloodQuantity">Quantity (in pints):</label>
-          <input type="text" id="bloodQuantity" name="bloodQuantity"><br><br>
+    </div>
+  
+    <div id="bloodDonationsFields" class="hidden">
+      <label for="bloodType">Blood Type:</label>
+      <select id="bloodType" name="bloodType">
+        <option value=""></option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select><br><br>
+      <div>
+        <label for="bloodQuantity">Quantity (in pints):</label>
+        <input type="text" id="bloodQuantity" name="bloodQuantity"><br><br>
       </div>
-
-      <label for="description">Description:</label><br>
-      <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
-
-      <input type="submit" value="Submit">
+    </div>
+  
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+    <input type="submit" class="btn" value="Submit">
   </form>
 
-
   <footer class="footer">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-6 col-lg-4">
-          <h3 class="heading-section">About Us</h3>
-          <p class="mb-5">Driven by empathy and a desire for change, we strive to bridge the gap between privilege and
-            poverty,
-            believing that everyone deserves access to basic necessities, education, and opportunities for a better
-            future.</p>
-          <p><a href="#" class="link-underline">Learn More About Our Initiatives</a></p>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="block-23">
-            <h3 class="heading-section">Get Connected</h3>
-            <ul>
-              <li><span class="icon icon-map-marker"></span><span class="text">Al tagamoa, Gamal Abdel Nasser, New Cairo
-                  1, Cairo Governorate</span></li>
-              <li><a href="#"><span class="icon icon-phone"></span><span class="text">Tel: 0227589990</span></a></li>
-              <li><a href="#"><span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
-              <li><a href="#"><span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
-            </ul>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4">
+            <h3 class="heading-section">About Us</h3>
+            <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege and
+              poverty, believing that everyone deserves access to basic necessities, education, and opportunities for a
+              better future.</p>
+          </div>
+  
+          <div class="col-md-6 col-lg-4">
+            <h3 class="heading-section">Contact Us</h3>
+            <div class="block-23">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                    German University in Cairo
+                    El Tagamoa El Khames
+                    New Cairo City - Egypt</span></li>
+                <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                      010-9917-0359</span></a></li>
+                <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+                <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- New div for the image container -->
+          <div class="col-md-6 col-lg-4">
+            <div class="image-container">
+              <a href="about.html">
+                <img src="fond_logo.png">
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row pt-5">
-        <div class="col-md-12 text-center">
-          <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> All rights reserved </a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-  
-  
-  </div>
-  <div class="row pt-5">
-    <div class="col-md-12 text-center">
-      <p>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;
-        <script>document.write(new Date().getFullYear());</script> All rights reserved </a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      </p>
-    </div>
-  </div>
-  </div>
-  </footer>
-
+    </footer>
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 

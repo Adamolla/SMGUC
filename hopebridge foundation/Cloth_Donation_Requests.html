@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HopeBridge Foundation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .navbar-brand {
+      font-size: 22.5px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
+    }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
+    .logo {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: -490px;
+      width: 130px;
+      vertical-align: bottom;
+      margin-right: 21px;
+      height: 130px;
+      border-radius: 900%;
+      display: none;
+
+    }
+
+    .show-logo .logo {
+      display: block;
+    }
+
+    a {
+      color: #4297A0;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
+    table {
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
+      border-collapse: collapse;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      /* Adjust the margin as needed */
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .btn {
+      background-color: transparent;
+      /* Remove background color */
+      border: none;
+      /* Remove border */
+      padding: 0;
+      /* Remove padding */
+    }
+
+    .btn img {
+      width: 20px;
+      /* Adjust width as needed */
+      height: 20px;
+      /* Adjust height as needed */
+      vertical-align: middle;
+      /* Align image vertically */
+    }
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 450px;
+
+    }
+
+    #gender,
+    #age,
+    #season {
+      padding: 8px 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+      width: 320px;
+    }
+
+    #gender {
+      margin-left: -4px;
+      /* Adjust the margin as needed */
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+      <img class="logo" src="fond_logo.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+        data-stellar-background-ratio="0.5">
+      </div>
+    </div>
+  </div>
+  </div>
+  <h1> Clothes Donation Requests</h1>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <label for="gender">Gender:</label>
+        <select id="gender" class="form-control">
+          <option value="">All</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Children">Children</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="age">Age:</label>
+        <input type="number" id="age" class="form-control" placeholder="Enter Age" min="1" required><br><br>
+
+      </div>
+      <div class="col-md-4">
+        <label for="season">Season:</label>
+        <select id="season" class="form-control">
+          <option value="">All</option>
+          <option value="Spring">Spring</option>
+          <option value="Summer">Summer</option>
+          <option value="Autumn">Autumn</option>
+          <option value="Winter">Winter</option>
+        </select>
+      </div>
+      <div class="col-md-12 mt-3">
+        <button id="filterButton" class="btn">Apply Filter</button>
+      </div>
+    </div>
+  </div>
+  <style>
+    .clickable-type {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+
+  <section id="clothesDonationRequests" class="mt-5">
+    <div class="container">
+      <h2>View List of Clothes Donation Requests</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Gender</th>
+              <th>Age</th>
+              <th>Type of Clothes (click to view needed details of a specific item)</th>
+              <th>Season</th>
+              <th>Size</th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr>
+              <td>Female</td>
+              <td>20</td>
+              <td><span class="clickable-type">Dresses</span></td>
+              <td>Spring</td>
+              <td>S</td>
+            </tr>
+            <tr>
+              <td>Female</td>
+              <td>25</td>
+              <td><span class="clickable-type">Blouses</span></td>
+              <td>Spring</td>
+              <td>M</td>
+            </tr>
+            <tr>
+              <td>Male</td>
+              <td>25</td>
+              <td><span class="clickable-type">Shirts</span></td>
+              <td>Summer</td>
+              <td>L</td>
+            </tr>
+            <tr>
+              <td>Male</td>
+              <td>20</td>
+              <td><span class="clickable-type">Pants</span></td>
+              <td>Summer</td>
+              <td>XL</td>
+            </tr>
+            <tr>
+              <td>Children</td>
+              <td> 6 </td>
+              <td><span class="clickable-type">T-shirts</span></td>
+              <td>Autumn</td>
+              <td>M</td>
+
+            </tr>
+            <tr>
+              <td>Children</td>
+              <td> 8 </td>
+              <td><span class="clickable-type">Shorts</span></td>
+              <td>Autumn</td>
+              <td>S</td>
+            </tr>
+            <tr>
+              <td>Unisex</td>
+              <td>20</td>
+              <td><span class="clickable-type">Hoodies</span></td>
+              <td>Winter</td>
+              <td>One Size</td>
+            </tr>
+            <tr>
+              <td>Unisex</td>
+              <td>2</td>
+              <td><span class="clickable-type">Jackets</span></td>
+              <td>Winter</td>
+              <td>One Size</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4">
+            <h3 class="heading-section">About Us</h3>
+            <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege and
+              poverty, believing that everyone deserves access to basic necessities, education, and opportunities for a
+              better future.</p>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <h3 class="heading-section">Contact Us</h3>
+            <div class="block-23">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                    German University in Cairo
+                    El Tagamoa El Khames
+                    New Cairo City - Egypt</span></li>
+                <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                      010-9917-0359</span></a></li>
+                <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+                <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- New div for the image container -->
+          <div class="col-md-6 col-lg-4">
+            <div class="image-container">
+              <a href="about.html">
+                <img src="fond_logo.png">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#F96D00" />
+      </svg></div>
+
+    <!-- JavaScript imports and scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            document.getElementById("ftco-navbar").classList.add("show-logo");
+            document.querySelector(".navbar-brand").style.marginLeft = "100px";
+
+          } else {
+            document.getElementById("ftco-navbar").classList.remove("show-logo");
+            document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("filterButton").addEventListener("click", filterDonationRequests);
+      });
+
+      function filterDonationRequests() {
+        var genderFilter = document.getElementById("gender").value;
+        var ageFilter = document.getElementById("age").value;
+        var seasonFilter = document.getElementById("season").value;
+        var tableRows = document.querySelectorAll("#clothesDonationRequests tbody tr");
+
+        tableRows.forEach(function (row) {
+          var genderCell = row.querySelector("td:nth-child(1)").textContent.trim();
+          var ageCell = parseInt(row.querySelector("td:nth-child(2)").textContent.trim());
+          var typeCell = row.querySelector("td:nth-child(3)").textContent.trim();
+          var seasonCell = row.querySelector("td:nth-child(4)").textContent.trim();
+
+          var showRow = true;
+
+          if (genderFilter && genderFilter !== "All" && genderCell !== genderFilter) {
+            showRow = false;
+          }
+
+          if (ageFilter !== "") {
+            var filterAge = parseInt(ageFilter);
+
+            if (isNaN(ageCell) || ageCell !== filterAge) {
+              showRow = false;
+            }
+          }
+
+          if (seasonFilter && seasonFilter !== "All" && seasonCell !== seasonFilter) {
+            showRow = false;
+          }
+
+          row.style.display = showRow ? "" : "none";
+        });
+      }
+
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all the rows in the table
+        // Get all the cells in the column that contains the type of clothing
+        var typeCells = document.querySelectorAll("#clothesDonationRequests tbody td:nth-child(3)");
+
+        // Attach click event listeners to each cell
+        typeCells.forEach(function (cell) {
+          cell.addEventListener("click", function () {
+            // Get the type of clothes from the clicked cell
+            var typeOfClothes = cell.textContent.trim();
+
+            // Display details based on the type of clothes
+            switch (typeOfClothes) {
+              case "Dresses":
+                alert("Gender: Female\nType of clothing: Dresses\nAge: 20\nSeason: Spring\nMaterial: Cloth");
+                break;
+              case "Blouses":
+                alert("Gender: Female\nType of clothing: Blouses\nAge: 25\nSeason: Spring\nMaterial: Cotton");
+                break;
+              case "Shirts":
+                alert("Gender: Male\nType of clothing: Shirts\nAge: 25\nSeason: Summer\nMaterial: Cotton");
+                break;
+              case "Pants":
+                alert("Gender: Male\nType of clothing: Pants\nAge: 20\nSeason: Summer\nMaterial: Jeans");
+                break;
+              case "T-shirts":
+                alert("Gender: Unisex\nType of clothing: T-shirts\nAge: 6\nSeason: Autumn\nMaterial: Cotton");
+                break;
+              case "Shorts":
+                alert("Gender: Unisex\nType of clothing: Shorts\nAge: 8\nSeason: Summer\nMaterial: Polestar");
+                break;
+              case "Hoodies":
+                alert("Gender: Unisex\nType of clothing: Hoodie\nAge: 20\nSeason: Winter\nMaterial: Wool");
+                break;
+              case "Jackets":
+                alert("Gender: Unisex\nType of clothing: Jackets\nAge: 2\nSeason: Winter\nMaterial: Wool");
+                break;
+              default:
+                alert("No additional details available.");
+            }
+          });
+        });
+      });
+    </script>
+
+
+</body>
+
+</html>
