@@ -19,12 +19,70 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/fancybox.min.css">
-
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-      .navbar-brand {
+    table {
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
+      border-collapse: collapse;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      /* Adjust the margin as needed */
+      text-decoration: underline rgb(38, 37, 37);
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .navbar-brand {
       font-size: 22.5px;
       margin-left: 10px;
       padding-left: 10px;
@@ -53,6 +111,10 @@
 
     .show-logo .logo {
       display: block;
+    }
+
+    a {
+      color: #4297A0;
     }
 
     .btn-primary {
@@ -117,6 +179,11 @@
       font-size: 25px;
       color: #4297A0;
 
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
     }
 
     .fundraise-item a {
@@ -188,32 +255,9 @@
       display: inline-block;
       border-radius: 50px;
     }
+
     body {
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    .btn {
-      background-color: #4297A0;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 18px;
-      margin-left: 80px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    h1 {
-      text-align: center;
-      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-      font-size: 36px;
-      color: #4297A0;
-      /* Choose your desired color */
-      margin-top: 50px;
-      /* Adjust the margin as needed */
-      margin-bottom: 30px;
-      /* Adjust the margin as needed */
-      text-decoration: underline rgb(38, 37, 37);
     }
   </style>
 </head>
@@ -233,9 +277,10 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-          <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
+          <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="ManageAcc.html" class="nav-link">Manage Account</a></li>
         </ul>
       </div>
     </div>
@@ -244,56 +289,106 @@
 
   <div class="block-31" style="position: relative;">
     <div class="owl-carousel loop-block-31 ">
-      <div class="block-30 block-30-sm item" style="background-image: url('images/bg_2.jpg');"
+      <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
         data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-md-7 text-center">
-              <h2 class="heading">Get In Touch</h2>
-            </div>
-          </div>
-        </div>
       </div>
-
     </div>
   </div>
+  </div>
 
-  <div class="site-section">
-    <div class="container">
-      <div class="row block-9">
-        <div class="col-md-6 pr-md-5">
-          <form action="#">
-            <div class="form-group">
-              <input type="text" class="form-control px-3 py-3" placeholder="Your Name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control px-3 py-3" placeholder="Your Email">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control px-3 py-3" placeholder="Subject">
-            </div>
-            <div class="form-group">
-              <textarea name="" id="" cols="30" rows="7" class="form-control px-3 py-3"
-                placeholder="Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Send Message" class="btn py-3 px-5">
-            </div>
-          </form>
-        </div>
+  <h1>View Donors List:</h1>
 
-
-        <div class="col-md-6">
-          <!-- Updated iframe with provided coordinates -->
-          <h1>Find Us At</h1>
-          <p></p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.742533243178!2d31.444929227625497!3d29.988882135306266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cb2bfafbe73%3A0x6e7220116094726d!2sGerman%20University%20in%20Cairo%20(GUC)!5e0!3m2!1sen!2seg!4v1715020773756!5m2!1sen!2seg"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Contact Details</th>
+        <th>Address</th>
+        <th>Area</th>
+        <th>Governorate</th>
+        <th>Type of Volunteer</th>
+        <th>Uploaded Document</th>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>Male</td>
+        <td>1234567890 <br> john@example.com</td>
+        <td>123 Main St</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Doctor</td>
+        <td><a href="doctor certificate1.pdf" target="_blank">Document1.pdf</a></td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Smith</td>
+        <td>Female</td>
+        <td>9876543210 <br> jane@example.com</td>
+        <td>456 Oak St</td>
+        <td>Town</td>
+        <td>Province</td>
+        <td>Teacher</td>
+        <td><a href="teacher certificate1.pdf" target="_blank">Document2.pdf</a></td>
+      </tr>
+      <tr>
+        <td>Michael</td>
+        <td>Johnson</td>
+        <td>Male</td>
+        <td>5556667777 <br> michael@example.com</td>
+        <td>789 Elm St</td>
+        <td>Village</td>
+        <td>County</td>
+        <td>Doctor</td>
+        <td><a href="doctor certificate2.pdf" target="_blank">Document3.pdf</a></td>
+      </tr>
+      <tr>
+        <td>Emily</td>
+        <td>Wilson</td>
+        <td>Female</td>
+        <td>4443332222 <br> emily@example.com</td>
+        <td>101 Pine St</td>
+        <td>Suburb</td>
+        <td>Region</td>
+        <td>Teacher</td>
+        <td><a href="teacher certificate2.pdf" target="_blank">Document4.pdf</a></td>
+      </tr>
+      <tr>
+        <td>David</td>
+        <td>Lee</td>
+        <td>Male</td>
+        <td>9998887777 <br> david@example.com</td>
+        <td>321 Maple St</td>
+        <td>Hamlet</td>
+        <td>Division</td>
+        <td>Doctor</td>
+        <td><a href="doctor certificate3.pdf" target="_blank">Document5.pdf</a></td>
+      </tr>
+      <tr>
+        <td>Sarah</td>
+        <td>Miller</td>
+        <td>Female</td>
+        <td>1112223333 <br> sarah@example.com</td>
+        <td>555 Cedar St</td>
+        <td>Outskirts</td>
+        <td>Zone</td>
+        <td>Teacher</td>
+        <td><a href="teacher certificate3.pdf" target="_blank">Document6.pdf</a></td>
+      </tr>
+      <tr>
+        <td>Robert</td>
+        <td>Thompson</td>
+        <td>Male</td>
+        <td>6665554444 <br> robert@example.com</td>
+        <td>777 Walnut St</td>
+        <td>Rural</td>
+        <td>District</td>
+        <td>Doctor</td>
+        <td><a href="doctor certificate4.pdf" target="_blank">Document7.pdf</a></td>
+      </tr>
+    </table>
   </div>
 
 
@@ -336,6 +431,10 @@
     </div>
   </footer>
 
+
+
+
+
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
@@ -360,7 +459,7 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
@@ -371,6 +470,7 @@
         if (window.scrollY > 50) {
           document.getElementById("ftco-navbar").classList.add("show-logo");
           document.querySelector(".navbar-brand").style.marginLeft = "100px";
+
         } else {
           document.getElementById("ftco-navbar").classList.remove("show-logo");
           document.querySelector(".navbar-brand").style.marginLeft = "-10px";
@@ -378,8 +478,6 @@
       });
     });
   </script>
-
-</script>
 </body>
 
 </html>

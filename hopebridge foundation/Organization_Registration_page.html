@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HopeBridge Foundation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .navbar-brand {
+      font-size: 22.5px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      /* Adjust the margin as needed */
+      margin-left: -20px;
+    }
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
+    }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
+    .logo {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: -490px;
+      width: 130px;
+      vertical-align: bottom;
+      margin-right: 21px;
+      height: 130px;
+      border-radius: 900%;
+      display: none;
+
+    }
+
+    .show-logo .logo {
+      display: block;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .wrapper {
+      max-width: 490px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 8px;
+
+    }
+
+    /* Styles for form fields */
+    .fs,
+    .ls,
+    .gen,
+    .email,
+    .pass,
+    .num,
+    .address,
+    .area,
+    .gov,
+    .orgname,
+    .document-upload {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px 15px;
+      padding-left: 40px;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+    }
+
+    /* Styles for icons */
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+      color: #495057;
+    }
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 145px;
+    }
+
+    .btn:hover {
+      background-color: #357d8e;
+    }
+
+    .document-upload {
+      margin-bottom: 20px;
+      position: relative;
+      /* Add position relative for proper positioning of the label */
+    }
+
+    .document-upload label {
+      display: block;
+      margin-bottom: 10px;
+      color: #495057;
+      text-decoration: underline;
+      cursor: pointer;
+      /* Add cursor pointer to indicate clickable */
+    }
+
+    .document-upload input[type="file"] {
+      display: none;
+    }
+
+    .document-upload .upload-button {
+      background-color: #4297A0;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .document-upload .upload-button:hover {
+      background-color: #357d8e;
+    }
+
+    .document-upload input[type="file"]+.upload-button::before {
+      content: 'Upload Document(s)';
+    }
+
+    .document-upload label:hover {
+      color: #4297A0;
+    }
+
+    /* Style to indicate uploaded document */
+    .document-upload .uploaded-document {
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+      color: #4297A0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+      <img class="logo" src="fond_logo.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+        data-stellar-background-ratio="0.5">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <h1> Organization's Registration Form: </h1>
+
+  <div class "wrapper">
+    <form action="organizationPost.html" method="GET">
+      <div>
+        <div class="wrapper">
+          <form>
+            <div class="fs">
+              <i class='bx bxs-user'></i>
+              <input type="text" id="fs" placeholder="First Name" required>
+
+              <i class='bx bxs-user'></i>
+            </div>
+            <div class="ls">
+              <input type="text" id="ls" placeholder="Last Name" required>
+              <i class='bx bxs-user'></i>
+            </div>
+            <div class="gen">
+              <input type="text" id="gen" placeholder="Gender" required>
+              <i class='bx bxs-user'></i>
+            </div>
+            <div class="email">
+              <input type="text" id="em" placeholder="Email" required>
+              <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="pass">
+              <input type="password" id="pass" placeholder="Password" required>
+              <i class='bx bxs-lock'></i>
+            </div>
+            <div class="num">
+              <input type="text" id="num" placeholder="Contact Number" required>
+              <i class='bx bxs-contact'></i>
+            </div>
+            <div class="orgname">
+              <input type="text" id="add" placeholder=" Organization Name" required>
+              <i class='bx bxs-buildings'></i>
+            </div>
+            <div class="address">
+              <input type="text" id="add" placeholder=" Organization Address" required>
+              <i class='bx bxs-home'></i>
+            </div>
+            <div class="area">
+              <input type="text" id="area" placeholder="Area" required>
+              <i class='bx bxs-area'></i>
+            </div>
+            <div class="gov">
+              <input type="text" id="goc" placeholder=" Governorate" required>
+              <i class='bx bxs-map-pin'></i>
+            </div>
+            <div class="document-upload">
+              <label for="document">Upload Organization Document(s):</label>
+              <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
+              <span class="uploaded-document" id="uploadedDocumentPlaceholder">No document chosen</span>
+            </div>
+            <button type="submit" class="btn">Login</button>
+
+          </form>
+        </div>
+
+
+
+        <footer class="footer">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-md-6 col-lg-4">
+                <h3 class="heading-section">About Us</h3>
+                <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege
+                  and
+                  poverty, believing that everyone deserves access to basic necessities, education, and opportunities
+                  for a
+                  better future.</p>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <h3 class="heading-section">Contact Us</h3>
+                <div class="block-23">
+                  <ul>
+                    <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                        German University in Cairo
+                        El Tagamoa El Khames
+                        New Cairo City - Egypt</span></li>
+                    <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                          010-9917-0359</span></a></li>
+                    <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+                    <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- New div for the image container -->
+              <div class="col-md-6 col-lg-4">
+                <div class="image-container">
+                  <a href="about.html">
+                    <img src="fond_logo.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+              stroke="#F96D00" />
+          </svg></div>
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+              if (window.scrollY > 50) {
+                document.getElementById("ftco-navbar").classList.add("show-logo");
+                document.querySelector(".navbar-brand").style.marginLeft = "100px";
+
+              } else {
+                document.getElementById("ftco-navbar").classList.remove("show-logo");
+                document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+              }
+            });
+          });
+        </script>
+
+        <script>
+          // Function to handle form submission
+          function registerUser(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            // Retrieve form data (assuming you have form fields with IDs firstName, lastName, etc.)
+            var firstName = document.getElementById('fs').value;
+            var lastName = document.getElementById('ls').value;
+            var gender = document.getElementById('gen').value;
+            var email = document.getElementById('em').value;
+            var password = document.getElementById('pass').value;
+            var contactNumber = document.getElementById('num').value;
+            var address = document.getElementById('add').value;
+            var organizationName = document.getElementById('orgname').value;
+            var area = document.getElementById('area').value;
+            var governorate = document.getElementById('goc').value;
+
+            // Check if a document has been uploaded
+            var documentUploaded = document.getElementById('document').files.length > 0;
+
+            // Perform basic form validation
+            if (!firstName || !lastName || !gender || !email || !password || !contactNumber || !address || !organizationName || !area || !governorate) {
+              alert('Please fill out all required fields.');
+              return;
+            }
+
+            // Display the entered form data
+            var formData = {
+              "First Name": firstName,
+              "Last Name": lastName,
+              "Gender": gender,
+              "Email": email,
+              "Password": password,
+              "Contact Number": contactNumber,
+              "Organization Name": organizationName,
+              "Address": address,
+              "Area": area,
+              "Governorate": governorate,
+              "Document Uploaded": documentUploaded ? "Yes" : "No"
+            };
+            console.log(formData); // Log the form data to the console
+
+            // Display a message indicating that the registration is successful
+            var message = 'Registration successful!';
+            if (documentUploaded) {
+              message += ' Document uploaded.';
+            }
+            alert(message);
+
+            // Redirect the user to the donate.html page after a short delay
+            setTimeout(function () {
+              window.location.href = 'donate.html';
+            }, 2000); // Delay in milliseconds (2000ms = 2 seconds)
+          }
+
+          // Add event listener to the form
+          document.querySelector('form').addEventListener('submit', registerUser);
+        </script>
+
+        <script>
+          // Function to handle document upload
+          document.getElementById('document').addEventListener('change', function () {
+            var fileInput = this;
+            var uploadedDocumentPlaceholder = document.getElementById('uploadedDocumentPlaceholder');
+            if (fileInput.files && fileInput.files.length > 0) {
+              uploadedDocumentPlaceholder.textContent = fileInput.files[0].name; // Update placeholder with the name of the uploaded file
+            } else {
+              uploadedDocumentPlaceholder.textContent = 'No document chosen'; // Reset placeholder if no file is chosen
+            }
+          });
+
+        </script>
+
+</body>
+
+</html>

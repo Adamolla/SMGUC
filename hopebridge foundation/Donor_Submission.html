@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HopeBridge Foundation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .navbar-brand {
+      font-size: 22.5px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
+    }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
+    .logo {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: -490px;
+      width: 130px;
+      vertical-align: bottom;
+      margin-right: 21px;
+      height: 130px;
+      border-radius: 900%;
+      display: none;
+
+    }
+
+    .show-logo .logo {
+      display: block;
+    }
+
+    a {
+      color: #4297A0;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    table {
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
+      border-collapse: collapse;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      /* Adjust the margin as needed */
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .btn {
+      background-color: transparent;
+      /* Remove background color */
+      border: none;
+      /* Remove border */
+      padding: 0;
+      /* Remove padding */
+    }
+
+    .btn img {
+      width: 20px;
+      /* Adjust width as needed */
+      height: 20px;
+      /* Adjust height as needed */
+      vertical-align: middle;
+      /* Align image vertically */
+    }
+
+    .btnn {
+      background-color: #4297A0;
+      border: solid #4297A0;
+      color: white;
+      letter-spacing: .2em;
+      padding: 0%;
+      width: 70px;
+      height: 50px;
+      box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .btnn:hover {
+      background-color: black;
+      border: solid black;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+      <img class="logo" src="fond_logo.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="ManageAcc.html" class="nav-link">Manage Account</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+        data-stellar-background-ratio="0.5">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="table-container">
+    <h1>View Donors List:</h1>
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Contact Details</th>
+        <th>Address</th>
+        <th>Area</th>
+        <th>Governorate</th>
+        <th>Location</th>
+        <th>Type of Volunteer</th>
+        <th>Uploaded Document</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>Male</td>
+        <td>1234567890 <br> john@example.com</td>
+        <td>123 Main St</td>
+        <td>City</td>
+        <td>State</td>
+        <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+        <td>Doctor</td>
+        <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
+        <td> <button class="btn" onclick="downloadSubmission('John Doe')">
+            <img src="download.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btn" onclick="acceptSubmission('John Doe')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btn" onclick="rejectSubmission('John Doe')">
+            <img src="reject.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Smith</td>
+        <td>Female</td>
+        <td>9876543210 <br> jane@example.com</td>
+        <td>456 Oak St</td>
+        <td>Town</td>
+        <td>Province</td>
+        <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+        <td>Teacher</td>
+        <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
+        <td> <button class="btn" onclick="downloadSubmission('Jane Smith ')">
+            <img src="download.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btn" onclick="acceptSubmission('Jane Smith')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btn" onclick="rejectSubmission('Jane Smith')">
+            <img src="reject.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Michael</td>
+        <td>Johnson</td>
+        <td>Male</td>
+        <td>5556667777 <br> michael@example.com</td>
+        <td>789 Elm St</td>
+        <td>Village</td>
+        <td>County</td>
+        <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+        <td>Doctor</td>
+        <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
+        <td> <button class="btn" onclick="downloadSubmission('Michael Johnson ')">
+            <img src="download.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btn" onclick="acceptSubmission('Michael Johnson ')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btn" onclick="rejectSubmission('Michael Johnson ')">
+            <img src="reject.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Emily</td>
+        <td>Wilson</td>
+        <td>Female</td>
+        <td>4443332222 <br> emily@example.com</td>
+        <td>101 Pine St</td>
+        <td>Suburb</td>
+        <td>Region</td>
+        <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+        <td>Teacher</td>
+        <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
+        <td> <button class="btn" onclick="downloadSubmission('Emily Wilson')">
+            <img src="download.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btn" onclick="acceptSubmission('Emily Wilson')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btn" onclick="rejectSubmission('Emily Wilson')">
+            <img src="reject.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>David</td>
+        <td>Lee</td>
+        <td>Male</td>
+        <td>9998887777 <br> david@example.com</td>
+        <td>321 Maple St</td>
+        <td>Hamlet</td>
+        <td>Division</td>
+        <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+        <td>Doctor</td>
+        <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
+        <td> <button class="btn" onclick="downloadSubmission('David Lee')">
+            <img src="download.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btn" onclick="acceptSubmission('David Lee')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btn" onclick="rejectSubmission('David Lee')">
+            <img src="reject.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Sarah</td>
+        <td>Miller</td>
+        <td>Female</td>
+        <td> 1112223333 <br> sarah@example.com</td>
+        <td>555 Cedar St</td>
+        <td>Outskirts</td>
+        <td>Zone</td>
+        <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+        <td>Teacher</td>
+        <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
+        <td> <button class="btn" onclick="downloadSubmission('Sarah Miller ')">
+            <img src="download.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btn" onclick="acceptSubmission('Sarah Miller')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btn" onclick="rejectSubmission('Sarah Miller')">
+            <img src="reject.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
+      <tr>
+        <td>Robert</td>
+        <td>Thompson</td>
+        <td>Male</td>
+        <td>6665554444 <br> robert@example.com</td>
+        <td>777 Walnut St</td>
+        <td>Rural</td>
+        <td>District</td>
+        <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+        <td>Doctor</td>
+        <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
+        <td> <button class="btn" onclick="downloadSubmission('Robert Thompson ')">
+            <img src="download.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btn" onclick="acceptSubmission('Robert Thompson ')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btn" onclick="rejectSubmission('Robert Thompson ')">
+            <img src="reject.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege and
+            poverty, believing that everyone deserves access to basic necessities, education, and opportunities for a
+            better future.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">Contact Us</h3>
+          <div class="block-23">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                  German University in Cairo
+                  El Tagamoa El Khames
+                  New Cairo City - Egypt</span></li>
+              <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                    010-9917-0359</span></a></li>
+              <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+              <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- New div for the image container -->
+        <div class="col-md-6 col-lg-4">
+          <div class="image-container">
+            <a href="about.html">
+              <img src="fond_logo.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          document.getElementById("ftco-navbar").classList.add("show-logo");
+          document.querySelector(".navbar-brand").style.marginLeft = "100px";
+
+        } else {
+          document.getElementById("ftco-navbar").classList.remove("show-logo");
+          document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // Function to download donor submission
+    function downloadSubmission(donorName) {
+      // Logic to download the submission for the given donor
+      // Replace this with actual implementation
+      alert(`Downloading submission for ${donorName}`);
+    }
+
+    // Function to accept donor submission
+    function acceptSubmission(donorName) {
+      // Logic to accept the submission for the given donor
+      // Replace this with actual implementation
+      alert(`Accepting submission for ${donorName}`);
+    }
+
+    // Function to reject donor submission
+    function rejectSubmission(donorName) {
+      // Logic to reject the submission for the given donor
+      // Replace this with actual implementation
+      alert(`Rejecting submission for ${donorName}`);
+    }
+  </script>
+
+</body>
+
+</html>
