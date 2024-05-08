@@ -390,31 +390,16 @@
             </div>
         </div>
     </div>
-    <h1>Schedule Pickup</h1>
+    <h1>Schedule Drop-off</h1>
     <form id="donationForm">
         <!-- Other donation details -->
 
         <!-- 55. Transportation Selection for Donation Pickup -->
         <div class="form-group">
-            <label id="text" for="transportation">Choose Transportation:</label>
-            <select class="form-control" id="transportation" name="transportation">
-                <option value=""></option>
-                <option value="truck">Truck</option>
-                <option value="car">Car</option>
-                <option value="motorcycle">Motorcycle</option>
-            </select>
-        </div>
-
-        <!-- 56. Schedule Selection for Donation Pickup -->
-        <div class="form-group">
-            <label id="text" for="pickupDateTime">Pickup Date and Time:</label>
-            <input type="datetime-local" class="form-control" id="pickupDateTime" name="pickupDateTime">
-        </div>
-        <div class="form-group">
             <label id="text" for="dropoffDateTime">Drop-off Date and Time:</label>
             <input type="datetime-local" class="form-control" id="dropoffDateTime" name="dropoffDateTime">
         </div>
-        <button type="submit" class="btnn2" id="submitBtn">Confrim</button>
+        <button type="submit" class="btnn2" id="submitBtn">Confirm</button>
     </form>
 
 
@@ -591,7 +576,7 @@
         document.getElementById("donationForm").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent default form submission
 
-            alert("Thank you for submitting your donation request. We will get in touch with you shortly.");
+            alert("Thank you for selecting your preferred time slot for the donation drop-off.We will get in touch with you shortly.");
             startCountdown(); // Start the countdown timer
             return false; // Prevent page reload
         });

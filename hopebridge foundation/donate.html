@@ -211,6 +211,7 @@
       margin-top: 50px;
       /* Adjust the margin as needed */
       margin-bottom: 30px;
+      margin-left: -10px;
       /* Adjust the margin as needed */
     }
 
@@ -276,10 +277,68 @@ input[type="submit"] {
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 127px;
+  margin-left: 180px;
   margin-bottom: 20px;
 }
-  
+
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-left: -15px;
+  border-color: #4297A0;
+}
+
+/* Adjust margin for select elements */
+#category,
+#clothesSize,
+#clothesGender,
+#toyType,
+#foodType,
+#medicalSupplyType,
+#schoolSupplyType,
+#bloodType {
+  margin-bottom: 10px; /* Adjust margin as needed */
+  width: 530px
+}
+
+/* Adjust margin for text inputs */
+#quantity,
+#toyAge,
+#foodQuantity,
+#schoolSupplyQuantity,
+#bloodQuantity,
+#medicalSupplyCondition {
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+  #quantity,
+  #medicalSupplyCondition,
+  #description
+  {
+    margin-left: -13px;
+    width:530px;
+  }
+  #description{
+    margin-left: -15px;
+    border-color: #4297A0;
+    border-radius: 5px;
+}
+  #schoolSupplyQuantity,
+#bloodQuantity{
+  padding: 40px;
+}
+  #quantity1,
+  #quantity2{
+    margin-left: -13px;
+    width: 530px;
+    margin-bottom: 20px;
+    border-color: #4297A0;
+}
   </style>
   </head>
   <body>
@@ -318,127 +377,158 @@ input[type="submit"] {
 
   <form id="donationForm">
     <label for="category">Category:</label>
-    <select id="category" name="category" onchange="showFields()">
-      <option value=""></option>  
-      <option value="clothes">Clothes</option>
-      <option value="toys">Toys</option>
-      <option value="food">Food</option>
-      <option value="medical_supplies">Medical Supplies</option>
-      <option value="school_supplies">School Supplies</option>
-      <option value="blood_donations">Blood Donations</option>
-    </select><br><br>
-  
+    <div>
+      <select id="category" name="category" onchange="showFields()">
+        <option value=""></option>  
+        <option value="clothes">Clothes</option>
+        <option value="toys">Toys</option>
+        <option value="food">Food</option>
+        <option value="medical_supplies">Medical Supplies</option>
+        <option value="school_supplies">School Supplies</option>
+        <option value="blood_donations">Blood Donations</option>
+      </select>
+    </div>
+
     <div id="clothesFields" class="hidden">
       <label for="clothesSize">Size:</label>
-      <select id="clothesSize" name="clothesSize">
-        <option value=""></option>
-        <option value="XXS">XXS</option>  
-        <option value="XS">XS</option>
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-        <option value="XXL">XXL</option>
-        <option value="One_Size">One Size</option>
-        <option value="Custom_Size">Custom Size</option>
-      </select><br><br>
       <div>
-        <label for="customSize">Custom Size:</label>
-        <input type="text" id="customSize" name="customSize"><br><br>
+        <select id="clothesSize" name="clothesSize">
+          <option value=""></option>
+          <option value="XXS">XXS</option>  
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="One_Size">One Size</option>
+        </select>
       </div>
       <div>
         <label for="clothesGender">Gender:</label>
-        <select id="clothesGender" name="clothesGender">
-          <option value=""></option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="unisex">Unisex</option>
-        </select><br><br>
+        <div>
+          <select id="clothesGender" name="clothesGender">
+            <option value=""></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="unisex">Unisex</option>
+          </select>
+        </div>
+        <div>
+          <label for="age1">Age:</label>
+          <div>
+            <input type="number" id="quantity1" name="Age" min="1"><br>
+          </div>
+        </div>
       </div>
     </div>
   
     <div id="toysFields" class="hidden">
       <label for="toyType">Type:</label>
-      <select id="toyType" name="toyType">
-        <option value=""></option>
-        <option value="board_games">Board Games</option>
-        <option value="stuffed_toys">Stuffed Toys</option>
-        <option value="dolls">Dolls</option>
-        <option value="sports">Sports</option>
-        <option value="cars">Cars</option>
-        <option value="outdoor">Outdoor</option>
-      </select><br><br>
+      <div>
+        <select id="toyType" name="toyType">
+          <option value=""></option>
+          <option value="board_games">Board Games</option>
+          <option value="stuffed_toys">Stuffed Toys</option>
+          <option value="dolls">Dolls</option>
+          <option value="sports">Sports</option>
+          <option value="cars">Cars</option>
+          <option value="outdoor">Outdoor</option>
+        </select>
+      </div>
       <div>
         <label for="toyAge">Age:</label>
-        <input type="text" id="toyAge" name="toyAge"><br><br>
+        <div>
+          <input type="number" id="quantity2" name="toyAge" min="1"><br>
+        </div>
       </div>
     </div>
   
     <div id="foodFields" class="hidden">
       <label for="foodType">Type:</label>
-      <select id="foodType" name="foodType">
-        <option value=""></option>
-        <option value="fruits_and_vegetables">Fruits and Vegetables</option>
-        <option value="canned_foods">Canned Foods</option>
-        <option value="fresh_meals">Fresh Meals</option>
-        <option value="baked_goods">Baked Goods</option>
-      </select><br><br>
+      <div>
+        <select id="foodType" name="foodType">
+          <option value=""></option>
+          <option value="fruits_and_vegetables">Fruits and Vegetables</option>
+          <option value="canned_foods">Canned Foods</option>
+          <option value="fresh_meals">Fresh Meals</option>
+          <option value="baked_goods">Baked Goods</option>
+        </select>
+      </div>
       <div>
         <label for="foodQuantity">Quantity:</label>
-        <input type="text" id="foodQuantity" name="foodQuantity"><br><br>
+        <div>
+          <input type="number" id="quantity" name="foodQuantity" min="1"><br>
+        </div>
       </div>
     </div>
   
     <div id="medicalSuppliesFields" class="hidden">
       <label for="medicalSupplyType">Type:</label>
-      <select id="medicalSupplyType" name="medicalSupplyType">
-        <option value=""></option>
-        <option value="medical_devices">Medical Devices</option>
-        <option value="medical_equipment_and_medication">Medical Equipment and Medication</option>
-        <option value="pain">Pain</option>
-        <option value="chronic">Chronic</option>
-        <option value="infection">Infection</option>
-      </select><br><br>
+      <div>
+        <select id="medicalSupplyType" name="medicalSupplyType">
+          <option value=""></option>
+          <option value="medical_devices">Medical Devices</option>
+          <option value="medical_equipment_and_medication">Medical Equipment and Medication</option>
+          <option value="pain">Pain</option>
+          <option value="chronic">Chronic</option>
+          <option value="infection">Infection</option>
+        </select>
+      </div>
+      <br>
       <div>
         <label for="medicalSupplyCondition">Condition:</label>
-        <input type="text" id="medicalSupplyCondition" name="medicalSupplyCondition"><br><br>
+        <div>
+          <input type="text" id="medicalSupplyCondition" name="medicalSupplyCondition"><br>
+        </div>
       </div>
     </div>
   
     <div id="schoolSuppliesFields" class="hidden">
       <label for="schoolSupplyType">Type:</label>
-      <select id="schoolSupplyType" name="schoolSupplyType">
-        <option value=""></option>
-        <option value="books">Books</option>
-        <option value="stationary">Stationary</option>
-      </select><br><br>
+      <div>
+        <select id="schoolSupplyType" name="schoolSupplyType">
+          <option value=""></option>
+          <option value="books">Books</option>
+          <option value="stationary">Stationary</option>
+        </select>
+      </div>
+      <br>
       <div>
         <label for="schoolSupplyQuantity">Quantity:</label>
-        <input type="text" id="schoolSupplyQuantity" name="schoolSupplyQuantity"><br><br>
+        <div>
+          <input type="number" id="quantity" name="schoolSupplyQuantity" min="1"><br>
+        </div>
       </div>
     </div>
   
     <div id="bloodDonationsFields" class="hidden">
       <label for="bloodType">Blood Type:</label>
-      <select id="bloodType" name="bloodType">
-        <option value=""></option>
-        <option value="A+">A+</option>
-        <option value="A-">A-</option>
-        <option value="B+">B+</option>
-        <option value="B-">B-</option>
-        <option value="AB+">AB+</option>
-        <option value="AB-">AB-</option>
-        <option value="O+">O+</option>
-        <option value="O-">O-</option>
-      </select><br><br>
       <div>
-        <label for="bloodQuantity">Quantity (in pints):</label>
-        <input type="text" id="bloodQuantity" name="bloodQuantity"><br><br>
+        <select id="bloodType" name="bloodType">
+          <option value=""></option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+      <div>
+        <label for="bloodQuantity">Quantity:</label>
+        <div>
+          <input type="number" id="quantity" name="bloodQuantity" min="1"><br>
+        </div>
       </div>
     </div>
   
     <label for="description">Description:</label><br>
-    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+    <div>
+      <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+    </div>
     <input type="submit" class="btn" value="Submit">
   </form>
 

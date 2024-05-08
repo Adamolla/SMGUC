@@ -135,6 +135,11 @@
       opacity: 65%;
     }
 
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
     .icon {
       color: #4297A0;
     }
@@ -189,75 +194,49 @@
       border-radius: 50px;
     }
 
-    .wrapper {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 40px;
-      border-radius: 8px;
-
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 
-    h1 {
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      /* Allow wrapping of buttons */
+      margin-top: 20px;
+    }
+
+    .list-container,
+    .list-group {
+      flex: 1;
+      /* Equal width for all containers */
+      margin: 10px;
+      /* Adjust spacing between containers */
+    }
+
+    /* Additional styling for spacing */
+    .heading {
+      margin-left: 20px;
+      margin-bottom: 30px;
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
       font-size: 36px;
-      margin-top: 20px;
-      /* Adjust the top margin as needed */
-      padding-bottom: 20px;
-      text-align: center;
       color: #4297A0;
+      margin-top: 50px;
       text-decoration: underline rgb(38, 37, 37);
-    }
-
-    .user {
-      position: relative;
-      margin-bottom: 20px;
-    }
-
-    .user i {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 15px;
-      color: #495057;
-      margin-left: -60px;
-    }
-
-    .user input {
-      width: 500px;
-      padding: 10px 15px;
-      padding-left: 40px;
-      border: 1px solid #ced4da;
-      margin-left: -60px;
-      border-radius: 5px;
-      border-color: #4297A0;
-      border-style: solid;
-      border-width: 1px;
-    }
-
-    button.btn {
-      width: 150px;
-      padding: 10px 15px;
-      background-color: #4297A0;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 20px;
-      margin-left: 95px;
-    }
-
-    button.btn:hover {
-      background-color: #4297A0;
-    }
-
-    a {
-      text-decoration: none;
-      color: #4297A0;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      /* Adjust the top margin as needed */
     }
   </style>
 </head>
@@ -280,7 +259,7 @@
           <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="ManageAcc.html" class="nav-link">Manage Account</a></li>
+          <li class="nav-item"><a href="volselection.html" class="nav-link">Role Selection</a></li>
         </ul>
       </div>
     </div>
@@ -295,24 +274,27 @@
     </div>
   </div>
   </div>
+  <div class="container">
+    <div class="button-container">
+      <div class="list-container">
+        <h1 class="heading">Subject / Class Selection:</h1>
+        <button class="btn" id="teach-button" onclick="gototeach()"> Subject and Class Selection </button>
+      </div>
+      <div class="list-group">
 
-  <form id="passwordForm" class="wrapper">
-    <h1 class="Password change">Change Password</h1>
-    <div class="currentpass user">
-      <input type="password" id="currentPassword" placeholder="Current Password:" required>
-      <i class='bx bxs-lock'></i>
+        <h1 class="heading">Donated items:</h1>
+        <button class="btn" id="teach-button1" onclick="gotodonateditem()"> Donated items </button>
+      </div>
+
+      <div class="list-group">
+
+        <h1 class="heading"> Cloth Requested:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonateditem1()"> Cloth Requested </button>
+
+      </div>
     </div>
-    <div class="newpass user">
-      <input type="password" id="newPassword" placeholder="New Password:" required>
-      <i class='bx bxs-lock'></i>
-    </div>
-    <div class="Newpass user">
-      <input type="password" id="confirmPassword" placeholder="Re-enter New Password:" required>
-      <i class='bx bxs-lock'></i>
-    </div>
-    <button type="button" id="changeBtn" class="btn">Change</button>
-  </form>
-  <div id="message" style="display: none;">Password has been changed successfully </div>
+  </div>
+
 
   <footer class="footer">
     <div class="container">
@@ -352,7 +334,6 @@
     </div>
   </footer>
 
-
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
       <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
@@ -370,7 +351,7 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
   <script src="js/jquery.fancybox.min.js"></script>
 
   <script src="js/aos.js"></script>
@@ -381,6 +362,7 @@
   <script src="js/main.js"></script>
 
   <script>
+
     document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
@@ -394,42 +376,20 @@
       });
     });
   </script>
-
   <script>
-    document.getElementById('changeBtn').addEventListener('click', function () {
-      var currentPassword = document.getElementById('currentPassword').value;
-      var newPassword = document.getElementById('newPassword').value;
-      var confirmPassword = document.getElementById('confirmPassword').value;
-
-      if (currentPassword === '' || newPassword === '' || confirmPassword === '') {
-        alert('Please fill out all password fields.');
-      } else {
-        document.getElementById('message').style.display = 'block';
-      }
-    });
+    function gototeach() {
+      window.location.href = "Subjectinclass.html";
+    }
   </script>
-
   <script>
-    document.getElementById('changeBtn').addEventListener('click', function () {
-      var currentPassword = document.getElementById('currentPassword').value;
-      var newPassword = document.getElementById('newPassword').value;
-      var confirmPassword = document.getElementById('confirmPassword').value;
-      var adminPassword = "admin123"; // Expected current password
-
-      if (currentPassword === '' || newPassword === '' || confirmPassword === '') {
-        alert('Please fill out all password fields.');
-      } else if (currentPassword !== adminPassword) {
-        alert('Current password is incorrect.');
-      } else if (newPassword !== confirmPassword) {
-        alert('New password and confirm password do not match.');
-      } else {
-        // Change the current password to the new password
-        adminPassword = newPassword;
-        alert('Password changed successfully.');
-        // Redirect to the Admin Login page
-        window.location.href = "Admin_Login_page.html";
-      }
-    });
+    function gotodonateditem() {
+      window.location.href = "donationitem.html";
+    }
+  </script>
+  <script>
+    function gotodonateditem1() {
+      window.location.href = "ClothesDonationRequests.html";
+    }
   </script>
 </body>
 
