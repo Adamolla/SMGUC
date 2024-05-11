@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-      .navbar-brand {
+    .navbar-brand {
       font-size: 22.5px;
       margin-left: 10px;
       padding-left: 10px;
@@ -242,6 +242,7 @@
       text-align: center;
 
     }
+
     .clickable-type {
       color: #4297A0;
       text-decoration: underline;
@@ -270,123 +271,166 @@
       display: none;
     }
 
-    .btn {
-      background-color: transparent;
-      /* Remove background color */
-      border: none;
-      /* Remove border */
-      padding: 0;
-      /* Remove padding */
-    }
 
-    .btn img {
-      width: 20px;
-      /* Adjust width as needed */
-      height: 20px;
-      /* Adjust height as needed */
-      vertical-align: middle;
-      /* Align image vertically */
-    }
 
+    #itemAge {
+
+      padding: 5px;
+      margin-left: 10px;
+      width: 30px;
+
+    }
 
     #text2 {
-            text-align: center;
-            font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-            color: #4297A0;
-            text-decoration: underline rgb(38, 37, 37);
-            /* Choose your desired color */
-            margin-top: 50px;
-            width:200px;
-            /* Adjust the margin as needed */
-            margin-bottom: 30px;
-            margin-left: 35px;
-            /* Adjust the margin as needed */
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 200px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 220px;
 
-        }
-        #text1 {
-            text-align: center;
-            font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-            color: #4297A0;
-            text-decoration: underline rgb(38, 37, 37);
-            /* Choose your desired color */
-            margin-top: 50px;
-            width:200px;
-            /* Adjust the margin as needed */
-            margin-bottom: 30px;
-            margin-left: 200px;
-            /* Adjust the margin as needed */
+      /* Adjust the margin as needed */
 
-        }
+    }
 
-#category,
-#medicationUse {
-  padding: 8px 12px;
+    #Area,
+    #governorate,
+    #subject {
+      padding: 8px 12px;
       font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      margin-right: 10px;
-      width: 320px;
-      border-radius: 5px ;
+      margin-right: 5px;
+      width: 290px;
+      border-radius: 5px;
       border-color: #4297A0;
       border-style: solid;
       border-width: 2px;
-}
+    }
 
-#category {
-  margin-left: 170px;
-  /* Center the select element */
-}
+    #Area {
+      margin-left: 60px;
+    }
 
-.btn {
-  background-color: #4297A0;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 240px;
-  display: block;
-  margin-left: 400px;
-  margin-right: auto;
-  margin-top: 20px;
-}
+    #subject {
+      margin-left: 70px;
+    }
 
-  .clickable-type {
-    color: #4297A0;
-    text-decoration: underline;
-    cursor: pointer;
-    /* Add a pointer cursor to indicate clickable */
-  }
-  .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    #governorate {
+      margin-left: 30px;
+    }
 
-.modal-container {
-  background-color: #fff; /* White background for the container */
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-}
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 240px;
+      display: block;
+      margin-left: 470px;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
 
-.modal-container img {
-  max-width: 100%;
-  max-height: 100%;
-}
+    form {
+      margin-top: 50px;
+      padding: 20px;
+      vertical-align: middle;
+      background-color: transparent;
+      text-align: center;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #4297A0;
+      font-size: 26;
+      font-weight: bold;
+      text-decoration: underline rgb(38, 37, 37);
+      margin-right: 50px;
+      margin-left: 70px;
+    }
+
+    label1 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #4297A0;
+      font-size: 26;
+
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="radio"],
+    select {
+      position: relative;
+      margin-bottom: 20px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+      vertical-align: middle;
+      
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"]{
+      width: 550px;
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #35707d;
+    }
+
+    #message {
+      margin-top: 20px;
+      display: none;
+      padding: 10px;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      color: #155724;
+    }
+
+    #message span {
+      font-weight: bold;
+    }
   </style>
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
@@ -400,10 +444,9 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-          <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
+          <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-
         </ul>
       </div>
     </div>
@@ -418,118 +461,72 @@
     </div>
   </div>
   </div>
-  <H1> Medical Donation Requests:</H1>
-  <!-- Combined Filter Form -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <form id="combinedFilterForm">
-          <label id="text1" for="category">Filter by category:</label>
-          <select id="category">
-            <option value="all">All</option>
-            <option value="devices">Medical Devices</option>
-            <option value="equipment">Medical Equipment</option>
-            <option value="medication">Medication</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-          <label id="text2" for="medicationUse">Filter by medical use:</label>
-          <select id="medicationUse">
-            <option value="all">All</option>
-            <option value="pain">Pain Relief</option>
-            <option value="infection">Antibiotics</option>
-            <option value="chronic">Chronic Disease</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-12 mt-3">
-        <button type="submit" class="btn">Apply Filter</button>
-      </div>
-    </form>
-  </div>
 
-  <!-- Medical Supplies Donation Requests Table -->
- 
-  
-  <section id="medDonationRequests" class="mt-5">
-    <div class="container">
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Quantity Needed</th>
-              <th>Device Type</th>
-              <th>Medical Use</th>
-              <th> Picture Reference</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <tr>
-              <td>Blood pressure Monitor</td>
-              <td>50</td>
-              <td>devices</td>
-              <td>None</td>
-              <td><button onclick="picview('Bpm2.jpg')"><img src="camera.png"></button></td>
-            </tr>
-            <tr>
-              <td>Asprin</td>
-              <td>30</td>
-              <td>medication</td>
-              <td>pain</td>
-              <td><button onclick="picview('ASP.jpg')"><img src="camera.png"></button></td>
-            </tr>
-            <tr>
-              <td>Hospital Beds</td>
-              <td>10</td>
-              <td>equipment</td>
-              <td>None</td>
-              <td><button onclick="picview('HB.jpg')"><img src="camera.png"></button></td>
-            </tr>
-            <tr>
-              <td>Insulin</td>
-              <td>10</td>
-              <td>medication</td>
-              <td>chronic</td>
-              <td><button onclick="picview('insulin.jpg')"><img src="camera.png"></button></td>
-            </tr>
-            <tr>
-              <td>Penicillin</td>
-              <td>20</td>
-              <td>medication</td>
-              <td>infection</td>
-              <td><button onclick="picview('pencilin.jpg')"><img src="camera.png"></button></td>
-            </tr>
-          
-            <tr>
-              <td>Electrocardiogram</td>
-              <td>40</td>
-              <td>devices</td>
-              <td>None</td>
-              <td><button onclick="picview('elecM.jpg')"><img src="camera.png"></button></td>
-            </tr>
-            <tr>
-              <td>Wheel Chair</td>
-              <td>25</td>
-              <td>equipment</td>
-              <td>None</td>
-              <td><button onclick="picview('wheelC.jpg')"><img src="camera.png"></button></td>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
+  <h1>Subject and Class Selection for Teaching</h1>
+  <form id="myForm" action="/submit_selection" method="post">
+    <label for="name">Your Name:</label><br>
+    <div>
+      <input type="text" id="name" name="name" required>
+    </div><br>
+
+    <label for="email">Your Email:</label><br>
+    <div>
+      <input type="email" id="email" name="email" required>
+    </div><br>
+
+    <label for="subjects">Subjects You Can Teach:</label><br>
+    <div>
+      <input type="radio" id="math" name="subjects" value="Math">
+      <label1 for="math">Math</label>
+    </div><br>
+    <div>
+      <input type="radio" id="science" name="subjects" value="Science">
+      <label1 for="science">Science</label>
+    </div><br>
+    <div>
+      <input type="radio" id="english" name="subjects" value="English">
+      <label1 for="english">English</label>
+    </div><br>
+    <div>
+      <input type="radio" id="history" name="subjects" value="History">
+      <label1 for="history">History</label>
+    </div><br>
+    <div>
+      <input type="radio" id="geography" name="subjects" value="Geography">
+      <label1 for="geography">Geography</label>
+    </div><br>
+    <p></p>
+    <label for="custom_subject">Or add a custom subject:</label><br>
+    <div>
+      <input type="text" id="custom_subject" name="custom_subject">
+    </div><br>
+
+    <label for="pro_bono_classes">Number of Pro-Bono Classes You Can Teach:</label><br>
+    <div>
+      <input type="number" id="pro_bono_classes" name="pro_bono_classes" min="0" required>
+    </div><br>
+
+    <label for="pro_bono_students">Number of Pro-Bono Students You Can Tutor:</label><br>
+    <div>
+      <input type="number" id="pro_bono_students" name="pro_bono_students" min="0" required>
+    </div><br>
+
+    <div class="col-md-12 mt-3">
+      <button type="submit" class="btn">Submit</button>
     </div>
-  </section>
+
+  </form>
+  
 
   <footer class="footer">
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-6 col-lg-4">
           <h3 class="heading-section">About Us</h3>
-          <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege and
-            poverty, believing that everyone deserves access to basic necessities, education, and opportunities for a
+          <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege
+            and
+            poverty, believing that everyone deserves access to basic necessities, education, and opportunities
+            for a
             better future.</p>
         </div>
 
@@ -561,14 +558,15 @@
     </div>
   </footer>
 
-  <!-- Loader -->
+
+  <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
       <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
         stroke="#F96D00" />
     </svg></div>
 
-  <!-- JavaScript imports and scripts -->
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -579,10 +577,13 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
+
   <script src="js/jquery.fancybox.min.js"></script>
+
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
@@ -601,69 +602,21 @@
       });
     });
   </script>
-  <script>
-    $(document).ready(function () {
-      // Combined filter form submission
-      $("#combinedFilterForm").submit(function (event) {
-        event.preventDefault(); // Prevent default form submission
-        var category = $("#category").val(); // Get selected category
-        var medicationUse = $("#medicationUse").val(); // Get selected medication use
-        filterDonationRequests(category, medicationUse); // Call filter function
-      });
 
-      // Function to filter both medical supplies and medication donation requests
-      function filterDonationRequests(category, medicationUse) {
-        // Show all rows initially
-        $("#medDonationRequests tbody tr").show();
+<script>
+  document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Preventing default form submission behavior
 
-        // Filter rows based on selected category
-        if (category !== "all") {
-          $("#medDonationRequests tbody tr").filter(function () {
-            return $(this).find("td:eq(2)").text().trim().toLowerCase() !== category;
-          }).hide();
-        }
+   
+    // Alerting the user
+    alert("Your request will be reviewed by the admin soon. You will be directed to the main page!");
 
-        // Filter rows based on selected medication use
-        if (medicationUse !== "all") {
-          $("#medDonationRequests tbody tr").filter(function () {
-            return $(this).find("td:eq(3)").text().trim().toLowerCase() !== medicationUse;
-          }).hide();
-        }
-      }
-    });
-
-  </script>
-<script> 
-  function picview(imageSrc) {
-    // Create a modal overlay container
-    var overlay = document.createElement('div');
-    overlay.classList.add('modal-overlay');
-    
-    // Create a modal container
-    var modalContainer = document.createElement('div');
-    modalContainer.classList.add('modal-container');
-    
-    // Create an image element
-    var imageElement = document.createElement('img');
-    imageElement.src = imageSrc;
-    
-    // Append the image element to the modal container
-    modalContainer.appendChild(imageElement);
-    
-    // Append the modal container to the overlay
-    overlay.appendChild(modalContainer);
-    
-    // Append the overlay to the body
-    document.body.appendChild(overlay);
-    
-    // Close the modal when clicking outside the image
-    overlay.onclick = function() {
-      overlay.remove();
-    };
-  }
-  
-  
-  </script>
+    // Redirecting to the main page after a delay
+    setTimeout(function () {
+      window.location.href = "donormainpage.html";
+    }, 3000); // 3000 milliseconds (3 seconds) delay
+  });
+</script>
 </body>
 
 </html>

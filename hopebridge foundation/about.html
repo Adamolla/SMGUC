@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    .navbar-brand {
+       .navbar-brand {
       font-size: 22.5px;
       margin-left: 10px;
       padding-left: 10px;
@@ -53,6 +53,10 @@
 
     .show-logo .logo {
       display: block;
+    }
+
+    a {
+      color: #4297A0;
     }
 
     .btn-primary {
@@ -117,6 +121,11 @@
       font-size: 25px;
       color: #4297A0;
 
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
     }
 
     .fundraise-item a {
@@ -188,9 +197,179 @@
       display: inline-block;
       border-radius: 50px;
     }
-    body{
+
+    body {
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+
+    table {
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
+      border-collapse: collapse;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 240px;
+      display: block;
+      margin-left: 400px;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .btn:active {
+      color: white;
+    }
+
+
+
+    #subjectFilter,
+    #areaFilter,
+    #governorateFilter,
+    #organizationFilter,
+    #medicalSpecialtyFilter {
+      display: block;
+      width: 100%;
+      padding: 10px;
+   
+      margin-bottom: 30px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      /* Ensure padding and border are included in the width */
+      font-size: 16px;
+      margin-left: -15px;
+      margin-right: 10px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
+    }
+
+    #text1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: -40px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 5px;
+      /* Adjust the margin as needed */
+
+    }
+
+    /* Style for form label */
+    label {
+      font-size: 18px;
+      font-weight: bold;
+      color: #4297A0;
+      margin-bottom: 10px;
+      text-decoration: underline rgb(38, 37, 37);
+    }
+
+    #donationForm {
+      max-width: 600px;
+      /* Adjust max-width as needed */
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .btnn3 {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30px;
+      /* Adjust width as needed */
+      height: 30px;
+      /* Adjust height as needed */
+      padding: 0;
+      /* Remove any default padding */
+    }
+    
+
+    .btnn3 img {
+      width: 100%;
+      /* Ensure the image fills the button */
+      height: 100%;
+      /* Ensure the image fills the button */
+    }
+
+    .btnn3:focus {
+      outline: none;
+      /* Remove default focus outline */
+    }
+    h2{
+      font-size: 29px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      margin-bottom: 30px;
+      margin-top: 30px;
+      font-weight:500;
+    }
+   
   </style>
 </head>
 
@@ -227,7 +406,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center">
-              <h2 class="heading">About The Organization</h2>
+              <h1 class="heading">About The Organization</h1>
             </div>
           </div>
         </div>
@@ -235,31 +414,37 @@
 
     </div>
   </div>
-
-  <div class="site-section mb-5">
+  <section class="site-section" id="about-us">
     <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-12 mb-5">
-          <h1>Our History</h1>
-        </div>
-        <div class="col-md-6">
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, necessitatibus officiis
-            facere nisi et, ut adipisci a quis quisquam vitae doloremque tempora repellat quae accusantium atque eum
-            voluptatibus aperiam cumque.</p>
-          <p>Quia ratione, eum harum ab similique mollitia, nisi itaque vel voluptas ipsam dolore perferendis. Deleniti
-            voluptatum error possimus ipsum, sed, obcaecati. Sit unde quia eum repudiandae molestiae reprehenderit harum
-            nesciunt.</p>
-
-        </div>
-        <div class="col-md-6">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, necessitatibus officiis facere nisi et, ut
-            adipisci a quis quisquam vitae doloremque tempora repellat quae accusantium atque eum voluptatibus aperiam
-            cumque.</p>
-          <p>Quia ratione, eum harum ab similique mollitia, nisi itaque vel voluptas ipsam dolore perferendis. Deleniti
-            voluptatum error possimus ipsum, sed, obcaecati. Sit unde quia eum repudiandae molestiae reprehenderit harum
-            nesciunt.</p>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="section-heading text-center">About Us</h2>
+          <p class="text-center">Welcome to <strong>Hope Bridge Foundation</strong>!</p>
+          <p>At Hope Bridge Foundation, we believe in the transformative power of compassion and kindness. We are driven by empathy and a deep desire for positive change in the world. Our mission is to bridge the gap between privilege and poverty, ensuring that everyone, regardless of their circumstances, has access to basic necessities, education, and opportunities for a better future.</p>
+          
+          <h2 class="section-subheading text-center">Our Vision</h2>
+          <p class="text-center">Our vision is a world where every individual has the opportunity to thrive, regardless of their background. We envision a future where kindness and generosity are the driving forces behind every action, where communities come together to support one another, and where every person feels valued and empowered to make a difference.</p>
+          
+          <h2 class="section-subheading text-center">Our Mission</h2>
+          <p class="text-center">Our mission is to facilitate acts of generosity that transcend boundaries. We work tirelessly to connect those in need with the resources and support they require to build better lives. Whether it's providing essential supplies to underprivileged students, supporting healthcare institutions, or creating safe and nurturing environments for orphaned children, we are committed to making a meaningful impact in the lives of those we serve.</p>
+          
+          <h2 class="section-subheading text-center">Our Values</h2>
+          <ul class="list-unstyled text-center">
+            <li><strong>Compassion:</strong> We approach everything we do with empathy and understanding, recognizing the inherent dignity and worth of every individual.</li>
+            <li><strong>Integrity:</strong> We uphold the highest standards of honesty, transparency, and accountability in all our interactions and endeavors.</li>
+            <li><strong>Collaboration:</strong> We believe in the power of partnership and collaboration, working hand-in-hand with communities, organizations, and individuals to achieve common goals.</li>
+            <li><strong>Innovation:</strong> We embrace creativity and innovation, constantly seeking new and effective ways to address the challenges facing our world.</li>
+            <li><strong>Empowerment:</strong> We empower individuals to create positive change in their own lives and communities, fostering a sense of agency and self-determination.</li>
+          </ul>
+          
+          <h2 class="section-subheading text-center">Get Involved</h2>
+          <p class="text-center">Join us in our mission to create a more compassionate and equitable world. Whether you're interested in making a donation, volunteering your time and skills, or simply learning more about our work, there are countless ways to get involved and make a difference.</p>
+          <p class="text-center">Together, let's build a brighter future for all.</p>
         </div>
       </div>
+    </div>
+  </section>
+  
 
       <div class="row mt-5">
         <div class="col-md-12 mb-5 text-center mt-5">
@@ -270,7 +455,7 @@
             <div class="block-38-img">
               <div class="block-38-header">
                 <img src="images/person_1.jpg" alt="Image placeholder">
-                <h3 class="block-38-heading">Greeg Graham</h3>
+                <h3 class="block-38-heading">Adam Mohamed</h3>
                 <p class="block-38-subheading">CEO</p>
               </div>
               <div class="block-38-body">
@@ -285,7 +470,7 @@
             <div class="block-38-img">
               <div class="block-38-header">
                 <img src="images/person_2.jpg" alt="Image placeholder">
-                <h3 class="block-38-heading">Jennifer Greive</h3>
+                <h3 class="block-38-heading">Hania Ismail</h3>
                 <p class="block-38-subheading">President</p>
               </div>
               <div class="block-38-body">
@@ -300,7 +485,7 @@
             <div class="block-38-img">
               <div class="block-38-header">
                 <img src="images/person_3.jpg" alt="Image placeholder">
-                <h3 class="block-38-heading">Patrick Marx</h3>
+                <h3 class="block-38-heading">Salma Moemen</h3>
                 <p class="block-38-subheading">Marketer</p>
               </div>
               <div class="block-38-body">
@@ -315,7 +500,7 @@
             <div class="block-38-img">
               <div class="block-38-header">
                 <img src="images/person_4.jpg" alt="Image placeholder">
-                <h3 class="block-38-heading">Mike Coolbert</h3>
+                <h3 class="block-38-heading">Moustafa Hamada</h3>
                 <p class="block-38-subheading">Partner</p>
               </div>
               <div class="block-38-body">

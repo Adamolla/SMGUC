@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HopeBridge Foundation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .navbar-brand {
+      font-size: 22.5px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
+    }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
+    .logo {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: -490px;
+      width: 130px;
+      vertical-align: bottom;
+      margin-right: 21px;
+      height: 130px;
+      border-radius: 900%;
+      display: none;
+
+    }
+
+    .show-logo .logo {
+      display: block;
+    }
+
+    a {
+      color: #4297A0;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    table {
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
+      border-collapse: collapse;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 240px;
+      display: block;
+      margin-left: 400px;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .btn:active {
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      /* Adjust the margin as needed */
+    }
+
+    #subjectFilter,
+    #areaFilter,
+    #governorateFilter,
+    #organizationFilter,
+    #medicalSpecialtyFilter {
+      display: block;
+      width: 100%;
+      padding: 10px;
+   
+      margin-bottom: 30px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      /* Ensure padding and border are included in the width */
+      font-size: 16px;
+      margin-left: -15px;
+      margin-right: 10px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
+    }
+
+    #text1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: -40px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 5px;
+      /* Adjust the margin as needed */
+
+    }
+
+    /* Style for form label */
+    label {
+      font-size: 18px;
+      font-weight: bold;
+      color: #4297A0;
+      margin-bottom: 10px;
+      text-decoration: underline rgb(38, 37, 37);
+    }
+
+    #donationForm {
+      max-width: 600px;
+      /* Adjust max-width as needed */
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .btnn3 {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30px;
+      /* Adjust width as needed */
+      height: 30px;
+      /* Adjust height as needed */
+      padding: 0;
+      /* Remove any default padding */
+    }
+
+    .btnn3 img {
+      width: 100%;
+      /* Ensure the image fills the button */
+      height: 100%;
+      /* Ensure the image fills the button */
+    }
+
+    .btnn3:focus {
+      outline: none;
+      /* Remove default focus outline */
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+      <img class="logo" src="fond_logo.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+        data-stellar-background-ratio="0.5">
+      </div>
+    </div>
+  </div>
+
+
+  <h1>Medical Cases</h1>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <label id= "text1" for="medicalSpecialtyFilter">Filter by Medical Specialty:</label>
+        <select id="medicalSpecialtyFilter" class="form-control">
+          <option value="">All Medical Specialties</option>
+          <option value="Orthopedics">Orthopedics</option>
+          <option value="Orthopedics">Orthopedics</option>
+          <option value="Cardiology"> Cardiology</option>
+          <option value="Neurology">Neurology</option>
+          <option value=" Dermatology"> Dermatology</option>
+          <option value=" Obstetrics and Gynecology"> Obstetrics and Gynecology</option>
+
+
+
+          <!-- Add options for medical specialties dynamically using JavaScript if needed -->
+        </select>
+      </div>
+     
+      <div class="col-md-3">
+        <label id= "text1" for="areaFilter">Filter by Area:</label>
+        <select id="areaFilter" class="form-control">
+          <option value="">All Areas</option>
+          <option value="Maadi">Maadi</option>
+          <option value="Nasr City">Nasr City</option>
+          <option value="Giza">Giza</option>
+          <option value="Dokki">Dokki</option>
+          <option value="Garden City">Garden City</option>
+          <option value="Heliopolis">Heliopolis</option>
+
+          <!-- Add options for areas dynamically using JavaScript if needed -->
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label id= "text1" for="organizationFilter">Filter by Organization Name:</label>
+        <select id="organizationFilter" class="form-control">
+          <option value="">All Organizations</option>
+          <option value="El Salam Hopital">El Salam Hopital</option>
+          <option value="Nile Badrawy Hospital">Nile Badrawy Hospital</option>
+          <option value="Cleopatra Hospital">Cleopatra Hospital</option>
+          <option value="Al Farouq Hospital">Al Farouq Hospital</option>
+          <option value="Cure Hospital"> Cure Hospital</option>
+          <!-- Add options for organization names dynamically using JavaScript if needed -->
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label id= "text1" for="governorateFilter">Filter by Governorate:</label>
+        <select id="governorateFilter" class="form-control">
+          <option value="">All Governorates</option>
+          <option value="Cairo">Cairo</option>
+          <option value="6 of October">6 of October</option>
+          <option value="Giza">Giza</option>
+
+          <!-- Add options for governorates dynamically using JavaScript if needed -->
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <button class="btn" onclick="applyMedicalFilters()">Filter</button>
+      </div>
+    </div>
+
+
+    <section id="medicalCases" class="mt-5">
+      <div class="container">
+        <div class="table-responsive">
+          <!-- Add an ID to the table for referencing -->
+          <table id="medicalCasesTable" class="table table-bordered">
+            <!-- Table headers -->
+            <thead>
+              <tr>
+                <th>Patient Name</th>
+                <th>Gender</th>
+                <th>Patient Age & Weigth</th>
+                <th>Organization Name</th>
+                <th>Area</th>
+                <th>Governorate</th>
+                <th>Medical Specialty</th>
+                <th>Illness</th>
+                <th>Case Description</th>
+                <th>Action</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+              <tr>
+                <td>Alice Smith</td>
+                <td>Female</td>
+                <td>45 <br> 70 kg</td>
+                <td>Al Farouq Hospital</td>
+                <td>Maadi</td>
+                <td>Cairo</td>
+                <td>Orthopedics</td>
+                <td>Fractured Leg</td>
+                <td>Needs orthopedic surgery and rehabilitation</td>
+                <td><button class="btnn3" onclick="fulfillMedicalCase('Fractured Leg')"><img src="accept.png"></button>
+                </td>
+                <td><button class="btnn3" onclick="showMap('Maadi, Cairo')"><img src="map.png"></button></td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>Male</td>
+                <td>50 <br> 80 kg</td>
+                <td>El Salam Hopital</td>
+                <td>Nasr City</td>
+                <td>Cairo</td>
+                <td>Oncology</td>
+                <td>Lung Cancer</td>
+                <td>Requires chemotherapy and radiation therapy</td>
+                <td><button class="btnn3" onclick="fulfillMedicalCase('Lung Cancer')"><img src="accept.png"></button>
+                </td>
+                </td>
+                <td><button class="btnn3" onclick="showMap('Nasr City, Cairo')"><img src="map.png"></button></td>
+              </tr>
+              <tr>
+                <td>Maria Garcia</td>
+                <td>Female</td>
+                <td>28 <br> 55 kg</td>
+                <td>Dar el Fouad</td>
+                <td>Giza</td>
+                <td>6 of October</td>
+                <td>Cardiology</td>
+                <td>Heart Attack</td>
+                <td>Needs urgent cardiac intervention</td>
+                <td><button class="btnn3" onclick="fulfillMedicalCase('Heart Attack')"><img src="accept.png"></button>
+                </td>
+                </td>
+                <td><button class="btnn3" onclick="showMap('Giza, 6 of October')"><img src="map.png"></button></td>
+                </td>
+              </tr>
+              <tr>
+                <td>David Johnson</td>
+                <td>Male</td>
+                <td>60 <br> </td>
+
+                <td>El Nour Hospital</td>
+                <td>Dokki</td>
+                <td>Giza</td>
+                <td>Neurology</td>
+                <td>Stroke</td>
+                <td>Requires neurosurgery and rehabilitation</td>
+                <td><button class="btnn3" onclick="fulfillMedicalCase('Stroke')"><img src="accept.png"></button></td>
+                <td><button class="btnn3" onclick="showMap('Dokki, Giza')"><img src="map.png"></button></td>
+              </tr>
+              <tr>
+                <td>Williams James</td>
+                <td>Male</td>
+                <td>55 <br> 90 kg</td>
+
+                <td>Cure Hospital</td>
+                <td>Nasr City</td>
+                <td>Cairo</td>
+                <td>Oncology</td>
+                <td>Brain Tumor</td>
+                <td>Requires surgery and chemotherapy</td>
+                <td><button class="btnn3" onclick="fulfillMedicalCase('Brain Tumor')"><img src="accept.png"></button>
+                </td>
+                </td>
+                <td><button class="btnn3" onclick="showMap('Nasr City, Cairo')"><img src="map.png"></button></td>
+              </tr>
+
+              <tr>
+                <td>Sarah Lee</td>
+                <td>Female</td>
+                <td>35 <br> 60 kg</td>
+
+                <td>Nile Badrawy Hospital</td>
+                <td>Garden City</td>
+                <td>Cairo</td>
+                <td>Dermatology</td>
+                <td>Skin Cancer</td>
+                <td>Needs dermatological consultation and treatment</td>
+                <td><button class="btnn3" onclick="fulfillMedicalCase('Skin Cancer')"><img src="accept.png"></button>
+                </td>
+                </td>
+                <td><button class="btnn3" onclick="showMap('Garden City, Cairo')"><img src="map.png"></button></td>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Emily Wilson</td>
+                <td>Female</td>
+                <td>25 <br> 55 kg</td>
+
+                <td>Cleopatra Hospital</td>
+                <td>Heliopolis</td>
+                <td>Cairo</td>
+                <td>Obstetrics and Gynecology</td>
+                <td>Infertility</td>
+                <td>Needs fertility evaluation and treatment</td>
+                <td><button class="btnn3" onclick="fulfillMedicalCase('Infertility')"><img src="accept.png"></button>
+                </td>
+                <td><button class="btnn3" onclick="showMap('Heliopolis, Cairo')"><img src="map.png"></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege and
+            poverty, believing that everyone deserves access to basic necessities, education, and opportunities for a
+            better future.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">Contact Us</h3>
+          <div class="block-23">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                  German University in Cairo
+                  El Tagamoa El Khames
+                  New Cairo City - Egypt</span></li>
+              <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                    010-9917-0359</span></a></li>
+              <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+              <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- New div for the image container -->
+        <div class="col-md-6 col-lg-4">
+          <div class="image-container">
+            <a href="about.html">
+              <img src="fond_logo.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          document.getElementById("ftco-navbar").classList.add("show-logo");
+          document.querySelector(".navbar-brand").style.marginLeft = "100px";
+
+        } else {
+          document.getElementById("ftco-navbar").classList.remove("show-logo");
+          document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+        }
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Preventing default form submission behavior
+
+      // Displaying the thank you message
+      document.getElementById('message').style.display = 'block';
+
+      // Redirecting to the main page after a delay
+      setTimeout(function () {
+        window.location.href = "donormainpage.html";
+      }, 3000); // 3000 milliseconds (3 seconds) delay
+    });
+  </script>
+  <script>
+    function fulfillTeachingCase(teachingCase) {
+      alert("You have chosen to fulfill the teaching case: " + teachingCase);
+    }
+  </script>
+ <script>
+  function applyMedicalFilters() {
+      var medicalSpecialtyFilter = document.getElementById("medicalSpecialtyFilter").value.toUpperCase();
+      var organizationFilter = document.getElementById("organizationFilter").value.toUpperCase();
+      var areaFilter = document.getElementById("areaFilter").value.toUpperCase();
+      var governorateFilter = document.getElementById("governorateFilter").value.toUpperCase();
+      var table = document.getElementById("medicalCasesTable");
+      var tr = table.getElementsByTagName("tr");
+
+      for (var i = 1; i < tr.length; i++) {
+          var tdMedicalSpecialty = tr[i].getElementsByTagName("td")[6];
+          var tdOrganization = tr[i].getElementsByTagName("td")[3];
+          var tdArea = tr[i].getElementsByTagName("td")[4];
+          var tdGovernorate = tr[i].getElementsByTagName("td")[5];
+          if (tdMedicalSpecialty && tdOrganization && tdArea && tdGovernorate) {
+              var medicalSpecialtyValue = tdMedicalSpecialty.textContent || tdMedicalSpecialty.innerText;
+              var organizationValue = tdOrganization.textContent || tdOrganization.innerText;
+              var areaValue = tdArea.textContent || tdArea.innerText;
+              var governorateValue = tdGovernorate.textContent || tdGovernorate.innerText;
+              if (medicalSpecialtyValue.toUpperCase().indexOf(medicalSpecialtyFilter) > -1 &&
+                  organizationValue.toUpperCase().indexOf(organizationFilter) > -1 &&
+                  areaValue.toUpperCase().indexOf(areaFilter) > -1 &&
+                  governorateValue.toUpperCase().indexOf(governorateFilter) > -1) {
+                  tr[i].style.display = "";
+              } else {
+                  tr[i].style.display = "none";
+              }
+          }
+      }
+  }
+</script>
+  <script>
+    function showTeachingPostLocation(lat, lng) {
+      // Construct the Google Maps URL with the specified coordinates
+      var mapsUrl = "https://www.google.com/maps?q=" + lat + "," + lng;
+
+      // Open the Google Maps URL in a new tab
+      window.open(mapsUrl, '_blank');
+    }
+
+    function initializeMap(mapId, lat, lng, zoom) {
+      var mapOptions = {
+        center: { lat: lat, lng: lng },
+        zoom: zoom
+      };
+      var map = new google.maps.Map(document.getElementById(mapId), mapOptions);
+    }
+  </script>
+
+</body>
+
+</html>

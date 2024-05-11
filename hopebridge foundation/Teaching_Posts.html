@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HopeBridge Foundation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .navbar-brand {
+            font-size: 22.5px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
+    }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
+    .logo {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: -490px;
+      width: 130px;
+      vertical-align: bottom;
+      margin-right: 21px;
+      height: 130px;
+      border-radius: 900%;
+      display: none;
+
+    }
+
+    .show-logo .logo {
+      display: block;
+    }
+
+    a {
+      color: #4297A0;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
+    table {
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
+      border-collapse: collapse;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    .clickable-type {
+      color: #4297A0;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 10px;
+      /* Adjust the margin as needed */
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+
+
+    #itemAge {
+
+      padding: 5px;
+      margin-left: 10px;
+      width: 30px;
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 200px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 220px;
+
+      /* Adjust the margin as needed */
+
+    }
+
+    #Area,
+    #governorate,
+    #subject {
+      padding: 8px 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 5px;
+      width: 290px;
+      border-radius: 5px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
+    }
+  
+#Area{
+margin-left: 60px;
+}
+ #subject{
+    margin-left: 70px;
+ }
+#governorate{
+    margin-left: 30px;
+}
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 240px;
+      display: block;
+      margin-left: 450px;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .clickable-type {
+      color: #4297A0;
+      text-decoration: underline;
+      cursor: pointer;
+      /* Add a pointer cursor to indicate clickable */
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-container {
+      background-color: #fff;
+      /* White background for the container */
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      /* Shadow effect */
+    }
+
+    .modal-container img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .btnn3 {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30px;
+      /* Adjust width as needed */
+      height: 30px;
+      /* Adjust height as needed */
+      padding: 0;
+      /* Remove any default padding */
+    }
+
+    .btnn3 img {
+      width: 100%;
+      /* Ensure the image fills the button */
+      height: 100%;
+      /* Ensure the image fills the button */
+    }
+
+    .btnn3:focus {
+      outline: none;
+      /* Remove default focus outline */
+    }
+
+    #text1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 30px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+    #text3 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 35px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+    
+    
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+            <img class="logo" src="fond_logo.png">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="block-31" style="position: relative;">
+        <div class="owl-carousel loop-block-31 ">
+            <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+                data-stellar-background-ratio="0.5">
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature 48: Filter Teaching Posts -->
+    <h1> Teaching Posts</h1>
+    <form id="filterForm">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <label id="text1" for="subject">Filter by Subject:</label>
+                <select id="subject">
+                    <option value="all">All</option>
+                    <option value="math">Mathematics</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                    <option value="Obstetrics and Gynecology">Obstetrics and Gynecology</option>
+                    <!-- Add options for medical specialties dynamically using JavaScript if needed -->
+                </select>
+            </div>
+    
+            <div class="col-md-4">
+                <label id="text3" for="Area">Filter by Area:</label>
+            <select id="Area">
+                <option value="all">All</option>
+                <option value=" Nasr City">Nasr City</option>
+                <option value="Shorouk">Shorouk </option>
+                <option value="Maadi">Maadi</option>
+                <option value="Mandara">Mandara</option>
+                <option value="Sidi Gaber">Sidi Gaber</option>
+                    <!-- Add options for areas dynamically using JavaScript if needed -->
+                </select>
+            </div>
+    
+            <div class="col-md-4">
+                <label id="text2" for="governorate">Filter by Governorate:</label>
+                <select id="governorate">
+                    <option value="all">All</option>
+                    <option value="Cairo"> Cairo</option>
+                    <option value="Alexandria">Alexandria</option>
+                    <!-- Add options for governorates dynamically using JavaScript if needed -->
+                </select>
+            </div>
+            
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <button type="submit" class="btn">Apply Filter</button>
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <section id="TeachingpostRequests" class="mt-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Subject Name</th>
+                            <th>Area</th>
+                            <th>Governorate</th>
+                            <th>Number of Students</th> 
+                            </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Ahmed Mohamed</td>
+                            <td>Male</td>
+                            <td>Mathematics</td>
+                            <td>Mandara</td>
+                            <td>Alexandria</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>Sarah Ahmed</td>
+                            <td>Female</td>
+                            <td>English</td>
+                            <td>Nasr City</td>
+                            <td>Cairo</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>Mohammed Ali</td>
+                            <td>Male</td>
+                            <td>Science</td>
+                            <td>Shorouk</td>
+                            <td>Cairo</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Fatima Hassan</td>
+                            <td>Female</td>
+                            <td>Mathematics</td>
+                            <td>Maadi</td>
+                            <td>Cairo</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>Ali Ibrahim</td>
+                            <td>Male</td>
+                            <td>English</td>
+                            <td>Sidi Gaber</td>
+                            <td>Alexandria</td>
+                            <td>20</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4">
+            <h3 class="heading-section">About Us</h3>
+            <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege
+              and
+              poverty, believing that everyone deserves access to basic necessities, education, and opportunities
+              for a
+              better future.</p>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <h3 class="heading-section">Contact Us</h3>
+            <div class="block-23">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                    German University in Cairo
+                    El Tagamoa El Khames
+                    New Cairo City - Egypt</span></li>
+                <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                      010-9917-0359</span></a></li>
+                <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+                <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- New div for the image container -->
+          <div class="col-md-6 col-lg-4">
+            <div class="image-container">
+              <a href="about.html">
+                <img src="fond_logo.png">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg>
+    </div>
+
+    <!-- JavaScript imports and scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    document.getElementById("ftco-navbar").classList.add("show-logo");
+                    document.querySelector(".navbar-brand").style.marginLeft = "100px";
+
+                } else {
+                    document.getElementById("ftco-navbar").classList.remove("show-logo");
+                    document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Function to handle form submission
+    document.getElementById("filterForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+        filterTeachingPosts(); // Call filter function
+    });
+
+    // Function to filter teaching posts based on selected values
+    function filterTeachingPosts() {
+        var subject = document.getElementById("subject").value;
+        var area = document.getElementById("Area").value;
+        var governorate = document.getElementById("governorate").value;
+
+        // Loop through each row in the table
+        var rows = document.querySelectorAll("#TeachingpostRequests tbody tr");
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            var subjectMatch = subject === "all" || row.cells[2].textContent.toLowerCase() === subject.toLowerCase();
+            var areaMatch = area === "all" || row.cells[3].textContent.toLowerCase().includes(area.toLowerCase());
+            var governorateMatch = governorate === "all" || row.cells[4].textContent.toLowerCase() === governorate.toLowerCase();
+            
+            // Show/hide rows based on filter criteria
+            if (subjectMatch && areaMatch && governorateMatch) {
+                row.style.display = ""; // Show row
+            } else {
+                row.style.display = "none"; // Hide row
+            }
+        }
+    }
+});
+    </script>
+</body>
+
+</html>

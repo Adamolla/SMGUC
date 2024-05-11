@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HopeBridge Foundation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .navbar-brand {
+      font-size: 22.5px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
+    }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
+    .logo {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: -490px;
+      width: 130px;
+      vertical-align: bottom;
+      margin-right: 21px;
+      height: 130px;
+      border-radius: 900%;
+      display: none;
+
+    }
+
+    .show-logo .logo {
+      display: block;
+    }
+
+    a {
+      color: #4297A0;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
+    table {
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
+      border-collapse: collapse;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    .clickable-type {
+      color: #4297A0;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 10px;
+      /* Adjust the margin as needed */
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+
+
+    #itemAge {
+
+      padding: 5px;
+      margin-left: 10px;
+      width: 30px;
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 200px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 220px;
+
+      /* Adjust the margin as needed */
+
+    }
+
+    #itemCategory,
+    #itemGender,
+    #itemAge {
+      padding: 8px 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 5px;
+      width: 250px;
+      border-radius: 5px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
+    }
+
+    #itemCategory {
+      /* Adjust margin to align with other elements */
+      margin-left: 120px;
+    }
+
+    #itemGender {
+      /* Adjust margin to align with other elements */
+      margin-left: 20px;
+    }
+
+    #itemAge {
+      /* Adjust margin to align with other elements */
+      margin-left: 70px;
+    }
+
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 240px;
+      display: block;
+      margin-left: 500px;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .clickable-type {
+      color: #4297A0;
+      text-decoration: underline;
+      cursor: pointer;
+      /* Add a pointer cursor to indicate clickable */
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-container {
+      background-color: #fff;
+      /* White background for the container */
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      /* Shadow effect */
+    }
+
+    .modal-container img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .btnn3 {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30px;
+      /* Adjust width as needed */
+      height: 30px;
+      /* Adjust height as needed */
+      padding: 0;
+      /* Remove any default padding */
+    }
+
+    .btnn3 img {
+      width: 100%;
+      /* Ensure the image fills the button */
+      height: 100%;
+      /* Ensure the image fills the button */
+    }
+
+    .btnn3:focus {
+      outline: none;
+      /* Remove default focus outline */
+    }
+
+    #text1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 80px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+      <img class="logo" src="fond_logo.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+        data-stellar-background-ratio="0.5">
+      </div>
+    </div>
+  </div>
+  </div>
+  <h1>Toy Donation Requests</h1>
+  <!-- Filter controls -->
+  <div class="row">
+    <div class="col-md-4">
+      <label id="text2" for="itemCategory">Item Category:</label>
+      <select id="itemCategory" class="form-control">
+        <option value="">All</option>
+        <option value="Board Games">Board Games</option>
+        <option value="Stuffed Toys">Stuffed Toys</option>
+        <option value="Dolls">Dolls</option>
+        <option value="Sports">Sports</option>
+        <option value="Cars">Cars</option>
+        <option value="Outdoor">Outdoor</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label id="text1" for="itemAge">Recipient Age:</label>
+      <input type="number" id="itemAge" class="form-control" placeholder="Enter age" min="1" required>
+    </div>
+
+    <div class="col-md-4">
+      <label id="text1" for="itemGender">Recipient Gender:</label>
+      <select id="itemGender" class="form-control">
+        <option value="">All</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <button id="filterButton" class="btn">Apply Filter</button>
+    </div>
+  </div>
+
+
+  <section id="toyDonationRequests" class="mt-5">
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Toy Name</th>
+                  <th>Recipient Age</th>
+                  <th>Gender</th>
+                  <th>Type of Toy</th>
+                  <th>Category</th>
+                  <th>Quantity Needed</th>
+                  <th>Picture Reference</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tbody>
+                <tr>
+                  <td>spiderman</td>
+                  <td>5 </td>
+                  <td>Male</td>
+                  <td>Collectible Toys</td>
+                  <td>Collectible</td>
+                  <td>5</td>
+                  <td><button class="btnn3" onclick="picview('spooderman.jpg')"><img src="camera.png"></button></td>
+                </tr>
+                <tr>
+                  <td>Teddy Bear</td>
+                  <td>8 </td>
+                  <td>Female</td>
+                  <td>Stuffed Animals and Plush Toys</td>
+                  <td>Stuffed Toys</td>
+                  <td>10</td>
+                  <td><button class="btnn3" onclick="picview('Teddy_bear.jpg')"><img src="camera.png"></button></td>
+                </tr>
+                <tr>
+                  <td>Barbie Doll</td>
+                  <td>3 </td>
+                  <td>Male</td>
+                  <td>Dolls and Accessories</td>
+                  <td>Dolls</td>
+                  <td>15</td>
+                  <td><button class="btnn3" onclick="picview('barbie.jpg')"><img src="camera.png"></button></td>
+                </tr>
+                <tr>
+                  <td>Basketball</td>
+                  <td>6 </td>
+                  <td>Female</td>
+                  <td>Outdoor and Sports Toys</td>
+                  <td>Sports</td>
+                  <td>12</td>
+                  <td><button class="btnn3" onclick="picview('Basketball.jpg')"><img src="camera.png"></button></td>
+                </tr>
+                <tr>
+                  <td> Ferrari toy </td>
+                  <td>4 </td>
+                  <td>Male</td>
+                  <td>Building and Construction Toys</td>
+                  <td>Cars</td>
+                  <td>18</td>
+                  <td><button class="btnn3" onclick="picview('car.jpg')"><img src="camera.png"></button></td>
+                </tr>
+                <tr>
+                  <td>Bicycle</td>
+                  <td>7 </td>
+                  <td>Female</td>
+                  <td>Ride-on Toys</td>
+                  <td>Outdoor</td>
+                  <td>8</td>
+                  <td><button class="btnn3" onclick="picview('Bicycle.jpg')"><img src="camera.png"></button></td>
+                </tr>
+                <tr>
+                  <td>chess</td>
+                  <td>10 </td>
+                  <td>All </td>
+                  <td> board game </td>
+                  <td>Board Games</td>
+                  <td>2</td>
+                  <td><button class="btnn3" onclick="picview('chess.jpg')"><img src="camera.png"></button></td>
+                </tr>
+              </tbody>
+
+              </tbody>
+            </table>
+
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege
+            and
+            poverty, believing that everyone deserves access to basic necessities, education, and opportunities
+            for a
+            better future.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">Contact Us</h3>
+          <div class="block-23">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                  German University in Cairo
+                  El Tagamoa El Khames
+                  New Cairo City - Egypt</span></li>
+              <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                    010-9917-0359</span></a></li>
+              <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+              <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- New div for the image container -->
+        <div class="col-md-6 col-lg-4">
+          <div class="image-container">
+            <a href="about.html">
+              <img src="fond_logo.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+  <!-- JavaScript imports and scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("filterButton").addEventListener("click", filterDonationRequests);
+    });
+
+    function filterDonationRequests() {
+      var itemCategoryFilter = document.getElementById("itemCategory").value.toLowerCase();
+      var itemAgeFilter = document.getElementById("itemAge").value.toLowerCase();
+      var itemGenderFilter = document.getElementById("itemGender").value.toLowerCase();
+      var tableRows = document.querySelectorAll("#toyDonationRequests tbody tr");
+
+      tableRows.forEach(function (row) {
+        var categoryCell = row.querySelector("td:nth-child(5)").textContent.trim().toLowerCase();
+        var ageCell = row.querySelector("td:nth-child(2)").textContent.trim().toLowerCase();
+        var genderCell = row.querySelector("td:nth-child(3)").textContent.trim().toLowerCase();
+
+        var showRow = true;
+        if (itemCategoryFilter && itemCategoryFilter !== "all" && categoryCell !== itemCategoryFilter) {
+          showRow = false;
+        }
+        if (itemAgeFilter && itemAgeFilter !== "" && ageCell !== itemAgeFilter) {
+          showRow = false;
+        }
+        if (itemGenderFilter && itemGenderFilter !== "" && genderCell !== itemGenderFilter) {
+          showRow = false;
+        }
+
+        row.style.display = showRow ? "" : "none";
+      });
+    }
+  </script>
+
+
+  <script>
+    function picview(imageSrc) {
+      // Create a modal overlay container
+      var overlay = document.createElement('div');
+      overlay.classList.add('modal-overlay');
+
+      // Create a modal container
+      var modalContainer = document.createElement('div');
+      modalContainer.classList.add('modal-container');
+
+      // Create an image element
+      var imageElement = document.createElement('img');
+      imageElement.src = imageSrc;
+
+      // Append the image element to the modal container
+      modalContainer.appendChild(imageElement);
+
+      // Append the modal container to the overlay
+      overlay.appendChild(modalContainer);
+
+      // Append the overlay to the body
+      document.body.appendChild(overlay);
+
+      // Close the modal when clicking outside the image
+      overlay.onclick = function () {
+        overlay.remove();
+      };
+    }
+
+
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("filterButton").addEventListener("click", filterDonationRequests);
+      document.getElementById("resetAgeButton").addEventListener("click", resetAgeFilter);
+    });
+
+    function resetAgeFilter() {
+      document.getElementById("itemAge").value = ""; // Reset the age input field
+      filterDonationRequests(); // Reapply the filter
+    }
+
+  </script>
+
+</body>
+
+</html>

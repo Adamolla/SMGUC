@@ -24,21 +24,28 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    .navbar-brand {
+  .navbar-brand {
       font-size: 22.5px;
-      margin-left: -10px;
+      margin-left: 10px;
+      padding-left: 10px;
     }
-    .body{
-      cursor: pointer;
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
     }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
     .logo {
       margin-bottom: 0px;
       margin-top: 0px;
-      margin-left: -500px;
-      width: 140px;
+      margin-left: -490px;
+      width: 130px;
       vertical-align: bottom;
       margin-right: 21px;
-      height: 140px;
+      height: 130px;
       border-radius: 900%;
       display: none;
 
@@ -48,56 +55,383 @@
       display: block;
     }
 
+    a {
+      color: #4297A0;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
     table {
-      width: 100%;
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
       border-collapse: collapse;
-      margin-bottom: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
-    /* Style table header */
-    th {
-      background-color: #f2f2f2;
-      padding: 8px;
-      text-align: left;
-    }
-
-    /* Style table rows */
+    th,
     td {
-      border-bottom: 1px solid #ddd;
-      padding: 8px;
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    .clickable-type {
+      color: #4297A0;
+      text-decoration: underline;
       cursor: pointer;
     }
-    .btn{
-            background-color: #4297A0;
-            color: white;
-        }
-        .btn:active{
-            color: white;
-        }
-        .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.modal-container {
-  background-color: #fff; /* White background for the container */
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-}
 
-.modal-container img {
-  max-width: 100%;
-  max-height: 100%;
-}
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 10px;
+      /* Adjust the margin as needed */
+    }
 
+    input[type="file"] {
+      display: none;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+
+
+    #itemAge {
+
+      padding: 5px;
+      margin-left: 10px;
+      width: 30px;
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 200px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 220px;
+
+      /* Adjust the margin as needed */
+
+    }
+
+    #itemCategory {
+      padding: 8px 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 5px;
+      width: 350px;
+      border-radius: 5px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
+      margin-left: 450px;
+    }
+
+  
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 240px;
+      display: block;
+      margin-left: 500px;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .clickable-type {
+      color: #4297A0;
+      text-decoration: underline;
+      cursor: pointer;
+      /* Add a pointer cursor to indicate clickable */
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-container {
+      background-color: #fff;
+      /* White background for the container */
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      /* Shadow effect */
+    }
+
+    .modal-container img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .btnn3 {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30px;
+      /* Adjust width as needed */
+      height: 30px;
+      /* Adjust height as needed */
+      padding: 0;
+      /* Remove any default padding */
+    }
+
+    .btnn3 img {
+      width: 100%;
+      /* Ensure the image fills the button */
+      height: 100%;
+      /* Ensure the image fills the button */
+    }
+
+    .btnn3:focus {
+      outline: none;
+      /* Remove default focus outline */
+    }
+
+    #text1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 450px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 80px;
+      margin-right: 10px;
+      /* Adjust the margin as needed */
+
+    }
+
+    h2 {
+      font-size: 25px;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-left: 150px;
+      padding-left: 280px;
+      margin-bottom: 50px;
+      margin-top: 50px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+    }
   </style>
 </head>
 
@@ -133,10 +467,10 @@
     </div>
   </div>
   </div>
-  
+  <h1>School Donation Requests</h1>
 <!-- Filter controls -->
 <div class="col-md-4">
-    <label for="itemCategory">Item Category:</label>
+    <label id="text1" for="itemCategory">Item Category:</label>
     <select id="itemCategory" class="form-control">
         <option value="">All</option>
         <option value="Books">Books</option>
@@ -181,7 +515,7 @@
           <td>1st Edition</td>
           <td>The AP Biology course is an introductory college-level biology course. Students cultivate their understanding of biology through inquiry-based investigations as they explore the following topics: evolution, cellular processes, energy and communication, genetics, information transfer, ecology, and interactions</td>
           <td>20</td>
-          <td><button onclick="picview('sci11.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('sci11.jpg')"><img src="camera.png"></button></td>
         </tr>
         <tr>
           <td>Common Core Curriculum</td>
@@ -192,7 +526,7 @@
           <td>1st Edition</td>
           <td>A textbook covering various mathematical topics for 6th grade.</td>
           <td>10</td>
-          <td><button onclick="picview('math1.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('math1.jpg')"><img src="camera.png"></button></td>
         </tr>
         <tr>
           <td>Macbeth</td>
@@ -203,7 +537,7 @@
           <td>None</td>
           <td>A brave Scottish general named Macbeth receives a prophecy from a trio of witches that one day he will become King of Scotland. Consumed by ambition and spurred to action by his wife, Macbeth murders King Duncan and takes the Scottish throne for himself. He is then wracked with guilt and paranoia.</td>
           <td>15</td>
-          <td><button onclick="picview('mac1.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('mac1.jpg')"><img src="camera.png"></button></td>
         </tr>
         <tr>
           <td>A Patriot's History of the United States: From Columbus's Great Discovery to the War on Terror</td>
@@ -214,7 +548,7 @@
           <td>None</td>
           <td>A Patriot's History of the United States corrects those doctrinaire biases. In this groundbreaking book, America's discovery, founding, and development are reexamined with an appreciation for the elements of public virtue, personal liberty, and private property that make this nation uniquely successful.</td>
           <td>20</td>
-          <td><button onclick="picview('his1.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('his1.jpg')"><img src="camera.png"></button></td>
         </tr>
       </tbody>
     </table>
@@ -234,37 +568,37 @@
           <td>Pens</td>
           <td>15</td>
           <td>Stationary</td>
-          <td><button onclick="picview('pen1.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('pen1.jpg')"><img src="camera.png"></button></td>
         </tr>
         <tr>
           <td>Pencils</td>
           <td>20</td>
           <td>Stationary</td>
-          <td><button onclick="picview('penc1.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('penc1.jpg')"><img src="camera.png"></button></td>
         </tr>
         <tr>
           <td>Backpack</td>
           <td>10</td>
           <td>Stationary</td>
-          <td><button onclick="picview('bag1.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('bag1.jpg')"><img src="camera.png"></button></td>
         </tr>
         <tr>
           <td>Calculators</td>
           <td>5</td>
           <td>Stationary</td>
-          <td><button onclick="picview('calc1.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('calc1.jpg')"><img src="camera.png"></button></td>
         </tr>
         <tr>
           <td>Computers</td>
           <td>5</td>
           <td>Stationary</td>
-          <td><button onclick="picview('comp1.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('comp1.jpg')"><img src="camera.png"></button></td>
         </tr>
         <tr>
           <td>Uniforms</td>
           <td>10</td>
           <td>Stationary</td>
-          <td><button onclick="picview('uni2.jpg')">View Reference</button></td>
+          <td><button class="btnn3" onclick="picview('uni2.jpg')"><img src="camera.png"></button></td>
         </tr>
       </tbody>
     </table>
@@ -273,80 +607,42 @@
 
 
 <footer class="footer">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-6 col-lg-4">
-          <h3 class="heading-section">About Us</h3>
-          <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-          <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p><a href="#" class="link-underline">Read  More</a></p>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <h3 class="heading-section">Recent Blog</h3>
-          <div class="block-21 d-flex mb-4">
-            <figure class="mr-3">
-              <img src="images/img_1.jpg" alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-              <h3 class="heading"><a href="#">Water Is Life. Clean Water In Urban Area</a></h3>
-              <div class="meta">
-                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-              </div>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-6 col-lg-4">
+        <h3 class="heading-section">About Us</h3>
+        <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege and
+          poverty, believing that everyone deserves access to basic necessities, education, and opportunities for a
+          better future.</p>
+      </div>
 
-          <div class="block-21 d-flex mb-4">
-            <figure class="mr-3">
-              <img src="images/img_2.jpg" alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-              <h3 class="heading"><a href="#">Life Is Short So Be Kind</a></h3>
-              <div class="meta">
-                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="block-21 d-flex mb-4">
-            <figure class="mr-3">
-              <img src="images/img_4.jpg" alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-              <h3 class="heading"><a href="#">Unfortunate Children Need Your Love</a></h3>
-              <div class="meta">
-                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="block-23">
-            <h3 class="heading-section">Get Connected</h3>
-              <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-              </ul>
-            </div>
+      <div class="col-md-6 col-lg-4">
+        <h3 class="heading-section">Contact Us</h3>
+        <div class="block-23">
+          <ul>
+            <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                German University in Cairo
+                El Tagamoa El Khames
+                New Cairo City - Egypt</span></li>
+            <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                  010-9917-0359</span></a></li>
+            <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+            <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+          </ul>
         </div>
       </div>
-      <div class="row pt-5">
-        <div class="col-md-12 text-center">
-          <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </p>
+
+      <!-- New div for the image container -->
+      <div class="col-md-6 col-lg-4">
+        <div class="image-container">
+          <a href="about.html">
+            <img src="fond_logo.png">
+          </a>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

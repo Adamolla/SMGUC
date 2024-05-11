@@ -230,14 +230,20 @@
     .address,
     .area,
     .gov,
+    .role,
     .orgname,
     .document-upload {
       position: relative;
       margin-bottom: 20px;
       border-color: #4297A0;
       border-style: solid;
-      border-width: 1px;
+      border-width: 2px;
       border-radius: 5px;
+    }
+    .role{
+      padding: 15px;
+      border-color: #4297A0;
+      
     }
 
     input[type="text"],
@@ -327,6 +333,7 @@
     #uploadedDocumentPlaceholder{
       margin-left: 17px;
     }
+    
   </style>
 </head>
 
@@ -366,7 +373,7 @@
   <h1> Donor's Registration Form: </h1>
 
   <div class "wrapper">
-    <form action="organizationPost.html" method="GET">
+    <form action="javascript:void(0);" method="GET" onsubmit="registerUser(event);">
       <div>
         <div class="wrapper">
           <form>
@@ -407,6 +414,15 @@
             <div class="gov">
               <input type="text" id="goc" placeholder=" Governorate" required>
               <i class='bx bxs-map-pin'></i>
+            </div>
+            <div style="position: relative;">
+              <select id="role1" name="role" class="role" style="width: 100%; padding-left: 40px;" >
+                <option  value="" disabled selected hidden> Choose a role</option>
+                <option value="regularDonor">Regular Donor</option>
+                <option value="teacher">Teacher</option>
+                <option value="doctor">Doctor</option>
+              </select>
+              <i class='bx bxs-user' style="padding-bottom: 20px"></i>
             </div>
             <div class="document-upload"> 
               <label for="document" class='bx bxs-file'>  Upload Organization Document(s):</label>
@@ -498,63 +514,64 @@
           });
         </script>
 
-        <script>
-          // Function to handle form submission
-          function registerUser(event) {
-            event.preventDefault(); // Prevent default form submission behavior
+<script>
+  // Function to handle form submission
+  function registerUser(event) {
+    event.preventDefault(); // Prevent default form submission behavior
 
-            // Retrieve form data (assuming you have form fields with IDs firstName, lastName, etc.)
-            var firstName = document.getElementById('fs').value;
-            var lastName = document.getElementById('ls').value;
-            var gender = document.getElementById('gen').value;
-            var email = document.getElementById('em').value;
-            var password = document.getElementById('pass').value;
-            var contactNumber = document.getElementById('num').value;
-            var address = document.getElementById('add').value;
-            var organizationName = document.getElementById('orgname').value;
-            var area = document.getElementById('area').value;
-            var governorate = document.getElementById('goc').value;
+    // Retrieve form data (assuming you have form fields with IDs firstName, lastName, etc.)
+    var firstName = document.getElementById('fs').value;
+    var lastName = document.getElementById('ls').value;
+    var gender = document.getElementById('gen').value;
+    var email = document.getElementById('em').value;
+    var password = document.getElementById('pass').value;
+    var contactNumber = document.getElementById('num').value;
+    var address = document.getElementById('add').value;
+    var area = document.getElementById('area').value;
+    var governorate = document.getElementById('goc').value;
+    var selectedRole = document.getElementById('role1').value; // Get selected volunteer role
 
-            // Check if a document has been uploaded
-            var documentUploaded = document.getElementById('document').files.length > 0;
+    // Check if a document has been uploaded
+    var documentUploaded = document.getElementById('document').files.length > 0;
 
-            // Perform basic form validation
-            if (!firstName || !lastName || !gender || !email || !password || !contactNumber || !address || !area || !governorate) {
-              alert('Please fill out all required fields.');
-              return;
-            }
+    // Perform basic form validation
+    if (!firstName || !lastName || !gender || !email || !password || !contactNumber || !address || !area || !governorate) {
+      alert('Please fill out all required fields.');
+      return;
+    }
 
-            // Display the entered form data
-            var formData = {
-              "First Name": firstName,
-              "Last Name": lastName,
-              "Gender": gender,
-              "Email": email,
-              "Password": password,
-              "Contact Number": contactNumber,
-              "Address": address,
-              "Area": area,
-              "Governorate": governorate,
-              "Document Uploaded": documentUploaded ? "Yes" : "No"
-            };
-            console.log(formData); // Log the form data to the console
+    // Display the entered form data
+    var formData = {
+      "First Name": firstName,
+      "Last Name": lastName,
+      "Gender": gender,
+      "Email": email,
+      "Password": password,
+      "Contact Number": contactNumber,
+      "Address": address,
+      "Area": area,
+      "Governorate": governorate,
+      "Role": selectedRole, // Add selected volunteer role to form data
+      "Document Uploaded": documentUploaded ? "Yes" : "No"
+    };
+    console.log(formData); // Log the form data to the console
 
-            // Display a message indicating that the registration is successful
-            var message = 'Registration successful!';
-            if (documentUploaded) {
-              message += ' Document uploaded.';
-            }
-            alert(message);
+    // Display a thank you message including the volunteer role
+    alert('Thank you for volunteering as ' + selectedRole + '. Thank you for registering!');
 
-            // Redirect the user to the donate.html page after a short delay
-            setTimeout(function () {
-              window.location.href = 'donate.html';
-            }, 2000); // Delay in milliseconds (2000ms = 2 seconds)
-          }
+    // Redirect the user after a short delay
+    setTimeout(function () {
+      window.location.href = 'Donor_Dashboard.html';
+    }, 1000); // Delay in milliseconds (1000ms = 1 second)
+  }
 
-          // Add event listener to the form
-          document.querySelector('form').addEventListener('submit', registerUser);
-        </script>
+  // Add event listener to the form
+  document.querySelector('form').addEventListener('submit', registerUser);
+
+  // Add event listener to the Register button
+  document.getElementById('registerButton').addEventListener('click', registerUser);
+</script>
+
 
         <script>
           // Function to handle document upload

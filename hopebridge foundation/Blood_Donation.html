@@ -262,6 +262,7 @@
     input[type="file"] {
       display: none;
     }
+ 
 
     .btn {
       background-color: transparent;
@@ -305,34 +306,28 @@
       border-radius: 5px;
       border-color: #4297A0;
       border-style: solid;
-      border-width: 1px;
+      border-width: 2px;
     }
 
     #hospitalFilter {
       margin-left: -4px;
       /* Adjust the margin as needed */
     }
-    .btnn1{
-    background-color: #4297A0;
+    .btnn3{
+    background-color:transparent;
       color: white;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      margin-left: 90px;
+      margin-left: 20px;
       border-color: #4297A0;
       letter-spacing: 4px;
 
     }
 
-    .btnn1:active {
-      background-color: black;
-    }
-
-    .btnn1:hover {
-      background-color: black;
-    }
+   
   </style>
 </head>
 
@@ -429,8 +424,7 @@
               <td>Cairo</td>
               <td>Maadi</td>
               <td>
-                <button class="btnn1" onclick="showHospitalLocation('HopeBridge Hospital')">View
-                  Location</button>
+                <button class="btnn3" onclick="showHospitalLocation('HopeBridge Hospital')"><img src="map.png"></button>
               </td>
             </tr>
             <tr>
@@ -440,8 +434,7 @@
               <td>Cairo</td>
               <td>Nasr City</td>
               <td>
-                <button class="btnn1" onclick="showHospitalLocation('El Salam Hopital')">View
-                  Location</button>
+                <button class="btnn3" onclick="showHospitalLocation('El Salam Hopital')"><img src="map.png"></button>
               </td>
             </tr>
             <tr>
@@ -451,8 +444,7 @@
               <td>Giza</td>
               <td>6 of October</td>
               <td>
-                <button class="btnn1" onclick="showHospitalLocation('Dar el Fouad')">View
-                  Location</button>
+                <button class="btnn3" onclick="showHospitalLocation('Dar el Fouad')"><img src="map.png"></button>
               </td>
             </tr>
             <tr>
@@ -462,7 +454,7 @@
               <td>Giza</td>
               <td>Dokki</td>
               <td>
-                <button class="btnn1" onclick="showHospitalLocation('57357')">View Location</button>
+                <button class="btnn3" onclick="showHospitalLocation('57357')"><img src="map.png"></button>
               </td>
             </tr>
           </tbody>
@@ -554,52 +546,43 @@
         }
       });
     });
+</script>
 
-    $(document).ready(function () {
-      $("#filterForm").on("submit", function (event) {
-        event.preventDefault(); // Prevent form submission
-        filterBloodDonationRequests(); // Call filter function
-      });
-
-      function filterBloodDonationRequests() {
-        var hospital = $("#hospitalFilter").val().toLowerCase();
-        var governorate = $("#governorateFilter").val().toLowerCase();
-        var area = $("#areaFilter").val().toLowerCase();
-
-        $("table tbody tr").each(function () { // Targeting table rows directly
-          var rowHospital = $(this).find("td:nth-child(3)").text().toLowerCase();
-          var rowGovernorate = $(this).find("td:nth-child(5)").text().toLowerCase();
-          var rowArea = $(this).find("td:nth-child(6)").text().toLowerCase();
-
-          var showRow = true;
-
-          if (hospital !== "" && rowHospital !== hospital) {
-            showRow = false;
-          }
-
-          if (governorate !== "" && rowGovernorate !== governorate) {
-            showRow = false;
-          }
-
-          if (area !== "" && rowArea !== area) {
-            showRow = false;
-          }
-
-          $(this).toggle(showRow);
-        });
-      }
+<script>
+  $(document).ready(function () {
+    $("#filterButton").on("click", function () {
+      filterBloodDonationRequests();
     });
 
-    function showHospitalLocation(hospitalName) {
-      if (hospitalName === 'HopeBridge Hospital') {
-        // Redirect or display the location of HopeBridge Hospital
-        window.location.href = 'https://www.google.com/maps/place/HopeBridge+Hospital';
-      } else {
-        // Handle other hospitals here
-        alert('Location not available for this hospital.');
-      }
+    function filterBloodDonationRequests() {
+      var hospital = $("#hospitalFilter").val().trim().toLowerCase();
+      var governorate = $("#governorateFilter").val().trim().toLowerCase();
+      var area = $("#areaFilter").val().trim().toLowerCase();
+
+      $("table tbody tr").each(function () {
+        var rowHospital = $(this).find("td:nth-child(3)").text().trim().toLowerCase();
+        var rowGovernorate = $(this).find("td:nth-child(4)").text().trim().toLowerCase();
+        var rowArea = $(this).find("td:nth-child(5)").text().trim().toLowerCase();
+
+        var showRow = true;
+
+        if (hospital !== "" && rowHospital !== hospital) {
+          showRow = false;
+        }
+
+        if (governorate !== "" && rowGovernorate !== governorate) {
+          showRow = false;
+        }
+
+        if (area !== "" && rowArea !== area) {
+          showRow = false;
+        }
+
+        $(this).toggle(showRow);
+      });
     }
-  </script>
+  });
+</script>
 </body>
 
 
