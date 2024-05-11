@@ -390,11 +390,12 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-          <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
+          <li class="nav-item"><a href="Home_page.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="Donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Choose_Which_User.html" class="nav-link"> Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="Organization_Pass_change.html" class="nav-link">Manage Account</a></li>
         </ul>
       </div>
     </div>
@@ -583,19 +584,22 @@
   });
 </script>
 
-<script>
-  // Function to handle document upload
+<Script>
   document.getElementById('document').addEventListener('change', function () {
-      var fileInput = this;
-      var uploadedDocumentPlaceholder = document.getElementById('uploadedDocumentPlaceholder');
-      if (fileInput.files && fileInput.files.length > 0) {
-          uploadedDocumentPlaceholder.textContent = fileInput.files[0].name; // Update placeholder with the name of the uploaded file
-      } else {
-          uploadedDocumentPlaceholder.textContent = 'No document chosen'; // Reset placeholder if no file is chosen
+  var fileInput = this;
+  var uploadedDocumentPlaceholder = document.getElementById('uploadedDocumentPlaceholder');
+  if (fileInput.files && fileInput.files.length > 0) {
+      var fileList = [];
+      for (var i = 0; i < fileInput.files.length; i++) {
+          fileList.push(fileInput.files[i].name);
       }
-  });
+      uploadedDocumentPlaceholder.textContent = fileList.join(', '); // Update placeholder with the names of the uploaded files
+  } else {
+      uploadedDocumentPlaceholder.textContent = 'No documents chosen'; // Reset placeholder if no files are chosen
+  }
+});
+      </script>
 
-</script>
 
 <script>
 function updateOrganizationInfo() {

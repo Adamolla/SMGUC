@@ -210,6 +210,20 @@
       transition: background-color 0.3s ease;
     }
 
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      text-decoration: underline rgb(38, 37, 37);
+      color: #4297A0;
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      /* Adjust the margin as needed */
+      margin-left: -20px;
+    }
+
     .button-container {
       display: flex;
       justify-content: center;
@@ -218,7 +232,14 @@
       /* Allow wrapping of buttons */
       margin-top: 20px;
     }
-
+    h2{
+      font-size: 29px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      margin-bottom: 30px;
+      margin-top: 30px;
+      font-weight:500;
+    }
     .list-container,
     .list-group {
       flex: 1;
@@ -232,7 +253,7 @@
       margin-left: 20px;
       margin-bottom: 30px;
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-      font-size: 36px;
+      font-size: 30px;
       color: #4297A0;
       margin-top: 50px;
       text-decoration: underline rgb(38, 37, 37);
@@ -254,12 +275,12 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-          <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
+          <li class="nav-item"><a href="Home_page.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="Donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Choose_Which_User.html" class="nav-link"> Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="ManageAcc.html" class="nav-link">Manage Account</a></li>
+          <li class="nav-item"><a href="Admin_Manage_Account.html" class="nav-link">Manage Account</a></li>
         </ul>
       </div>
     </div>
@@ -273,38 +294,41 @@
     </div>
   </div>
 
+    <h1>Admin's Dashboard</h1>
+
   <div class="container">
     <div class="button-container">
       <div class="list-container">
         <!-- View Lists -->
-        <h1 class="heading">View Lists:</h1>
+        <h2 class="heading">View Lists:</h2>
         <button class="btn" onclick="gotodonorlist()">Donors' Lists</button>
         <button class="btn" onclick="goToOrganizationlist()">Organizations' Lists</button>
       </div>
 
       <div class="list-group">
         <!-- Manage Requests -->
-        <h1 class="heading">View Registered Organizations:</h1>
+        <h2 class="heading">View Registered Organizations:</h2>
         <button class="btn" onclick="gotoregisteredorg()">Registered Organizations</button>
       </div>
       <div class="list-group">
         <!-- Review Submissions -->
-        <h1 class="heading">Review Submissions:</h1>
+        <h2 class="heading">Review Submissions:</h2>
         <button class="btn" onclick="gotodonorsubmission()">Donor Submission</button>
         <button class="btn" onclick="goToOrganizationsubmission()">Organization Submissions</button>
       </div>
 
       <div class="list-group">
         <!-- Manage Requests -->
-        <h1 class="heading">Manage Requests:</h1>
+        <h2 class="heading">Manage Requests:</h2>
         <button class="btn" onclick="gotodonorreq()">Donor Requests</button>
         <button class="btn" onclick="goToOrganizationreq()">Organization Requests</button>
       </div>
 
       <div class="list-group">
         <!-- Manage Requests -->
-        <h1 class="heading">Account Management:</h1>
+        <h2 class="heading">Account Management:</h2>
         <button class="btn" onclick="gotoaccmanage()"> Account Management</button>
+        <button class="btn" onclick="gotoaccmanage1()"> Change Pasword</button>
       </div>
     </div>
   </div>
@@ -416,6 +440,9 @@
     }
     function gotoaccmanage(){
       window.location.href = "Admin_Delete_Organization_Donor_Account.html";
+    }
+    function gotoaccmanage1(){
+      window.location.href = "Admin_Manage_Account.html";
     }
   </script>
 </body>

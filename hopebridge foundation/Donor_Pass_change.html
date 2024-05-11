@@ -181,9 +181,6 @@
     .image-container {
       text-align: center;
     }
-    .register-link {
-      margin-left: 500px;
-    }
 
     .image-container img {
       max-width: 100%;
@@ -197,11 +194,7 @@
       margin: 0 auto;
       padding: 40px;
       border-radius: 8px;
-    }
 
-    .footer {
-      margin-top: 0;
-      padding-top: 4%;
     }
 
     h1 {
@@ -215,34 +208,34 @@
       text-decoration: underline rgb(38, 37, 37);
     }
 
-    .user,
-    .pass {
+    .user {
       position: relative;
       margin-bottom: 20px;
     }
 
-    .user i,
-    .pass i {
+    .user i {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       left: 15px;
       color: #495057;
-      margin-left: 405px;
+      margin-left: -60px;
     }
 
-    .user input,
-    .pass input {
+    .user input {
       width: 500px;
       padding: 10px 15px;
       padding-left: 40px;
       border: 1px solid #ced4da;
+      margin-left: -60px;
       border-radius: 5px;
-      margin-left: 405px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
     }
 
     button.btn {
-      width: 100px;
+      width: 150px;
       padding: 10px 15px;
       background-color: #4297A0;
       color: #fff;
@@ -250,7 +243,8 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      margin-left: 586px;
+      margin-top: 20px;
+      margin-left: 95px;
     }
 
     button.btn:hover {
@@ -281,12 +275,12 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="Home_page.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="Donate.html" class="nav-link">Donate</a></li>
-          <li class="nav-item"><a href="Choose_Which_User.html" class="nav-link"> Login / Register</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <!-- <li class="nav-item"><a href="Organization_Pass_change.html" class="nav-link">Manage Account</a></li> -->
+            <li class="nav-item"><a href="Home_page.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="Donate.html" class="nav-link">Donate</a></li>
+            <li class="nav-item"><a href="Choose_Which_User.html" class="nav-link"> Login / Register</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="Donor_Pass_change.html" class="nav-link">Manage Account</a></li>
         </ul>
       </div>
     </div>
@@ -302,29 +296,23 @@
   </div>
   </div>
 
-  <h1> Organization's Login</h1>
-
-  <div class "wrapper">
-    <form>
-      <p></p>
-      <div class="user">
-        <input type="text" id="username" placeholder="Organization Name" required> <!-- Added id="username" -->
-        <i class='bx bxs-user'></i>
-      </div>
-      <p></p>
-      <div class="pass">
-        <input type="password" id="password" placeholder="Password" required> <!-- Added id="password" -->
-        <i class='bx bxs-lock'></i>
-      </div>
-      <div class="register-link">
-        <p>Don't have an account?<a href="#" onclick="goToRegisterPage()"> Register</a></p>
-      </div>
-      <p>
-        <button type="button" class="btn" onclick="login()">Login</button>
-      </p>
-    </form>
-  </div>
-
+  <form id="passwordForm" class="wrapper">
+    <h1 class="Password change">Change Password</h1>
+    <div class="currentpass user">
+      <input type="password" id="currentPassword" placeholder="Current Password:" required>
+      <i class='bx bxs-lock'></i>
+    </div>
+    <div class="newpass user">
+      <input type="password" id="newPassword" placeholder="New Password:" required>
+      <i class='bx bxs-lock'></i>
+    </div>
+    <div class="Newpass user">
+      <input type="password" id="confirmPassword" placeholder="Re-enter New Password:" required>
+      <i class='bx bxs-lock'></i>
+    </div>
+    <button type="button" id="changeBtn" class="btn">Change</button>
+  </form>
+  <div id="message" style="display: none;">Password has been changed successfully </div>
 
   <footer class="footer">
     <div class="container">
@@ -364,13 +352,12 @@
     </div>
   </footer>
 
-  <!-- loader -->
+
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
       <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
         stroke="#F96D00" />
     </svg></div>
-
 
 
   <script src="js/jquery.min.js"></script>
@@ -383,18 +370,17 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
   <script src="js/jquery.fancybox.min.js"></script>
 
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
   <script>
-
     document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
@@ -408,32 +394,44 @@
       });
     });
   </script>
- <script>
-  function goToRegisterPage() {
-    window.location.href = "Organization_Registration_page.html";
-  }
-</script>
+
   <script>
- function login() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+    document.getElementById('changeBtn').addEventListener('click', function () {
+      var currentPassword = document.getElementById('currentPassword').value;
+      var newPassword = document.getElementById('newPassword').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
 
-  // Hardcoded username and passwords for admin
-  var adminUsername = "organization";
-  var adminPassword1 = "org123";
-  var adminPassword2 = "org456";
-
-  // Check if the entered username and password match any of the admin credentials
-  if ((username === adminUsername) && (password === adminPassword1 || password === adminPassword2)) {
-    // Redirect to admin dashboard or any desired page
-    window.location.href = "Organization_dashboard.html";
-  } else {
-    // Display an error message for incorrect credentials
-    alert("Incorrect username or password. Please try again.");
-  }
-}
-
+      if (currentPassword === '' || newPassword === '' || confirmPassword === '') {
+        alert('Please fill out all password fields.');
+      } else {
+        document.getElementById('message').style.display = 'block';
+      }
+    });
   </script>
+
+  <script>
+    document.getElementById('changeBtn').addEventListener('click', function () {
+      var currentPassword = document.getElementById('currentPassword').value;
+      var newPassword = document.getElementById('newPassword').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+      var adminPassword = "donor123"; // Expected current password
+
+      if (currentPassword === '' || newPassword === '' || confirmPassword === '') {
+        alert('Please fill out all password fields.');
+      } else if (currentPassword !== adminPassword) {
+        alert('Current password is incorrect.');
+      } else if (newPassword !== confirmPassword) {
+        alert('New password and confirm password do not match.');
+      } else {
+        // Change the current password to the new password
+        adminPassword = newPassword;
+        alert('Password changed successfully.');
+        // Redirect to the Admin Login page
+        window.location.href = "Donor_Login_page.html";
+      }
+    });
+  </script>
+  
 </body>
 
 </html>

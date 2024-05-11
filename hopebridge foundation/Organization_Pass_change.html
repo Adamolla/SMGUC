@@ -275,12 +275,12 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-          <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
+          <li class="nav-item"><a href="Home_page.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="Donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Choose_Which_User.html" class="nav-link"> Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item active"><a href="Admin_Manage_Account.html" class="nav-link">Manage Account</a></li>
+          <li class="nav-item"><a href="Organization_Pass_change.html" class="nav-link">Manage Account</a></li>
         </ul>
       </div>
     </div>
@@ -414,7 +414,7 @@
       var currentPassword = document.getElementById('currentPassword').value;
       var newPassword = document.getElementById('newPassword').value;
       var confirmPassword = document.getElementById('confirmPassword').value;
-      var adminPassword = "organization123"; // Expected current password
+      var adminPassword = "org123"; // Expected current password
 
       if (currentPassword === '' || newPassword === '' || confirmPassword === '') {
         alert('Please fill out all password fields.');
@@ -431,6 +431,7 @@
       }
     });
   </script>
+  
 </body>
 
 </html>
