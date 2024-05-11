@@ -259,6 +259,7 @@
           <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="ManageAcc.html" class="nav-link">Manage Account</a></li>
         </ul>
       </div>
     </div>
@@ -277,15 +278,20 @@
       <div class="list-container">
         <!-- View Lists -->
         <h1 class="heading">View Lists:</h1>
-        <button class="btn" onclick="gotodonorlist()">Donor List</button>
-        <button class="btn" onclick="goToOrganizationlist()">Organization List</button>
+        <button class="btn" onclick="gotodonorlist()">Donors' Lists</button>
+        <button class="btn" onclick="goToOrganizationlist()">Organizations' Lists</button>
       </div>
 
+      <div class="list-group">
+        <!-- Manage Requests -->
+        <h1 class="heading">View Registered Organizations:</h1>
+        <button class="btn" onclick="gotoregisteredorg()">Registered Organizations</button>
+      </div>
       <div class="list-group">
         <!-- Review Submissions -->
         <h1 class="heading">Review Submissions:</h1>
         <button class="btn" onclick="gotodonorsubmission()">Donor Submission</button>
-        <button class="btn" onclick="goToOrganizationsubmission()">Organization Submission</button>
+        <button class="btn" onclick="goToOrganizationsubmission()">Organization Submissions</button>
       </div>
 
       <div class="list-group">
@@ -293,6 +299,12 @@
         <h1 class="heading">Manage Requests:</h1>
         <button class="btn" onclick="gotodonorreq()">Donor Requests</button>
         <button class="btn" onclick="goToOrganizationreq()">Organization Requests</button>
+      </div>
+
+      <div class="list-group">
+        <!-- Manage Requests -->
+        <h1 class="heading">Account Management:</h1>
+        <button class="btn" onclick="gotoaccmanage()"> Account Management</button>
       </div>
     </div>
   </div>
@@ -398,6 +410,12 @@
 
     function goToOrganizationreq() {
       window.location.href = "Organization_Request.html";
+    }
+    function gotoregisteredorg(){
+      window.location.href = "Registered_Organization.html";
+    }
+    function gotoaccmanage(){
+      window.location.href = "Admin_Delete_Organization_Donor_Account.html";
     }
   </script>
 </body>

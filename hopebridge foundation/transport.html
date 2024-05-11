@@ -396,8 +396,8 @@
 
         <!-- 55. Transportation Selection for Donation Pickup -->
         <div class="form-group">
-            <label id="text" for="transportation">Choose Transportation:</label>
-            <select class="form-control" id="transportation" name="transportation">
+            <label id="text" for="transportation">Choose Transportation:</label >
+            <select class="form-control" id="transportation" name="transportation" required>
                 <option value=""></option>
                 <option value="truck">Truck</option>
                 <option value="car">Car</option>
@@ -408,12 +408,9 @@
         <!-- 56. Schedule Selection for Donation Pickup -->
         <div class="form-group">
             <label id="text" for="pickupDateTime">Pickup Date and Time:</label>
-            <input type="datetime-local" class="form-control" id="pickupDateTime" name="pickupDateTime">
+            <input type="datetime-local" class="form-control" id="pickupDateTime" name="pickupDateTime" required>
         </div>
-        <div class="form-group">
-            <label id="text" for="dropoffDateTime">Drop-off Date and Time:</label>
-            <input type="datetime-local" class="form-control" id="dropoffDateTime" name="dropoffDateTime">
-        </div>
+       
         <button type="submit" class="btnn2" id="submitBtn">Confrim</button>
     </form>
 
@@ -549,27 +546,30 @@
 
         // Function to update the displayed estimated time of arrival (ETA) every second
         function updateETA(etaMilliseconds) {
-            const etaElement = document.getElementById("eta");
+    const etaElement = document.getElementById("eta");
 
-            // Update the displayed ETA every second until the pickup time is reached
-            const countdownInterval = setInterval(function () {
-                const hours = Math.floor(etaMilliseconds / (1000 * 60 * 60));
-                const minutes = Math.floor((etaMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((etaMilliseconds % (1000 * 60)) / 1000);
-                etaElement.textContent = `${hours}h ${minutes}m ${seconds}s`;
+    // Update the displayed ETA every second until the pickup time is reached
+    const countdownInterval = setInterval(function () {
+        const hours = Math.floor(etaMilliseconds / (1000 * 60 * 60));
+        const minutes = Math.floor((etaMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((etaMilliseconds % (1000 * 60)) / 1000);
+        etaElement.textContent = `${hours}h ${minutes}m ${seconds}s`;
 
-                // Reduce the remaining time by one second
-                etaMilliseconds -= 1000;
+        // Reduce the remaining time by one second
+        etaMilliseconds -= 1000;
 
-                // If the remaining time is less than or equal to zero, stop the countdown
-                if (etaMilliseconds <= 0) {
-                    clearInterval(countdownInterval);
+        // If the remaining time is less than or equal to zero, stop the countdown
+        if (etaMilliseconds <= 0) {
+            clearInterval(countdownInterval);
 
-                    // Display alert that the driver has arrived
-                    alert("The driver has arrived!");
-                }
-            }, 1000);
+            // Display alert that the driver has arrived
+            alert("The driver has arrived!");
+
+            // Redirect to the desired page after the driver has arrived
+            window.location.href = "Donor_Dashboard.html";
         }
+    }, 1000);
+}
 
         // Function to start the countdown timer
         function startCountdown() {
@@ -591,7 +591,7 @@
         document.getElementById("donationForm").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent default form submission
 
-            alert("Thank you for submitting your donation request. We will get in touch with you shortly.");
+            alert("Thank you for submitting your donation request." + "\nWe will get in touch with you shortly.");
             startCountdown(); // Start the countdown timer
             return false; // Prevent page reload
         });

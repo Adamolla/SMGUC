@@ -259,7 +259,6 @@
           <li class="nav-item"><a href="Log in.html" class="nav-link">Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="volselection.html" class="nav-link">Role Selection</a></li>
         </ul>
       </div>
     </div>
@@ -276,22 +275,85 @@
   </div>
   <div class="container">
     <div class="button-container">
+      <div class="list-group">
+        <!-- Review Submissions -->
+        <h1 class="heading"> Documents:</h1>
+        <button class="btn" onclick="gotoupload()">Upload New Documents</button>
+      </div>
+
+      <div class="list-group">
+        <!-- Manage Requests -->
+        <h1 class="heading">View Registered Organizations:</h1>
+        <button class="btn" onclick="gotoregisteredorg()">Registered Organizations</button>
+      </div>
+
       <div class="list-container">
         <h1 class="heading">Subject / Class Selection:</h1>
         <button class="btn" id="teach-button" onclick="gototeach()"> Subject and Class Selection </button>
       </div>
-      <div class="list-group">
+     
+      <div class="list-container">
+        <!-- View Lists -->
+        <h1 class="heading">Scheduling:</h1>
+        <button class="btn" onclick="gotoschedule()">Schedule Transportation </button>
+      </div>
 
+      <div class="list-group">
         <h1 class="heading">Donated items:</h1>
-        <button class="btn" id="teach-button1" onclick="gotodonateditem()"> Donated items </button>
+        <button class="btn" id="teach-button1" onclick="gotodonateditem()"> Donated Items Requested </button>
+        <button class="btn" id="teach-button1" onclick="gotodonateditem100()"> Search for Donated Items </button>
+      </div>
+      
+      <div class="list-group">
+        <h1 class="heading"> Teaching Cases:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonateditem23()"> Teaching Posts Requested </button>
+        <button class="btn" id="cloth-button1" onclick="gotoquanteach1()"> Teaching Posts to Fulfill </button>
       </div>
 
       <div class="list-group">
-
-        <h1 class="heading"> Cloth Requested:</h1>
-        <button class="btn" id="cloth-button1" onclick="gotodonateditem1()"> Cloth Requested </button>
-
+        <h1 class="heading"> Medical Cases:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonateditem24()"> Medical Posts Requested </button>
+        <button class="btn" id="cloth-button1" onclick="gotoquanmed2()"> Medical Posts to Fulfill </button>
       </div>
+
+      <div class="list-group">
+        <h1 class="heading"> Blood Donation:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonateditem7()"> Blood Requested </button>
+      </div>
+
+      <div class="list-group">
+        <h1 class="heading"> Cloth Donation:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonateditem1()"> Cloth Requested </button>
+        <button class="btn" id="cloth-button1" onclick="gotoquancloth()"> Quantity to Donate </button>
+      </div>
+
+      <div class="list-group">
+        <h1 class="heading"> Toys Donation:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonateditem5()"> Toys Requested </button>
+        <button class="btn" id="cloth-button1" onclick="gotoquantoy()"> Quantity to Donate </button>
+      </div>
+
+      <div class="list-group">
+        <h1 class="heading"> Food Donation:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonateditem6()"> Food Requested </button>
+        <button class="btn" id="cloth-button1" onclick="gotoquanfood()"> Quantity to Donate </button>
+      </div>
+
+      <div class="list-group">
+        <h1 class="heading"> Medical Supplies Donation:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonated18()"> Medical Supplies Requested </button>
+        <button class="btn" id="cloth-button1" onclick="gotoquanmed1()"> Medical Supplies Quantity to Donatee </button>
+      </div>
+
+      <div class="list-group">
+        <h1 class="heading"> School Supplies Donation:</h1>
+        <button class="btn" id="cloth-button1" onclick="gotodonateditem2()"> School Supplies Requested </button>
+        <button class="btn" id="cloth-button1" onclick="gotoquanschool()"> Stationary Quantity to Donate </button>
+        <button class="btn" id="cloth-button1" onclick="gotoquanschool3()"> Books Quantity to Donate </button>
+      </div>
+
+     
+
     </div>
   </div>
 
@@ -378,17 +440,70 @@
   </script>
   <script>
     function gototeach() {
-      window.location.href = "Subjectinclass.html";
+      window.location.href = "Subject_Class_For_Teaching.html";
     }
-  </script>
-  <script>
+    function gotoschedule() {
+      window.location.href = "Transport.html";
+    }
     function gotodonateditem() {
-      window.location.href = "donationitem.html";
+      window.location.href = "Donated_Items.html";
     }
-  </script>
-  <script>
+    function gotodonateditem100() {
+      window.location.href = "Search_By_Category.html";
+    }
     function gotodonateditem1() {
-      window.location.href = "ClothesDonationRequests.html";
+      window.location.href = "Cloth_Donation_Requests.html";
+    }
+    function gotoquancloth(){
+      window.location.href = "Cloth_Quantity_Donation.html";
+    }
+    function gotoupload(){
+      window.location.href = "Add_Donor_Documents.html"
+    }
+    function gotodonateditem2(){
+      window.location.href = "School_Donation_Requests.html"
+    }
+    function gotoquanschool(){
+      window.location.href = "Stationary_Quantity_Selection.html"
+    }
+    function gotoquanschool2(){
+      window.location.href = "Stationary_Quantity_Selection.html"
+    }
+    function gotoquanschool3(){
+      window.location.href = "Book_Quantity_Selection.html"
+    }
+    function gotodonateditem5(){
+      window.location.href ="Toy_Donation_Requests.html";
+    }
+    function gotoquantoy(){
+      window.location.href = "Toy_Quantity_Selection.html";
+    }
+    function gotodonateditem6(){
+      window.location.href ="Food_Donation_Requests.html";
+    }
+    function gotoquanfood(){
+      window.location.href = "Food_Quantity_selection.html";
+    }
+    function gotodonated17(){
+      window.location.href ="Medical_Donation_Requests.html";
+    }
+    function gotoquanmed1(){
+      window.location.href = "Medical_Quantity_Selection.html";
+    }
+    function gotodonateditem23(){
+      window.location.href ="Teaching_Posts.html";
+    }
+    function gotodonateditem24(){
+      window.location.href ="Medical_Donation_Cases.html";
+    }
+    function gotoquanmed2(){
+      window.location.href = "Fulfill_Medical_Cases.html";
+    }
+    function gotoquanteach1(){
+      window.location.href = "Fulfill_Teaching_Cases.html";
+    }
+    function gotoregisteredorg(){
+      window.location.href = "Registered_Organization.html";
     }
   </script>
 </body>

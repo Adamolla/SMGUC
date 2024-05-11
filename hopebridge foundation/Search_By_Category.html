@@ -143,6 +143,31 @@
       color: #4297A0;
     }
 
+    #searchInput {
+      padding: 10px;
+      margin-top: 20px;
+      /* Adjust margin top */
+      font-size: 18px;
+      /* Adjust font size */
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      /* Set font family */
+      border: 1px solid #ccc;
+      /* Add border */
+      border-radius: 4px;
+      border-color: #4297A0;
+      border-width: 2px;
+      /* Add border radius */
+      width: 450px;
+      /* Make input span the entire width */
+      margin-left: 400px;
+      margin-right: 40px;
+      margin-bottom: 30px;
+    }
+
+    #searchInput::placeholder {
+      color: #999;
+      /* Style placeholder text */
+    }
     .btn-success {
       background-color: white;
       color: #4297A0;
@@ -272,35 +297,15 @@
     }
 
     h2 {
-      text-align: center;
+      font-size: 25px;
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-      font-size: 26px;
+      margin-left: 150px;
+      margin-bottom: 20px;
+      padding-left: 100px;
       color: #4297A0;
       text-decoration: underline rgb(38, 37, 37);
-      /* Choose your desired color */
-      margin-top: 50px;
-      /* Adjust the margin as needed */
-      margin-bottom: 30px;
-      /* Adjust the margin as needed */
-    }
-
-    .btn {
-      background-color: transparent;
-      /* Remove background color */
-      border: none;
-      /* Remove border */
-      padding: 0;
-      /* Remove padding */
-    }
-
-    .btn img {
-      width: 20px;
-      /* Adjust width as needed */
-      height: 20px;
-      /* Adjust height as needed */
-      vertical-align: middle;
-      /* Align image vertically */
-    }
+    } /* Adjust the margin as needed */
+    
 
     .btn {
       background-color: #4297A0;
@@ -310,8 +315,8 @@
       font-size: 16px;
       border-radius: 4px;
       cursor: pointer;
-      margin-left: 385px;
-      width: 300px;
+      margin-left: 490px;
+      width: 280px;
 
     }
 
@@ -397,8 +402,10 @@
   <!-- Requested Donation Items -->
   <div class="container">
     <h1>Requested Donation Items</h1>
-  
+
+    <h2>Select preferred category:</h2>
 <select id="filterCategory">
+ 
   <option value="all">All Categories</option>
   <option value="clothes">Clothes</option>
   <option value="toys">Toys</option>
@@ -410,6 +417,14 @@
 </select>
 </div>
 <!-- Display area for donation requests -->
+<h2>Search by category:</h2>
+
+<!-- Search bar -->
+<input type="text" id="searchInput" placeholder="Search">
+<button id="searchBtn" type="button" class="btn">SEARCH</button>
+
+</p>
+<p></p>
 <div id="donationRequests">
   <!-- Donation requests will be dynamically populated here -->
 </div>
@@ -577,6 +592,44 @@
   document.getElementById('filterCategory').addEventListener('change', handleCategoryFilterChange);
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the input element, search button, and table
+    var searchInput = document.getElementById("searchInput");
+    var searchBtn = document.getElementById("searchBtn");
+    var donationRequestsContainer = document.getElementById("donationRequests");
+
+    // Add event listener for search button click
+    searchBtn.addEventListener("click", function () {
+      var searchText = searchInput.value.toLowerCase();
+      var rows = donationRequestsContainer.getElementsByTagName("tr");
+
+      // Loop through each row starting from index 1 to exclude the header row
+      for (var i = 1; i < rows.length; i++) {
+        var row = rows[i];
+        var cells = row.getElementsByTagName("td");
+        var found = false;
+
+        // Loop through each cell in the row
+        for (var j = 0; j < cells.length; j++) {
+          var cellText = cells[j].textContent || cells[j].innerText;
+          if (cellText.toLowerCase().indexOf(searchText) > -1) {
+            found = true;
+            break;
+          }
+        }
+
+        // Hide or show the row based on search result
+        if (found) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      }
+    });
+  });
+
+</script> 
     
 </body>
 </html>

@@ -423,9 +423,9 @@
     }
 
     h2 {
-      font-size: 25px;
+      font-size: 26px;
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-      margin-left: 150px;
+      margin-left: 120px;
       padding-left: 280px;
       margin-bottom: 50px;
       margin-top: 50px;
@@ -472,7 +472,7 @@
 <div class="col-md-4">
     <label id="text1" for="itemCategory">Item Category:</label>
     <select id="itemCategory" class="form-control">
-        <option value="">All</option>
+        <option value=""></option>
         <option value="Books">Books</option>
         <option value="Stationary">Stationary</option>
         <!-- Add more options as needed -->
@@ -682,34 +682,36 @@
  
 <script>
   // Filter requests based on selected category
-  function filterRequests() {
-    var selectedCategory = document.getElementById("itemCategory").value.toLowerCase();
-    var bookTable = document.getElementById("bookDonationTable");
-    var stationaryTable = document.getElementById("stationaryDonationTable");
-    var bookTableHeading = document.getElementById("bookTableHeading");
-    var stationaryTableHeading = document.getElementById("stationaryTableHeading");
+function filterRequests() {
+  var selectedCategory = document.getElementById("itemCategory").value.toLowerCase();
+  var bookTable = document.getElementById("bookDonationTable");
+  var stationaryTable = document.getElementById("stationaryDonationTable");
+  var bookTableHeading = document.getElementById("bookTableHeading");
+  var stationaryTableHeading = document.getElementById("stationaryTableHeading");
 
-    // Check if the selected category is "books" or "stationary" and show/hide the respective tables
-    if (selectedCategory === 'books') {
-      bookTable.style.display = "table";
-      stationaryTable.style.display = "none";
-      stationaryTableHeading.style.display = "none"; // Hide stationary table heading
-      bookTableHeading.style.display = "table-row"; // Show book table heading
-    } else if (selectedCategory === 'stationary') {
-      bookTable.style.display = "none";
-      stationaryTable.style.display = "table";
-      stationaryTableHeading.style.display = "table-row"; // Show stationary table heading
-      bookTableHeading.style.display = "none"; // Hide book table heading
-    } else {
-      bookTable.style.display = "none";
-      stationaryTable.style.display = "none";
-      stationaryTableHeading.style.display = "none"; // Hide stationary table heading
-      bookTableHeading.style.display = "none"; // Hide book table heading
-    }
+  // Check if the selected category is "books" or "stationary" and show/hide the respective tables
+  if (selectedCategory === 'books') {
+    bookTable.style.display = "table";
+    stationaryTable.style.display = "none";
+    stationaryTableHeading.style.display = "none"; // Hide stationary table heading
+    bookTableHeading.style.display = "table-row"; // Show book table heading
+  } else if (selectedCategory === 'stationary') {
+    bookTable.style.display = "none";
+    stationaryTable.style.display = "table";
+    stationaryTableHeading.style.display = "table-row"; // Show stationary table heading
+    bookTableHeading.style.display = "none"; // Hide book table heading
+  } else {
+    // If no category is selected or if the filter is reset, display both tables
+    bookTable.style.display = "table";
+    stationaryTable.style.display = "table";
+    stationaryTableHeading.style.display = "table-row"; // Show stationary table heading
+    bookTableHeading.style.display = "table-row"; // Show book table heading
   }
+}
 
-  // Add event listener to the filter button
-  document.getElementById("filterButton").addEventListener("click", filterRequests);
+// Add event listener to the filter button
+document.getElementById("filterButton").addEventListener("click", filterRequests);
+
 </script>
 
   <script>

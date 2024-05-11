@@ -249,7 +249,7 @@
       /* Choose your desired color */
       margin-top: 50px;
       /* Adjust the margin as needed */
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       /* Adjust the margin as needed */
     }
 
@@ -278,6 +278,32 @@
       vertical-align: middle;
       /* Align image vertically */
     }
+    #text1 {
+            text-align: center;
+            font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            color: #4297A0;
+            text-decoration: underline rgb(38, 37, 37);
+            /* Choose your desired color */
+            margin-top: 50px;
+            width:300px;
+            /* Adjust the margin as needed */
+            margin-bottom: 30px;
+            margin-left: 400px;
+            /* Adjust the margin as needed */
+
+        }
+        
+      
+
+    /* Style for form label */
+    label {
+      font-size: 18px;
+      font-weight: bold;
+      color: #4297A0;
+      margin-bottom: 10px;
+      text-decoration: underline rgb(38, 37, 37);
+    }
 
     .btn {
       background-color: #4297A0;
@@ -287,11 +313,23 @@
       font-size: 16px;
       border-radius: 4px;
       cursor: pointer;
-      margin-left: 70px;
+      width: 300px;
+      margin-left: 400px;
 
     }
-
+#address{
+    margin-left: 350px;
+    border-color: #4297A0;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 400px;
+}
    
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
     
   </style>
   </head>
@@ -326,187 +364,164 @@
       </div>
       </div>
   </div>
+       
+  <div class="container">
+    <h1>Add Organization Location</h1>
+    <div></div>
 
-    <h1>Account Management</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Account Name</th>
-                <th>Account Type</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Manually added account data -->
-            <tr>
-                <td>Healthcare Foundation</td>
-                <td>Organization</td>
-                <td><button  class="btn" onclick="confirmDelete('Healthcare Foundation')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Education Empowerment</td>
-                <td>Organization</td>
-                <td><button  class="btn"onclick="confirmDelete('Education Empowerment')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Hope for All</td>
-                <td>Organization</td>
-                <td><button class="btn" onclick="confirmDelete('Hope for All')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Childrens Haven</td>
-                <td>Organization</td>
-                <td><button class="btn" onclick="confirmDelete('Childrens Haven')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>EmpowerHope Foundation</td>
-                <td>Organization</td>
-                <td><button class="btn" onclick="confirmDelete('EmpowerHope Foundation')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Education for All</td>
-                <td>Organization</td>
-                <td><button class="btn" onclick="confirmDelete('Education for All')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Grace Haven Community</td>
-                <td>Organization</td>
-                <td><button class="btn" onclick="confirmDelete('Grace Haven Community')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Jane Smith</td>
-                <td>Donor</td>
-                <td><button class="btn" onclick="confirmDelete('Jane Smith')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>Donor</td>
-                <td><button class="btn" onclick="confirmDelete('John Doe')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Emily Wilson</td>
-                <td>Donor</td>
-                <td><button class="btn" onclick="confirmDelete('Emily Wilson')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>David Lee</td>
-                <td>Donor</td>
-                <td><button class="btn" onclick="confirmDelete('David Lee')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Michael Johnson</td>
-                <td>Donor</td>
-                <td><button class="btn" onclick="confirmDelete('Michael Johnson')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Sarah Miller</td>
-                <td>Donor</td>
-                <td><button class="btn" onclick="confirmDelete('Sarah Miller')">Delete</button></td>
-            </tr>
-            <tr>
-                <td>Robert Thompson</td>
-                <td>Donor</td>
-                <td><button class="btn" onclick="confirmDelete('Robert Thompson')">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
+    <form id="locationForm">
+        <div>
+            <label id="text1" for="address">Address:</label>
+            <br>
+            <input type="text" id="address" name="address" placeholder="Enter address">
+        </div>
+        <br>
+        <div>
+            <button class="btn" type="submit">Add Location</button>
+        </div>
+    </form>
 
-
+    <div id="map"></div>
+</div>
 
     <footer class="footer">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-4">
-            <h3 class="heading-section">About Us</h3>
-            <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege
-              and
-              poverty, believing that everyone deserves access to basic necessities, education, and opportunities
-              for a
-              better future.</p>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <h3 class="heading-section">Contact Us</h3>
-            <div class="block-23">
-              <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
-                    German University in Cairo
-                    El Tagamoa El Khames
-                    New Cairo City - Egypt</span></li>
-                <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
-                      010-9917-0359</span></a></li>
-                <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
-                <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
-              </ul>
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-6 col-lg-4">
+              <h3 class="heading-section">About Us</h3>
+              <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege
+                and
+                poverty, believing that everyone deserves access to basic necessities, education, and opportunities
+                for a
+                better future.</p>
             </div>
-          </div>
-
-          <!-- New div for the image container -->
-          <div class="col-md-6 col-lg-4">
-            <div class="image-container">
-              <a href="about.html">
-                <img src="fond_logo.png">
-              </a>
+  
+            <div class="col-md-6 col-lg-4">
+              <h3 class="heading-section">Contact Us</h3>
+              <div class="block-23">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                      German University in Cairo
+                      El Tagamoa El Khames
+                      New Cairo City - Egypt</span></li>
+                  <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                        010-9917-0359</span></a></li>
+                  <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+                  <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+                </ul>
+              </div>
+            </div>
+  
+            <!-- New div for the image container -->
+            <div class="col-md-6 col-lg-4">
+              <div class="image-container">
+                <a href="about.html">
+                  <img src="fond_logo.png">
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+      
+      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+            stroke="#F96D00" />
+    </svg></div>
 
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-
-  <script src="js/jquery.fancybox.min.js"></script>
-  
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+ 
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/jquery.waypoints.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/bootstrap-datepicker.js"></script>
     
-  <script>
+      <script src="js/jquery.fancybox.min.js"></script>
+      
+      <script src="js/aos.js"></script>
+      <script src="js/jquery.animateNumber.min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+      <script src="js/google-map.js"></script>
+      <script src="js/main.js"></script>
+      <script>
 
-    document.addEventListener("DOMContentLoaded", function() {
-      window.addEventListener("scroll", function() {
-        if (window.scrollY > 50) {
-          document.getElementById("ftco-navbar").classList.add("show-logo");
-          document.querySelector(".navbar-brand").style.marginLeft = "100px"; 
-        } else {
-          document.getElementById("ftco-navbar").classList.remove("show-logo");
-          document.querySelector(".navbar-brand").style.marginLeft = "-10px"; 
-        }
-      });
-    });
-  </script>
-
-    <script>
-        // Function to show confirmation dialog and remove the name from the page
-        function confirmDelete(name) {
-            if (confirm("Are you sure you want to delete this account?")) {
-                var rows = document.querySelectorAll("tbody tr");
-                for (var i = 0; i < rows.length; i++) {
-                    var accountName = rows[i].cells[0].textContent;
-                    if (accountName === name) {
-                        rows[i].remove();
-                        alert(`The account "${name}" has been deleted.`);
-                        break;
-                    }
-                }
+        document.addEventListener("DOMContentLoaded", function() {
+          window.addEventListener("scroll", function() {
+            if (window.scrollY > 50) {
+              document.getElementById("ftco-navbar").classList.add("show-logo");
+              document.querySelector(".navbar-brand").style.marginLeft = "100px"; 
+            } else {
+              document.getElementById("ftco-navbar").classList.remove("show-logo");
+              document.querySelector(".navbar-brand").style.marginLeft = "-10px"; 
             }
+          });
+        });
+      </script>  
+    <script>
+        var map;
+        var geocoder;
+
+        // Initialize and add the map
+        function initMap() {
+            // Default map center
+            var defaultCenter = { lat: 37.7749, lng: -122.4194 }; // Example coordinates for San Francisco, CA
+
+            // Create a map object and specify the DOM element for display
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: defaultCenter,
+                zoom: 15 // Adjust zoom level as needed
+            });
+
+            // Initialize Geocoder
+            geocoder = new google.maps.Geocoder();
         }
+
+        // Function to add marker at specified location
+        function addMarker(location) {
+            new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+
+        // Function to handle form submission
+        function handleSubmit(event) {
+    event.preventDefault();
+
+    var address = document.getElementById('address').value;
+
+    // Geocode address to obtain latitude and longitude
+    geocoder.geocode({ address: address }, function (results, status) {
+        if (status === 'OK') {
+            var location = results[0].geometry.location;
+
+            // Add marker at geocoded location
+            addMarker(location);
+
+            // Center map at geocoded location
+            map.setCenter(location);
+
+            // Show alert message
+            alert('Thank you for adding your location.');
+
+            // Clear input field
+            document.getElementById('address').value = '';
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
+
+        // Attach form submission event listener
+        document.getElementById('locationForm').addEventListener('submit', handleSubmit);
     </script>
+
+   
 </body>
 </html>

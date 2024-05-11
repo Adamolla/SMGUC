@@ -242,7 +242,31 @@
       margin-top: 0;
       padding-top: 4%;
     }
+    .btnn3 {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30px;
+      /* Adjust width as needed */
+      height: 30px;
+      /* Adjust height as needed */
+      padding: 0;
+      /* Remove any default padding */
+    }
 
+    .btnn3 img {
+      width: 100%;
+      /* Ensure the image fills the button */
+      height: 100%;
+      /* Ensure the image fills the button */
+    }
+
+    .btnn3:focus {
+      outline: none;
+      /* Remove default focus outline */
+    }
     h1 {
       text-align: center;
       text-decoration: underline rgb(38, 37, 37);
@@ -289,7 +313,7 @@
           <li class="nav-item"><a href="Log in.html" class="nav-link"> Login / Register</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="ManageAcc.html" class="nav-link">Manage Account</a></li>
+          <li class="nav-item"><a href="Admin_Manage_Account.html" class="nav-link">Manage Account</a></li>
         </ul>
       </div>
     </div>
@@ -332,7 +356,7 @@
           <td>Stateville</td>
           <td>City Central</td>
           <td><a href="document1.pdf" target="_blank">Document1.pdf</a></td>
-          <td><button class="btn" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
         </tr>
         <!-- Organization 2 -->
         <tr>
@@ -343,7 +367,7 @@
           <td>Townville</td>
           <td>City Central</td>
           <td><a href="document2.pdf" target="_blank">Document2.pdf</a></td>
-          <td><button class="btn" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
         </tr>
         <!-- Organization 3 -->
         <tr>
@@ -354,7 +378,7 @@
           <td>Ruraltown</td>
           <td>City Central</td>
           <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
-          <td><button class="btn" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
         </tr>
         <!-- Organization 4 -->
         <tr>
@@ -365,7 +389,7 @@
           <td>Ruraltown</td>
           <td>City Central</td>
           <td><a href="document4.pdf" target="_blank">Document4.pdf</a></td>
-          <td><button class="btn" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
         </tr>
         <!-- Organization 5 -->
         <tr>
@@ -376,7 +400,7 @@
           <td>Townsville</td>
           <td>City Central</td>
           <td><a href="document5.pdf" target="_blank">Document5.pdf</a></td>
-          <td><button class="btn" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
         </tr>
         <!-- Organization 6 -->
         <tr>
@@ -387,7 +411,7 @@
           <td>State</td>
           <td>City Central</td>
           <td><a href="document6.pdf" target="_blank">Document6.pdf</a></td>
-          <td><button class="btn" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
         </tr>
       </tbody>
     </table>

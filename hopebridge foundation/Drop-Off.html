@@ -507,82 +507,24 @@
             return false; // Prevent page reload
         });
     </script>
+<script>
+    document.getElementById("donationForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
 
-    <script>
-        document.getElementById("donationForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent default form submission
+        // Get the selected date and time
+        var dropoffDateTime = document.getElementById("dropoffDateTime").value;
 
-            // Get the pickup date and time from the form
-            const pickupDateTimeString = document.getElementById("pickupDateTime").value;
-            const pickupDateTime = new Date(pickupDateTimeString);
+        // Display the selected date and time in the alert message
+        alert("Thank you for selecting " + dropoffDateTime + " as your preferred time slot for the donation drop-off. We will get in touch with you shortly.");
 
-            // Calculate estimated time of arrival (ETA)
-            const eta = calculateETA(pickupDateTime);
+        // Redirect to organization dashboard after 2 seconds
+        setTimeout(function () {
+            window.location.href = "organization_dashboard.html"; // Replace with your actual dashboard URL
+        }, 1000); // Adjust the delay time as needed
 
-            // Display ETA
-            displayETA(eta);
-
-            // Prevent page reload
-            return false;
-        });
-
-        // Function to calculate estimated time of arrival (ETA)
-        function calculateETA(pickupDateTime) {
-            const currentDate = new Date();
-            return pickupDateTime.getTime() - currentDate.getTime();
-        }
-
-        // Function to update the displayed estimated time of arrival (ETA) every second
-        function updateETA(etaMilliseconds) {
-            const etaElement = document.getElementById("eta");
-
-            // Update the displayed ETA every second until the pickup time is reached
-            const countdownInterval = setInterval(function () {
-                const hours = Math.floor(etaMilliseconds / (1000 * 60 * 60));
-                const minutes = Math.floor((etaMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((etaMilliseconds % (1000 * 60)) / 1000);
-                etaElement.textContent = `${hours}h ${minutes}m ${seconds}s`;
-
-                // Reduce the remaining time by one second
-                etaMilliseconds -= 1000;
-
-                // If the remaining time is less than or equal to zero, stop the countdown
-                if (etaMilliseconds <= 0) {
-                    clearInterval(countdownInterval);
-
-                    // Display alert that the driver has arrived
-                    alert("The driver has arrived!");
-                }
-            }, 1000);
-        }
-
-        // Function to start the countdown timer
-        function startCountdown() {
-            const pickupDateTimeString = document.getElementById("pickupDateTime").value;
-            const pickupDateTime = new Date(pickupDateTimeString);
-            const etaMilliseconds = calculateETA(pickupDateTime);
-
-            // If the pickup time is in the future, start the countdown
-            if (etaMilliseconds > 0) {
-                updateETA(etaMilliseconds);
-                document.getElementById("etaDisplay").style.display = "block";
-            } else {
-                // If the pickup time is in the past, display a message indicating that the time has passed
-                document.getElementById("etaDisplay").textContent = "Pickup time has passed.";
-                document.getElementById("etaDisplay").style.display = "block";
-            }
-        }
-
-        document.getElementById("donationForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent default form submission
-
-            alert("Thank you for selecting your preferred time slot for the donation drop-off.We will get in touch with you shortly.");
-            startCountdown(); // Start the countdown timer
-            return false; // Prevent page reload
-        });
-
-
-    </script>
+        return false; // Prevent page reload
+    });
+</script>
 
 
 

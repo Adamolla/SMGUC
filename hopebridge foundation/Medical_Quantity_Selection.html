@@ -457,15 +457,17 @@
   });
 </script>
 <script>
-   document.getElementById('donationForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form submission
-  let item = document.getElementById('item').value;
-  let quantity = document.getElementById('quantity').value;
-  // You can perform further actions here, such as sending data to a server or displaying a message
-  alert('Thank you for your donation!'); // Show the thank you message as an alert
-  // Optionally, you can reset the form after submission
-  this.reset();
-});
-</script>
+  document.getElementById('donationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    let item = document.getElementById('item').value;
+    let quantity = document.getElementById('quantity').value;
+    // You can perform further actions here, such as sending data to a server or displaying a message
+    alert('Thank you for your donation!'); // Show the thank you message as an alert
+    // Redirect to another page after showing the alert
+    window.location.href = 'Donor_Dashboard.html'; // Change the URL to your desired thank you page
+    // Optionally, you can reset the form after submission
+    this.reset();
+  });
+  </script>
  </body>
 </html>

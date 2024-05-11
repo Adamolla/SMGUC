@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    .navbar-brand {
+ .navbar-brand {
       font-size: 22.5px;
       margin-left: 10px;
       padding-left: 10px;
@@ -333,7 +333,57 @@
     #uploadedDocumentPlaceholder{
       margin-left: 17px;
     }
-    
+    /* Styles for form fields */
+    .fs,
+    .ls,
+    .gen,
+    .email,
+    .pass,
+    .num,
+    .address,
+    .area,
+    .gov,
+    .orgname,
+    .document-upload {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px 15px;
+      padding-left: 40px;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+    }
+
+    /* Styles for icons */
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+      color: #495057;
+    }
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 145px;
+    }
+
+    .btn:hover {
+      background-color: #357d8e;
+    }
+
+  
   </style>
 </head>
 
@@ -370,66 +420,20 @@
   </div>
   </div>
 
-  <h1> Donor's Registration Form: </h1>
+  <h1>Upload Documents: </h1>
 
   <div class "wrapper">
-    <form action="javascript:void(0);" method="GET" onsubmit="registerUser(event);">
+    <form id="registrationForm">
       <div>
         <div class="wrapper">
           <form>
-            <div class="fs">
-              <i class='bx bxs-user'></i>
-              <input type="text" id="fs" placeholder="First Name" required>
-
-              <i class='bx bxs-user'></i>
-            </div>
-            <div class="ls">
-              <input type="text" id="ls" placeholder="Last Name" required>
-              <i class='bx bxs-user'></i>
-            </div>
-            <div class="gen">
-              <input type="text" id="gen" placeholder="Gender" required>
-              <i class='bx bxs-user'></i>
-            </div>
-            <div class="email">
-              <input type="text" id="em" placeholder="Email" required>
-              <i class='bx bxs-envelope'></i>
-            </div>
-            <div class="pass">
-              <input type="password" id="pass" placeholder="Password" required>
-              <i class='bx bxs-lock'></i>
-            </div>
-            <div class="num">
-              <input type="text" id="num" placeholder="Contact Number" required>
-              <i class='bx bxs-contact'></i>
-            </div>
-            <div class="address">
-              <input type="text" id="add" placeholder=" Address" required>
-              <i class='bx bxs-home'></i>
-            </div>
-            <div class="area">
-              <input type="text" id="area" placeholder="Area" required>
-              <i class='bx bxs-area'></i>
-            </div>
-            <div class="gov">
-              <input type="text" id="goc" placeholder=" Governorate" required>
-              <i class='bx bxs-map-pin'></i>
-            </div>
-            <div style="position: relative;">
-              <select id="role1" name="role" class="role" style="width: 100%; padding-left: 40px;" >
-                <option  value="" disabled selected hidden> Choose a role</option>
-                <option value="regularDonor">Regular Donor</option>
-                <option value="teacher">Teacher</option>
-                <option value="doctor">Doctor</option>
-              </select>
-              <i class='bx bxs-user' style="padding-bottom: 20px"></i>
-            </div>
+           
             <div class="document-upload"> 
               <label for="document" class='bx bxs-file'>  Upload Organization Document(s):</label>
               <input type="file" id="document" name="document" accept=".pdf,.doc,.docx" multiple>
               <span class="uploaded-document" id="uploadedDocumentPlaceholder">No document chosen</span>
             </div>
-            <button type="submit" class="btn">Register</button>
+            <button type="submit" class="btn">Upload</button>
 
           </form>
         </div>
@@ -514,77 +518,46 @@
           });
         </script>
 
-<script>
-  // Function to handle form submission
-  function registerUser(event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    // Retrieve form data (assuming you have form fields with IDs firstName, lastName, etc.)
-    var firstName = document.getElementById('fs').value;
-    var lastName = document.getElementById('ls').value;
-    var gender = document.getElementById('gen').value;
-    var email = document.getElementById('em').value;
-    var password = document.getElementById('pass').value;
-    var contactNumber = document.getElementById('num').value;
-    var address = document.getElementById('add').value;
-    var area = document.getElementById('area').value;
-    var governorate = document.getElementById('goc').value;
-    var selectedRole = document.getElementById('role1').value; // Get selected volunteer role
-
-    // Check if a document has been uploaded
-    var documentUploaded = document.getElementById('document').files.length > 0;
-
-    // Perform basic form validation
-    if (!firstName || !lastName || !gender || !email || !password || !contactNumber || !address || !area || !governorate) {
-      alert('Please fill out all required fields.');
-      return;
-    }
-
-    // Display the entered form data
-    var formData = {
-      "First Name": firstName,
-      "Last Name": lastName,
-      "Gender": gender,
-      "Email": email,
-      "Password": password,
-      "Contact Number": contactNumber,
-      "Address": address,
-      "Area": area,
-      "Governorate": governorate,
-      "Role": selectedRole, // Add selected volunteer role to form data
-      "Document Uploaded": documentUploaded ? "Yes" : "No"
-    };
-    console.log(formData); // Log the form data to the console
-
-    // Display a thank you message including the volunteer role
-    alert('Thank you for volunteering as ' + selectedRole + '.' +  '\nThank you for registering!');
-
-    // Redirect the user after a short delay
-    setTimeout(function () {
-      window.location.href = 'Donor_Login_page.html';
-    }, 1000); // Delay in milliseconds (1000ms = 1 second)
-  }
-
-  // // Add event listener to the form
-  // document.querySelector('form').addEventListener('submit', registerUser);
-
-  // Add event listener to the Register button
-  document.getElementById('registerButton').addEventListener('click', registerUser);
-</script>
 
 
         <script>
-          // Function to handle document upload
-          document.getElementById('document').addEventListener('change', function () {
-            var fileInput = this;
-            var uploadedDocumentPlaceholder = document.getElementById('uploadedDocumentPlaceholder');
-            if (fileInput.files && fileInput.files.length > 0) {
-              uploadedDocumentPlaceholder.textContent = fileInput.files[0].name; // Update placeholder with the name of the uploaded file
-            } else {
-              uploadedDocumentPlaceholder.textContent = 'No document chosen'; // Reset placeholder if no file is chosen
-            }
-          });
+  // Function to handle form submission
+function registerUser(event) {
+    event.preventDefault(); // Prevent default form submission behavior
 
+    // Retrieve form data
+    var uploadedDocuments = document.getElementById('document').files;
+    
+    // Basic form validation
+    if (uploadedDocuments.length === 0) {
+        alert('Please choose at least one document to upload.');
+        return;
+    }
+
+    // Simulate successful upload
+    alert('Documents uploaded successfully!');
+
+    // Redirect to organization dashboard
+    window.location.href = 'organization_dashboard.html'; // Change 'organization_dashboard.html' to the actual URL of your organization dashboard page
+}
+
+// Add event listener to the form
+document.getElementById('registrationForm').addEventListener('submit', registerUser);
+
+// Function to update placeholder text when files are selected
+document.getElementById('document').addEventListener('change', function () {
+    var fileInput = this;
+    var uploadedDocumentPlaceholder = document.getElementById('uploadedDocumentPlaceholder');
+    if (fileInput.files && fileInput.files.length > 0) {
+        var fileList = [];
+        for (var i = 0; i < fileInput.files.length; i++) {
+            fileList.push(fileInput.files[i].name);
+        }
+        uploadedDocumentPlaceholder.textContent = fileList.join(', '); // Update placeholder with the names of the uploaded files
+    } else {
+        uploadedDocumentPlaceholder.textContent = 'No documents chosen'; // Reset placeholder if no files are chosen
+    }
+});
         </script>
 
 </body>

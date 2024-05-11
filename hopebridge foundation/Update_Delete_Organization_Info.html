@@ -415,7 +415,7 @@
     <div class="container">
       <div class="account-sections">
         <section class="update-account">
-          <h1>Delete Account</h1>
+          <h1>Update Account</h1>
           <div class="fs">
             <i class='bx bxs-user'></i>
             <input type="text" id="fs" placeholder="First Name" required>
@@ -432,10 +432,6 @@
           <div class="email">
             <input type="text" id="em" placeholder="Email" required>
             <i class='bx bxs-envelope'></i>
-          </div>
-          <div class="pass">
-            <input type="password" id="pass" placeholder="Password" required>
-            <i class='bx bxs-lock'></i>
           </div>
           <div class="num">
             <input type="text" id="num" placeholder="Contact Number" required>
@@ -459,7 +455,7 @@
           </div>
           <div class="document-upload">
             <label for="document" class='bx bxs-file'> Upload Organization Document(s):</label>
-            <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
+            <input type="file" id="document" name="document" accept=".pdf,.doc,.docx" multiple>
             <span class="uploaded-document" id="uploadedDocumentPlaceholder">No document chosen</span>
           </div>
           <input type="button" class="btn" value="UPDATE ACCOUNT" onclick="updateOrganizationInfo()">
@@ -469,12 +465,12 @@
 
         <section class="delete-account">
           <h1>Delete Account</h1>
-          <form id="deleteForm" action="/delete-account" method="POST"
-            onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
+          <form id="deleteForm" action="/delete-account" method="POST">
             <p>Select to confirm deletion:</p>
-            <input type="radio" id="confirmDelete" name="confirmDelete" required>
-            <label for="confirmDelete">Yes, I understand that this action is irreversible and my account will be
-              permanently deleted.</label><br>
+            <label for="confirmDelete">
+              <input type="radio" id="confirmDelete" name="confirmDelete" required>
+              Yes, I understand that this action is irreversible and my account will be permanently deleted.
+            </label><br>
             <button type="submit" class="delete-btn">Delete Account</button>
           </form>
         </section>
@@ -567,30 +563,51 @@
       });
     });
   </script>
-  <script>
-    function updateOrganizationInfo() {
-      // Retrieve updated information from the form
-      var updatedFirstName = document.getElementById('firstName').value;
-      var updatedLastName = document.getElementById('lastName').value;
-      var updatedGender = document.getElementById('gender').value;
-      var updatedEmail = document.getElementById('email').value;
-      var updatedPassword = document.getElementById('password').value;
-      var updatedContactNumber = document.getElementById('contactNumber').value;
-      var updatedOrganizationName = document.getElementById('organizationName').value;
-      var updatedOrganizationType = document.getElementById('organizationType').value;
-      var updatedOrganizationAddress = document.getElementById('organizationAddress').value;
-      var updatedOrganizationArea = document.getElementById('organizationArea').value;
-      var updatedGovernorate = document.getElementById('governorate').value;
+  <!-- Inside your <script> tag or in an external JavaScript file -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("deleteForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent default form submission
 
-      // Update organization information in the database or local storage
-      // This is just a sample script. You need to implement the actual update logic.
+      // Display confirmation dialog
+      var confirmation = confirm("Are you sure you want to delete your account? This action cannot be undone.");
 
-      alert('Organization information has been updated.');
-      // Redirect to homepage or organization dashboard
-      window.location.href = "index.html";
-    }
+      if (confirmation) {
+        // If user confirms deletion, redirect to home page
+        window.location.href = "Home_page.html"; // Replace "index.html" with your actual home page URL
+      } else {
+        // If user cancels deletion, do nothing
+        return false;
+      }
+    });
+  });
+</script>
 
-  </script>
+<script>
+  // Function to handle document upload
+  document.getElementById('document').addEventListener('change', function () {
+      var fileInput = this;
+      var uploadedDocumentPlaceholder = document.getElementById('uploadedDocumentPlaceholder');
+      if (fileInput.files && fileInput.files.length > 0) {
+          uploadedDocumentPlaceholder.textContent = fileInput.files[0].name; // Update placeholder with the name of the uploaded file
+      } else {
+          uploadedDocumentPlaceholder.textContent = 'No document chosen'; // Reset placeholder if no file is chosen
+      }
+  });
+
+</script>
+
+<script>
+function updateOrganizationInfo() {
+    alert("Your Information has been updated");
+    
+    setTimeout(function() {
+        window.location.href = "Organization_Dashboard.html"; // Replace URL with your desired destination
+    }, 1000); // Delay in milliseconds (e.g., 2000ms = 2 seconds)
+}
+
+
+</script>
+
 </body>
-
 </html>

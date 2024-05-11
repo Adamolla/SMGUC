@@ -197,6 +197,22 @@
             font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
+        @keyframes ringing {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .ringing-animation {
+        animation: ringing 0.5s infinite;
+    }
+
         .footer {
             margin-top: 0;
             padding-top: 4%;
@@ -349,7 +365,8 @@
               <th>Hospital Address</th>
               <th>Governorate</th>
               <th>Area</th>
-              <th>Action</th>
+              <th>Donor's Details</th>
+              <th>Contact Donor</th>
             </tr>
           </thead>
           <tbody>
@@ -361,9 +378,10 @@
               <td>123 Main St</td>
               <td>Cairo</td>
               <td>Maadi</td>
-              <td><button class="btnn2" onclick="viewDonorDetails('John Doe', 'Doctor')">
+              <td><button class="btnn2" onclick="viewDonorDetails('John Doe', 'Doctor', 'john.doe@example.com', '1234567890')">
                 <img src="detail.png"></button>
-                  <button class="btnn2" onclick="viewDonorContact('john.doe@example.com', '1234567890')"> <img src="contact.png"></button></td>
+              <td><button id="contactDonorBtn" class="btnn2" onclick="contactDonor(this)"> <img src="call.png"> </button>
+              </td>
             </tr>
             <tr>
               <td>Female</td>
@@ -373,9 +391,10 @@
               <td>456 Elm St</td>
               <td>Cairo</td>
               <td>Nasr City</td>
-              <td><button class="btnn2" onclick="viewDonorDetails('David  Lee', 'Nurse')"> <img src="detail.png"></button>
-                  <button class="btnn2" onclick="viewDonorContact('david.lee@example.com', '9998887777')"><img src="contact.png"></button></td>
-            </tr>
+              <td><button class="btnn2" onclick="viewDonorDetails('David  Lee', 'Nurse','david.lee@example.com', '9998887777')"> <img src="detail.png"></button>
+                  <td><button id="contactDonorBtn" class="btnn2" onclick="contactDonor(this)"> <img src="call.png"> </button>
+                  </td>
+                </tr>
             <tr>
               <td>Male</td>
               <td>45</td>
@@ -384,9 +403,11 @@
               <td>789 Oak St</td>
               <td>Alexandria</td>
               <td>Smouha</td>
-              <td><button class="btnn2" onclick="viewDonorDetails('Michael Brown', 'Doctor')"> <img src="detail.png"></button>
-                  <button class="btnn2" onclick="viewDonorContact('michael.brown@example.com', '5555555555')"> <img src="contact.png"></button></td>
-            </tr>
+              <td><button class="btnn2" onclick="viewDonorDetails('Michael Brown', 'Doctor', 'michael.brown@example.com', '5555555555')"> <img src="detail.png"></button>
+                  <td><button id="contactDonorBtn" class="btnn2" onclick="contactDonor(this)"> <img src="call.png"> </button>
+
+                  </td>
+                </tr>
           </tbody>
         </table>
       </div>
@@ -404,7 +425,8 @@
               <th>Area</th>
               <th>Governorate</th>
               <th>Number of Students</th>
-              <th>Action</th>
+              <th>Donor's Details</th>
+              <th>Contact Donor</th>
             </tr>
           </thead>
           <tbody>
@@ -414,27 +436,29 @@
               <td>Mandara</td>
               <td>Alexandria</td>
               <td>70</td>
-              <td><button class="btnn2" onclick="viewDonorDetails('Jane Smith', 'Teacher')"> <img src="detail.png"></button>
-                  <button class="btnn2" onclick="viewDonorContact('jane.smith@example.com', '9876543210')"> <img src="contact.png"></button></td>
-            </tr>
+              <td><button class="btnn2" onclick="viewDonorDetails('Jane Smith', 'Teacher','jane.smith@example.com', '9876543210')"> <img src="detail.png"></button>
+                  <td><button id="contactDonorBtn" class="btnn2" onclick="contactDonor(this)"> <img src="call.png"> </button>
+                  </td>
+                </tr>
             <tr>
               <td>English</td>
               <td>Middle School</td>
               <td>Nasr City</td>
               <td>Cairo</td>
               <td>100</td>
-              <td><button class="btnn2" onclick="viewDonorDetails('Robert Thompson', 'Teacher')"> <img src="detail.png"></button>
-                <button class="btnn2" onclick="viewDonorContact('robert.thompson@example.com', '6665554444')"> <img src="contact.png"></button></td>
-          </tr>
+              <td><button class="btnn2" onclick="viewDonorDetails('Robert Thompson', 'Teacher', 'robert.thompson@example.com', '6665554444')"> <img src="detail.png"></button>
+                <td><button id="contactDonorBtn" class="btnn2" onclick="contactDonor(this)"> <img src="call.png"> </button></td>
+              </tr>
           <tr>
             <td>Science</td>
             <td>Elementary School</td>
             <td>Maadi</td>
             <td>Cairo</td>
             <td>50</td>
-            <td><button class="btnn2" onclick="viewDonorDetails('Emily Wilson', 'Teacher')"> <img src="detail.png"></button>
-                <button class="btnn2" onclick="viewDonorContact('emily.wilson@example.com', '4443332222')"> <img src="contact.png"></button></td>
-          </tr>
+            <td><button class="btnn2" onclick="viewDonorDetails('Emily Wilson', 'Teacher', 'emily.wilson@example.com', '4443332222')"> <img src="detail.png"></button>
+                <td><button id="contactDonorBtn" class="btnn2" onclick="contactDonor(this)"> <img src="call.png"> </button>
+                </td>
+              </tr>
           </tbody>
         </table>
       </div>
@@ -519,17 +543,50 @@
     });
   });
 </script>
+
+<script>
+  function checkNewPosts() {
+// Here you would have logic to check for new posts, perhaps by making an AJAX request to your server
+// For this example, let's assume a new post is available
+const isNewPostAvailable = true;
+
+if (isNewPostAvailable) {
+   // Delay the alert by 5 seconds
+   setTimeout(function () {
+       alert("A new post has been chosen!");
+   }, 1000); // 5000 milliseconds = 5 seconds
+}
+}
+
+   // Call the function when the DOM content is loaded
+   document.addEventListener("DOMContentLoaded", function () {
+       checkNewPosts();
+   });
+   </script> 
+
   <script>
     // JavaScript function to handle viewing donor details
-    function viewDonorDetails(name, occupation) {
-      alert("Name: " + name + "\nOccupation: " + occupation);
-    }
-
-    // JavaScript function to handle viewing donor contact details
-    function viewDonorContact(email, phone_number) {
-      alert("Email: " + email + "\nPhone number: " + phone_number);
+    function viewDonorDetails(name, occupation, email, phone_number) {
+      alert("Name: " + name + "\nOccupation: " + occupation + "\nEmail: " + email + "\nPhone number: " + phone_number) ;
     }
   </script>
+
+<script>
+ function contactDonor(button) {
+    // Display message
+    alert("You will be calling the donor...");
+
+    // Toggle the ringing animation
+    button.classList.add('ringing-animation');
+
+    // Simulate a delay before stopping the animation
+    setTimeout(() => {
+        button.classList.remove('ringing-animation');
+    }, 3000); // Adjust the duration of the animation (in milliseconds) as needed
+}
+</script>
+
+
 
 </body>
 </html>
