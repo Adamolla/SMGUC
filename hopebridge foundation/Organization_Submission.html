@@ -294,6 +294,43 @@
       padding-top: 4%;
     }
 
+    .btnn {
+      background-color: #4297A0;
+      border: solid #4297A0;
+      color: white;
+      letter-spacing: .2em;
+      padding: 0%;
+      width: 70px;
+      height: 50px;
+      box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
+
+    }
+    .btnn3 {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30px;
+      /* Adjust width as needed */
+      height: 30px;
+      /* Adjust height as needed */
+      padding: 0;
+      /* Remove any default padding */
+    }
+
+    .btnn3 img {
+      width: 100%;
+      /* Ensure the image fills the button */
+      height: 100%;
+      /* Ensure the image fills the button */
+    }
+
+    .btnn3:focus {
+      outline: none;
+      /* Remove default focus outline */
+    }
+
     .btnn:hover {
       background-color: black;
       border: solid black;
@@ -336,7 +373,7 @@
   </div>
   </div>
 
-  <h1>Organizations Submissions</h1>
+  <h1>Organizations' Submissions</h1>
 
   <div class="table-container">
     <table>
@@ -362,20 +399,20 @@
           <td>1234567890 <br> Health.Foun.@example.com</td>
           <td>Stateville</td>
           <td>City Central</td>
-          <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
           <td><a href="doctor certificate1.pdf" target="_blank">Document1.pdf</a></td>
-          <td> <button class="btn" onclick="downloadSubmission('Healthcare Foundation')">
-              <img src="download.png" alt="Download Icon">
+          <td> <button class="btnn3" onclick="downloadSubmission('Healthcare Foundation')">
+              <img src="download2.png" alt="Download Icon">
             </button>
             <p></p>
             <!-- Accept button with image -->
-            <button class="btn" onclick="acceptSubmission('Healthcare Foundation ')">
-              <img src="accept1.png" alt="Accept Icon">
+            <button class="btnn3" onclick="acceptSubmission('Healthcare Foundation ')">
+              <img src="accept.png" alt="Accept Icon">
             </button>
             <p></p>
             <!-- Reject button with image -->
-            <button class="btn" onclick="rejectSubmission('Healthcare Foundation')">
-              <img src="reject1.png" alt="Reject Icon">
+            <button class="btnn3" onclick="rejectSubmission('Healthcare Foundation')">
+              <img src="rej.png" alt="Reject Icon">
             </button>
           </td>
         </tr>
@@ -387,20 +424,20 @@
           <td>9876543210 <br> Edu.Emp.@example.com</td>
           <td>Townville</td>
           <td>City Central</td>
-          <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
           <td><a href="document2.pdf" target="_blank">Document2.pdf</a></td>
-          <td> <button class="btn" onclick="downloadSubmission('Education Empowerment')">
-              <img src="download.png" alt="Download Icon">
+          <td> <button class="btnn3" onclick="downloadSubmission('Education Empowerment')">
+              <img src="download2.png" alt="Download Icon">
             </button>
             <p></p>
             <!-- Accept button with image -->
-            <button class="btn" onclick="acceptSubmission('Education Empowerment')">
-              <img src="accept1.png" alt="Accept Icon">
+            <button class="btnn3" onclick="acceptSubmission('Education Empowerment')">
+              <img src="accept.png" alt="Accept Icon">
             </button>
             <p></p>
             <!-- Reject button with image -->
-            <button class="btn" onclick="rejectSubmission('Education Empowerment ')">
-              <img src="reject1.png" alt="Reject Icon">
+            <button class="btnn3" onclick="rejectSubmission('Education Empowerment ')">
+              <img src="rej.png" alt="Reject Icon">
             </button>
           </td>
         </tr>
@@ -412,20 +449,20 @@
           <td>4561237890 <br> Hope4All@example.com</td>
           <td>Ruraltown</td>
           <td>City Central</td>
-          <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
           <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
-          <td> <button class="btn" onclick="downloadSubmission('Hope for All')">
-              <img src="download.png" alt="Download Icon">
+          <td> <button class="btnn3" onclick="downloadSubmission('Hope for All')">
+              <img src="download2.png" alt="Download Icon">
             </button>
             <p></p>
             <!-- Accept button with image -->
-            <button class="btn" onclick="acceptSubmission('Hope for All')">
-              <img src="accept1.png" alt="Accept Icon">
+            <button class="btnn3" onclick="acceptSubmission('Hope for All')">
+              <img src="accept.png" alt="Accept Icon">
             </button>
             <p></p>
             <!-- Reject button with image -->
-            <button class="btn" onclick="rejectSubmission('Hope for All')">
-              <img src="reject1.png" alt="Reject Icon">
+            <button class="btnn3" onclick="rejectSubmission('Hope for All')">
+              <img src="rej.png" alt="Reject Icon">
             </button>
           </td>
         </tr>
@@ -437,20 +474,20 @@
           <td>3698521470 <br> Emp.HopeFoun.@example.com</td>
           <td>Ruraltown</td>
           <td>City Central</td>
-          <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
           <td><a href="document4.pdf" target="_blank">Document4.pdf</a></td>
-          <td> <button class="btn" onclick="downloadSubmission('EmpowerHope Foundation')">
-              <img src="download.png" alt="Download Icon">
+          <td> <button class="btnn3" onclick="downloadSubmission('EmpowerHope Foundation')">
+              <img src="download2.png" alt="Download Icon">
             </button>
             <p></p>
             <!-- Accept button with image -->
-            <button class="btn" onclick="acceptSubmission('EmpowerHope Foundation ')">
-              <img src="accept1.png" alt="Accept Icon">
+            <button class="btnn3" onclick="acceptSubmission('EmpowerHope Foundation ')">
+              <img src="accept.png" alt="Accept Icon">
             </button>
             <p></p>
             <!-- Reject button with image -->
-            <button class="btn" onclick="rejectSubmission('EmpowerHope Foundation')">
-              <img src="reject1.png" alt="Reject Icon">
+            <button class="btnn3" onclick="rejectSubmission('EmpowerHope Foundation')">
+              <img src="rej.png" alt="Reject Icon">
             </button>
           </td>
           <p></p>
@@ -463,20 +500,20 @@
           <td>7418529630 <br> Educ4All@example.com</td>
           <td>Townsville</td>
           <td>City Central</td>
-          <td><button class="btnn px-2 py-2" onclick="redirectToGoogleMaps()">View</button></td>
+          <td><button class="btnn3" onclick="redirectToGoogleMaps()"><img src="map.png"></button></td>
           <td><a href="document5.pdf" target="_blank">Document5.pdf</a></td>
-          <td> <button class="btn" onclick="downloadSubmission('Education for All')">
-              <img src="download.png" alt="Download Icon">
+          <td> <button class="btnn3" onclick="downloadSubmission('Education for All')">
+              <img src="download2.png" alt="Download Icon">
             </button>
             <p></p>
             <!-- Accept button with image -->
-            <button class="btn" onclick="acceptSubmission('Education for All')">
-              <img src="accept1.png" alt="Accept Icon">
+            <button class="btnn3" onclick="acceptSubmission('Education for All')">
+              <img src="accept.png" alt="Accept Icon">
             </button>
             <p></p>
             <!-- Reject button with image -->
-            <button class="btn" onclick="rejectSubmission('Education for All')">
-              <img src="reject1.png" alt="Reject Icon">
+            <button class="btnn3" onclick="rejectSubmission('Education for All')">
+              <img src="rej.png" alt="Reject Icon">
             </button>
           </td>
         </tr>
@@ -489,18 +526,18 @@
           <td>State</td>
           <td>City Central</td>
           <td><a href="document6.pdf" target="_blank">Document6.pdf</a></td>
-          <td> <button class="btn" onclick="downloadSubmission('Grace Haven Community')">
-              <img src="download.png" alt="Download Icon">
+          <td> <button class="btnn3" onclick="downloadSubmission('Grace Haven Community')">
+              <img src="download2.png" alt="Download Icon">
             </button>
             <p></p>
             <!-- Accept button with image -->
-            <button class="btn" onclick="acceptSubmission('Grace Haven Community ')">
-              <img src="accept1.png" alt="Accept Icon">
+            <button class="btnn3" onclick="acceptSubmission('Grace Haven Community ')">
+              <img src="accept.png" alt="Accept Icon">
             </button>
             <p></p>
             <!-- Reject button with image -->
-            <button class="btn" onclick="rejectSubmission('Grace Haven Community')">
-              <img src="reject1.png" alt="Reject Icon">
+            <button class="btnn3" onclick="rejectSubmission('Grace Haven Community')">
+              <img src="rej.png" alt="Reject Icon">
             </button>
           </td>
           <p></p>

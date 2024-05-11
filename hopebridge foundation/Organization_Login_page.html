@@ -181,6 +181,9 @@
     .image-container {
       text-align: center;
     }
+    .register-link {
+      margin-left: 500px;
+    }
 
     .image-container img {
       max-width: 100%;
@@ -312,6 +315,9 @@
         <input type="password" id="password" placeholder="Password" required> <!-- Added id="password" -->
         <i class='bx bxs-lock'></i>
       </div>
+      <div class="register-link">
+        <p>Don't have an account?<a href="#" onclick="goToRegisterPage()"> Register</a></p>
+      </div>
       <p>
         <button type="button" class="btn" onclick="login()">Login</button>
       </p>
@@ -401,21 +407,24 @@
       });
     });
   </script>
-
+ <script>
+  function goToRegisterPage() {
+    window.location.href = "Organization_Registration_page.html";
+  }
+</script>
   <script>
     function login() {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
 
       // Hardcoded username and password for admin
-      var adminUsername = "admin";
-      var adminPassword = "admin123";
-      var adminPassword2 = "admin456";
+      var adminUsername = "organization";
+      var adminPassword = "organization123";
 
       // Check if the entered username and password match the admin credentials
-      if (username === adminUsername && password === adminPassword || username === adminUsername && password === adminPassword2) {
+      if (username === adminUsername && password === adminPassword) {
         // Redirect to admin dashboard or any desired page
-        window.location.href = "admin_dashboard.html";
+        window.location.href = "Organization_dashboard.html";
       } else {
         // Display an error message for incorrect credentials
         alert("Incorrect username or password. Please try again.");

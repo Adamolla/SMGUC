@@ -411,30 +411,29 @@
       });
     });
   </script>
-
+  <script>
+    function goToRegisterPage() {
+      window.location.href = "Donor_Registration_page.html";
+    }
+  </script>
   <script>
     function login() {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
 
       // Hardcoded username and password for admin
-      var adminUsername = "admin";
-      var adminPassword = "admin123";
+      var adminUsername = "donor";
+      var adminPassword = "donor123";
       var adminPassword2 = "admin456";
 
       // Check if the entered username and password match the admin credentials
-      if (username === adminUsername && password === adminPassword || username === adminUsername && password === adminPassword2) {
+      if (username === adminUsername && password === adminPassword ) {
         // Redirect to admin dashboard or any desired page
-        window.location.href = "admin_dashboard.html";
+        window.location.href = "Donor_Dashboard.html";
       } else {
         // Display an error message for incorrect credentials
         alert("Incorrect username or password. Please try again.");
       }
-    }
-  </script>
-  <script>
-    function goToRegisterPage() {
-      window.location.href = "Donor_Registration_page.html";
     }
   </script>
 </body>
