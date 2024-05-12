@@ -229,12 +229,12 @@
 
     /* Additional styling for spacing */
     .heading {
-      margin-left: 20px;
       margin-bottom: 30px;
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
       font-size: 30px;
       color: #4297A0;
       margin-top: 50px;
+      text-align: center;
       text-decoration: underline rgb(38, 37, 37);
       /* Adjust the top margin as needed */
     }
@@ -292,7 +292,17 @@
   <div class="container">
     <div class="button-container">
       <div class="list-container">
-        <!-- View Lists -->
+        <h1 class="heading"> Clinic Specification:</h1>
+        <button class="btn" id="teach-button" onclick="gotoclinic()"> View Clinic Specification </button>
+      </div>
+
+      <div class="list-group">
+        <!-- Review Submissions -->
+        <h1 class="heading"> Documents:</h1>
+        <button class="btn" onclick="gotoupload()">Upload New Documents</button>
+      </div>
+
+      <div class="list-container">
         <h1 class="heading">Scheduling:</h1>
         <button class="btn" onclick="gotoschedule()">Schedule Transportation </button>
       </div>
@@ -302,18 +312,12 @@
         <button class="btn" id="teach-button" onclick="gototeach()"> Subject and Class Selection </button>
       </div>
 
-      <div class="list-group">
-        <!-- Review Submissions -->
-        <h1 class="heading"> Documents:</h1>
-        <button class="btn" onclick="gotoupload()">Upload New Documents</button>
-      </div>
+     
       <div class="list-group">
         <!-- Manage Requests -->
         <h1 class="heading">View Registered Organizations:</h1>
         <button class="btn" onclick="gotoregisteredorg()">Registered Organizations</button>
       </div>
-
-
 
       <div class="list-group">
         <!-- Manage Requests -->
@@ -500,6 +504,9 @@
     }
     function gotopass1() {
       window.location.href = "Update_Delete_Donor_Info.html";
+    }
+    function gotoclinic(){
+      window.location.href = "Clinic.html";
     }
     function gotodonateditem5() {
       window.location.href = "Toy_Donation_Requests.html";

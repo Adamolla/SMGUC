@@ -18,15 +18,14 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/fancybox.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 
     <style>
         .navbar-brand {
             font-size: 22.5px;
-            margin-left: 10px;
+            margin-left: -25px;
             padding-left: 10px;
         }
 
@@ -203,52 +202,43 @@
         }
 
         table {
-            width: 90%;
-            /* Adjust the width as needed */
-            margin: 20px auto;
-            /* Center the table horizontally and add space around it */
-            border-collapse: collapse;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+        width: 100%; /* Set table width to 100% */
+        max-width: 100%; /* Limit maximum width to viewport width */
+        margin: 20px auto;
+        border-collapse: collapse;
+        overflow-x: auto; /* Enable horizontal scroll if needed */
+    }
 
-        th,
-        td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #f2f2f2;
-            font-size: 16px;
-            text-align: center;
-        }
+    th,
+    td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #f2f2f2;
+        font-size: 16px;
+        text-align: center;
+    }
 
-        th {
-            background-color: #f8f9fa;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-        }
+    th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        color: #333;
+    }
 
-        tbody tr:hover {
-            background-color: #f2f2f2;
-        }
+    tbody tr:hover {
+        background-color: #f2f2f2;
+    }
 
-        tbody tr:nth-child(even) {
-            background-color: #fff;
-        }
+    tbody tr:nth-child(even) {
+        background-color: #fff;
+    }
 
-        td:last-child {
-            text-align: center;
-
-        }
-
+    td:last-child {
+        text-align: center;
+    }
         .clickable-type {
             color: #4297A0;
             text-decoration: underline;
             cursor: pointer;
         }
-
 
         h1 {
             text-align: center;
@@ -259,25 +249,8 @@
             /* Choose your desired color */
             margin-top: 50px;
             /* Adjust the margin as needed */
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             /* Adjust the margin as needed */
-        }
-
-        input[type="file"] {
-            display: none;
-        }
-
-        input[type="file"] {
-            display: none;
-        }
-
-        .btn {
-            background-color: transparent;
-            /* Remove background color */
-            border: none;
-            /* Remove border */
-            padding: 0;
-            /* Remove padding */
         }
 
         h2 {
@@ -293,6 +266,27 @@
             /* Adjust the margin as needed */
         }
 
+        input[type="file"] {
+            display: none;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .btnn2 {
+            background-color: transparent;
+            /* Remove background color */
+            border: none;
+            /* Remove border */
+            padding: 0;
+            /* Remove padding */
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
         .btn img {
             width: 20px;
             /* Adjust width as needed */
@@ -302,58 +296,6 @@
             /* Align image vertically */
         }
 
-        .btn {
-            background-color: #4297A0;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-left: 520px;
-
-        }
-
-        #itemCategory {
-            padding: 8px 12px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-right: 10px;
-            width: 320px;
-            border-radius: 5px;
-            border-color: #4297A0;
-            border-style: solid;
-            border-width: 2px;
-        }
-
-        #itemCategory {
-            margin-left: 450px;
-            /* Adjust the margin as needed */
-        }
-
-        .clickable-type {
-            color: #4297A0;
-            text-decoration: underline;
-            cursor: pointer;
-            /* Add a pointer cursor to indicate clickable */
-        }
-
-        #text {
-            text-align: center;
-            font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-            color: #4297A0;
-            text-decoration: underline rgb(38, 37, 37);
-            /* Choose your desired color */
-            margin-top: 50px;
-            width: 200px;
-            /* Adjust the margin as needed */
-            margin-bottom: 30px;
-            margin-left: 500px;
-            /* Adjust the margin as needed */
-
-        }
         .btnn3 {
       background-color: transparent;
       border: none;
@@ -380,6 +322,8 @@
       /* Remove default focus outline */
     }
     </style>
+
+    </style>
 </head>
 
 <body>
@@ -405,7 +349,7 @@
             </div>
         </div>
     </nav>
-
+    <!-- END nav -->
 
     <div class="block-31" style="position: relative;">
         <div class="owl-carousel loop-block-31 ">
@@ -416,10 +360,7 @@
     </div>
     </div>
 
-
-
     <h1>Fulfilled Donation Posts:</h1>
-    <h2>Deletion:</h2>
     <section id="clothesDonationRequests" class="mt-5">
         <div class="container">
             <h2>Clothes Donation Requests
@@ -662,30 +603,29 @@
             </div>
         </div>
     </section>
+
     <section id="BloodDonationRequests" class="mt-5">
         <div class="container">
-            <h2>Blood Donation Requests
-            </h2>
+            <h2>Posts of Blood Donation</h2>
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Request Number</th>
                             <th>Blood Type</th>
                             <th>Hospital Name</th>
-                            <th>Hospital Address</th>
                             <th>Government</th>
                             <th>Area</th>
                             <th>Status</th>
                             <th>Actions</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
                         <tr data-request-id="1">
-                            <td>John Doe</td>
+                            <td>Request 1</td>
                             <td>A+</td>
-                            <td>HopeBridge Hospital</td>
-                            <td>123 Main St</td>
+                            <td>Al Faruq Hospital</td>
                             <td>Cairo</td>
                             <td>Maadi</td>
                             <td>Fulfilled</td>
@@ -696,10 +636,9 @@
                             </td>
                         </tr>
                         <tr data-request-id="2">
-                            <td>Jane Smith</td>
+                            <td>Request 2</td>
                             <td>B-</td>
                             <td>El Salam Hopital</td>
-                            <td>456 Elm St </td>
                             <td>Cairo</td>
                             <td>Nasr City</td>
                             <td>Fulfilled</td>
@@ -710,10 +649,9 @@
                             </td>
                         </tr>
                         <tr data-request-id="3">
-                            <td>Michael Johnson</td>
+                            <td>Request 3</td>
                             <td>O+</td>
                             <td>Dar el Fouad</td>
-                            <td>789 Oak St</td>
                             <td>Giza</td>
                             <td>6 of October</td>
                             <td>Fulfilled</td>
@@ -724,12 +662,11 @@
                             </td>
                         </tr>
                         <tr data-request-id="4">
-                            <td>Sarah Williams</td>
+                            <td>Request 4</td>
                             <td>AB+</td>
-                            <td>57357</td>
-                            <td>321 Pine St</td>
-                            <td>Giza</td>
-                            <td>Dokki</td>
+                            <td>Air Force Hospital</td>
+                            <td>New Cairo</td>
+                            <td>5th settlement</td>
                             <td>Fulfilled</td>
                             <td>
                                 <button class="btnn3" onclick="deleteDonationRequest('Blood', 4)"><img src="rej.png"
@@ -952,8 +889,7 @@
                 window.addEventListener("scroll", function () {
                     if (window.scrollY > 50) {
                         document.getElementById("ftco-navbar").classList.add("show-logo");
-                        const logoWidth = document.querySelector(".logo").offsetWidth;
-                        document.querySelector(".navbar-brand").style.marginLeft = (100 + logoWidth) + "px";
+                        document.querySelector(".navbar-brand").style.marginLeft = "100px";
                     } else {
                         document.getElementById("ftco-navbar").classList.remove("show-logo");
                         document.querySelector(".navbar-brand").style.marginLeft = "-10px";

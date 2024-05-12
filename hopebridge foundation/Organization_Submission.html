@@ -412,12 +412,13 @@
         <td>19057 <br> info@57357.org</td>
         <td>Cairo</td>
         <td>El-Saida Zenab</td>
-        <td><a href="or1.pdf" target="_blank">Document1.pdf</a></td>
         <td> <button class="btnn3" onclick="showLocation57357()">
-            <img src="map.png">
-            <td> <button class="btnn3" onclick="downloadSubmission('57357')">
+          <img src="map.png">
+        <td><a href="org1.pdf" target="_blank">Document1.pdf</a></td>
+        <td>Pending</td>
+            <td> <button class="btnn3" onclick="downloadSubmission('57357', 'org1.pdf')">
               <img src="download2.png" alt="Download Icon">
-            </button>
+          </button>
             <p></p>
             <!-- Accept button with image -->
             <button class="btnn3" onclick="acceptSubmission('57357')">
@@ -439,11 +440,12 @@
           <td>02 26079714 <br> test2@test.com</td>
           <td>Cairo</td>
           <td>El Rehab</td>
-          <td><a href="org2.pdf" target="_blank">Document2.pdf</a></td>
           <td><button class="btnn3" onclick="showLocationOthmanIbnAffanSchool()"><img src="map.png"></button></td>
-          <td> <button class="btnn3" onclick="downloadSubmission('Othman Ibn Affan School')">
+          <td><a href="org2.pdf" target="_blank">Document2.pdf</a></td>
+          <td> Pending </td>
+          <td> <button class="btnn3" onclick="downloadSubmission('Othman Ibn Affan School', 'org2.pdf')">
             <img src="download2.png" alt="Download Icon">
-          </button>
+        </button>
           <p></p>
           <!-- Accept button with image -->
           <button class="btnn3" onclick="acceptSubmission('Othman Ibn Affan School')">
@@ -459,17 +461,18 @@
         </tr>
         <!-- Organization 3 -->
         <tr>
-          <td>SOS Children's Villages Egypt</td>
+          <td>SOS Childrens Villages Egypt</td>
           <td>Orphanage</td>
           <td>Clothes, shoes, bags & housing supplies</td>
           <td>011 20000341 <br> Children.VillageEgy@gmail.com</td>
           <td>New Cairo</td>
           <td>Nasr city</td>
-          <td><a href="org3.pdf" target="_blank">Document3.pdf</a></td>
           <td><button class="btnn3" onclick="showLocationSOS()"><img src="map.png"></button></td>
-          <td> <button class="btnn3" onclick="downloadSubmission('SOS Childrens Villages Egypt')">
+          <td><a href="org3.pdf" target="_blank">Document3.pdf</a></td>
+          <td> Pending </td>
+          <td> <button class="btnn3" onclick="downloadSubmission('SOS Childrens Villages Egypt', 'org3.pdf')">
             <img src="download2.png" alt="Download Icon">
-          </button>
+        </button>
           <p></p>
           <!-- Accept button with image -->
           <button class="btnn3" onclick="acceptSubmission('SOS Childrens Villages Egypt')">
@@ -491,11 +494,12 @@
           <td>0235655211 <br> MEKassociationegy@gmail.com</td>
           <td>Giza</td>
           <td>El Omraniya</td>
-          <td><a href="org4.pdf" target="_blank">Document4.pdf</a></td>
           <td><button class="btnn3" onclick="showLocationMisrElKhair()"><img src="map.png"></button></td>
-          <td> <button class="btnn3" onclick="downloadSubmission('Misr El Khair Association')">
+          <td><a href="org4.pdf" target="_blank">Document4.pdf</a></td>
+          <td> Pending </td>
+          <td> <button class="btnn3" onclick="downloadSubmission('Misr El Khair Association', 'org4.pdf')">
             <img src="download2.png" alt="Download Icon">
-          </button>
+        </button>
           <p></p>
           <!-- Accept button with image -->
           <button class="btnn3" onclick="acceptSubmission('Misr El Khair Association')">
@@ -518,11 +522,12 @@
           <td>19558 <br> stmarychurch@gmail.com</td>
           <td>Cairo</td>
           <td>El Rehab</td>
-          <td><a href="org5.pdf" target="_blank">Document5.pdf</a></td>
           <td><button class="btnn3" onclick="showLocationStMaryChurch()"><img src="map.png"></button></td>
-          <td> <button class="btnn3" onclick="downloadSubmission('St.Mary Church')">
+          <td><a href="org5.pdf" target="_blank">Document5.pdf</a></td>
+          <td> Pending </td>
+          <td> <button class="btnn3" onclick="downloadSubmission('St.Mary Church', 'org5.pdf')">
             <img src="download2.png" alt="Download Icon">
-          </button>
+        </button>
           <p></p>
           <!-- Accept button with image -->
           <button class="btnn3" onclick="acceptSubmission('St.Mary Church')">
@@ -769,46 +774,70 @@
     });
   </script>
   <script>
-    // Function to download organization submission
-    function downloadSubmission(organizationName) {
-      // Logic to download the submission for the given organization
-      // Replace this with actual implementation
-      alert(`Downloading submission for ${organizationName}`);
-    }
-// Function to accept organization submission
-function acceptSubmission(organizationName) {
-  // Logic to accept the submission for the given organization
-  // For demonstration purposes, let's assume we have a variable `statusCell` representing the status cell in the table
-
-  // Find the row corresponding to the organization name
-  var row = document.querySelector(`tr:contains(${organizationName})`);
-
-  // Update the status cell content to "Accepted"
-  row.querySelector('td:nth-child(8)').innerText = "Accepted";
-
-  // You can also add additional styling or visual feedback if needed
-  
-  // Alert or any other actions as needed
-  alert(`Accepting submission for ${organizationName}`);
+   function downloadSubmission(organizationName, fileName) {
+    // Create a hidden anchor element
+    var anchor = document.createElement('a');
+    
+    // Set the href attribute to the file URL
+    anchor.href = fileName;
+    
+    // Set the download attribute to specify the filename
+    anchor.download = fileName.split('/').pop();
+    
+    // Programmatically trigger a click event on the anchor
+    anchor.click();
+    
+    // Remove the anchor element from the DOM
+    anchor.remove();
+    
+    // Show an alert indicating the download action
+    alert(`Downloading submission for ${organizationName}`);
 }
+    function acceptSubmission(organizationName) {
+    // Show an alert confirming the acceptance of the document
+    var confirmation = confirm(`Are you sure you want to accept the submission for ${organizationName}?`);
 
+    // If the user confirms the acceptance
+    if (confirmation) {
+        // Get all rows in the table
+        var rows = document.querySelectorAll("tbody tr");
+
+        // Iterate over each row
+        rows.forEach(function(row) {
+            // Get the content of the first cell in the row
+            var cellContent = row.cells[0].innerText.trim();
+
+            // Check if the cell content matches the organization name
+            if (cellContent === organizationName) {
+                // Update the status cell content to "Accepted"
+                row.cells[8].innerText = "Accepted";
+
+                // Alert to indicate the acceptance
+                alert(`Accepted submission for ${organizationName}`);
+            }
+        });
+    }
+}
 // Function to reject organization submission
 function rejectSubmission(organizationName) {
-  // Logic to reject the submission for the given organization
-  // Similar to acceptSubmission, update the status cell content to "Rejected"
+    // Get all rows in the table
+    var rows = document.querySelectorAll("tbody tr");
 
-  // Find the row corresponding to the organization name
-  var row = document.querySelector(`tr:contains(${organizationName})`);
+    // Iterate over each row
+    rows.forEach(function(row) {
+        // Get the content of the first cell in the row
+        var cellContent = row.cells[0].innerText.trim();
 
-  // Update the status cell content to "Rejected"
-  row.querySelector('td:nth-child(8)').innerText = "Rejected";
+        // Check if the cell content matches the organization name
+        if (cellContent === organizationName) {
+            // Update the status cell content to "Rejected"
+            row.cells[8].innerText = "Rejected";
 
-  // You can also add additional styling or visual feedback if needed
-  
-  // Alert or any other actions as needed
-  alert(`Rejecting submission for ${organizationName}`);
+            // Alert or any other actions as needed
+            alert(`Rejecting submission for ${organizationName}`);
+        }
+    });
 }
-
   </script>
 
     

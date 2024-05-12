@@ -434,7 +434,7 @@
           <p></p>
         </tr>
         <tr>
-          <td>SOS Children's Villages Egypt</td>
+          <td>SOS Childrens Villages Egypt</td>
           <td>Orphanage</td>
           <td>Clothes, shoes, bags & housing supplies</td>
           <td>011 20000341 <br> Children.VillageEgy@gmail.com</td>
@@ -735,36 +735,47 @@
 
     // If the user confirms the acceptance
     if (confirmation) {
-        // Find the row corresponding to the organization name
-        var row = document.querySelector(`tr:contains(${organizationName})`);
+        // Get all rows in the table
+        var rows = document.querySelectorAll("tbody tr");
 
-        // Update the status cell content to "Accepted"
-        row.querySelector('td:nth-child(8)').innerText = "Accepted";
+        // Iterate over each row
+        rows.forEach(function(row) {
+            // Get the content of the first cell in the row
+            var cellContent = row.cells[0].innerText.trim();
 
-        // Alert to indicate the acceptance
-        alert(`Accepted submission for ${organizationName}`);
+            // Check if the cell content matches the organization name
+            if (cellContent === organizationName) {
+                // Update the status cell content to "Accepted"
+                row.cells[7].innerText = "Accepted";
+
+                // Alert to indicate the acceptance
+                alert(`Accepted submission for ${organizationName}`);
+            }
+        });
     }
 }
-  </script>
-  <script>
-
 
 // Function to reject organization submission
 function rejectSubmission(organizationName) {
-  // Logic to reject the submission for the given organization
-  // Similar to acceptSubmission, update the status cell content to "Rejected"
+    // Get all rows in the table
+    var rows = document.querySelectorAll("tbody tr");
 
-  // Find the row corresponding to the organization name
-  var row = document.querySelector(`tr:contains(${organizationName})`);
+    // Iterate over each row
+    rows.forEach(function(row) {
+        // Get the content of the first cell in the row
+        var cellContent = row.cells[0].innerText.trim();
 
-  // Update the status cell content to "Rejected"
-  row.querySelector('td:nth-child(8)').innerText = "Rejected";
+        // Check if the cell content matches the organization name
+        if (cellContent === organizationName) {
+            // Update the status cell content to "Rejected"
+            row.cells[7].innerText = "Rejected";
 
-  // You can also add additional styling or visual feedback if needed
-  
-  // Alert or any other actions as needed
-  alert(`Rejecting submission for ${organizationName}`);
+            // Alert or any other actions as needed
+            alert(`Rejecting submission for ${organizationName}`);
+        }
+    });
 }
+
 </script>
 
 <script>
