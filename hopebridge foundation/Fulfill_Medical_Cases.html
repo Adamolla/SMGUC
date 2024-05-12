@@ -370,6 +370,22 @@
       outline: none;
       /* Remove default focus outline */
     }
+
+    .mapContainerAlFaruqHospital,
+    .mapContainerGalaHospital,
+    .mapContainerDarfouad,
+    .mapContainerAlNourEyeHospital,
+    .mapContainerElNileBadrawyHospitals,
+    .mapContainerCureHospital,
+    .mapContainerCleopatraHospitals
+     {
+      height: 400px;
+      width: 100%;
+      margin-top: 20px;
+    
+    }
+
+
   </style>
 </head>
 
@@ -607,13 +623,13 @@
     </section>
   </div>
 
-    <div id="mapContainerAlFaruqHospital"></div>
-    <div id="mapContainerGalaHospital"></div>
-    <div id="mapContainerDarfouad"></div>
-    <div id="mapContainerAlNourEyeHospital"></div>
-    <div id="mapContainerCureHospital"></div>
-        <div id="mapContainerElNileBadrawyHospitals"></div>
-    <div id="mapContainerCleopatraHospitals"></div>
+    <div id="mapContainerAlFaruqHospital" style="margin-left:350px;"></div>
+    <div id="mapContainerGalaHospital" style="margin-left:350px;"></div>
+    <div id="mapContainerDarfouad" style="margin-left:350px;"></div>
+    <div id="mapContainerAlNourEyeHospital" style="margin-left:350px;"></div>
+    <div id="mapContainerCureHospital" style="margin-left:350px;"></div>
+        <div id="mapContainerElNileBadrawyHospitals" style="margin-left:350px;"></div>
+    <div id="mapContainerCleopatraHospitals" style="margin-left:350px;"></div>
 
 
 
@@ -890,8 +906,8 @@
     });
   </script>
   <script>
-    function fulfillTeachingCase(teachingCase) {
-      alert("You have chosen to fulfill the teaching case: " + teachingCase);
+    function fulfillMedicalCase(Illness) {
+      alert("You have chosen to fulfill the teaching case: " + Illness);
     }
   </script>
  <script>

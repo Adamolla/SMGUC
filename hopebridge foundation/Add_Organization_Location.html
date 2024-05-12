@@ -397,87 +397,7 @@
     <!-- Map container -->
     <div id="map"></div>
   </div>
-<<<<<<< Updated upstream
-  <div id="map"></div>
-  <input type="text" id="search" placeholder="Search for a location">
-=======
   
-
-
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
-  <script>
-      // Initialize the map
-      function initMap() {
-        // Specify the map options
-        var mapOptions = {
-          center: { lat: 47.6062, lng: -122.3321 }, // Default center (Seattle, WA)
-          zoom: 13 // Default zoom level
-        };
-
-        // Create the map object
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-        // Create the search box and link it to the UI element
-        var input = document.getElementById('search');
-        var searchBox = new google.maps.places.SearchBox(input);
-
-        // Bias the SearchBox results towards current map's viewport
-        map.addListener('bounds_changed', function () {
-          searchBox.setBounds(map.getBounds());
-        });
-
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place
-        searchBox.addListener('places_changed', function () {
-          var places = searchBox.getPlaces();
-
-          if (places.length == 0) {
-            return;
-          }
-
-          // For each place, get the icon, name and location
-          var bounds = new google.maps.LatLngBounds();
-          places.forEach(function (place) {
-            if (!place.geometry) {
-              console.log("Returned place contains no geometry");
-              return;
-            }
-
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
-
-            // Create a marker for each place
-            var marker = new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location
-            });
-
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
-        });
-      }
-    </script>
-    <script>
-      // Load the map
-      initMap();
-    </script>
-
-</div>
->>>>>>> Stashed changes
-
     <footer class="footer">
         <div class="container">
           <div class="row mb-5">
@@ -540,12 +460,9 @@
       
       <script src="js/aos.js"></script>
       <script src="js/jquery.animateNumber.min.js"></script>
-<<<<<<< Updated upstream
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
       <script src="js/google-map.js"></script>
-=======
-     
->>>>>>> Stashed changes
+=
       <script src="js/main.js"></script>
       <script>
 
@@ -561,81 +478,68 @@
           });
         });
       </script>  
-<<<<<<< Updated upstream
-    <script>
-      // Initialize the map
-      function initMap() {
-        // Specify the map options
-        var mapOptions = {
-          center: { lat: 47.6062, lng: -122.3321 }, // Default center (Seattle, WA)
-          zoom: 13 // Default zoom level
-        };
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
+ <script>
+   // Initialize the map
+   function initMap() {
+       // Specify the map options
+       var mapOptions = {
+           center: { lat: 47.6062, lng: -122.3321 }, // Default center (Seattle, WA)
+           zoom: 13 // Default zoom level
+       };
 
-        // Create the map object
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+       // Create the map object
+       var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-        // Create the search box and link it to the UI element
-        var input = document.getElementById('search');
-        var searchBox = new google.maps.places.SearchBox(input);
+       // Create the search box and link it to the UI element
+       var input = document.getElementById('address');
+       var searchBox = new google.maps.places.SearchBox(input);
 
-        // Bias the SearchBox results towards current map's viewport
-        map.addListener('bounds_changed', function () {
-          searchBox.setBounds(map.getBounds());
-        });
+       // Listen for the event fired when the user selects a prediction and retrieve more details for that place
+       searchBox.addListener('places_changed', function () {
+           var places = searchBox.getPlaces();
 
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place
-        searchBox.addListener('places_changed', function () {
-          var places = searchBox.getPlaces();
+           if (places.length == 0) {
+               return;
+           }
 
-          if (places.length == 0) {
-            return;
-          }
+           // Clear out the old markers
+           markers.forEach(function (marker) {
+               marker.setMap(null);
+           });
+           markers = [];
 
-          // For each place, get the icon, name and location
-          var bounds = new google.maps.LatLngBounds();
-          places.forEach(function (place) {
-            if (!place.geometry) {
-              console.log("Returned place contains no geometry");
-              return;
-            }
+           // For each place, get the icon, name and location
+           var bounds = new google.maps.LatLngBounds();
+           places.forEach(function (place) {
+               if (!place.geometry) {
+                   console.log("Returned place contains no geometry");
+                   return;
+               }
 
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
+               // Create a marker for each place
+               var marker = new google.maps.Marker({
+                   map: map,
+                   title: place.name,
+                   position: place.geometry.location
+               });
 
-            // Create a marker for each place
-            var marker = new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location
-            });
+               markers.push(marker);
 
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
-        });
-      }
-    </script>
-    <script>
-      // Load the map
-      initMap();
-    </script>
+               if (place.geometry.viewport) {
+                   // Only geocodes have viewport
+                   bounds.union(place.geometry.viewport);
+               } else {
+                   bounds.extend(place.geometry.location);
+               }
+           });
+           map.fitBounds(bounds);
+       });
+   }
 
-   
-=======
-
->>>>>>> Stashed changes
+   // Load the map
+   initMap();
+</script>
 </body>
 </html>
  
