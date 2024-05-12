@@ -23,7 +23,14 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
 
+
   <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
     .navbar-brand {
       font-size: 22.5px;
       margin-left: 10px;
@@ -262,7 +269,7 @@
     input[type="file"] {
       display: none;
     }
- 
+
 
     .btn {
       background-color: transparent;
@@ -313,37 +320,38 @@
       margin-left: -4px;
       /* Adjust the margin as needed */
     }
+
     #text1 {
-            text-align: center;
-            font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-            color: #4297A0;
-            text-decoration: underline rgb(38, 37, 37);
-            /* Choose your desired color */
-            margin-top: 50px;
-            width:300px;
-            /* Adjust the margin as needed */
-            margin-bottom: 30px;
-            margin-left: 10px;
-            /* Adjust the margin as needed */
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 10px;
+      /* Adjust the margin as needed */
 
-        }
-        
-        #text2 {
-            text-align: center;
-            font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-            color: #4297A0;
-            text-decoration: underline rgb(38, 37, 37);
-            /* Choose your desired color */
-            margin-top: 50px;
-            width:300px;
-            /* Adjust the margin as needed */
-            margin-bottom: 30px;
-            margin-left: 5px;
-            /* Adjust the margin as needed */
+    }
 
-        }
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 300px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 5px;
+      /* Adjust the margin as needed */
+
+    }
 
     /* Style for form label */
     label {
@@ -353,8 +361,9 @@
       margin-bottom: 10px;
       text-decoration: underline rgb(38, 37, 37);
     }
-    .btnn3{
-    background-color:transparent;
+
+    .btnn3 {
+      background-color: transparent;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -367,7 +376,13 @@
 
     }
 
-   
+    #mapContainer {
+      height: 1000px;
+      width: 1000px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 100px;
+    }
   </style>
 </head>
 
@@ -412,10 +427,10 @@
         <label id="text2" for="hospitalFilter">Hospital:</label>
         <select id="hospitalFilter" class="form-control">
           <option value=""></option>
-          <option value="HopeBridge Hospital">HopeBridge Hospital</option>
-          <option value="El Salam Hopital">El Salam Hopital</option>
-          <option value="Dar el Fouad">Dar el Fouad</option>
-          <option value="57357">57357</option>
+          <option value="HopeBridge Hospital">Al Faruq Hospital Maadi</option>
+          <option value="El Salam Hopital">El Salam Hopital Nasr City</option>
+          <option value="Dar el Fouad">Dar el Fouad 6 October</option>
+          <option value="Air Force Hospital">Air Force Hospital 5th settlement</option>
         </select>
       </div>
       <div class="col-md-4">
@@ -433,7 +448,7 @@
           <option value="Maadi">Maadi</option>
           <option value="Nasr City">Nasr City</option>
           <option value="6 of October">6 of October</option>
-          <option value="Dokki">Dokki</option>
+          <option value="Dokki">5th settlement</option>
         </select>
         <p></p>
       </div>
@@ -460,11 +475,14 @@
             <tr>
               <td><span class="clickable-type">Request Number 1</span></td>
               <td>A+</td>
-              <td>HopeBridge Hospital</td>
+              <td>Al Faruq Hospital</td>
               <td>Cairo</td>
               <td>Maadi</td>
               <td>
-                <button class="btnn3" onclick="showHospitalLocation('HopeBridge Hospital')"><img src="map.png"></button>
+                <button class="btnn3"
+                  onclick="showHospitalLocation('Al Faruq Hospital',29.95759658327605, 31.256668838930224)">
+                  <img src="map.png">
+                </button>
               </td>
             </tr>
             <tr>
@@ -474,7 +492,13 @@
               <td>Cairo</td>
               <td>Nasr City</td>
               <td>
-                <button class="btnn3" onclick="showHospitalLocation('El Salam Hopital')"><img src="map.png"></button>
+                <button class="btnn3"
+                  onclick="showHospitalLocation('El Salam Hospital',30.166764218192167, 31.417675169620058)">
+                  <img src="map.png">
+                </button>
+                <div id="mapContainer1"></div>
+                </button>
+                </button>
               </td>
             </tr>
             <tr>
@@ -484,17 +508,25 @@
               <td>Giza</td>
               <td>6 of October</td>
               <td>
-                <button class="btnn3" onclick="showHospitalLocation('Dar el Fouad')"><img src="map.png"></button>
+                <button class="btnn3"
+                  onclick="showHospitalLocation('Dar el Fouad',30.065956312753485, 31.319616525439887)">
+                  <img src="map.png">
+                </button>
+                <div id="mapContainer2"></div> <!-- Unique id for this map container -->
               </td>
             </tr>
             <tr>
               <td><span class="clickable-type">Request Number 4</span></td>
               <td>AB+</td>
-              <td>57357</td>
-              <td>Giza</td>
-              <td>Dokki</td>
+              <td>Air Force Hospital</td>
+              <td>Cairo</td>
+              <td>5th settlement</td>
               <td>
-                <button class="btnn3" onclick="showHospitalLocation('57357')"><img src="map.png"></button>
+                <button class="btnn3"
+                  onclick="showHospitalLocation('Air Force Hospital',30.017769499216552, 31.434058765919566)">
+                  <img src="map.png">
+                </button>
+                <div id="mapContainer3"></div>
               </td>
             </tr>
           </tbody>
@@ -503,6 +535,8 @@
     </div>
   </section>
 
+
+  <div id="mapContainer"></div>
 
 
 
@@ -547,6 +581,7 @@
   </footer>
 
 
+
   <!-- Loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
@@ -570,6 +605,8 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&callback=initMap"
+    async defer></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
@@ -586,44 +623,71 @@
         }
       });
     });
-</script>
+  </script>
 
-<script>
-  $(document).ready(function () {
-    $("#filterButton").on("click", function () {
-      filterBloodDonationRequests();
+  <script>
+    $(document).ready(function () {
+      $("#filterButton").on("click", function () {
+        filterBloodDonationRequests();
+      });
+
+      function filterBloodDonationRequests() {
+        var hospital = $("#hospitalFilter").val().trim().toLowerCase();
+        var governorate = $("#governorateFilter").val().trim().toLowerCase();
+        var area = $("#areaFilter").val().trim().toLowerCase();
+
+        $("table tbody tr").each(function () {
+          var rowHospital = $(this).find("td:nth-child(3)").text().trim().toLowerCase();
+          var rowGovernorate = $(this).find("td:nth-child(4)").text().trim().toLowerCase();
+          var rowArea = $(this).find("td:nth-child(5)").text().trim().toLowerCase();
+
+          var showRow = true;
+
+          if (hospital !== "" && rowHospital !== hospital) {
+            showRow = false;
+          }
+
+          if (governorate !== "" && rowGovernorate !== governorate) {
+            showRow = false;
+          }
+
+          if (area !== "" && rowArea !== area) {
+            showRow = false;
+          }
+
+          $(this).toggle(showRow);
+        });
+      }
     });
+  </script>
 
-    function filterBloodDonationRequests() {
-      var hospital = $("#hospitalFilter").val().trim().toLowerCase();
-      var governorate = $("#governorateFilter").val().trim().toLowerCase();
-      var area = $("#areaFilter").val().trim().toLowerCase();
+  <script>
+    function showHospitalLocation(hospitalName, latitude, longitude) {
+      // Clear previous map
+      document.getElementById("mapContainer").innerHTML = "";
 
-      $("table tbody tr").each(function () {
-        var rowHospital = $(this).find("td:nth-child(3)").text().trim().toLowerCase();
-        var rowGovernorate = $(this).find("td:nth-child(4)").text().trim().toLowerCase();
-        var rowArea = $(this).find("td:nth-child(5)").text().trim().toLowerCase();
+      // Create a map container div
+      var mapContainer = document.createElement('div');
+      mapContainer.setAttribute('id', 'map');
+      mapContainer.style.height = '100%'; // Set height to 100% to fill the container
 
-        var showRow = true;
+      // Append the map container to the designated map container div
+      document.getElementById("mapContainer").appendChild(mapContainer);
 
-        if (hospital !== "" && rowHospital !== hospital) {
-          showRow = false;
-        }
+      // Initialize the map
+      var map = new google.maps.Map(mapContainer, {
+        center: { lat: latitude, lng: longitude },
+        zoom: 15
+      });
 
-        if (governorate !== "" && rowGovernorate !== governorate) {
-          showRow = false;
-        }
-
-        if (area !== "" && rowArea !== area) {
-          showRow = false;
-        }
-
-        $(this).toggle(showRow);
+      // Create a marker and set its position
+      var marker = new google.maps.Marker({
+        map: map,
+        position: { lat: latitude, lng: longitude },
+        title: hospitalName
       });
     }
-  });
-</script>
+  </script>
 </body>
-
 
 </html>
