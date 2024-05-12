@@ -24,6 +24,17 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
+    .mapContainer57357,
+    .mapContainer,
+    .mapContainerSOS,
+    .mapContainerStMaryChurch,
+    .mapContainerMisrElKhair {
+      height: 400px;
+      width: 100%;
+      margin-top: 20px;
+    
+    }
+
     .navbar-brand {
       font-size: 22.5px;
       margin-left: 10px;
@@ -387,6 +398,7 @@
           <th>Area</th>
           <th>Location</th>
           <th>Uploaded Document</th>
+          <th>Status</th>
           <th> Action</th>
         </tr>
       </thead>
@@ -400,14 +412,23 @@
         <td>19057 <br> info@57357.org</td>
         <td>Cairo</td>
         <td>El-Saida Zenab</td>
-        <td><a href="document1.pdf" target="_blank">Document1.pdf</a></td>
+        <td><a href="or1.pdf" target="_blank">Document1.pdf</a></td>
         <td> <button class="btnn3" onclick="showLocation57357()">
             <img src="map.png">
-        <td><a href="doctor certificate1.pdf" target="_blank">Document1.pdf</a></td>
-        <td> <button class="btnn3" onclick="downloadSubmission('57357')">
-            <img src="download2.png" alt="Download Icon">
-          </button>
-          </button>
+            <td> <button class="btnn3" onclick="downloadSubmission('57357')">
+              <img src="download2.png" alt="Download Icon">
+            </button>
+            <p></p>
+            <!-- Accept button with image -->
+            <button class="btnn3" onclick="acceptSubmission('57357')">
+              <img src="accept.png" alt="Accept Icon">
+            </button>
+            <p></p>
+            <!-- Reject button with image -->
+            <button class="btnn3" onclick="rejectSubmission('57357')">
+              <img src="rej.png" alt="Reject Icon">
+            </button>
+            <p></p>
         </td>
         </tr>
         <!-- Organization 2 -->
@@ -418,12 +439,23 @@
           <td>02 26079714 <br> test2@test.com</td>
           <td>Cairo</td>
           <td>El Rehab</td>
-          <td><a href="document2.pdf" target="_blank">Document2.pdf</a></td>
+          <td><a href="org2.pdf" target="_blank">Document2.pdf</a></td>
           <td><button class="btnn3" onclick="showLocationOthmanIbnAffanSchool()"><img src="map.png"></button></td>
-          <td><a href="doctor certificate1.pdf" target="_blank">Document1.pdf</a></td>
           <td> <button class="btnn3" onclick="downloadSubmission('Othman Ibn Affan School')">
-              <img src="download2.png" alt="Download Icon">
-            </button>
+            <img src="download2.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btnn3" onclick="acceptSubmission('Othman Ibn Affan School')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btnn3" onclick="rejectSubmission('Othman Ibn Affan School')">
+            <img src="rej.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
         </tr>
         <!-- Organization 3 -->
         <tr>
@@ -433,12 +465,23 @@
           <td>011 20000341 <br> Children.VillageEgy@gmail.com</td>
           <td>New Cairo</td>
           <td>Nasr city</td>
-          <td><a href="document3.pdf" target="_blank">Document3.pdf</a></td>
+          <td><a href="org3.pdf" target="_blank">Document3.pdf</a></td>
           <td><button class="btnn3" onclick="showLocationSOS()"><img src="map.png"></button></td>
-          <td><a href="doctor certificate1.pdf" target="_blank">Document1.pdf</a></td>
           <td> <button class="btnn3" onclick="downloadSubmission('SOS Childrens Villages Egypt')">
-              <img src="download2.png" alt="Download Icon">
-            </button>
+            <img src="download2.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btnn3" onclick="acceptSubmission('SOS Childrens Villages Egypt')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btnn3" onclick="rejectSubmission('SOS Childrens Villages Egypt')">
+            <img src="rej.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
         </tr>
         <!-- Organization 4 -->
         <tr>
@@ -448,13 +491,23 @@
           <td>0235655211 <br> MEKassociationegy@gmail.com</td>
           <td>Giza</td>
           <td>El Omraniya</td>
-          <td><a href="document4.pdf" target="_blank">Document4.pdf</a></td>
+          <td><a href="org4.pdf" target="_blank">Document4.pdf</a></td>
           <td><button class="btnn3" onclick="showLocationMisrElKhair()"><img src="map.png"></button></td>
-          <td><a href="doctor certificate1.pdf" target="_blank">Document1.pdf</a></td>
           <td> <button class="btnn3" onclick="downloadSubmission('Misr El Khair Association')">
-              <img src="download2.png" alt="Download Icon">
-            </button>
-        
+            <img src="download2.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btnn3" onclick="acceptSubmission('Misr El Khair Association')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btnn3" onclick="rejectSubmission('Misr El Khair Association')">
+            <img src="rej.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
         </tr>
         <!-- Organization 5 -->
         
@@ -465,24 +518,36 @@
           <td>19558 <br> stmarychurch@gmail.com</td>
           <td>Cairo</td>
           <td>El Rehab</td>
-          <td><a href="document6.pdf" target="_blank">Document6.pdf</a></td>
+          <td><a href="org5.pdf" target="_blank">Document5.pdf</a></td>
           <td><button class="btnn3" onclick="showLocationStMaryChurch()"><img src="map.png"></button></td>
-          <td><a href="doctor certificate1.pdf" target="_blank">Document1.pdf</a></td>
           <td> <button class="btnn3" onclick="downloadSubmission('St.Mary Church')">
-              <img src="download2.png" alt="Download Icon">
-            </button>
-            <!-- Organization 1 -->
+            <img src="download2.png" alt="Download Icon">
+          </button>
+          <p></p>
+          <!-- Accept button with image -->
+          <button class="btnn3" onclick="acceptSubmission('St.Mary Church')">
+            <img src="accept.png" alt="Accept Icon">
+          </button>
+          <p></p>
+          <!-- Reject button with image -->
+          <button class="btnn3" onclick="rejectSubmission('St.Mary Church')">
+            <img src="rej.png" alt="Reject Icon">
+          </button>
+          <p></p>
+        </td>
+        </tr>
         
       </tbody>
     </table>
   </div>
 
 
-  <div id="mapContainer"></div> <!-- Container for the map -->
-  <div id="mapContainer57357"></div>
-  <div id="mapContainerSOS"></div>
-  <div id="mapContainerMisrElKhair"></div>
-  <div id="mapContainerStMaryChurch"></div>
+  <div id="mapContainer"  style="margin-left:400px;"></div> <!-- Container for the map -->
+  <div id="mapContainer57357" style="margin-left:400px;"></div>
+  <div id="mapContainerSOS"  style="margin-left:400px;"></div>
+  <div id="mapContainerMisrElKhair"  style="margin-left:400px;"></div>
+  <div id="mapContainerStMaryChurch"  style="margin-left:400px;"></div>
+
 
 
 
@@ -532,105 +597,7 @@
     </svg></div>
 
 
-    <script>
-      function showLocationStMaryChurch() {
-        var latitude = 30.066350592074382;
-        var longitude = 31.4764058730124;
-
-        // Create a map container div
-        var mapContainer = document.createElement('div');
-        mapContainer.setAttribute('id', 'mapStMaryChurch');
-
-        // Append the map container to the designated map container div
-        document.getElementById("mapContainerStMaryChurch").innerHTML = "";
-        document.getElementById("mapContainerStMaryChurch").appendChild(mapContainer);
-
-        // Create the HTML for the map iframe
-        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13812.036419398166!2d31.4763415!3d30.0652735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458186e504a28e5%3A0x27a8700e89fa6ccc!2sSt.Mary%20Church%20-%20El%20Rehab!5e0!3m2!1sen!2seg!4v1715514786911!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-
-        // Set the HTML for the map iframe
-        mapContainer.innerHTML = mapIframe;
-      }
-    </script>
-    
-    
-    
-    <script>
-      function showLocationMisrElKhair() {
-        var latitude = 30.00684960518526;
-        var longitude = 31.192306222125996;
-
-        // Create a map container div
-        var mapContainer = document.createElement('div');
-        mapContainer.setAttribute('id', 'mapMisrElKhair');
-
-        // Append the map container to the designated map container div
-        document.getElementById("mapContainerMisrElKhair").innerHTML = "";
-        document.getElementById("mapContainerMisrElKhair").appendChild(mapContainer);
-
-        // Create the HTML for the map iframe
-        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221133.51424056874!2d30.889838894531238!3d30.002092600000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145845cd38b5628d%3A0x4a5319735a56c9df!2sMisr%20El%20Khair%20Association!5e0!3m2!1sen!2seg!4v1715514408691!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-
-        // Set the HTML for the map iframe
-        mapContainer.innerHTML = mapIframe;
-      }
-    </script>
-    
-    <script>
-      function showLocationSOS() {
-        var latitude = 30.066392312303318;
-        var longitude = 31.351658769616677;
-
-        // Create a map container div
-        var mapContainer = document.createElement('div');
-        mapContainer.setAttribute('id', 'mapSOS');
-
-        // Append the map container to the designated map container div
-        document.getElementById("mapContainerSOS").innerHTML = "";
-        document.getElementById("mapContainerSOS").appendChild(mapContainer);
-
-        // Create the HTML for the map iframe
-        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.973636168219!2d31.3490141116906!3d30.06629017480789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14582244a5945363%3A0x62a47d4aaaf2bcb8!2sSOS%20Children&#39;s%20Villages%20Egypt!5e0!3m2!1sen!2seg!4v1715513886709!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-
-        // Set the HTML for the map iframe
-        mapContainer.innerHTML = mapIframe;
-      }
-    </script>
-    
-    <script>
-      // Method to display the location of Othman ibn Affan School
-      function showLocationOthmanIbnAffanSchool() {
-        var latitude = 30.074008740029157;
-        var longitude = 31.490994618478;
-
-        // Create the HTML for the map iframe
-        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13810.931337108168!2d31.4902436!3d30.0731917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458185f0b41a2eb%3A0x10e2289913c8d8e!2sOthman%20Ibn%20Affan%20School!5e0!3m2!1sen!2seg!4v1715513224035!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-
-        // Set the HTML for the map iframe
-        document.getElementById('mapContainer').innerHTML = mapIframe;
-      }
-    </script>
-    <script>
-      // Method to display the location of Children's Cancer Hospital Egypt 57357
-      function showLocation57357() {
-        var latitude = 30.023156092641084;
-        var longitude = 31.237981784956986;
-
-        // Create a map container div
-        var mapContainer = document.createElement('div');
-        mapContainer.setAttribute('id', 'map57357');
-
-        // Append the map container to the designated map container div
-        document.getElementById("mapContainer57357").innerHTML = "";
-        document.getElementById("mapContainer57357").appendChild(mapContainer);
-
-        // Create the HTML for the map iframe
-        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4829992571154!2d31.235294211689308!3d30.02299817482991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458474801f2136f%3A0x5b7e6b7cbf39dd15!2sChildren%E2%80%99s%20Cancer%20Hospital%20Egypt%2057357!5e0!3m2!1sen!2seg!4v1715512140504!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-
-        // Set the HTML for the map iframe
-        mapContainer.innerHTML = mapIframe;
-      }
-    </script>
+   
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -674,22 +641,163 @@
       // Replace this with actual implementation
       alert(`Downloading submission for ${organizationName}`);
     }
+// Function to accept organization submission
+function acceptSubmission(organizationName) {
+  // Logic to accept the submission for the given organization
+  // For demonstration purposes, let's assume we have a variable `statusCell` representing the status cell in the table
 
-    // Function to accept organization submission
-    function acceptSubmission(organizationName) {
-      // Logic to accept the submission for the given organization
-      // Replace this with actual implementation
-      alert(`Accepting submission for ${organizationName}`);
-    }
+  // Find the row corresponding to the organization name
+  var row = document.querySelector(`tr:contains(${organizationName})`);
 
-    // Function to reject organization submission
-    function rejectSubmission(organizationName) {
-      // Logic to reject the submission for the given organization
-      // Replace this with actual implementation
-      alert(`Rejecting submission for ${organizationName}`);
-    }
+  // Update the status cell content to "Accepted"
+  row.querySelector('td:nth-child(8)').innerText = "Accepted";
+
+  // You can also add additional styling or visual feedback if needed
+  
+  // Alert or any other actions as needed
+  alert(`Accepting submission for ${organizationName}`);
+}
+
+// Function to reject organization submission
+function rejectSubmission(organizationName) {
+  // Logic to reject the submission for the given organization
+  // Similar to acceptSubmission, update the status cell content to "Rejected"
+
+  // Find the row corresponding to the organization name
+  var row = document.querySelector(`tr:contains(${organizationName})`);
+
+  // Update the status cell content to "Rejected"
+  row.querySelector('td:nth-child(8)').innerText = "Rejected";
+
+  // You can also add additional styling or visual feedback if needed
+  
+  // Alert or any other actions as needed
+  alert(`Rejecting submission for ${organizationName}`);
+}
+
   </script>
 
+    
+<script>
+  function showLocationStMaryChurch() {
+    clearMaps();
+    var latitude = 30.066350592074382;
+    var longitude = 31.4764058730124;
+
+    // Create a map container div
+    var mapContainer = document.createElement('div');
+    mapContainer.setAttribute('id', 'mapStMaryChurch');
+
+    // Append the map container to the designated map container div
+    document.getElementById("mapContainerStMaryChurch").innerHTML = "";
+    document.getElementById("mapContainerStMaryChurch").appendChild(mapContainer);
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13812.036419398166!2d31.4763415!3d30.0652735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458186e504a28e5%3A0x27a8700e89fa6ccc!2sSt.Mary%20Church%20-%20El%20Rehab!5e0!3m2!1sen!2seg!4v1715514786911!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    mapContainer.innerHTML = mapIframe;
+  }
+</script>
+
+
+
+<script>
+  function showLocationMisrElKhair() {
+    clearMaps();
+    var latitude = 30.00684960518526;
+    var longitude = 31.192306222125996;
+
+    // Create a map container div
+    var mapContainer = document.createElement('div');
+    mapContainer.setAttribute('id', 'mapMisrElKhair');
+
+    // Append the map container to the designated map container div
+    document.getElementById("mapContainerMisrElKhair").innerHTML = "";
+    document.getElementById("mapContainerMisrElKhair").appendChild(mapContainer);
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221133.51424056874!2d30.889838894531238!3d30.002092600000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145845cd38b5628d%3A0x4a5319735a56c9df!2sMisr%20El%20Khair%20Association!5e0!3m2!1sen!2seg!4v1715514408691!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    mapContainer.innerHTML = mapIframe;
+  }
+</script>
+
+<script>
+  function showLocationSOS() {
+    clearMaps();
+    var latitude = 30.066392312303318;
+    var longitude = 31.351658769616677;
+
+    // Create a map container div
+    var mapContainer = document.createElement('div');
+    mapContainer.setAttribute('id', 'mapSOS');
+
+    // Append the map container to the designated map container div
+    document.getElementById("mapContainerSOS").innerHTML = "";
+    document.getElementById("mapContainerSOS").appendChild(mapContainer);
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.973636168219!2d31.3490141116906!3d30.06629017480789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14582244a5945363%3A0x62a47d4aaaf2bcb8!2sSOS%20Children&#39;s%20Villages%20Egypt!5e0!3m2!1sen!2seg!4v1715513886709!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    mapContainer.innerHTML = mapIframe;
+  }
+</script>
+
+<script>
+  // Method to display the location of Othman ibn Affan School
+  function showLocationOthmanIbnAffanSchool() {
+    clearMaps();
+    var latitude = 30.074008740029157;
+    var longitude = 31.490994618478;
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13810.931337108168!2d31.4902436!3d30.0731917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458185f0b41a2eb%3A0x10e2289913c8d8e!2sOthman%20Ibn%20Affan%20School!5e0!3m2!1sen!2seg!4v1715513224035!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    document.getElementById('mapContainer').innerHTML = mapIframe;
+    document.getElementById("mapContainer").appendChild(mapContainer);
+
+  }
+</script>
+
+<script>
+  // Method to display the location of Children's Cancer Hospital Egypt 57357
+  function showLocation57357() {
+    clearMaps();
+    var latitude = 30.023156092641084;
+    var longitude = 31.237981784956986;
+
+    // Create a map container div
+    var mapContainer = document.createElement('div');
+    mapContainer.setAttribute('id', 'map57357');
+
+    // Append the map container to the designated map container div
+    document.getElementById("mapContainer57357").innerHTML = "";
+    document.getElementById("mapContainer57357").appendChild(mapContainer);
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4829992571154!2d31.235294211689308!3d30.02299817482991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458474801f2136f%3A0x5b7e6b7cbf39dd15!2sChildren%E2%80%99s%20Cancer%20Hospital%20Egypt%2057357!5e0!3m2!1sen!2seg!4v1715512140504!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    mapContainer.innerHTML = mapIframe;
+  }
+</script>
+<script>
+  // Function to clear all map containers
+  function clearMaps() {
+    document.getElementById("mapContainerStMaryChurch").innerHTML = "";
+    document.getElementById("mapContainerMisrElKhair").innerHTML = "";
+    document.getElementById("mapContainerSOS").innerHTML = "";
+    document.getElementById("mapContainer57357").innerHTML = "";
+    document.getElementById("mapContainer").innerHTML = "";
+  }
+</script>
+</body>
+
+</html>
 </body>
 
 </html>
