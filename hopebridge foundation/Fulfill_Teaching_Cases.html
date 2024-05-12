@@ -469,7 +469,9 @@
                                     onclick="fulfillTeachingCase('Mathematics')"><img src="accept.png"></button></td>
 
                             <td>
-                                <button type="button" class="btnn3" onclick="showTeachingPostLocation(31.2241, 29.9658)"><img src="map.png"></button>
+                                <button type="button" class="btnn3" onclick="showBritishSchoolAlexandriaLocation()"><img src="map.png"></button>
+
+
 
                             </td>
 
@@ -484,8 +486,8 @@
                             <td><button type="submit" class="btnn3 "
                                     onclick="fulfillTeachingCase('English')"><img src="accept.png"></button></td>
                             <td>
-                                <button type="button" class="btnn3"
-                                    onclick="showTeachingPostLocation('map1', 30.0444, 31.2357, 10)"><img src="map.png"></button>
+<button type="button" class="btnn3" onclick="showCambridgeSchoolLocation()"><img src="map.png"></button>
+
                             </td>
 
                         </tr>
@@ -499,8 +501,8 @@
                             <td><button type="submit" class="btnn3"
                                     onclick="fulfillTeachingCase('Science')"><img src="accept.png"></button></td>
                             <td>
-                                <button type="button" class="btnn3"
-                                    onclick="showTeachingPostLocation('map2', 30.0444, 31.2357, 10)"><img src="map.png"></button>
+                                <button type="button" class="btnn3" onclick="showBICCschoolLocation()"><img src="map.png"></button>
+
                             </td>
 
                         </tr>
@@ -514,8 +516,8 @@
                             <td><button type="submit" class="btnn3"
                                     onclick="fulfillTeachingCase('Mathematics')"><img src="accept.png"></button></td>
                             <td>
-                                <button type="button" class="btnn3"
-                                    onclick="showTeachingPostLocation('map3', 30.0444, 31.2357, 10)"><img src="map.png"></button>
+<button type="button" class="btnn3" onclick="showVictoryCollegeLocation()"><img src="map.png"></button>
+
                             </td>
                         </tr>
                         </tr>
@@ -528,8 +530,8 @@
                             <td><button type="submit" class="btnn3"
                                     onclick="fulfillTeachingCase('English')"><img src="accept.png"></button></td>
                             <td>
-                                <button type="button" class="btnn3"
-                                    onclick="showTeachingPostLocation('map4', 30.0444, 31.2357, 10)"><img src="map.png"></button>
+                                <button type="button" class="btnn3" onclick="showBritishSchoolAlexandriaLocation()"><img src="map.png"></button>
+
                             </td>
 
                         </tr>
@@ -540,6 +542,17 @@
             </div>
         </div>
     </section>
+
+
+    <div id="mapContainerMandara"></div>
+<div id="mapContainerBICCschool"></div>
+<div id="mapContainerCairoAmericanCollege"></div>
+<div id="mapContainerBritishSchoolAlexandria"></div>
+<div id="mapContainerCambridgeSchool"></div>
+<div id="mapContainerElShoroukCampus"></div>
+<div id="mapContainerCambridgeSchool"></div>
+<div id="mapContainerVictoryCollege"></div>
+
 
     <footer class="footer">
         <div class="container">
@@ -585,6 +598,195 @@
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
                 stroke="#F96D00" />
         </svg></div>
+
+
+
+
+
+<script>
+  function showCambridgeSchoolLocation() {
+        clearMaps();
+
+    var latitude = 30.055277810051443;
+    var longitude = 31.41443784078122;
+
+    // Create a map container div
+    var mapContainer = document.createElement('div');
+    mapContainer.setAttribute('id', 'mapCambridgeSchool');
+
+    // Clear existing maps
+
+    // Append the map container to the designated map container div
+    document.getElementById("mapContainerCambridgeSchool").appendChild(mapContainer);
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.3616524707377!2d31.41180391169054!3d30.055166374813595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583d6e88da25df%3A0xbcd2f929af7c2d60!2sCambridge%20Egypt%20-%20Egypt%20Integrated%20Schools!5e0!3m2!1sen!2seg!4v1715532561012!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    mapContainer.innerHTML = mapIframe;
+  }
+</script>
+
+
+        <script>
+          // Function to clear all map containers
+          function clearMaps() {
+            document.getElementById("mapContainerMandara").innerHTML = "";
+            document.getElementById("mapContainerElShoroukCampus").innerHTML = "";
+            document.getElementById("mapContainerBICCschool").innerHTML = "";
+            document.getElementById("mapContainerVictoryCollege").innerHTML = "";
+            document.getElementById("mapContainerBritishSchoolAlexandria").innerHTML = "";
+ document.getElementById("mapContainerCambridgeSchool").innerHTML = "";
+
+          }
+        </script>
+
+        <script>
+          function showBritishSchoolAlexandriaLocation() {
+            clearMaps();
+
+            var latitude = 31.225131721095003;
+            var longitude = 29.95587316932845;
+            var zoomLevel = 10;
+
+            // Create a map container div
+            var mapContainer = document.createElement('div');
+            mapContainer.setAttribute('id', 'mapBritishSchoolAlexandria');
+
+            // Clear existing maps
+
+            // Append the map container to the designated map container div
+            document.getElementById("mapContainerBritishSchoolAlexandria").appendChild(mapContainer);
+
+            // Create the HTML for the map iframe
+            var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.8507405559308!2d29.953811711729387!3d31.22486437424372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c4c379ade7f5%3A0xf79737b051c00bb4!2sThe%20British%20School%20of%20Alexandria!5e0!3m2!1sen!2seg!4v1715531946032!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+            // Set the HTML for the map iframe
+            mapContainer.innerHTML = mapIframe;
+          }
+        </script>
+
+        <script>
+          function showCairoAmericanCollegeLocation() {
+            clearMaps();
+            var latitude = 29.958845846648856;
+            var longitude = 31.274894411942554;
+            var zoomLevel = 10;
+
+            // Create a map container div
+            mapContainer.setAttribute('id', 'mapCairoAmericanCollege');
+
+            // Clear existing maps
+
+            // Append the map container to the designated map container div
+            document.getElementById("mapContainerCairoAmericanCollege").appendChild(mapContainer);
+
+            // Create the HTML for the map iframe
+            var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.717964211564!2d31.272271211687272!3d29.958790074862414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583812970bbd17%3A0x7f10782ad907abac!2sCairo%20American%20College!5e0!3m2!1sen!2seg!4v1715531852348!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+            // Set the HTML for the map iframe
+            mapContainer.innerHTML = mapIframe;
+          }
+        </script>
+
+        <script>
+          function showBICCschoolLocation() {
+            clearMaps();
+
+            var latitude = 30.15417503746284;
+            var longitude = 31.63883253893668;
+            var zoomLevel = 10;
+
+            // Create a map container div
+            var mapContainer = document.createElement('div');
+            mapContainer.setAttribute('id', 'mapBICCschool');
+
+            // Clear existing maps
+
+            // Append the map container to the designated map container div
+            document.getElementById("mapContainerBICCschool").appendChild(mapContainer);
+
+            // Create the HTML for the map iframe
+            var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.9096593068866!2d31.636273711693804!3d30.153998774763796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457f798c0267b29%3A0x3b6bdd45a65ab41d!2sThe%20Egyptian%20British%20International%20School%20-%20El%20Shorouk%20Campus!5e0!3m2!1sen!2seg!4v1715531703940!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+            // Set the HTML for the map iframe
+            mapContainer.innerHTML = mapIframe;
+          }
+        </script>
+
+        <script>
+          function showSeragMallLocation() {
+            clearMaps();
+
+            var latitude = 30.051249298268313;
+            var longitude = 31.349474423821995;
+            var zoomLevel = 10;
+
+            // Create a map container div
+            var mapContainer = document.createElement('div');
+            mapContainer.setAttribute('id', 'mapSeragMall');
+
+            // Clear existing maps
+
+            // Append the map container to the designated map container div
+            document.getElementById("mapContainerSeragMall").appendChild(mapContainer);
+
+            // Create the HTML for the map iframe
+            var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6906.908425242161!2d31.334958309525895!3d30.052512273578284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583ffe2924d7f9%3A0x1bfe4412dce53e87!2sEl%20Serag%20Mall!5e0!3m2!1sen!2seg!4v1715531476605!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+            // Set the HTML for the map iframe
+            mapContainer.innerHTML = mapIframe;
+          }
+        </script>
+
+        <script>
+          function showTeachingPostLocation() {
+            clearMaps();
+
+            var latitude = 31.27541465266786;
+            var longitude = 30.00654318628589;
+
+            // Create a map container div
+            var mapContainer = document.createElement('div');
+            mapContainer.setAttribute('id', 'mapMandara');
+
+            // Clear existing maps
+
+            // Append the map container to the designated map container div
+            document.getElementById("mapContainerMandara").appendChild(mapContainer);
+
+            // Create the HTML for the map iframe
+            var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13640.183277656866!2d29.995835808556762!3d31.274827787521144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5d070fc90f301%3A0xb98635fcce33c78c!2sEl-Mandara%2C%20Al%20Mandarah%20Bahri%2C%20Montaza%202%2C%20Alexandria%20Governorate%205526065!5e0!3m2!1sen!2seg!4v1715531072654!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+            // Set the HTML for the map iframe
+            mapContainer.innerHTML = mapIframe;
+          }
+        </script>
+
+        <script>
+          function showVictoryCollegeLocation() {
+                        clearMaps();
+
+            var latitude = 29.962592114260726;
+            var longitude = 31.271706642625904;
+
+            // Create a map container div
+            var mapContainer = document.createElement('div');
+            mapContainer.setAttribute('id', 'mapVictoryCollege');
+
+            // Clear existing maps
+
+            // Append the map container to the designated map container div
+            document.getElementById("mapContainerVictoryCollege").appendChild(mapContainer);
+
+            // Create the HTML for the map iframe
+            var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.5896223059303!2d31.268997611687425!3d29.962480574860557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458380ce42a2729%3A0x274a141c3af2714e!2sVictory%20College!5e0!3m2!1sen!2seg!4v1715532828250!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+            // Set the HTML for the map iframe
+            mapContainer.innerHTML = mapIframe;
+          }
+        </script>
+
 
 
     <script src="js/jquery.min.js"></script>
@@ -668,23 +870,7 @@
         }
     }
 </script>
-    <script>
-        function showTeachingPostLocation(lat, lng) {
-                // Construct the Google Maps URL with the specified coordinates
-                var mapsUrl = "https://www.google.com/maps?q=" + lat + "," + lng;
-
-                // Open the Google Maps URL in a new tab
-                window.open(mapsUrl, '_blank');
-            }
-
-        function initializeMap(mapId, lat, lng, zoom) {
-            var mapOptions = {
-                center: { lat: lat, lng: lng },
-                zoom: zoom
-            };
-            var map = new google.maps.Map(document.getElementById(mapId), mapOptions);
-        }
-    </script>
+   
 
 </body>
 

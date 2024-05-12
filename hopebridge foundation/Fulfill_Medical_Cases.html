@@ -432,7 +432,7 @@
         <select id="areaFilter" class="form-control">
           <option value="">All Areas</option>
           <option value="Maadi">Maadi</option>
-          <option value="Nasr City">Nasr City</option>
+          <option value="Nasr City">New Cairo</option>
           <option value="Giza">Giza</option>
           <option value="Dokki">Dokki</option>
           <option value="Garden City">Garden City</option>
@@ -445,7 +445,7 @@
         <label id= "text1" for="organizationFilter">Filter by Organization Name:</label>
         <select id="organizationFilter" class="form-control">
           <option value="">All Organizations</option>
-          <option value="El Salam Hopital">El Salam Hopital</option>
+          <option value="El Galaa Hospital">El Galaa Hospital</option>
           <option value="Nile Badrawy Hospital">Nile Badrawy Hospital</option>
           <option value="Cleopatra Hospital">Cleopatra Hospital</option>
           <option value="Al Farouq Hospital">Al Farouq Hospital</option>
@@ -507,14 +507,14 @@
                 <td>Needs orthopedic surgery and rehabilitation</td>
                 <td><button class="btnn3" onclick="fulfillMedicalCase('Fractured Leg')"><img src="accept.png"></button>
                 </td>
-                <td><button class="btnn3" onclick="showMap('Maadi, Cairo')"><img src="map.png"></button></td>
+                <td><button class="btnn3" onclick="showLocationAlFaruqHospital()"><img src="map.png"></button></td>
               </tr>
               <tr>
                 <td>John Doe</td>
                 <td>Male</td>
                 <td>50 <br> 80 kg</td>
-                <td>El Salam Hopital</td>
-                <td>Nasr City</td>
+                <td>El Galaa Hospital</td>
+                <td>New Cairo</td>
                 <td>Cairo</td>
                 <td>Oncology</td>
                 <td>Lung Cancer</td>
@@ -522,7 +522,7 @@
                 <td><button class="btnn3" onclick="fulfillMedicalCase('Lung Cancer')"><img src="accept.png"></button>
                 </td>
                 </td>
-                <td><button class="btnn3" onclick="showMap('Nasr City, Cairo')"><img src="map.png"></button></td>
+                <td><button class="btnn3" onclick="showLocationGalaHospital()"><img src="map.png"></button></td>
               </tr>
               <tr>
                 <td>Maria Garcia</td>
@@ -537,7 +537,7 @@
                 <td><button class="btnn3" onclick="fulfillMedicalCase('Heart Attack')"><img src="accept.png"></button>
                 </td>
                 </td>
-                <td><button class="btnn3" onclick="showMap('Giza, 6 of October')"><img src="map.png"></button></td>
+<td><button class="btnn3" onclick="showLocationDarfouad()"><img src="map.png"></button></td>
                 </td>
               </tr>
               <tr>
@@ -552,7 +552,7 @@
                 <td>Stroke</td>
                 <td>Requires neurosurgery and rehabilitation</td>
                 <td><button class="btnn3" onclick="fulfillMedicalCase('Stroke')"><img src="accept.png"></button></td>
-                <td><button class="btnn3" onclick="showMap('Dokki, Giza')"><img src="map.png"></button></td>
+    <td><button class="btnn3" onclick="showMapAlNourEyeHospital()"><img src="map.png"></button></td>
               </tr>
               <tr>
                 <td>Williams James</td>
@@ -568,7 +568,7 @@
                 <td><button class="btnn3" onclick="fulfillMedicalCase('Brain Tumor')"><img src="accept.png"></button>
                 </td>
                 </td>
-                <td><button class="btnn3" onclick="showMap('Nasr City, Cairo')"><img src="map.png"></button></td>
+    <td><button class="btnn3" onclick="showMapCureHospital()"><img src="map.png"></button></td>
               </tr>
 
               <tr>
@@ -585,7 +585,7 @@
                 <td><button class="btnn3" onclick="fulfillMedicalCase('Skin Cancer')"><img src="accept.png"></button>
                 </td>
                 </td>
-                <td><button class="btnn3" onclick="showMap('Garden City, Cairo')"><img src="map.png"></button></td>
+    <td><button class="btnn3" onclick="showMapElNileBadrawyHospitals()"><img src="map.png"></button></td>
                 </td>
               </tr>
 
@@ -602,7 +602,7 @@
                 <td>Needs fertility evaluation and treatment</td>
                 <td><button class="btnn3" onclick="fulfillMedicalCase('Infertility')"><img src="accept.png"></button>
                 </td>
-                <td><button class="btnn3" onclick="showMap('Heliopolis, Cairo')"><img src="map.png"></button></td>
+    <td><button class="btnn3" onclick="showMapCleopatraHospitals()"><img src="map.png"></button></td>
               </tr>
             </tbody>
           </table>
@@ -610,6 +610,17 @@
       </div>
     </section>
   </div>
+
+    <div id="mapContainerAlFaruqHospital"></div>
+    <div id="mapContainerGalaHospital"></div>
+    <div id="mapContainerDarfouad"></div>
+    <div id="mapContainerAlNourEyeHospital"></div>
+    <div id="mapContainerCureHospital"></div>
+        <div id="mapContainerElNileBadrawyHospitals"></div>
+    <div id="mapContainerCleopatraHospitals"></div>
+
+
+
 
 
   <footer class="footer">
@@ -656,6 +667,181 @@
       <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
         stroke="#F96D00" />
     </svg></div>
+
+    
+
+
+
+    <script>
+      // Function to clear all map containers
+      function clearMaps() {
+        document.getElementById("mapContainerAlFaruqHospital").innerHTML = "";
+        document.getElementById("mapContainerGalaHospital").innerHTML = "";
+        document.getElementById("mapContainerDarfouad").innerHTML = "";
+        document.getElementById("mapContainerAlNourEyeHospital").innerHTML = "";
+        document.getElementById("mapContainerCureHospital").innerHTML = "";
+      document.getElementById("mapContainerElNileBadrawyHospitals").innerHTML = "";
+              document.getElementById("mapContainerCleopatraHospitals").innerHTML = "";
+
+
+      }
+    </script>
+
+    <script>
+      function showMapCleopatraHospitals() {
+        clearMaps()
+        var latitude = 30.093183467349082;
+        var longitude = 31.329848083111518;
+
+        // Create a map container div
+        var mapContainer = document.createElement('div');
+        mapContainer.setAttribute('id', 'mapCleopatraHospitals');
+
+        // Append the map container to the designated map container div
+        document.getElementById("mapContainerCleopatraHospitals").innerHTML = "";
+        document.getElementById("mapContainerCleopatraHospitals").appendChild(mapContainer);
+
+        // Create the HTML for the map iframe
+        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.0389059006584!2d31.327235611691634!3d30.093072074794524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458158a930edb85%3A0x642c923f11f70af4!2zQ2xlb3BhdHJhIEhvc3BpdGFsINmF2LPYqti02YHZiSDZg9mE2YrZiNio2KfYqtix2KcgLSBDbGVvcGF0cmEgSG9zcGl0YWxzIEdyb3Vw!5e0!3m2!1sen!2seg!4v1715529714085!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+        // Set the HTML for the map iframe
+        mapContainer.innerHTML = mapIframe;
+      }
+    </script>
+
+    <script>
+      function showMapElNileBadrawyHospitals() {
+        clearMaps()
+        var latitude = 29.98279522919301;
+        var longitude = 31.231350400297316;
+
+        // Create a map container div
+        var mapContainer = document.createElement('div');
+        mapContainer.setAttribute('id', 'mapElNileBadrawyHospitals');
+
+        // Append the map container to the designated map container div
+        document.getElementById("mapContainerElNileBadrawyHospitals").innerHTML = "";
+        document.getElementById("mapContainerElNileBadrawyHospitals").appendChild(mapContainer);
+
+        // Create the HTML for the map iframe
+        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.889688510552!2d31.228619911688032!3d29.982600074850296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847a5251ae3ff%3A0x968f4b181ae3ab97!2zRWwgTmlsZSBCYWRyYXd5IEhvc3BpdGFsINmF2LPYqti02YHZiSDYp9mE2YbZitmEINio2K_YsdmI2KfZiiAtIENsZW9wYXRyYSBIb3NwaXRhbHMgR3JvdXA!5e0!3m2!1sen!2seg!4v1715529588177!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+        // Set the HTML for the map iframe
+        mapContainer.innerHTML = mapIframe;
+      }
+    </script>
+
+<script>
+  function showMapCureHospital() {
+    clearMaps()
+    var latitude = 30.0466299939604;
+    var longitude = 31.343751867768432;
+
+    // Create a map container div
+    var mapContainer = document.createElement('div');
+    mapContainer.setAttribute('id', 'mapCureHospital');
+
+    // Append the map container to the designated map container div
+    document.getElementById("mapContainerCureHospital").innerHTML = "";
+    document.getElementById("mapContainerCureHospital").appendChild(mapContainer);
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.6638604403183!2d31.34118231169014!3d30.046499974817966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e7d58a24c05%3A0x802172fcdc3babd2!2sCure%20Hospital!5e0!3m2!1sen!2seg!4v1715529443407!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    mapContainer.innerHTML = mapIframe;
+  }
+</script>
+
+<script>
+  function showMapAlNourEyeHospital() {
+    clearMaps()
+    var latitude = 30.057334890753022;
+    var longitude = 31.350287764328684;
+
+    // Create a map container div
+    var mapContainer = document.createElement('div');
+    mapContainer.setAttribute('id', 'mapAlNourEyeHospital');
+
+    // Append the map container to the designated map container div
+    document.getElementById("mapContainerAlNourEyeHospital").innerHTML = "";
+    document.getElementById("mapContainerAlNourEyeHospital").appendChild(mapContainer);
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55272.054143977046!2d31.22900900896791!3d30.0224131062769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e7a143d1451%3A0x9ff0eb3e2d5db11a!2sAl%20Nour%20Eye%20Hospital!5e0!3m2!1sen!2seg!4v1715529292612!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    mapContainer.innerHTML = mapIframe;
+  }
+</script>
+
+<script>
+  function showLocationDarfouad() {
+ clearMaps()
+    var latitude = 30.066039880084947;
+    var longitude = 31.319723813793885;
+
+    // Create a map container div
+    var mapContainer = document.createElement('div');
+    mapContainer.setAttribute('id', 'mapDarfouad');
+
+    // Append the map container to the designated map container div
+    document.getElementById("mapContainerDarfouad").innerHTML = "";
+    document.getElementById("mapContainerDarfouad").appendChild(mapContainer);
+
+    // Create the HTML for the map iframe
+    var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6903.777081488158!2d31.319723813793885!3d30.066039880084947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458380de2f45d59%3A0x138b72c1da1b8a8e!2sDar%20El%20Fouad%20Hospital!5e0!3m2!1sen!2seg!4v1641522652286!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+    // Set the HTML for the map iframe
+    mapContainer.innerHTML = mapIframe;
+  }
+</script>
+    <script>
+      function showLocationGalaHospital() {
+        clearMaps()
+        var latitude = 30.098588932420316;
+        var longitude = 31.35067219050299;
+
+        // Create a map container div
+        var mapContainer = document.createElement('div');
+        mapContainer.setAttribute('id', 'mapGalaHospital');
+
+        // Append the map container to the designated map container div
+        document.getElementById("mapContainerGalaHospital").innerHTML = "";
+        document.getElementById("mapContainerGalaHospital").appendChild(mapContainer);
+
+        // Create the HTML for the map iframe
+        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.848858414244!2d31.347759311691917!3d30.098514674791733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815f696d11991%3A0x638b323b8ea2149!2sEl%20Galaa%20Hospital%20For%20Armed%20Forces%20Officers%20Families!5e0!3m2!1sen!2seg!4v1715528060663!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+        // Set the HTML for the map iframe
+        mapContainer.innerHTML = mapIframe;
+      }
+    </script>
+
+    
+    <script>
+      function showLocationAlFaruqHospital() {
+
+        clearMaps()
+        var latitude = 29.95764306032493;
+        var longitude = 31.25690487330902;
+
+        // Create a map container div
+        var mapContainer = document.createElement('div');
+        mapContainer.setAttribute('id', 'mapAlFaruqHospital');
+
+        // Append the map container to the designated map container div
+        document.getElementById("mapContainerAlFaruqHospital").innerHTML = "";
+        document.getElementById("mapContainerAlFaruqHospital").appendChild(mapContainer);
+
+        // Create the HTML for the map iframe
+        var mapIframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.7659309468304!2d31.254110011687338!3d29.95741067486323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847f0d454525f%3A0x15f59c7bc895acf!2sAl%20Farouq%20Hospital!5e0!3m2!1sen!2seg!4v1715527529776!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+
+        // Set the HTML for the map iframe
+        mapContainer.innerHTML = mapIframe;
+      }
+    </script>
+    
 
 
   <script src="js/jquery.min.js"></script>

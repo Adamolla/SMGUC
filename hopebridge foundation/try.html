@@ -1,49 +1,723 @@
-<form>
-    <h2>Clinic Location Specification</h2>
-  
-    <!-- Clinic Location Details -->
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address" required><br>
-  
-    <label for="area">Area:</label>
-    <input type="text" id="area" name="area" required><br>
-  
-    <label for="governorate">Governorate:</label>
-    <select id="governorate" name="governorate" required>
-      <option value="governorate1">Governorate 1</option>
-      <option value="governorate2">Governorate 2</option>
-      <!-- Add more options as needed -->
-    </select><br>
-  
-    <!-- Google Marker (Map component can be embedded here) -->
-  
-    <!-- Specialty -->
-    <label for="specialty">Specialty:</label>
-    <input type="text" id="specialty" name="specialty" required><br>
-  
-    <!-- Pro-Bono Cases -->
-    <label for="probono">Pro-Bono Cases:</label>
-    <input type="number" id="probono" name="probono" required><br>
-  
-    <!-- Submit Button -->
-    <input type="submit" value="Submit">
-  </form>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('clinicForm');
-  
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    // You can add your form submission logic here, such as sending data to a server or storing it in the browser's local storage.
-    console.log('Form submitted!');
-    // Example: You can access form fields like this:
-    const address = document.getElementById('address').value;
-    const area = document.getElementById('area').value;
-    const governorate = document.getElementById('governorate').value;
-    const specialty = document.getElementById('specialty').value;
-    const probono = document.getElementById('probono').value;
-    // Then you can process this data as needed.
-  });
-});
+<!DOCTYPE html>
+<html lang="en">
 
-  </script>
+<head>
+  <title>HopeBridge Foundation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .navbar-brand {
+      font-size: 22.5px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    .ftco-navbar-light {
+      margin-bottom: 2px;
+    }
+
+    .block-48 {
+      background-color: #4297A0;
+    }
+
+    .logo {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: -490px;
+      width: 130px;
+      vertical-align: bottom;
+      margin-right: 21px;
+      height: 130px;
+      border-radius: 900%;
+      display: none;
+
+    }
+
+    .show-logo .logo {
+      display: block;
+    }
+
+    a {
+      color: #4297A0;
+    }
+
+    .btn-primary {
+      background-color: #4297A0;
+      color: white;
+      width: auto;
+      height: auto;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .block-6 .icon {
+      margin-right: 30px;
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline {
+      color: #4297A0;
+    }
+
+    .block-6 .link-underline:hover {
+      color: black;
+
+    }
+
+    .btn-white {
+      background-color: white;
+      color: #4297A0;
+      font-size: 20px;
+    }
+
+    .btn-white:hover {
+      background-color: black;
+      color: white
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.active>a {
+      color: #4297A0 !important;
+    }
+
+    .link-underline {
+      color: #4297A0
+    }
+
+    .link-underline:active {
+      color: black
+    }
+
+    a.link-underline:hover {
+      color: black;
+
+    }
+
+    .bg-primary {
+      background: #4297A0 !important;
+    }
+
+    .fundraise-item .card-title {
+      font-size: 25px;
+      color: #4297A0;
+
+    }
+
+    .fundraise-item a {
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline;
+    }
+
+    .fundraise-item a:hover {
+      color: black;
+    }
+
+    .featured-donate.overlay-color-2:before,
+    .featured-section.overlay-color-2:before {
+      background-color: #4297A0;
+      opacity: 65%;
+    }
+
+    .icon {
+      color: #4297A0;
+    }
+
+    .btn-success {
+      background-color: white;
+      color: #4297A0;
+      font-size: 17px;
+    }
+
+    .btn-success:hover {
+      background-color: black
+    }
+
+    .btn-white {
+      font-size: 17px;
+      margin-left: 150px;
+      color: #4297A0;
+      margin-top: 40px;
+    }
+
+    .block-23 ul li .icon {
+      color: #4297A0;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .footer .link {
+      color: #4297A0;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+    a:hover {
+      color: black
+    }
+
+    .footer {
+      background-color: rgb(38, 37, 37);
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 50px;
+    }
+
+    body {
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .footer {
+      margin-top: 0;
+      padding-top: 4%;
+    }
+
+    table {
+      width: 90%;
+      /* Adjust the width as needed */
+      margin: 20px auto;
+      /* Center the table horizontally and add space around it */
+      border-collapse: collapse;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td:last-child {
+      text-align: center;
+
+    }
+
+    .clickable-type {
+      color: #4297A0;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+
+    h1 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 36px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      /* Adjust the margin as needed */
+      margin-bottom: 10px;
+      /* Adjust the margin as needed */
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+
+
+    #itemAge {
+
+      padding: 5px;
+      margin-left: 10px;
+      width: 30px;
+
+    }
+
+    #text2 {
+      text-align: center;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      color: #4297A0;
+      text-decoration: underline rgb(38, 37, 37);
+      /* Choose your desired color */
+      margin-top: 50px;
+      width: 200px;
+      /* Adjust the margin as needed */
+      margin-bottom: 30px;
+      margin-left: 220px;
+
+      /* Adjust the margin as needed */
+
+    }
+
+    #Area,
+    #governorate,
+    #subject {
+      padding: 8px 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 5px;
+      width: 290px;
+      border-radius: 5px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
+    }
+
+    #Area {
+      margin-left: 60px;
+    }
+
+    #subject {
+      margin-left: 70px;
+    }
+
+    #governorate {
+      margin-left: 30px;
+    }
+
+    .btn {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 240px;
+      display: block;
+      margin-left: 500px;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      margin-top: 50px;
+      padding: 20px;
+      vertical-align: middle;
+      background-color: transparent;
+      text-align: center;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #4297A0;
+      font-size: 26;
+      font-weight: bold;
+      text-decoration: underline rgb(38, 37, 37);
+      margin-right: 50px;
+      margin-left: 70px;
+    }
+
+    label1 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #4297A0;
+      font-size: 26;
+
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="radio"],
+    select {
+      position: relative;
+      margin-bottom: 20px;
+      border-color: #4297A0;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+      vertical-align: middle;
+
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 550px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+      background-color: #4297A0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #35707d;
+    }
+
+    #message {
+      margin-top: 20px;
+      display: none;
+      padding: 10px;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      color: #155724;
+    }
+
+    #message span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
+      <img class="logo" src="fond_logo.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="Home_page.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="Donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="Choose_Which_User.html" class="nav-link"> Login / Register</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="Organization_Pass_change.html" class="nav-link">Manage Account</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');"
+        data-stellar-background-ratio="0.5">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </head>
+
+  <body>
+    <h1>Clinic Specification</h1>
+    <form id="myForm">
+
+      <label for="specialty">Specialty:</label>
+      <div>
+        <input type="text" id="specialty" name="specialty" required>
+      </div><br>
+
+      <!-- Pro-Bono Cases -->
+      <label for="probono">Pro-Bono Cases:</label>
+      <div>
+        <input type="number" id="probono" name="probono" required>
+      </div><br>
+
+      <label for="address">Address:</label>
+      <div>
+        <input type="text" id="address" name="address" required>
+      </div><br>
+
+      <label for="area">Area:</label>
+      <div>
+        <input type="text" id="area" name="area" required>
+      </div><br>
+
+      <label for="governorate">Governorate:</label>
+      <div>
+        <select id="governorate" name="governorate" required>
+          <option value=""></option>
+          <option value="Giza">Giza</option>
+          <option value="Cairo">Cairo</option>
+          <option value="Alexandria">Alexandria</option>
+          <option value="Other">
+            <!-- Add more options as needed -->
+        </select>
+      </div><br>
+      <label for="other"> if other specify:</label>
+      <div></div>
+      <input type="text" id="other" name="other">
+      </div><br>
+
+      <label for="loc">Clinic Location:</label>
+      <di></di>
+
+      <div id="map"></div>
+      </div>
+
+      <!-- Submit Button -->
+      <input class="btn" type="submit" value="Submit">
+
+    </form>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4">
+            <h3 class="heading-section">About Us</h3>
+            <p class="lead">Driven by empathy and a desire for change, we strive to bridge the gap between privilege and
+              poverty, believing that everyone deserves access to basic necessities, education, and opportunities for a
+              better future.</p>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <h3 class="heading-section">Contact Us</h3>
+            <div class="block-23">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Center of Continuing Education
+                    German University in Cairo
+                    El Tagamoa El Khames
+                    New Cairo City - Egypt</span></li>
+                <li><a><span class="icon icon-phone"></span><span class="text">Tel: 010-9919-4446 /
+                      010-9917-0359</span></a></li>
+                <li><a> <span class="icon icon-phone"></span><span class="text">Hotline: 16482</span></a></li>
+                <li><a> <span class="icon icon-envelope"></span><span class="text">CCE@Guc.edu.eg</span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- New div for the image container -->
+          <div class="col-md-6 col-lg-4">
+            <div class="image-container">
+              <a href="about.html">
+                <img src="fond_logo.png">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#F96D00" />
+      </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+
+    <script src="js/jquery.fancybox.min.js"></script>
+
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            document.getElementById("ftco-navbar").classList.add("show-logo");
+            document.querySelector(".navbar-brand").style.marginLeft = "100px";
+
+          } else {
+            document.getElementById("ftco-navbar").classList.remove("show-logo");
+            document.querySelector(".navbar-brand").style.marginLeft = "-10px";
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('clinicForm');
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          // You can add your form submission logic here, such as sending data to a server or storing it in the browser's local storage.
+          console.log('Form submitted!');
+          // Example: You can access form fields like this:
+          const address = document.getElementById('address').value;
+          const area = document.getElementById('area').value;
+          const governorate = document.getElementById('governorate').value;
+          const specialty = document.getElementById('specialty').value;
+          const probono = document.getElementById('probono').value;
+          // Then you can process this data as needed.
+        });
+      });
+
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('myForm');
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          // You can add your form submission logic here, such as sending data to a server or storing it in the browser's local storage.
+          console.log('Form submitted!');
+          // Example: You can access form fields like this:
+          const address = document.getElementById('address').value;
+          const area = document.getElementById('area').value;
+          const governorate = document.getElementById('governorate').value;
+          const specialty = document.getElementById('specialty').value;
+          const probono = document.getElementById('probono').value;
+          // Then you can process this data as needed.
+          // Display an alert message
+          alert('Thank you for adding your location and providing your clinic specification.');
+          // Redirect to Donor_Dashboard page after a delay of 2 seconds (2000 milliseconds)
+          setTimeout(function () {
+            window.location.href = 'Donor_Dashboard.html';
+          }, 1000);
+        });
+      });
+    </script>
+
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
+    <script>
+      // Initialize the map
+      function initMap() {
+        // Specify the map options
+        var mapOptions = {
+          center: { lat: 47.6062, lng: -122.3321 }, // Default center (Seattle, WA)
+          zoom: 13 // Default zoom level
+        };
+
+        // Create the map object
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        // Create the search box and link it to the UI element
+        var input = document.getElementById('search');
+        var searchBox = new google.maps.places.SearchBox(input);
+
+        // Bias the SearchBox results towards current map's viewport
+        map.addListener('bounds_changed', function () {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place
+        searchBox.addListener('places_changed', function () {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // For each place, get the icon, name and location
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function (place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place
+            var marker = new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            });
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+    </script>
+    <script>
+      // Load the map
+      initMap();
+    </script>
+
+  </body>
+
+</html>

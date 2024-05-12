@@ -573,7 +573,22 @@
       </svg></div>
 
       <script>
+        // Add event listener for scroll event
+        window.addEventListener("scroll", function () {
+          var scrollX = window.scrollX; // Get horizontal scroll position
+          var image = document.getElementById("hero-image"); // Get the image element
+          if (scrollX > 0) {
+            image.classList.add("expanded"); // Add expanded class to the image
+          } else {
+            image.classList.remove("expanded"); // Remove expanded class from the image
+          }
+        });
+      </script>
+      
+      
+      <script>
         function showLocationStMaryChurch() {
+          clearMaps();
           var latitude = 30.066350592074382;
           var longitude = 31.4764058730124;
 
@@ -597,6 +612,7 @@
       
       <script>
         function showLocationMisrElKhair() {
+          clearMaps();
           var latitude = 30.00684960518526;
           var longitude = 31.192306222125996;
 
@@ -618,6 +634,7 @@
       
       <script>
         function showLocationSOS() {
+          clearMaps();
           var latitude = 30.066392312303318;
           var longitude = 31.351658769616677;
 
@@ -640,6 +657,7 @@
       <script>
         // Method to display the location of Othman ibn Affan School
         function showLocationOthmanIbnAffanSchool() {
+          clearMaps();
           var latitude = 30.074008740029157;
           var longitude = 31.490994618478;
 
@@ -648,11 +666,15 @@
 
           // Set the HTML for the map iframe
           document.getElementById('mapContainer').innerHTML = mapIframe;
+          document.getElementById("mapContainer").appendChild(mapContainer);
+
         }
       </script>
+      
       <script>
         // Method to display the location of Children's Cancer Hospital Egypt 57357
         function showLocation57357() {
+          clearMaps();
           var latitude = 30.023156092641084;
           var longitude = 31.237981784956986;
 
@@ -669,6 +691,16 @@
 
           // Set the HTML for the map iframe
           mapContainer.innerHTML = mapIframe;
+        }
+      </script>
+      <script>
+        // Function to clear all map containers
+        function clearMaps() {
+          document.getElementById("mapContainerStMaryChurch").innerHTML = "";
+          document.getElementById("mapContainerMisrElKhair").innerHTML = "";
+          document.getElementById("mapContainerSOS").innerHTML = "";
+          document.getElementById("mapContainer57357").innerHTML = "";
+          document.getElementById("mapContainer").innerHTML = "";
         }
       </script>
 
