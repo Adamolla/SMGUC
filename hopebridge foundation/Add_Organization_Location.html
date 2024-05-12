@@ -4,7 +4,9 @@
     <title>HopeBridge Foundation</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load the Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&libraries=places"></script>
     <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -22,6 +24,16 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
+
+     #search-container {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
      .navbar-brand {
       font-size: 22.5px;
       margin-left: 10px;
@@ -334,8 +346,10 @@
   </style>
   </head>
   <body>
+
+
     
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">HopeBridge Foundation</a>
       <img class="logo" src="fond_logo.png">
@@ -357,7 +371,7 @@
   </nav>
   <!-- END nav -->
   
-  <div class="block-31" style="position: relative;">
+<div class="block-31" style="position: relative;">
     <div class="owl-carousel loop-block-31 ">
       <div class="block-30 block-30-sm item" style="background-image: url('pic1.jpeg');" data-stellar-background-ratio="0.5">
         </div>
@@ -366,23 +380,25 @@
   </div>
        
   <div class="container">
+    <!-- Form for adding organization location -->
     <h1>Add Organization Location</h1>
-    <div></div>
-
     <form id="locationForm">
-        <div>
-            <label id="text1" for="address">Address:</label>
-            <br>
-            <input type="text" id="address" name="address" placeholder="Enter address">
-        </div>
+      <div>
+        <label id="text1" for="address">Address:</label>
         <br>
-        <div>
-            <button class="btn" type="submit">Add Location</button>
-        </div>
+        <input type="text" id="address" name="address" placeholder="Enter address">
+      </div>
+      <br>
+      <div>
+        <button class="btn" type="submit">Add Location</button>
+      </div>
     </form>
-
+  
+    <!-- Map container -->
     <div id="map"></div>
-</div>
+  </div>
+  <div id="map"></div>
+  <input type="text" id="search" placeholder="Search for a location">
 
     <footer class="footer">
         <div class="container">
@@ -446,7 +462,7 @@
       
       <script src="js/aos.js"></script>
       <script src="js/jquery.animateNumber.min.js"></script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejBc4dvd7qPQ3WzGjQ3ad-3T8xPAh2aw&sensor=false"></script>
       <script src="js/google-map.js"></script>
       <script src="js/main.js"></script>
       <script>
@@ -464,62 +480,73 @@
         });
       </script>  
     <script>
-        var map;
-        var geocoder;
+      // Initialize the map
+      function initMap() {
+        // Specify the map options
+        var mapOptions = {
+          center: { lat: 47.6062, lng: -122.3321 }, // Default center (Seattle, WA)
+          zoom: 13 // Default zoom level
+        };
 
-        // Initialize and add the map
-        function initMap() {
-            // Default map center
-            var defaultCenter = { lat: 37.7749, lng: -122.4194 }; // Example coordinates for San Francisco, CA
+        // Create the map object
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-            // Create a map object and specify the DOM element for display
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: defaultCenter,
-                zoom: 15 // Adjust zoom level as needed
+        // Create the search box and link it to the UI element
+        var input = document.getElementById('search');
+        var searchBox = new google.maps.places.SearchBox(input);
+
+        // Bias the SearchBox results towards current map's viewport
+        map.addListener('bounds_changed', function () {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place
+        searchBox.addListener('places_changed', function () {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // For each place, get the icon, name and location
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function (place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place
+            var marker = new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
             });
 
-            // Initialize Geocoder
-            geocoder = new google.maps.Geocoder();
-        }
-
-        // Function to add marker at specified location
-        function addMarker(location) {
-            new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
-
-        // Function to handle form submission
-        function handleSubmit(event) {
-    event.preventDefault();
-
-    var address = document.getElementById('address').value;
-
-    // Geocode address to obtain latitude and longitude
-    geocoder.geocode({ address: address }, function (results, status) {
-        if (status === 'OK') {
-            var location = results[0].geometry.location;
-
-            // Add marker at geocoded location
-            addMarker(location);
-
-            // Center map at geocoded location
-            map.setCenter(location);
-
-            // Show alert message
-            alert('Thank you for adding your location.');
-
-            // Clear input field
-            document.getElementById('address').value = '';
-        } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-        }
-    });
-}
-
-        // Attach form submission event listener
-        document.getElementById('locationForm').addEventListener('submit', handleSubmit);
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+    </script>
+    <script>
+      // Load the map
+      initMap();
     </script>
 
    
